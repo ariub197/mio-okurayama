@@ -1,0 +1,4 @@
+{
+  "root": true,
+  "extends": ["@fourdigit/eslint-config-fourdigit/esnext"]
+}

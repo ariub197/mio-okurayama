@@ -1,0 +1,15 @@
+@import '../../common/css/variables/_variables';
+@import '../../common/css/mixins/_easing';
+@import '../../common/css/mixins/_mixins';
+@import '../components/**/*';
+
+
+.outline-first {
+  @include pc {
+    padding: 80px 0;
+  }
+
+  @include sp {
+    padding: 40px 0;
+  }
+}

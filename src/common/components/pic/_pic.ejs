@@ -1,0 +1,49 @@
+<%include('/_utils');
+const params = ejsUtils.defaultParamsMapper(locals, {
+  imagePathPC:'',
+  imagePathSP:'',
+  imagePath:'',
+  alt:'',
+  captionColor:'sdw-wh',
+  captionPosition:'capIn',
+  pictureMode:'on',
+  sai:'',
+  lazy:'on',
+  modifiers: []
+});
+const className = ejsUtils.mapModifiers('pic', params.modifiers);
+
+const baseImgPC = params.imagePathPC;
+const baseImgSP = params.imagePathSP;
+const baseImg = params.imagePath;
+
+function photoFunc(photoSrc) {
+  let baseSrc = photoSrc.split(/(src=)["|'](.*?)["|']+/g);
+  let baseWidth = photoSrc.split(/(width=)["|'](.*?)["|']+/g);
+  let baseHeight = photoSrc.split(/(height=)["|'](.*?)["|']+/g);
+
+  if (photoSrc == params.imagePathPC) {
+    pureSrcPC = baseSrc[2];
+    pureWidthPC = baseWidth[2];
+    pureHeightPC = baseHeight[2];
+  } else if (photoSrc == params.imagePathSP) {
+    pureSrcSP = baseSrc[2];
+    pureWidthSP = baseWidth[2];
+    pureHeightSP = baseHeight[2];
+  } else {
+    pureSrc = baseSrc[2];
+    pureWidth = baseWidth[2];
+    pureHeight = baseHeight[2];
+  }
+}
+
+photoFunc(baseImgPC);
+photoFunc(baseImgSP);
+photoFunc(baseImg);
+
+const photoAlt = alt.replace(/<br.*?>|<span.*?>|<\u002fspan>|<sup.*?>(.*?)<\u002fsup>/g, "");
+
+%><picture class="<%- className %>"<% if (params.sai !== '') { %> data-sai="<%- params.sai %>"<% } %>>
+  <source media="(min-width: 768px)" <% if (params.lazy == 'on') { %>data-<% } %>srcset="<%- pureSrcPC %>" width="<%- pureWidthPC %>" height="<%- pureHeightPC %>">
+  <img src="data:image/gif;base64,R0lGODlhAQABAGAAACH5BAEKAP8ALAAAAAABAAEAAAgEAP8FBAA7" data-src="<%- pureSrcSP %>" alt="<%- photoAlt %>"  width="<%- pureWidthSP %>" height="<%- pureHeightSP %>" class="pic__image lazyload">
+</picture>

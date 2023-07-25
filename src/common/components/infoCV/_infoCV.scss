@@ -1,0 +1,136 @@
+.infoCV {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+
+  @include pc {
+    padding-bottom: 16px;
+  }
+
+  @include sp {
+    padding-bottom: 21px;
+  }
+
+  @include hover {
+
+    .infoCV__visual {
+      box-shadow: 0 8px 16px 0 rgba(102, 102, 102, 0);
+
+      .pic {
+        transform: scale(1.25);
+      }
+    }
+
+    .infoCV__icon {
+      box-shadow: 0 8px 16px 0 rgba(102, 102, 102, 0);
+    }
+
+    .infoCV__ttl {
+      opacity: .3;
+    }
+  }
+
+  &:after {
+    background-color: #aeafb0;
+    bottom: 0;
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  &__visual {
+    box-shadow: 0 8px 16px 0 rgba(102, 102, 102, .5);
+    overflow: hidden;
+    transition: 1s;
+
+    @include pc {
+      width: 240px;
+    }
+
+    @include sp {
+      width: 80px;
+    }
+
+    .pic {
+      display: block;
+      transition: 1s;
+    }
+  }
+
+  &__cont {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+    padding-left: 21px;
+    position: relative;
+  }
+
+  &__ttl {
+    letter-spacing: 0;
+    transition: 1s;
+
+    @include pc {
+      font-size: 18px;
+
+      @include lhCrop(50 / 18);
+    }
+
+    @include sp {
+      font-size: 12px;
+
+      @include lhCrop(50 / 24);
+    }
+  }
+
+  &__icon {
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 8px 16px 0 rgba(102, 102, 102, .1);
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+    transition: 1s;
+
+    @include pc {
+      height: 48px;
+      width: 48px;
+    }
+
+    @include sp {
+      height: 23px;
+      width: 23px;
+
+    }
+
+    .arrowSVG,
+    .plusSVG {
+      height: auto;
+
+      @include pc {
+        width: 16px;
+      }
+
+      @include sp {
+        width: 10px;
+      }
+    }
+
+  }
+
+  & + .infoCV {
+    @include pc {
+      margin-top: 56px;
+    }
+
+    @include sp {
+      margin-top: 28px;
+    }
+  }
+}

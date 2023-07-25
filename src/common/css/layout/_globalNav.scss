@@ -1,0 +1,166 @@
+.globalNav {
+  align-items: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include sp {
+    width: 255px;
+  }
+
+  &__link {
+    align-items: center;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    @include pc {
+      height: 40px;
+      padding: 10px 0 10px 30px;
+      width: 435px;
+    }
+
+    @include sp {
+      flex-direction: row-reverse;
+      padding-bottom: 15px;
+      padding-right: 25px;
+      padding-top: 15px;
+      text-align: right;
+    }
+
+    &.is-current{
+
+      &:before {
+        opacity: 1;
+
+        @include pc {
+          width: calc(100% + 60px);
+        }
+
+        @include sp {
+          width: 100%;
+        }
+      }
+
+      .arrowSVG {
+        opacity: 1;
+        transform: translate(0, -50%);
+      }
+
+      .jp {
+        opacity: 1;
+      }
+
+      .en {
+        color: #ca9d76;
+      }
+    }
+
+    @include hover {
+
+      &:before {
+        opacity: 1;
+        width: calc(100% + 60px);
+      }
+
+      .arrowSVG {
+        opacity: 1;
+        transform: translate(0, -50%);
+      }
+
+      .jp {
+        opacity: 1;
+      }
+
+      .en {
+        color: #ca9d76;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      transform-origin: right;
+      transition: .3s;
+
+      @include pc {
+        border: 1px solid #987f6a;
+        border-radius: 20px;
+        height: 100%;
+        opacity: 0;
+        right: -60px;
+        top: 0;
+        width: 0;
+      }
+
+      @include sp {
+        background-color: #666666;
+        bottom: 0;
+        height: 1px;
+        left: 0;
+        width: 100%;
+      }
+    }
+
+
+    &:not(:last-of-type) {
+      @include pc {
+        margin-bottom: 20px;
+      }
+    }
+
+    .jp {
+      color: #999999;
+      letter-spacing: .08em;
+      transition: .3s;
+
+      @include pc {
+        font-size: 12px;
+        opacity: 0;
+      }
+
+      @include sp {
+        font-size: 10px;
+
+        @include lhCrop(30/20);
+      }
+    }
+
+    .en {
+      color: #efefef;
+      font-family: $font-en;
+      transition: .3s;
+      white-space: nowrap;
+
+      @include pc {
+        font-size: 18px;
+      }
+
+      @include sp {
+        font-size: 14px;
+
+      }
+    }
+
+    .arrowSVG {
+      position: absolute;
+      top: 50%;
+      transition: .3s;
+
+      @include pc {
+        opacity: 0;
+        right: -40px;
+        transform: translate(-50%,-50%);
+        width: 20px;
+      }
+
+      @include sp {
+        opacity: 1;
+        right: 0;
+        transform: translate(0, -50%);
+        width: 13px;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.heading {
+  @include min-screen($breakP) {
+    font-size: 18px;
+
+    @include lhCrop(30 / 18);
+  }
+
+  @include max-screen($breakP) {
+    font-size: 16px;
+
+    @include lhCrop(50 / 32);
+  }
+}

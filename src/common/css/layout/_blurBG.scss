@@ -1,0 +1,76 @@
+.blurBG {
+  height: 100lvh;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+
+  &__pic {
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    &:nth-of-type(1) {
+      animation: bg-animation01 10s ease-in-out infinite;
+    }
+
+    &:nth-of-type(2) {
+      animation: bg-animation02 10s ease-in-out infinite;
+    }
+  }
+
+  &__image  {
+    height: 100%;
+    max-width: unset;
+    object-fit: cover;
+    transition: 1s;
+    width: 100%;
+  }
+}
+
+@keyframes bg-animation01 {
+
+  0% {
+    filter: blur(1px);
+    opacity: .6;
+    transform: rotate(-1deg) translateX(-1%) scale(1.06);
+  }
+
+  50% {
+    filter: blur(3px);
+    opacity: .8;
+    transform: rotate(1deg) translateX(1%) scale(1.06);
+  }
+
+  100% {
+    filter: blur(1px);
+    opacity: .6;
+    transform: rotate(-1deg) translateX(-1%) scale(1.06);
+  }
+}
+
+@keyframes bg-animation02 {
+
+  0% {
+    filter: blur(0);
+    opacity: .3;
+    transform: rotate(1.1deg) translateY(1%) scale(1.07);
+  }
+
+  50% {
+    filter: blur(3px);
+    opacity: .4;
+    transform: rotate(-1.2deg) translateY(-1%) scale(1.07);
+  }
+
+  100% {
+    filter: blur(0);
+    opacity: .3;
+    transform: rotate(1.1deg) translateY(1%) scale(1.07);
+  }
+}

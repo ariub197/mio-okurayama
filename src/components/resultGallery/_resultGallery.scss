@@ -1,0 +1,164 @@
+.resultGallery {
+  counter-reset: resultPhotoOrder;
+  overflow: hidden;
+  position: relative;
+
+  @include pc {
+    height: 714px;
+    margin-right: calc((100vw - 1056px) / -2);
+    width: calc(624px + (100vw - 1056px) / 2);
+  }
+
+  @include sp {
+    margin-top: 48px;
+    padding-bottom: 100px;
+  }
+
+  &__inner {
+    transform: rotate(5deg);
+    transform-origin: bottom left;
+
+    &:nth-of-type(even) {
+
+      .resultGallery__list {
+        animation: slideReverse infinite linear;
+        animation-duration: 30s;
+        flex-direction: row-reverse;
+        float: right;
+
+        @include u-clearfix();
+      }
+    }
+
+    & + .resultGallery__inner {
+      @include pc {
+        margin-top: 30px;
+      }
+
+      @include sp {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &__list {
+    animation: slide infinite linear;
+    animation-duration: 30s;
+    display: flex;
+    justify-content: space-between;
+
+    @include pc {
+      width: 2700px;
+    }
+
+    @include sp {
+      width: 1350px;
+    }
+
+    & + .resultGallery__list {
+      @include pc {
+        margin-top: 30px;
+      }
+
+      @include sp {
+        margin-top: 24px;
+      }
+    }
+
+  }
+
+  &__item {
+    counter-increment: resultPhotoOrder;
+    position: relative;
+    will-change: transform;
+
+    @include pc {
+      width: 430px;
+    }
+
+    @include sp {
+      width: 215px;
+    }
+
+  }
+
+  &__order {
+    align-items: center;
+    background-color: rgba(51,51,51,.8);
+    bottom: 0;
+    color: #ffffff;
+    content: counter(resultPhotoOrder);
+    display: flex;
+    height: 20px;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    width: 20px;
+
+    @include pc {
+      font-size: 12px;
+    }
+
+    @include sp {
+      font-size: 10px;
+    }
+  }
+
+  &__caption {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+
+    @include sp {
+      margin: 0 20px;
+    }
+  }
+}
+
+@include pc {
+  @keyframes slide {
+
+    0% {
+      transform: translate3d(0%,0,0);
+    }
+
+    100% {
+      transform: translate3d(-1360px,0,0);
+    }
+  }
+
+  @keyframes slideReverse {
+
+    0% {
+      transform: translate3d(0%,0,0);
+    }
+
+    100% {
+      transform: translate3d(1350px,0,0);
+    }
+  }
+}
+
+@include sp {
+  @keyframes slide {
+
+    0% {
+      transform: translate3d(0%,0,0);
+    }
+
+    100% {
+      transform: translate3d(-680px,0,0);
+    }
+  }
+
+  @keyframes slideReverse {
+
+    0% {
+      transform: translate3d(0%,0,0);
+    }
+
+    100% {
+      transform: translate3d(675px,0,0);
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.outlineIframe{
+  background-color: #ffffff;
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+
+  @include pc {
+    width: 1056px;
+  }
+
+  @include sp {
+    width: 100%;
+  }
+
+}

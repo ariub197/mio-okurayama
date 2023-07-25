@@ -1,0 +1,37 @@
+.constructionTruck {
+  background-color: #4d4d4d;
+  color: #ffffff;
+  overflow: hidden;
+  position: relative;
+
+  @include pc {
+    background-image: linear-gradient( 125deg, #4f4f4f 0%, #464646 100%);
+    padding: 160px 0 152px;
+  }
+
+  @include sp {
+    padding: 80px 0 84px;
+  }
+
+  &__bgTxt {
+    color: rgba(255,255,255,.1);
+    left: 0;
+    line-height: .8;
+    position: absolute;
+
+    @include pc {
+      bottom: 160px;
+      font-size: 96px;
+
+      @media only screen and (min-width:1920px) {
+        left: calc(100 / 1440 * 100vw);
+      }
+    }
+
+    @include sp {
+      bottom: 50px;
+      font-size: 40px;
+
+    }
+  }
+}

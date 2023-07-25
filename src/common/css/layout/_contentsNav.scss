@@ -1,0 +1,130 @@
+
+.contentsNav {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include pc {
+    justify-content: flex-start;
+  }
+
+  @include sp {
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+
+    @include pc {
+      margin-right: 32px;
+      width: 240px;
+    }
+
+    @include sp {
+      width: 133px;
+    }
+
+    &:nth-of-type(n+3) {
+      @include sp {
+        margin-top: 28px;
+      }
+    }
+
+  }
+
+  &__link {
+    display: block;
+    font-family: $font-en;
+    letter-spacing: .12em;
+    line-height: .8;
+    position: relative;
+
+    &:after {
+      background-color: rgba(102,102,102,.5);
+      bottom: 0;
+      content: '';
+      height: 1px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+    @include pc {
+      font-size: 18px;
+      height: 30px;
+    }
+
+    @include sp {
+      font-size: 14px;
+      height: 21px;
+    }
+
+    @include hover {
+
+      .arrowSVG {
+        transform: translate(10px,0);
+      }
+    }
+
+    .arrowSVG {
+      position: absolute;
+      right: 0;
+      top: 5px;
+      transition: .3s;
+    }
+
+    &.is-off {
+      opacity: .5;
+      pointer-events: none;
+    }
+  }
+
+  &--oneThird {
+    @include pc {
+      width: 784px;
+    }
+
+    .contentsNav__item {
+
+
+      &:nth-of-type(3n) {
+        margin-right: 0;
+      }
+
+      &:nth-of-type(n+4) {
+        @include pc {
+          margin-top: 56px;
+        }
+      }
+    }
+  }
+
+  &--oneFourth {
+    @include pc {
+      width: 1056px;
+    }
+
+    .contentsNav__item {
+
+
+      &:nth-of-type(4n) {
+        margin-right: 0;
+      }
+
+      &:nth-of-type(n+5) {
+        @include pc {
+          margin-top: 56px;
+        }
+      }
+    }
+  }
+
+  & + .primaryNav {
+    @include pc {
+      margin-top: 64px;
+    }
+
+    @include sp {
+      margin-top: 32px;
+    }
+  }
+}

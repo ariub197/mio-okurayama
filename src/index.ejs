@@ -1,0 +1,165 @@
+<% var pageData = {
+		pageDir: 'top',
+	};
+%>
+<%- include('/_head', {
+  pageId: pageData.pageDir,
+  title: '',
+  canonical:'',
+  }) %>
+<%- include('/common/inc/header/_header.ejs', {pageId: pageData.pageDir}) %>
+<main class="main">
+  <div class="container">
+    <%- include('./components/mainVisual/_mainVisual.ejs') %>
+
+    <div class="uspIntroduction">
+      <div class="uspCard" data-sai="target">
+        <h3 class="uspCard__heading" data-sai="fade" data-sai-duration="1500">01 ACCESS</h3>
+        <div class="uspCard__visual" data-sai="fade" data-sai-duration="1500">
+          <img src="./imgs/img-usp-01.jpg" alt="01 ACCESS" width="550" height="309">
+        </div>
+
+        <div class="uspCard__cont" data-sai="fade" data-sai-duration="1500">
+          <h4 class="uspCard__subheading">2駅2路線利用可能<sup>※1</sup></h4>
+          <div class="trafficInfo">
+            <div class="trafficInfo__term">
+              <div class="line">◯◯◯◯線</div>
+              <div class="station"><span class="name">「◯◯」</span>駅</div>
+            </div>
+            <div class="trafficInfo__desc">
+              <span class="transpotation">徒歩</span>
+              <span class="time"><span class="num">0</span>分</span>
+            </div>
+          </div>
+          <div class="trafficInfo">
+            <div class="trafficInfo__term">
+              <div class="line">◯◯◯◯線</div>
+              <div class="station"><span class="name">「◯◯◯◯」</span>駅</div>
+            </div>
+            <div class="trafficInfo__desc">
+              <span class="transpotation">徒歩</span>
+              <span class="time"><span class="num">0</span>分</span>
+            </div>
+          </div>
+        </div>
+        <div class="uspCard__bgSquare"></div>
+      </div>
+      <div class="uspCard is-reverse" data-sai="target">
+        <h3 class="uspCard__heading" data-sai="fade" data-sai-duration="1500">02 PLAN</h3>
+        <div class="uspCard__visual" data-sai="fade" data-sai-duration="1500">
+          <img src="./imgs/img-usp-02.jpg" alt="02 PLAN" width="550" height="309">
+        </div>
+        <div class="uspCard__cont" data-sai="fade" data-sai-duration="1500">
+          <h4 class="uspCard__subheading">全戸角住戸</h4>
+          <div class="roomInfo roomInfo--ldk">
+            <div class="roomInfo__term"><span class="large">0</span>LDK</div>
+            <span class="roomInfo__line"></span>
+            <div class="roomInfo__desc"><span class="large">0</span>LDK+S</div>
+          </div>
+          <div class="roomInfo roomInfo--length">
+            <div class="roomInfo__term"><span class="num"><span class="large">00</span>.00</span><span class="meter">m&sup2;</span></div>
+            <span class="roomInfo__line"></span>
+            <div class="roomInfo__desc"><span class="num"><span class="large">00</span>.00</span><span class="meter">m&sup2;</span></div>
+          </div>
+        </div>
+        <div class="uspCard__bgSquare"></div>
+      </div>
+      <div class="uspCard" data-sai="target">
+        <h3 class="uspCard__heading" data-sai="fade" data-sai-duration="1500">03 LOCATION</h3>
+        <div class="uspCard__visual" data-sai="fade" data-sai-duration="1500">
+          <img src="./imgs/img-usp-03.jpg" alt="03 LOCATION" width="530" height="298">
+        </div>
+        <div class="uspCard__cont" data-sai="fade" data-sai-duration="1500">
+          <h4 class="uspCard__subheading">駅までフラットアプローチ</h4>
+        </div>
+        <div class="uspCard__bgSquare"></div>
+      </div>
+    </div>
+    <div class="contentsGuide contentsGuide--comingSoon">
+      <div class="contentsGuide__head" data-sai="fade" data-sai-duration="1500">
+        <h3 class="contentsGuide__heading">CONTENTS LIST<span class="comingSoon">coming soon</span></h3>
+        <h4 class="contentsGuide__subheading">0月下旬 公開予定</h4>
+      </div>
+      <div class="contentsGuide__cont" data-sai="fade" data-sai-duration="1500">
+        <%- include('/common/inc/contentsNav/_contentsNav.ejs', {parent: 'contentsGuide'}) %>
+        <%- include('/common/inc/primaryNav/_primaryNav.ejs') %>
+      </div>
+    </div>
+    <div class="constructionTruck">
+      <section class="resultSect">
+        <div class="resultSect__head">
+          <h3 class="resultSect__heading">
+            <span class="jp">施工実績</span>
+            <span class="en">Construction track record</span>
+          </h3>
+        </div>
+        <div class="resultSect__cont">
+          <p class="resultSect__txt">多くの人々に愛される<br>心豊かな暮らしの舞台の創造を積極的に推進。<br>年月を経て、さらに輝きを増す・・・。<br>そんなクオリティあふれる住まいを山田建設は<br>プロデュースしています。</p>
+          <div class="resultGallery">
+            <div class="resultGallery__inner js-gallery-container">
+              <div class="resultGallery__list js-gallery-column">
+                <div class="resultGallery__item">
+                  <img src="./imgs/img-result-01.jpg" alt="ミオカステーロ向ヶ丘遊園Ⅱ" width="430" height="287">
+                  <div class="resultGallery__order">1</div>
+                </div>
+                <div class="resultGallery__item">
+                  <img src="./imgs/img-result-02.jpg" alt="ミオカステーロ橋本" width="430" height="287">
+                  <div class="resultGallery__order">2</div>
+                </div>
+                <div class="resultGallery__item">
+                  <img src="./imgs/img-result-03.jpg" alt="ミオカステーロ都筑ふれあいの丘" width="430" height="287">
+                  <div class="resultGallery__order">3</div>
+                </div>
+                <div class="resultGallery__item">
+                  <img src="./imgs/img-result-01.jpg" alt="ミオカステーロ向ヶ丘遊園Ⅱ" width="430" height="287">
+                  <div class="resultGallery__order">1</div>
+                </div>
+                <div class="resultGallery__item">
+                  <img src="./imgs/img-result-02.jpg" alt="ミオカステーロ橋本" width="430" height="287">
+                  <div class="resultGallery__order">2</div>
+                </div>
+                <div class="resultGallery__item">
+                  <img src="./imgs/img-result-03.jpg" alt="ミオカステーロ都筑ふれあいの丘" width="430" height="287">
+                  <div class="resultGallery__order">3</div>
+                </div>
+              </div>
+            </div>
+            <div class="resultGallery__inner js-gallery-container">
+              <div class="resultGallery__list js-gallery-column js-gallery-column-reverse">
+                <div class="resultGallery__item">
+                  <img src="./imgs/img-result-04.jpg" alt="ミオカステーロ都筑ふれあいの丘" width="430" height="287">
+                  <div class="resultGallery__order">4</div>
+                </div>
+                <div class="resultGallery__item">
+                  <img src="./imgs/img-result-05.jpg" alt="ミオカステーロ鶴見フロンティア" width="430" height="287">
+                  <div class="resultGallery__order">5</div>
+                </div>
+                <div class="resultGallery__item">
+                  <img src="./imgs/img-result-06.jpg" alt="ミオカステーロ鶴見フロンティア" width="430" height="287">
+                  <div class="resultGallery__order">6</div>
+                </div>
+                <div class="resultGallery__item">
+                  <img src="./imgs/img-result-04.jpg" alt="ミオカステーロ都筑ふれあいの丘" width="430" height="287">
+                  <div class="resultGallery__order">4</div>
+                </div>
+                <div class="resultGallery__item">
+                  <img src="./imgs/img-result-05.jpg" alt="ミオカステーロ鶴見フロンティア" width="430" height="287">
+                  <div class="resultGallery__order">5</div>
+                </div>
+                <div class="resultGallery__item">
+                  <img src="./imgs/img-result-06.jpg" alt="ミオカステーロ鶴見フロンティア" width="430" height="287">
+                  <div class="resultGallery__order">6</div>
+                </div>
+
+              </div>
+            </div>
+            <p class="resultGallery__caption caption" data-color="white">※1.ミオカステーロ向ヶ丘遊園Ⅱ <br class="sp">2.ミオカステーロ橋本 <br>3.4.ミオカステーロ都筑ふれあいの丘 <br>5.6.ミオカステーロ鶴見フロンティア</p>
+          </div>
+        </div>
+      </section>
+      <div class="constructionTruck__bgTxt">Mio Castello</div>
+    </div>
+  </div>
+</main>
+<%- include('/common/inc/bottomInfo/_bottomInfo.ejs') %>
+<%- include('/common/inc/footer/_footer.ejs', {pageId: pageData.pageDir, footerCap: '※フッターキャプションが入りますフッターキャプションが入りますフッターキャプションが入ります'}) %>

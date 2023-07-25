@@ -1,0 +1,132 @@
+<%include('/_utils');
+
+const params = ejsUtils.defaultParamsMapper(locals, {
+  pageId: '',
+  footerCap:''
+});
+
+%>
+
+<footer id="gFooter" class="footer">
+  <div class="footer__cont">
+    <div class="footer-captionArea">
+      <p class="caption"><%- params.footerCap %></p>
+    </div>
+    <div class="footer-facility">
+      <div class="footer-facility__wrap">
+        <div class="footer-facility__inner">
+          <a href="https://home.tokyo-gas.co.jp/living/bathroom/hotdry/index.html" target="_blank" class="footer-facility__bnr footer-facility__bnr--misty">
+            <picture class="footer-facility__pic">
+              <source media="(min-width: 768px)" data-srcset="<%= relativePath %>common/imgs/pc/ftr-facility-misty.jpg" width="120" height="120">
+              <img src="data:image/gif;base64,R0lGODlhAQABAGAAACH5BAEKAP8ALAAAAAABAAEAAAgEAP8FBAA7" data-src="<%= relativePath %>common/imgs/sp/ftr-facility-misty.jpg" alt="ミストサウナ付浴室暖房乾燥機「ミスティ」" width="275" height="155" class="footer-facility__image lazyload">
+            </picture>
+            <div class="footer-facility__cont">
+              <div class="footer-facility__ttl">MISTY</div>
+              <div class="footer-facility__txt">ミストサウナ付<br>浴室暖房乾燥機「ミスティ」</div>
+              <svg class="arrowSVG" width="17.5px" height="10.5px"><path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M9.500,9.500 L9.500,8.500 L14.000,5.500 L0.500,5.500 L0.500,4.500 L14.000,4.500 L9.500,1.500 L9.500,0.500 L16.500,4.500 L16.500,5.500 L9.500,9.500 Z"/></svg>
+            </div>
+          </a>
+          <a href="https://www.yamada-kensetsu.co.jp/mansion/mio/hisct" target="_blank" class="footer-facility__bnr footer-facility__bnr--highsect">
+            <picture class="footer-facility__pic">
+              <source media="(min-width: 768px)" data-srcset="<%= relativePath %>common/imgs/pc/ftr-facility-highsect.jpg" width="120" height="120">
+              <img src="data:image/gif;base64,R0lGODlhAQABAGAAACH5BAEKAP8ALAAAAAABAAEAAAgEAP8FBAA7" data-src="<%= relativePath %>common/imgs/sp/ftr-facility-highsect.jpg" alt="ハイセクト採用" width="275" height="155" class="footer-facility__image lazyload">
+            </picture>
+            <div class="footer-facility__cont">
+              <div class="footer-facility__ttl">ハイセクト採用</div>
+              <div class="footer-facility__txt">ホームインターネット<br>セキュリティシステム</div>
+              <svg class="arrowSVG" width="17.5px" height="10.5px"><path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M9.500,9.500 L9.500,8.500 L14.000,5.500 L0.500,5.500 L0.500,4.500 L14.000,4.500 L9.500,1.500 L9.500,0.500 L16.500,4.500 L16.500,5.500 L9.500,9.500 Z"/></svg>
+            </div>
+          </a>
+          <a href="https://www.youtube.com/watch?v=o5HutMv_Pio&feature=youtu.be" target="_blank" class="footer-facility__bnr footer-facility__bnr--sink">
+            <picture class="footer-facility__pic">
+              <source media="(min-width: 768px)" data-srcset="<%= relativePath %>common/imgs/pc/ftr-facility-sink.jpg" width="120" height="120">
+              <img src="data:image/gif;base64,R0lGODlhAQABAGAAACH5BAEKAP8ALAAAAAABAAEAAAgEAP8FBAA7" data-src="<%= relativePath %>common/imgs/sp/ftr-facility-sink.jpg" alt="ユーティリティシンク" width="275" height="155" class="footer-facility__image lazyload">
+            </picture>
+            <div class="footer-facility__cont">
+              <div class="footer-facility__ttl"><span class="small">Takara standard</span>ユーティリティシンク</div>
+              <div class="footer-facility__txt">3層のシンクで「洗う、調理、<br>片付ける」をスムーズに。</div>
+              <svg class="arrowSVG" width="17.5px" height="10.5px"><path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M9.500,9.500 L9.500,8.500 L14.000,5.500 L0.500,5.500 L0.500,4.500 L14.000,4.500 L9.500,1.500 L9.500,0.500 L16.500,4.500 L16.500,5.500 L9.500,9.500 Z"/></svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="footer-contact">
+      <div class="footer-contact__inner">
+        <div class="footer-contact__ttl">お問い合わせは<br>「ミオカステーロ〇〇〇〇〇〇(仮称) 販売準備室」まで</div>
+        <a href="tel:0120302115" class="footer-contact__tel">
+            <svg class="telSVG" viewBox="0 0 31.85 31.77"><path d="m29.67,31.77c-3.37,0-6.82-.91-10.34-2.73-3.52-1.82-6.71-4.16-9.58-7.01-2.87-2.85-5.21-6.03-7.03-9.54C.91,8.99,0,5.55,0,2.17c0-.62.21-1.14.62-1.55.41-.41.93-.62,1.55-.62h4.42c.57,0,1.05.17,1.45.51.4.34.67.81.79,1.39l1.04,4.45c.09.52.08.99-.04,1.41-.12.42-.34.76-.65,1.03l-4.43,4.17c1.97,3.28,4.13,6.08,6.49,8.41,2.36,2.33,5.11,4.35,8.28,6.08l4.29-4.48c.33-.37.7-.62,1.09-.76.39-.14.82-.16,1.28-.06l3.76.84c.59.11,1.05.38,1.39.8.34.42.51.94.51,1.54v4.25c0,.62-.21,1.14-.62,1.55-.41.41-.93.62-1.55.62ZM3.95,11.6l4.2-3.91c.1-.1.17-.24.21-.42.04-.18.04-.35.02-.5l-1.03-4.62c-.03-.21-.11-.36-.25-.46-.14-.1-.31-.15-.52-.15H2.08c-.15,0-.28.05-.38.15-.1.1-.15.23-.15.38-.05,1.33.14,2.79.58,4.39s1.05,3.31,1.83,5.13Zm17.03,16.53c1.37.71,2.88,1.24,4.53,1.59,1.65.35,3.07.53,4.27.55.15,0,.28-.05.38-.15.1-.1.15-.23.15-.38v-4.47c0-.21-.05-.38-.15-.52-.1-.14-.26-.22-.46-.25l-3.92-.82c-.15-.03-.29-.02-.4.02-.12.04-.24.11-.37.21,0,0-4.03,4.23-4.03,4.23Z"/></svg>
+            0120-302-115
+        </a>
+        <div class="footer-schedule">
+          <div class="footer-schedule__detail">
+            <div class="footer-schedule__term">営業時間</div>
+            <div class="footer-schedule__desc">00：00-00：00</div>
+          </div>
+          <div class="footer-schedule__detail">
+            <div class="footer-schedule__term">定休日</div>
+            <div class="footer-schedule__desc">水曜日（祝日除く）</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-subNav">
+      <a class="footer-subNav__btn" href="<%= relativePath %>outline/index.html">
+        <div class="footer-subNav__icon">
+          <svg class="outlineSVG" viewBox="0 0 28 36"><path d="m6.99,28.77h14.02v-1.54H6.99v1.54Zm0-8.23h14.02v-1.54H6.99v1.54Zm-4.22,15.46c-.77,0-1.42-.27-1.96-.81-.54-.54-.81-1.19-.81-1.96V2.77c0-.77.27-1.42.81-1.96.54-.54,1.19-.81,1.96-.81h16.7l8.53,8.53v24.7c0,.77-.27,1.42-.81,1.96-.54.54-1.19.81-1.96.81H2.77Zm15.93-26.78V1.54H2.77c-.31,0-.59.13-.85.38-.26.26-.38.54-.38.85v30.46c0,.31.13.59.38.85.26.26.54.38.85.38h22.46c.31,0,.59-.13.85-.38.26-.26.38-.54.38-.85V9.22s-7.76,0-7.76,0ZM1.54,1.54v7.68V1.54v32.92S1.54,1.54,1.54,1.54Z"/></svg>
+        </div>
+        物件概要
+      </a>
+      <a class="footer-subNav__btn" href="<%= relativePath %>map/index.html">
+        <div class="footer-subNav__icon">
+          <svg class="mapSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 38.23"><path d="m15,17.77c.76,0,1.41-.27,1.95-.82.54-.55.81-1.2.81-1.96s-.27-1.41-.82-1.95c-.55-.54-1.2-.81-1.96-.81-.76,0-1.41.27-1.95.82-.54.55-.81,1.2-.81,1.96,0,.76.27,1.41.82,1.95.55.54,1.2.81,1.96.81Zm0,18.36c4.33-3.78,7.66-7.53,9.98-11.26,2.32-3.73,3.48-6.89,3.48-9.46,0-4.05-1.29-7.38-3.88-9.97-2.59-2.59-5.78-3.89-9.58-3.89s-6.99,1.3-9.58,3.89c-2.59,2.59-3.88,5.92-3.88,9.97,0,2.58,1.17,5.73,3.52,9.46,2.35,3.73,5.66,7.49,9.94,11.26Zm0,2.1c-5.06-4.49-8.82-8.65-11.29-12.49-2.47-3.84-3.71-7.29-3.71-10.34C0,10.71,1.51,6.97,4.54,4.18,7.56,1.39,11.05,0,15,0s7.44,1.39,10.46,4.18c3.02,2.79,4.54,6.53,4.54,11.22,0,3.05-1.24,6.5-3.71,10.34-2.47,3.84-6.24,8-11.29,12.49Z"/></svg>
+        </div>
+        現地案内図
+      </a>
+      <a class="footer-subNav__btn" href="https://www.yamada-kensetsu.co.jp/mcclub" target="_blank">
+        <div class="footer-subNav__icon">
+          <svg class="memberSVG" viewBox="0 0 37.74 26.01"><path d="m0,26.01v-2.89c0-.94.24-1.74.73-2.41.48-.67,1.17-1.2,2.06-1.59,1.9-.83,3.66-1.48,5.29-1.95,1.63-.47,3.61-.7,5.95-.7s4.31.23,5.92.7c1.61.47,3.38,1.12,5.3,1.95.86.39,1.53.92,2.02,1.59.49.67.73,1.47.73,2.41v2.89H0Zm31.54,0v-2.78c0-1.46-.3-2.7-.89-3.73-.59-1.03-1.36-1.88-2.3-2.56,1.25.24,2.45.54,3.62.91,1.16.36,2.18.76,3.07,1.2.79.43,1.44,1.01,1.94,1.74.51.73.76,1.55.76,2.45v2.78s-6.2,0-6.2,0ZM14.02,11.54c-1.66,0-3.04-.55-4.14-1.65-1.1-1.1-1.65-2.48-1.65-4.14s.55-3.04,1.65-4.12c1.1-1.09,2.48-1.63,4.14-1.63s3.04.54,4.12,1.63c1.09,1.09,1.63,2.46,1.63,4.12s-.54,3.04-1.63,4.14c-1.09,1.1-2.46,1.65-4.12,1.65Zm13.6-5.79c0,1.66-.54,3.04-1.63,4.14-1.09,1.1-2.46,1.65-4.14,1.65-.09,0-.17,0-.23-.02-.07-.01-.14-.03-.23-.06.63-.72,1.1-1.57,1.43-2.54.32-.97.48-2.02.48-3.16s-.18-2.17-.53-3.09c-.35-.92-.81-1.8-1.38-2.64.06,0,.13,0,.23-.02C21.71,0,21.79,0,21.85,0,23.52,0,24.9.54,25.99,1.63c1.09,1.09,1.63,2.46,1.63,4.12ZM1.54,24.47h24.92v-1.35c0-.53-.15-1.02-.44-1.45-.29-.44-.77-.83-1.44-1.18-1.78-.89-3.46-1.52-5.01-1.9-1.56-.38-3.41-.57-5.55-.57s-4,.19-5.56.57c-1.56.38-3.23,1.01-5.02,1.9-.67.35-1.16.75-1.46,1.18-.3.44-.45.92-.45,1.45,0,0,0,1.35,0,1.35Zm12.46-14.47c1.2,0,2.2-.41,3.01-1.22.81-.81,1.22-1.82,1.22-3.01,0-1.2-.41-2.2-1.22-3.01-.81-.81-1.82-1.22-3.01-1.22-1.2,0-2.2.41-3.01,1.22-.81.81-1.22,1.82-1.22,3.01s.41,2.2,1.22,3.01c.81.81,1.82,1.22,3.01,1.22Z"/></svg>
+        </div>
+        会員のご入会
+      </a>
+      <a class="footer-subNav__btn" href="mailto:mio-〇〇〇〇〇〇@zizaiplan.com">
+        <div class="footer-subNav__icon">
+          <svg class="mailSVG" viewBox="0 0 36 28"><path d="m2.77,28c-.77,0-1.42-.27-1.96-.81-.54-.54-.81-1.19-.81-1.96V2.77c0-.77.27-1.42.81-1.96.54-.54,1.19-.81,1.96-.81h30.46c.77,0,1.42.27,1.96.81.54.54.81,1.19.81,1.96v22.46c0,.77-.27,1.42-.81,1.96-.54.54-1.19.81-1.96.81H2.77Zm15.23-14.29L1.54,2.71v22.52c0,.36.12.65.35.88.23.23.53.35.88.35h30.46c.36,0,.65-.12.88-.35.23-.23.35-.53.35-.88V2.71l-16.46,11Zm0-1.77L33.76,1.54H2.29l15.71,10.4ZM1.54,2.71v-1.17,23.69c0,.36.12.65.35.88.23.23.53.35.88.35h-1.23S1.54,2.71,1.54,2.71Z"/></svg>
+        </div>
+        メールでお問い合わせ
+      </a>
+    </div>
+  </div>
+  <div class="footer-corporateArea">
+      <div class="footer-corporateArea__inner">
+          <ul class="footer-corporateList">
+              <li class="footer-corporateList__item">
+                <a href="https://www.yamada-kensetsu.co.jp/" class="footer-corporateList__link" target="_blank">
+                  <span class="footer-corporateList__type">＜売主＞</span>
+                  <img src="<%= relativePath %>common/imgs/ftr-corporate-yamadakensetsu.png" alt="山田建設株式会社" class="footer-corporateList__image footer-corporateList__image--yamadakensetsu" width="317" height="36">
+                </a>
+              </li>
+              <li class="footer-corporateList__item">
+                <a href="https://www.zizaiplan.com/" class="footer-corporateList__link" target="_blank">
+                  <span class="footer-corporateList__type">＜販売提携（代理）＞</span>
+                  <img src="<%= relativePath %>common/imgs/ftr-corporate-jizaikukan.png" alt="株式会社自在空間" class="footer-corporateList__image footer-corporateList__image--jizaikukan" width="315" height="43">
+                </a>
+              </li>
+              <li class="footer-corporateList__item">
+                <a href="https://www.mcservice.co.jp/" class="footer-corporateList__link" target="_blank">
+                  <span class="footer-corporateList__type">＜管理＞</span>
+                  <img src="<%= relativePath %>common/imgs/ftr-corporate-mcs.png" alt="株式会社エム・シー・サービス" class="footer-corporateList__image footer-corporateList__image--mcs" width="315" height="37">
+                </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="footer-copyright__txt">Copyright (C)  Yamada Corp.All rights reserved.</div>
+  </div>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,522 @@
+.footer {
+  background-color: #464646;
+  position: relative;
+  z-index: 1;
+
+  &__cont {
+    margin: 0 auto;
+
+    @include pc {
+      padding: 120px 0 0;
+      width: 1056px;
+    }
+
+    @include sp {
+      padding: 40px 20px 0;
+
+    }
+  }
+
+  &__bottom {
+    margin: 0 auto;
+
+    @include pc {
+      padding: 80px 0 120px;
+      width: 863px;
+    }
+
+    @include sp {
+      padding: 40px 20px;
+    }
+  }
+}
+
+
+.footer-captionArea {
+  position: relative;
+  text-align: left;
+
+  @include pc {
+    padding: 40px 0;
+  }
+
+  @include sp {
+    padding: 32px 0;
+  }
+
+  &:before {
+    background-color: rgba(255,255,255,.2);
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .caption {
+    color: #ffffff;
+  }
+}
+
+.footer-facility {
+  position: relative;
+
+  @include pc {
+    padding: 80px 0;
+  }
+
+  @include sp {
+    padding: 40px 0;
+  }
+
+  &:before,
+  &:after {
+    background-color: rgba(255,255,255,.2);
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  &:before {
+    top: 0;
+  }
+
+  &:after {
+    bottom: 0;
+  }
+
+  &__wrap {
+    @include sp {
+      -webkit-appearance: none;
+      margin: 0 calc(50% - 50vw);
+      overflow: scroll;
+      -ms-overflow-style: none;
+      padding: 0 20px;
+      scrollbar-width: none;
+      width: 100vw;
+
+      &::-webkit-scrollbar{
+        display: none;
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @include sp {
+      width: 453px;
+    }
+  }
+
+  &__bnr {
+    position: relative;
+
+    @include pc {
+      align-items: center;
+      background-color: #595959;
+      box-shadow: 0 8px 16px 0 rgba(102, 102, 102, .1);
+      display: flex;
+      justify-content: space-between;
+      width: 336px;
+    }
+
+    @include sp {
+      margin-bottom: 48px;
+      width: 138px;
+    }
+  }
+
+  &__pic {
+    display: block;
+
+    @include pc {
+      width: 120px;
+    }
+  }
+
+  &__cont {
+    align-items: flex-start;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    text-align: left;
+    width: 100%;
+
+    @include pc {
+      padding: 5px 18px;
+      width: 216px;
+    }
+
+    @include sp {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  &__ttl {
+    letter-spacing: 0;
+    white-space: nowrap;
+
+    @include pc{
+      font-size: 18px;
+    }
+
+    @include sp{
+      font-size: 12px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%,-50%);
+    }
+
+    .small {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+  }
+
+  &__txt {
+    @include pc{
+      font-size: 14px;
+      letter-spacing: 0;
+      margin-top: 10px;
+
+      @include lhCrop(17/14);
+    }
+
+    @include sp{
+      font-size: 12px;
+      letter-spacing: -.06em;
+      position: absolute;
+      top: calc(100% + 10px);
+
+      @include lhCrop(28/20);
+    }
+  }
+
+  .arrowSVG {
+    bottom: 10px;
+    position: absolute;
+    right: 10px;
+  }
+
+}
+
+.footer-contact {
+  color: #ffffff;
+  position: relative;
+
+  &__ttl {
+    letter-spacing: .15em;
+
+    @include pc {
+      font-size: 16px;
+
+      @include lhCrop(26/16);
+    }
+
+    @include sp {
+      font-size: 12px;
+
+      @include lhCrop(32/20);
+    }
+  }
+
+  &__tel {
+    align-items: flex-start;
+    color: #ffffff;
+    display: flex;
+    justify-content: flex-start;
+    letter-spacing: .11em;
+    line-height: .7;
+
+    @include pc {
+      font-size: 32px;
+      margin-top: 40px;
+      pointer-events: none;
+    }
+
+    @include sp {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+
+    .telSVG {
+      @include pc {
+        margin-right: 10px;
+        width: 26px;
+      }
+
+      @include sp {
+        margin-right: 8px;
+        width: 16px;
+      }
+    }
+  }
+}
+
+.footer-schedule {
+  position: relative;
+
+  @include pc {
+    margin-top: 40px;
+    padding-left: 12px;
+  }
+
+  @include sp {
+    margin-top: 24px;
+    padding-left: 17px;
+  }
+
+  &:before {
+    background-color: #ffffff;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 2px;
+  }
+
+  &__detail {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    justify-content: stretch;
+    letter-spacing: .15em;
+    line-height: 1;
+
+    & + .footer-schedule__detail {
+      margin-top: 10px;
+    }
+  }
+
+  &__term {
+    width: 70px;
+  }
+
+  &__desc {
+    margin-left: 18px;
+  }
+}
+
+.footer-corporateArea {
+  background-color: #ffffff;
+
+  @include pc {
+    padding: 80px 0;
+  }
+
+  @include sp {
+    padding: 40px 12px;
+  }
+}
+
+.footer-corporateList {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__item {
+
+    &:not(:last-of-type) {
+      @include pc {
+        margin-right: 85px;
+      }
+    }
+
+    &:nth-child(2n) {
+      @include sp {
+        margin-left: auto;
+      }
+    }
+
+    &:nth-child(n+3) {
+      @include sp {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__type {
+    display: block;
+    font-family: $font-default-gothic;
+    font-size: 10px;
+    letter-spacing: .04em;
+  }
+
+  &__link {
+    display: inline-block;
+  }
+
+  &__image {
+    @include pc {
+      margin-top: 20px;
+    }
+
+    @include sp {
+      margin-top: 8px;
+    }
+
+    @include sp {
+      width: 158px;
+    }
+
+    &--yamadakensetsu {
+      @include pc {
+        width: 184px;
+      }
+    }
+
+    &--jizaikukan {
+      @include pc {
+        width: 159px;
+      }
+    }
+
+    &--mcs {
+      @include pc {
+        width: 160px;
+      }
+    }
+  }
+}
+
+.footer-copyright {
+  background-color: #e0e0e0;
+
+  &__txt {
+    color: #666666;
+    font-size: 10px;
+    letter-spacing: .08em;
+    padding: 10px 0;
+    text-align: center;
+  }
+}
+
+.footer-subNav {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include pc {
+    margin-top: 60px;
+  }
+
+  @include sp {
+    margin-top: 25px;
+  }
+
+  &__btn {
+    align-items: center;
+    color: #ffffff;
+    display: flex;
+    letter-spacing: .12em;
+    line-height: 1;
+    position: relative;
+
+    @include pc {
+      font-size: 16px;
+      justify-content: center;
+    }
+
+    @include sp {
+      font-size: 11px;
+      justify-content: flex-start;
+      width: 50%;
+    }
+
+    &:nth-of-type(n+3) {
+      @include sp {
+        margin-top: 12px;
+      }
+    }
+
+  }
+
+  &__icon {
+    align-items: center;
+    background-color: #5c5c5c;
+    box-shadow: 0 8px 16px 0 rgba(102, 102, 102, .1);
+    display: flex;
+    justify-content: center;
+
+    @include pc {
+      height: 48px;
+      margin-right: 10px;
+      width: 48px;
+    }
+
+    @include sp {
+      height: 32px;
+      margin-right: 12px;
+      width: 32px;
+    }
+
+    .outlineSVG {
+      height: auto;
+
+      @include pc {
+        width: 16px;
+      }
+
+      @include sp {
+        width: 11px;
+      }
+    }
+
+    .mapSVG {
+      height: auto;
+
+      @include pc {
+        width: 18px;
+      }
+
+      @include sp {
+        width: 12px;
+      }
+    }
+
+    .memberSVG {
+      height: auto;
+
+      @include pc {
+        width: 26px;
+      }
+
+      @include sp {
+        width: 16px;
+      }
+    }
+
+    .mailSVG {
+      height: auto;
+
+      @include pc {
+        width: 21px;
+      }
+
+      @include sp {
+        width: 19px;
+      }
+    }
+  }
+}

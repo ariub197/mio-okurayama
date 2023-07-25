@@ -1,0 +1,248 @@
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+
+  @include pc {
+    height: 130px;
+  }
+
+  @include sp {
+    height: 92px;
+  }
+
+  &__bg {
+    backdrop-filter: blur(3px);
+    background-color: rgba(255,255,255,.6);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &.is-init {
+
+    .header__bg {
+      opacity: 0;
+    }
+
+    .header-bukkenIcon {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+.header-bukkenIcon {
+  transition: 1s;
+
+  &__inner {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__logo {
+    @include pc {
+      width: 43px;
+    }
+
+    @include sp {
+      width: 29px;
+    }
+
+    & + .header-bukkenIcon__ttl {
+      @include pc {
+        margin-top: 3px;
+      }
+
+      @include sp {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  &__ttl {
+    text-align: center;
+
+    &--en {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      @include pc {
+        letter-spacing: .06em;
+      }
+
+      @include sp {
+        letter-spacing: .02em;
+      }
+
+      .brand{
+        line-height: 1;
+
+        @include pc {
+          font-size: 14px;
+        }
+
+        @include sp {
+          font-size: 10px;
+        }
+
+      }
+
+      .bukken {
+        @include pc {
+          font-size: 14px;
+          margin-left: 5px;
+        }
+
+        @include sp {
+          font-size: 10px;
+          margin-left: 2px;
+
+          @include lhCrop(50/40);
+        }
+      }
+    }
+
+    &--jp {
+      align-items: center;
+      color: #666666;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      @include pc {
+        letter-spacing: .02em;
+        margin-top: 5px;
+      }
+
+      @include sp {
+        letter-spacing: 0;
+        margin-top: 5px;
+      }
+
+      .bukken {
+        @include pc {
+          font-size: 12px;
+          margin: 0 8px;
+        }
+
+        @include sp {
+          font-size: 10px;
+          margin: 0 5px;
+
+          @include lhCrop(50/24);
+        }
+      }
+
+      .tentative {
+        @include pc {
+          font-size: 12px;
+        }
+
+        @include sp {
+          font-size: 10px;
+        }
+      }
+
+      &:before,
+      &:after {
+        background-color: #cccccc;
+        content: '';
+        flex-grow: 1;
+        height: 1px;
+        width: auto;
+      }
+    }
+  }
+}
+
+.header-menuButton {
+  cursor: pointer;
+  padding: 10px;
+  position: fixed;
+  z-index: 9999;
+
+  @include pc {
+    height: 47px;
+    right: 48px;
+    top: 40px;
+    width: 70px;
+  }
+
+  @include sp {
+    height: 39px;
+    right: 10px;
+    top: 20px;
+    width: 50px;
+  }
+}
+
+
+.header-menuIcon {
+  border: none;
+  height: 100%;
+  padding: 0;
+  position: relative;
+  width: 100%;
+
+  @include pc {
+  }
+
+  @include sp {
+  }
+
+  &__line {
+    background-color: #464646;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+
+    &:nth-of-type(1) {
+      top: 0;
+      transform-origin: top left;
+      transition: .3s;
+    }
+
+
+    &:nth-of-type(2) {
+      bottom: 0;
+      transform-origin: bottom left;
+      transition: .3s;
+    }
+  }
+
+
+
+  &:focus:not(:focus-visible) {
+    outline: 0;
+  }
+
+}
+
+.is-active {
+
+  .header-menuIcon__line {
+    background-color: #ffffff;
+
+    &:nth-of-type(1) {
+      transform: rotate(29deg) scale(1.08, 1);
+    }
+
+    &:nth-of-type(2) {
+      transform: rotate(-29deg) scale(1.08, 1);
+    }
+
+  }
+}

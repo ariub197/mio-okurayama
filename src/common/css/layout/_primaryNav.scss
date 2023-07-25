@@ -1,0 +1,119 @@
+.primaryNav {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__btn {
+    align-items: center;
+    background-color: rgba(255,255,255,.6);
+    box-shadow: 0 8px 16px 0 rgba(102, 102, 102, .1);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    transition: .3s;
+
+    @include pc {
+      height: 56px;
+      width: calc(50% - 16px);
+    }
+
+    @include sp {
+      height: 32px;
+      width: 133px;
+    }
+
+    @include hover {
+      box-shadow: 0 8px 16px 0 rgba(102, 102, 102, 0);
+
+      .primaryNav {
+
+        &__ttl,
+        &__icon {
+          opacity: .5;
+        }
+      }
+    }
+
+    &:nth-of-type(n+3) {
+      @include sp {
+        margin-top: 10px;
+      }
+    }
+
+    &--full {
+      @include pc {
+        width: 512px;
+      }
+
+      @include sp {
+        width: 100%;
+      }
+    }
+  }
+
+  &__ttl {
+    letter-spacing: .12em;
+    line-height: 1;
+    transition: .3s;
+
+    @include pc {
+      font-size: 18px;
+    }
+
+    @include sp {
+      font-size: 12px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    transition: .3s;
+
+    @include pc {
+      left: 24px;
+    }
+
+    @include sp {
+      left: 10px;
+    }
+
+    .outlineSVG {
+      height: auto;
+
+      @include pc {
+        width: 16px;
+      }
+
+      @include sp {
+        width: 11px;
+      }
+    }
+
+    .mapSVG {
+      height: auto;
+
+      @include pc {
+        width: 18px;
+      }
+
+      @include sp {
+        width: 12px;
+      }
+    }
+
+    .memberSVG {
+      height: auto;
+
+      @include pc {
+        width: 26px;
+      }
+
+      @include sp {
+        width: 16px;
+      }
+    }
+  }
+}

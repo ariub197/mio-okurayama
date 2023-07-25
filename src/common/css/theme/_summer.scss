@@ -1,0 +1,63 @@
+
+.site-theme-summer {
+
+  .globalMenu {
+    background-color: $color-summer-globalmenu;
+  }
+
+  .mainVisual__type {
+    box-shadow: 0 8px 16px 0 $color-summer-main-02;
+  }
+
+  .uspCard {
+
+    &__heading {
+      color: $color-summer-sub-01;
+    }
+
+    &:nth-of-type(odd) {
+
+      .uspCard__bgSquare:before {
+        background-color: $color-summer-main-02;
+      }
+
+      .uspCard__ttl {
+        color: rgba($color: $color-summer-main-01, $alpha: .5);
+      }
+
+      .trafficInfo__desc .num {
+        color: $color-summer-main-01;
+      }
+    }
+
+    &:nth-of-type(even) {
+
+      .uspCard__bgSquare:before {
+        background-color: $color-summer-sub-02;
+      }
+
+      .uspCard__ttl {
+        color: rgba($color: $color-summer-sub-01, $alpha: .5);
+      }
+
+      .roomInfo__term .num,
+      .roomInfo__desc .num {
+        color: $color-summer-sub-01;
+      }
+    }
+  }
+
+  .newsBox__desc .new,
+  .contentsGuide__ttl .comingSoon {
+    color: $color-summer-main-01;
+  }
+
+  .infoCard__status {
+    color: $color-summer-main-01;
+  }
+
+  .fixBnr__bg {
+    background-color: $color-summer-sub-03;
+  }
+
+}

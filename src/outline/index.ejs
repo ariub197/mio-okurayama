@@ -1,0 +1,23 @@
+<% var pageData = {
+		pageDir: 'outline',
+	};
+%>
+<%- include('/_head', {
+  pageId: pageData.pageDir,
+  title: '物件概要',
+  canonical:'outline/',
+  }) %>
+<%- include('/common/inc/header/_header.ejs', {pageId: pageData.pageDir}) %>
+<main class="main">
+  <div class="container">
+    <h2 class="pageTtl">
+      <div class="en">OUTLINE</div>
+      <div class="jp">物件概要</div>
+    </h2>
+    <div class="outline-first">
+      <iframe id="outlineIframe" class="outlineIframe" width="100%" height="1000" title="" frameborder="0" scrolling="auto" src="https://www.yamada-kensetsu.co.jp/mansion/mansiondata/detail_2/manshiondate_〇〇〇〇〇〇"></iframe>
+    </div>
+  </div>
+</main>
+<%- include('/common/inc/bottomInfo/_bottomInfo.ejs') %>
+<%- include('/common/inc/footer/_footer.ejs', {pageId: pageData.pageDir, footerCap: '※all image photo'}) %>

@@ -1,0 +1,14 @@
+.uspIntroduction {
+  overflow: hidden;
+
+  @include pc {
+    margin: 0 auto;
+    padding: 135px 0 160px;
+    width: 1056px;
+  }
+
+  @include sp {
+    padding: 72px 30px 80px;
+  }
+
+}

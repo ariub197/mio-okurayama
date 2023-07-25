@@ -1,0 +1,60 @@
+.pageTtl {
+  color: #333333;
+  position: relative;
+
+  @include pc {
+    margin: 0 auto;
+    padding-bottom: 40px;
+    padding-top: 120px;
+    width: 1056px;
+  }
+
+  @include sp {
+    margin: 0 20px;
+    padding-bottom: 21px;
+    padding-top: 80px;
+  }
+
+  &:after {
+    background-color: #6caab9;
+    bottom: 0;
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  .en {
+    line-height: .8;
+
+    @include pc {
+      font-size: 40px;
+      letter-spacing: .08em;
+    }
+
+    @include sp {
+      font-size: 28px;
+      letter-spacing: .08em;
+    }
+  }
+
+  .jp {
+    letter-spacing: .02em;
+    opacity: .6;
+
+    @include pc {
+      font-size: 16px;
+      margin-top: 15px;
+
+      @include lhCrop(50 / 16);
+    }
+
+    @include sp {
+      font-size: 10px;
+      margin-top: 10px;
+
+      @include lhCrop(2);
+    }
+  }
+}

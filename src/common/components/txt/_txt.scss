@@ -1,0 +1,15 @@
+.txt {
+  letter-spacing: .15em;
+
+  @include min-screen($breakP) {
+    font-size: 14px;
+
+    @include lhCrop(32 / 14);
+  }
+
+  @include max-screen($breakP) {
+    font-size: 13px;
+
+    @include lhCrop(52 / 26);
+  }
+}

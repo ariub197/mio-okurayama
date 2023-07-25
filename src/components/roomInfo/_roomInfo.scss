@@ -1,0 +1,118 @@
+.roomInfo {
+  align-items: center;
+  color: #464646;
+  display: flex;
+
+  @include pc {
+    justify-content: center;
+  }
+
+  @include sp {
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 220px;
+  }
+
+  &__term,
+  &__desc {
+    font-family: $font-en;
+    letter-spacing: 0;
+    line-height: .8;
+
+    @include pc {
+      width: 180px;
+    }
+
+    @include sp {
+    }
+
+    .num {
+      color: #907e5e;
+    }
+
+    .large {
+      vertical-align: top;
+
+      @include pc {
+        font-size: 42px;
+        line-height: .65;
+      }
+
+      @include sp {
+        font-size: 30px;
+        line-height: .75;
+      }
+    }
+
+    .meter {
+      font-family: $font-jp;
+    }
+  }
+
+  &__term {
+    @include pc {
+      text-align: right;
+    }
+  }
+
+  &__line {
+    background-color: #595959;
+    height: 1px;
+    margin: 0 10px;
+
+    @include pc {
+      width: 24px;
+    }
+
+    @include sp {
+      flex-grow: 1;
+      width: auto;
+    }
+  }
+
+  &__desc {
+    @include sp {
+      text-align: right;
+    }
+  }
+
+  &--ldk {
+    @include pc {
+      font-size: 34px;
+    }
+
+    @include sp {
+      font-size: 24px;
+    }
+
+    .large {
+      @include pc {
+        line-height: .55;
+      }
+
+      @include sp {
+        line-height: .55;
+      }
+    }
+  }
+
+  &--length {
+    @include pc {
+      font-size: 28px;
+    }
+
+    @include sp {
+      font-size: 24px;
+    }
+  }
+
+  & + .roomInfo {
+    @include pc {
+      margin-top: 20px;
+    }
+
+    @include sp {
+      margin-top: 15px;
+    }
+  }
+}

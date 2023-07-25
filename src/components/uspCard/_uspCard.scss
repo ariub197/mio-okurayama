@@ -1,0 +1,200 @@
+.uspCard {
+  position: relative;
+  z-index: 1;
+
+  @include pc {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 80px 96px;
+  }
+
+  @include sp {
+    padding: 40px 20px 33px;
+
+  }
+
+  &:before {
+    box-shadow: 0 8px 16px 0 rgba(102, 102, 102, .1);
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: .8;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    will-change: transform;
+    z-index: -1;
+
+    @include pc {
+      background: url('../imgs/pc/bg-usp.jpg');
+    }
+
+    @include sp {
+      background: url('../imgs/sp/bg-usp.jpg');
+    }
+  }
+
+  &__bgSquare {
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -9;
+
+    &:before {
+      background-color: #cccccc;
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transform: rotate(5deg);
+      width: 100%;
+      z-index: -1;
+    }
+  }
+
+  &__heading {
+    color: #94afaa;
+    font-family: $font-en;
+    letter-spacing: .08em;
+
+    @include pc {
+      font-size: 32px;
+      margin-bottom: 30px;
+      text-align: center;
+      width: 100%;
+    }
+
+    @include sp {
+      font-size: 20px;
+
+      @include lhCrop(2);
+    }
+
+    & + .uspCard__visual {
+      @include sp {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__visual {
+    @include pc {
+      width: 408px;
+    }
+
+    & + .uspCard__cont {
+      @include sp {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &__cont {
+    @include pc {
+      width: 406px;
+
+    }
+  }
+
+  &__subheading {
+    color: #464646;
+    font-family: $font-mix-serif;
+    letter-spacing: .02em;
+    text-align: center;
+
+    @include pc {
+      font-size: 32px;
+
+      @include lhCrop(50/32);
+    }
+
+    @include sp {
+      font-size: 20px;
+
+      @include lhCrop(50/40);
+    }
+
+    sup {
+      vertical-align: top;
+
+      @include pc {
+        font-size: 12px;
+      }
+
+      @include sp {
+        font-size: 10px;
+      }
+    }
+
+    & + .trafficInfo,
+    & + .roomInfo {
+      @include pc {
+        margin-top: 30px;
+      }
+
+      @include sp {
+        margin-top: 25px;
+      }
+    }
+  }
+
+  &:nth-of-type(odd) {
+
+    .uspCard__bgSquare:before {
+      background-color: #dce1e2;
+    }
+  }
+
+  &:nth-of-type(even) {
+
+    .uspCard__bgSquare:before {
+      background-color: #d6d3cd;
+    }
+  }
+
+  &.is-reverse {
+    flex-direction: row-reverse;
+  }
+
+  & + .uspCard {
+    @include pc {
+      margin-top: 156px;
+    }
+
+    @include sp {
+      margin-top: 72px;
+    }
+  }
+
+  & + .uspFeature {
+    margin-top: 60px;
+  }
+
+  &.sai-init {
+    opacity: 0;
+    perspective: 300px;
+    transform: translate(0,30%);
+    transition: 3s;
+
+    .uspCard__bgSquare:before {
+      transform: rotate(25deg) rotateX(15deg);
+      transform-origin: center;
+      transition: 1s;
+    }
+
+    &.sai-animate {
+      opacity: 1;
+      transform: translate(0,0);
+
+      .uspCard__bgSquare:before {
+        transform: rotate(5deg) rotateX(0deg);
+      }
+    }
+  }
+}

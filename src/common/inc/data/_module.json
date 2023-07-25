@@ -1,0 +1,78 @@
+{
+  "comment": "当jsonファイルの説明に関してはREADMEを参照してください",
+  "season_theme": "",
+  "nav_set": [
+    {
+      "id": "top",
+      "display": true,
+      "linkPath": "top",
+      "en": "TOP",
+      "new": false,
+      "off": false
+    },
+    {
+      "id": "redevelopemnt",
+      "display": true,
+      "linkPath": "redevelopemnt",
+      "en": "REDEVELOPMENT",
+      "new": false,
+      "off": true
+    },
+    {
+      "id": "location",
+      "display": true,
+      "linkPath": "location",
+      "en": "LOCATION",
+      "new": false,
+      "off": true
+    },
+    {
+      "id": "access",
+      "display": true,
+      "linkPath": "access",
+      "en": "ACCESS",
+      "new": false,
+      "off": true
+    },
+    {
+      "id": "plan",
+      "display": true,
+      "linkPath": "plan",
+      "en": "PLAN",
+      "new": false,
+      "off": true
+    },
+    {
+      "id": "design",
+      "display": true,
+      "linkPath": "design",
+      "en": "DESIGN",
+      "new": false,
+      "off": true
+    },
+    {
+      "id": "equipment",
+      "display": true,
+      "linkPath": "equipment",
+      "en": "EQUIPMENT",
+      "new": false,
+      "off": true
+    },
+    {
+      "id": "zeh",
+      "display": false,
+      "linkPath": "zeh",
+      "en": "ZEH",
+      "new": false,
+      "off": true
+    },
+    {
+      "id": "brand",
+      "display": true,
+      "linkPath": "brand",
+      "en": "BRAND",
+      "new": false,
+      "off": true
+    }
+  ]
+}

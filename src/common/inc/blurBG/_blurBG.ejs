@@ -1,0 +1,16 @@
+<%include('/_utils');
+const params = ejsUtils.defaultParamsMapper(locals, {
+  modifiers: []
+});
+const className = ejsUtils.mapModifiers('blurBG', params.modifiers);
+%>
+<div class="blurBG">
+  <picture class="blurBG__pic">
+    <source media="(min-width: 768px)" data-srcset="<%= relativePath %>common/imgs/pc/bg-container.jpg" width="550" height="309">
+    <img src="data:image/gif;base64,R0lGODlhAQABAGAAACH5BAEKAP8ALAAAAAABAAEAAAgEAP8FBAA7" data-src="<%= relativePath %>common/imgs/sp/bg-container.jpg" alt="" width="550" height="309" class="blurBG__image lazyload">
+  </picture>
+  <picture class="blurBG__pic">
+    <source media="(min-width: 768px)" data-srcset="<%= relativePath %>common/imgs/pc/bg-container.jpg" width="550" height="309">
+    <img src="data:image/gif;base64,R0lGODlhAQABAGAAACH5BAEKAP8ALAAAAAABAAEAAAgEAP8FBAA7" data-src="<%= relativePath %>common/imgs/sp/bg-container.jpg" alt="" width="550" height="309" class="blurBG__image lazyload">
+  </picture>
+</div>

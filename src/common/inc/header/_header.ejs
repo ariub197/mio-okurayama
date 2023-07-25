@@ -1,0 +1,41 @@
+<%
+include('/_utils');
+
+const params = ejsUtils.defaultParamsMapper(locals, {
+  pageId: '',
+});
+
+const bukkenIcon = params.pageId === 'top'
+  ? [
+    `<span class="header-bukkenIcon__inner">`,
+    `</span>`,
+  ]
+  : [
+    `<a href="${relativePath}index.html" class="header-bukkenIcon__inner">`,
+    `</a>`,
+  ];
+%>
+<header id="gHeader" class="header<% if (params.pageId ==='top') { %> is-init<% } %>">
+  <h1 class="header-bukkenIcon">
+    <%- bukkenIcon[0] %>
+      <img src="<%= relativePath %>common/imgs/logo-miocastello.svg" alt="MIO CASTELLO" class="header-bukkenIcon__logo" width="36" height="37">
+      <div class="header-bukkenIcon__ttl header-bukkenIcon__ttl--en">
+        <div class="brand">Mio Castello</div>
+        <div class="bukken">〇〇〇〇〇〇</div>
+      </div>
+      <div class="header-bukkenIcon__ttl header-bukkenIcon__ttl--jp"><span class="bukken">ミオカステーロ◯◯<span class="tentative">（仮称）</span></span></div>
+    <%- bukkenIcon[1] %>
+  </h1>
+  <div class="header-menuButton js-globalMenu-button">
+    <div class="header-menuIcon">
+      <span class="header-menuIcon__line"></span>
+      <span class="header-menuIcon__line"></span>
+    </div>
+  </div>
+  <%- include('/common/inc/globalMenu/_globalMenu.ejs', {
+    pageId: params.pageId,
+    modifiers: ['header']
+  }) %>
+  <div class="header__bg"></div>
+</header>
+<%- include('/common/inc/blurBG/_blurBG.ejs', {modifiers: ''}) %>

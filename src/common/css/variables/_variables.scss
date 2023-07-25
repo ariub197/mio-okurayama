@@ -1,0 +1,44 @@
+$test: #333333;
+$font-jp: 'YakuHanMP', 'Shippori Mincho B1', 'YuMincho', 'Hiragino Mincho ProN', 'Yu Mincho', 'MS PMincho', serif;
+$font-default-gothic: 'YakuHanJP', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+$font-default-serif: 'YakuHanMP', 'Shippori Mincho B1', 'YuMincho', 'Hiragino Mincho ProN', 'Yu Mincho', 'MS PMincho', serif;
+$font-mix-serif: 'YakuHanMP','Cinzel', 'Shippori Mincho B1', 'YuMincho', 'Hiragino Mincho ProN', 'Yu Mincho', 'MS PMincho', serif;
+$font-en: 'Cinzel', serif;
+$font-en-cursive: 'Licorice', cursive;
+
+$color-base-logo: #333333;
+$color-base-txt-01: #464646;
+$color-base-txt-02: #666666;
+
+$color-normal-main-01: #94afaa;
+$color-normal-main-02: rgba($color: $color-normal-main-01, $alpha: .2);
+$color-normal-sub-01: #b09d84;
+$color-normal-sub-02: rgba($color: $color-normal-sub-01, $alpha: .1);
+
+$color-spring-main-01: #dd7994;
+$color-spring-main-02: rgba($color: $color-spring-main-01, $alpha: .2);
+$color-spring-globalmenu: rgba($color: $color-spring-main-01, $alpha: .8);
+$color-spring-sub-01: #9fbb7f;
+$color-spring-sub-02: rgba($color: $color-spring-sub-01, $alpha: .1);
+$color-spring-sub-03: rgba($color: $color-spring-sub-01, $alpha: .7);
+
+$color-summer-main-01: #4c98aa;
+$color-summer-main-02: rgba($color: $color-summer-main-01, $alpha: .2);
+$color-summer-globalmenu: rgba($color: $color-summer-main-01, $alpha: .8);
+$color-summer-sub-01: #dfb255;
+$color-summer-sub-02: rgba($color: $color-summer-sub-01, $alpha: .1);
+$color-summer-sub-03: rgba($color: $color-summer-sub-01, $alpha: .7);
+
+$color-autumn-main-01: #7c3a26;
+$color-autumn-main-02: rgba($color: $color-autumn-main-01, $alpha: .2);
+$color-autumn-globalmenu: rgba($color: $color-autumn-main-01, $alpha: .8);
+$color-autumn-sub-01: #315048;
+$color-autumn-sub-02: rgba($color: $color-autumn-sub-01, $alpha: .1);
+$color-autumn-sub-03: rgba($color: $color-autumn-sub-01, $alpha: .7);
+
+$color-winter-main-01: #7c8796;
+$color-winter-main-02: rgba($color: $color-winter-main-01, $alpha: .2);
+$color-winter-globalmenu: rgba($color: $color-winter-main-01, $alpha: .8);
+$color-winter-sub-01: #967e7c;
+$color-winter-sub-02: rgba($color: $color-winter-sub-01, $alpha: .1);
+$color-winter-sub-03: rgba($color: $color-winter-sub-01, $alpha: .7);

@@ -1,0 +1,32 @@
+<% var pageData = {
+		pageDir: 'map'
+	};
+%>
+<%- include('/_head', {
+  pageId: pageData.pageDir,
+  title: '現地案内図',
+  canonical:'map/',
+  }) %>
+<%- include('/common/inc/header/_header.ejs', {pageId: pageData.pageDir}) %>
+<main class="main">
+  <div class="container">
+    <h2 class="pageTtl">
+      <div class="en">MAP</div>
+      <div class="jp">現地案内図</div>
+    </h2>
+    <div class="map-current">
+      <div class="mapFigure">
+        <div class="mapFigure__spIcon">
+          <svg class="zoomSVG" viewBox="0 0 34 34"><path d="m0,34v-13.54h1.54v10.94L31.4,1.54h-10.94V0h13.54v13.54h-1.54V2.6L2.6,32.46h10.94v1.54H0Z" fill="#ffffff"/></svg>
+        </div>
+        <img src="./imgs/img-current-map.jpg" alt="現地案内図" class="mapFigure__image" width="864" height="615">
+      </div>
+      <a href="{$google_map$}" target="_blank" class="mapBtn">
+        <span class="mapBtn__txt">Google map</span>
+        <svg class="arrowSVG" width="21.5px" height="12.5px" viewBox="0 0 21.5 12.5"><path fill-rule="evenodd" fill="rgb(144, 126, 94)" d="M11.500,11.500 L11.500,10.499 L17.899,6.500 L0.500,6.500 L0.500,5.500 L17.899,5.500 L11.500,1.501 L11.500,0.500 L20.500,5.500 L20.500,6.500 L11.500,11.500 Z"/></svg>
+      </a>
+    </div>
+  </div>
+</main>
+<%- include('/common/inc/bottomInfo/_bottomInfo.ejs') %>
+<%- include('/common/inc/footer/_footer.ejs', {pageId: pageData.pageDir, footerCap: '※all image photo'}) %>

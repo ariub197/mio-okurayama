@@ -1,0 +1,345 @@
+.flowModal {
+  color: #464646;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  transition: .3s;
+  visibility: hidden;
+  width: 100%;
+  z-index: 99999;
+
+  @include pc {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__bg {
+    backdrop-filter: blur(3px);
+    background-color: rgba(204, 204, 204, .7);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+
+  &__inner {
+    background-color: #ffffff;
+    overflow: hidden;
+    transition: 1s;
+
+    @include pc {
+      height: auto;
+      width: 1248px;
+    }
+
+    @include sp {
+      height: calc(100% - 150px);
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translate(100%, -50%);
+      width: 335px;
+    }
+  }
+
+  &__head {
+    align-items: center;
+    background-color: #464646;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    @include pc {
+      height: 80px;
+    }
+
+    @include sp {
+      height: 50px;
+    }
+  }
+
+  &__close {
+    align-items: center;
+    background: rgba(255,255,255,.2);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+
+    @include pc {
+      height: 48px;
+      padding: 16px;
+      right: 16px;
+      top: 50%;
+      transform: translate(0,-50%);
+      width: 48px;
+    }
+
+    @include sp {
+      height: 28px;
+      padding: 9px;
+      right: 10px;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 28px;
+    }
+
+    &:before {
+      background-color: #ffffff;
+      content: '';
+      height: 1px;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    height: 100%;
+    overflow: scroll;
+
+    @include pc {
+      padding: 64px 96px;
+    }
+
+    @include sp {
+      padding: 48px 35px 140px;
+    }
+  }
+
+  &__ttl {
+    color: #ffffff;
+    letter-spacing: .1em;
+
+    @include pc {
+      font-size: 18px;
+    }
+
+    @include sp {
+      font-size: 12px;
+    }
+  }
+
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+
+    .flowModal__inner {
+      @include sp {
+        transform: translate(0, -50%);
+      }
+    }
+  }
+}
+
+.stepFeature {
+  position: relative;
+
+  @include pc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &:before {
+    background-color: #c2c1c3;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    @include pc {
+      content: '';
+    }
+  }
+}
+
+.stepDetail {
+  position: relative;
+
+  @include pc {
+    padding-top: 28px;
+    width: 336px;
+  }
+
+  @include sp {
+    padding-left: 16px;
+    width: 255px;
+  }
+
+  &:before {
+    background-color: #c2c1c3;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1px;
+
+    @include sp {
+      content: '';
+    }
+  }
+
+  &:not(:last-of-type) {
+    @include sp {
+      padding-bottom: 45px;
+    }
+  }
+
+  &:last-of-type {
+
+    &:before {
+      content: none;
+    }
+  }
+
+
+  &__order {
+    font-family: $font-en;
+    font-size: 12px;
+    letter-spacing: .15em;
+    line-height: .7;
+
+    @include pc {
+    }
+
+
+    .squareSVG {
+      height: auto;
+      position: absolute;
+
+      @include pc {
+        left: 0;
+        top: 0;
+        transform: translate(-50%, -50%);
+        width: 8px;
+      }
+
+      @include sp {
+        left: 0;
+        top: 2px;
+        transform: translate(-50%, -50%);
+        width: 8px;
+
+      }
+    }
+
+    & + .stepDetail__ttl {
+      @include pc {
+        margin-top: 15px;
+      }
+
+      @include sp {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  &__ttl {
+    position: relative;
+
+    @include pc {
+      font-size: 22px;
+      letter-spacing: .07em;
+
+      @include lhCrop(64/40);
+    }
+
+    @include sp {
+      font-size: 18px;
+      letter-spacing: .07em;
+
+      @include lhCrop(64/40);
+    }
+
+
+    & + .stepDetail__txt {
+      @include pc {
+        margin-top: 30px;
+      }
+
+      @include sp {
+        margin-top: 18px;
+      }
+    }
+  }
+
+  &__txt {
+    color: rgba(102, 102, 102, .8);
+
+    @include pc {
+      font-size: 16px;
+      letter-spacing: .06em;
+
+      @include lhCrop(25 / 16);
+    }
+
+    @include sp {
+      font-size: 12px;
+      letter-spacing: 0;
+
+      @include lhCrop(44 / 24);
+    }
+
+    & + .flowCVBtn {
+      @include pc {
+        margin-top: 30px;
+      }
+
+      @include sp {
+        margin-top: 25px;
+      }
+
+    }
+  }
+}
+
+.flowCVBtn {
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0 8px 16px 0 rgba(102, 102, 102, .1);
+  color: #464646;
+  display: flex;
+  justify-content: center;
+  letter-spacing: .12em;
+  position: relative;
+  transition: .3s;
+  width: 100%;
+
+  @include pc {
+    font-size: 14px;
+    height: 64px;
+  }
+
+  @include sp {
+    font-size: 12px;
+    height: 40px;
+  }
+
+  @include hover {
+    background-color: #ffffff;
+    color: #322f33;
+  }
+
+  .arrowSVG {
+    height: auto;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    @include pc {
+      width: 20px;
+    }
+
+    @include sp {
+      width: 10px;
+    }
+  }
+}

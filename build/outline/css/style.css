@@ -1,0 +1,30 @@
+.outlineIframe {
+  background-color: #ffffff;
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .outlineIframe {
+    width: 1056px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .outlineIframe {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .outline-first {
+    padding: 80px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .outline-first {
+    padding: 40px 0;
+  }
+}

@@ -1,0 +1,42 @@
+.mapBtn {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  position: relative;
+
+  @include pc {
+    padding-bottom: 16px;
+    width: 240px;
+  }
+
+  @include sp {
+    padding-bottom: 12px;
+    width: 133px;
+  }
+
+  &:after {
+    background: #666666;
+    bottom: 0;
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  &__txt {
+    font-family: $font-en;
+    line-height: .8;
+
+    @include pc {
+      font-size: 16px;
+    }
+
+    @include sp {
+      font-size: 12px;
+    }
+
+  }
+}

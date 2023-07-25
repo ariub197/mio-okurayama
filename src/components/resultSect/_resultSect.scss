@@ -1,0 +1,82 @@
+.resultSect {
+
+  &__head {
+    text-align: center;
+
+    & + .resultSect__cont {
+      @include pc {
+        margin-top: 80px;
+      }
+
+      @include sp {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &__heading {
+    line-height: 1;
+    position: relative;
+
+    .jp {
+      @include pc {
+        font-size: 26px;
+        letter-spacing: .16em;
+      }
+
+      @include sp {
+        font-size: 18px;
+        letter-spacing: .12em;
+      }
+    }
+
+    .en {
+      color: rgba(255,255,255,.1);
+      font-family: $font-en;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+
+      @include pc {
+        font-size: 26px;
+        letter-spacing: .08em;
+        padding-top: 19px;
+      }
+
+      @include sp {
+        font-size: 18px;
+        letter-spacing: .12em;
+        padding-top: 12px;
+      }
+    }
+  }
+
+  &__cont {
+    @include pc {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      width: 1056px;
+    }
+  }
+
+  &__txt {
+    letter-spacing: .12em;
+
+    @include lhCrop(2);
+
+    @include pc {
+      font-size: 16px;
+
+    }
+
+    @include sp {
+      font-size: 12px;
+      text-align: center;
+
+    }
+  }
+}
