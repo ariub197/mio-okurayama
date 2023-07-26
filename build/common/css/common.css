@@ -3496,14 +3496,30 @@ body[data-sai-easing='ease-in-out-quart'] [data-sai] {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 336px;
+    margin: 0 auto 50px;
+    -webkit-transition: .3s;
+    transition: .3s;
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-facility__bnr:hover {
+    opacity: .8;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .footer-facility__bnr:hover {
+    opacity: .8;
   }
 }
 
 @media screen and (max-width: 768px) {
   .footer-facility__bnr {
+    display: block;
     margin-bottom: 48px;
-    width: 138px;
+    width: 100%;
   }
 }
 

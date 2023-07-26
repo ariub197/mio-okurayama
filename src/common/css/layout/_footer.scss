@@ -122,12 +122,19 @@
       box-shadow: 0 8px 16px 0 rgba(102, 102, 102, .1);
       display: flex;
       justify-content: space-between;
-      width: 336px;
+      margin: 0 auto 50px;
+      transition: .3s;
+      width: 480px;
+    }
+
+    @include hover {
+      opacity: .8;
     }
 
     @include sp {
+      display: block;
       margin-bottom: 48px;
-      width: 138px;
+      width: 100%;
     }
   }
 
