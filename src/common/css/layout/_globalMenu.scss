@@ -142,13 +142,18 @@
           font-size: 14px;
           height: 40px;
           padding-left: 58px;
-          width: 240px;
+          width: 251px;
         }
 
         @include sp {
           font-size: 10px;
           height: 28px;
           padding-left: 40px;
+          width: 169px;
+        }
+
+        &:nth-of-type(3) {
+          margin: 0;
         }
 
         &:not(:first-of-type) {

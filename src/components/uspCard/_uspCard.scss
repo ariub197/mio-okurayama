@@ -100,6 +100,18 @@
       width: 406px;
 
     }
+
+    .option {
+      font-size: 14px;
+
+      @include sp {
+        font-size: 10px;
+      }
+    }
+
+    .caption {
+      text-align: right;
+    }
   }
 
   &__subheading {
@@ -132,6 +144,18 @@
       }
     }
 
+    .num {
+      color: #907e5e;
+
+      @include pc {
+        font-size: 38px;
+      }
+
+      @include sp {
+        font-size: 22px;
+      }
+    }
+
     & + .trafficInfo,
     & + .roomInfo {
       @include pc {
@@ -144,17 +168,66 @@
     }
   }
 
+  &__lead {
+    color: #464646;
+    font-family: $font-mix-serif;
+    letter-spacing: .02em;
+    text-align: center;
+
+    @include pc {
+      font-size: 32px;
+      margin-top: 30px;
+
+      @include lhCrop(50/32);
+    }
+
+    @include sp {
+      font-size: 20px;
+      margin-top: 25px;
+
+      @include lhCrop(50/40);
+    }
+
+    .num {
+      color: #907e5e;
+
+      @include pc {
+        font-size: 38px;
+      }
+
+      @include sp {
+        font-size: 22px;
+      }
+    }
+  }
+
+  &.only-pc {
+    @include sp {
+      display: none;
+    }
+  }
+
+  &.only-sp {
+    @include pc {
+      display: none;
+    }
+  }
+
   &:nth-of-type(odd) {
 
     .uspCard__bgSquare:before {
-      background-color: #dce1e2;
+      background-color: #e3eae9;
     }
   }
 
   &:nth-of-type(even) {
 
     .uspCard__bgSquare:before {
-      background-color: #d6d3cd;
+      background-color: #d9d6cf;
+    }
+
+    .uspCard__heading {
+      color: #907e5e;
     }
   }
 
@@ -162,7 +235,8 @@
     flex-direction: row-reverse;
   }
 
-  & + .uspCard {
+  & + .uspCard,
+  & + .uspCardWrap, {
     @include pc {
       margin-top: 156px;
     }
@@ -170,6 +244,7 @@
     @include sp {
       margin-top: 72px;
     }
+
   }
 
   & + .uspFeature {
@@ -181,6 +256,7 @@
     perspective: 300px;
     transform: translate(0,30%);
     transition: 3s;
+
 
     .uspCard__bgSquare:before {
       transform: rotate(25deg) rotateX(15deg);
@@ -196,5 +272,21 @@
         transform: rotate(5deg) rotateX(0deg);
       }
     }
+  }
+}
+
+.uspCardWrap {
+
+
+  & + .uspCard,
+  & + .uspCardWrap, {
+    @include pc {
+      margin-top: 156px;
+    }
+
+    @include sp {
+      margin-top: 72px;
+    }
+
   }
 }

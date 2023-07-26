@@ -329,7 +329,7 @@
 }
 
 .footer-corporateList {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -381,7 +381,12 @@
 
     &--yamadakensetsu {
       @include pc {
+        margin-top: 24px;
         width: 184px;
+      }
+
+      @include sp {
+        margin-top: 13px;
       }
     }
 
@@ -394,6 +399,17 @@
     &--mcs {
       @include pc {
         width: 160px;
+      }
+
+      @include sp {
+        margin-top: 15px;
+      }
+    }
+
+    &--world {
+      @include pc {
+        margin-top: 13px;
+        width: 173px;
       }
     }
   }

@@ -1,0 +1,117 @@
+.menuCV {
+  @include pc {
+    margin-bottom: -125px;
+  }
+
+  @include sp {
+    margin-bottom: -80px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include pc {
+      padding: 40px 0 120px;
+      width: 515px;
+    }
+
+    @include sp {
+      padding: 30px 0;
+    }
+
+    .infoCV {
+      color: #ffffff;
+
+      @include pc {
+        padding-top: 16px;
+        transition: .5s;
+        width: 240px;
+
+        &:hover {
+          opacity: .8;
+        }
+      }
+
+      @include sp {
+        padding-top: 21px;
+        width: 100%;
+      }
+
+      &:nth-of-type(n+3) {
+        @include pc {
+          margin-top: 64px;
+        }
+      }
+
+      &:not(:last-of-type) {
+        @include sp {
+          margin-bottom: 10px;
+        }
+      }
+
+      &:after {
+        content: none;
+      }
+
+      &--entry {
+        background-color: rgba(144, 126, 94, .7);
+
+        @include pc {
+          padding-left: 50px;
+        }
+
+        @include sp {
+          padding-left: 30px;
+        }
+      }
+
+      &--flow {
+        margin-top: 0;
+
+        &:after {
+          background-color: #ffffff;
+          bottom: 0;
+          content: '';
+          height: 1px;
+          left: 0;
+          position: absolute;
+          width: 100%;
+        }
+      }
+
+      &__cont {
+        padding-left: 0;
+      }
+
+      &__ttl {
+        @include pc {
+          font-size: 14px;
+        }
+      }
+
+      &__icon {
+        background-color: transparent;
+
+        &--entry {
+          @include sp {
+            right: 10px;
+          }
+        }
+
+        .plusSVG {
+          @include sp {
+            width: 13px;
+          }
+        }
+
+        .arrowSVG {
+          @include sp {
+            width: 15px;
+          }
+        }
+      }
+    }
+  }
+}

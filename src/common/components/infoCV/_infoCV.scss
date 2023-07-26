@@ -123,14 +123,4 @@
     }
 
   }
-
-  & + .infoCV {
-    @include pc {
-      margin-top: 56px;
-    }
-
-    @include sp {
-      margin-top: 28px;
-    }
-  }
 }

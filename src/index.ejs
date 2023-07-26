@@ -13,64 +13,122 @@
     <%- include('./components/mainVisual/_mainVisual.ejs') %>
 
     <div class="uspIntroduction">
-      <div class="uspCard" data-sai="target">
-        <h3 class="uspCard__heading" data-sai="fade" data-sai-duration="1500">01 ACCESS</h3>
-        <div class="uspCard__visual" data-sai="fade" data-sai-duration="1500">
-          <img src="./imgs/img-usp-01.jpg" alt="01 ACCESS" width="550" height="309">
+      <div class="uspCardWrap">
+        <div class="uspCardWrap__inner">
+          <div class="uspCard only-pc" data-sai="target" data-sai-offset="-110">
+            <h3 class="uspCard__heading">01 ACCESS</h3>
+            <div class="uspCard__visual">
+              <img src="./imgs/img-usp-01.jpg" alt="01 ACCESS" width="550" height="309">
+            </div>
+
+            <div class="uspCard__cont">
+              <!-- <h4 class="uspCard__subheading">2駅2路線利用可能<sup>※1</sup></h4> -->
+              <div class="trafficInfo">
+                <div class="trafficInfo__term">
+                  <div class="line">東急東横線</div>
+                  <div class="station"><span class="name">「大倉山」</span>駅</div>
+                </div>
+                <div class="trafficInfo__desc">
+                  <span class="transpotation">徒歩</span>
+                  <span class="time"><span class="num">10</span>分</span>
+                </div>
+              </div>
+              <div class="trafficInfo">
+                <div class="trafficInfo__term">
+                  <div class="line">相鉄・東急新横浜線<br>横浜市営地下鉄ブルーライン</div>
+                  <div class="station"><span class="name">「大手町」</span>駅まで</div>
+                </div>
+                <div class="trafficInfo__desc">
+                  <span class="time"><span class="num">16</span>分</span>
+                </div>
+              </div>
+              <p class="option">※フラットアプローチ</p>
+            </div>
+            <div class="uspCard__bgSquare"></div>
+          </div>
+
+        </div>
+        <div class="uspCardWrap__inner">
+          <div class="uspCard only-sp" data-sai="target" data-sai-offset="-70">
+            <h3 class="uspCard__heading">01 ACCESS</h3>
+            <div class="uspCard__visual">
+              <img src="./imgs/img-usp-01.jpg" alt="01 ACCESS" width="550" height="309">
+            </div>
+
+            <div class="uspCard__cont">
+              <!-- <h4 class="uspCard__subheading">2駅2路線利用可能<sup>※1</sup></h4> -->
+              <div class="trafficInfo">
+                <div class="trafficInfo__term">
+                  <div class="line">東急東横線</div>
+                  <div class="station"><span class="name">「大倉山」</span>駅</div>
+                </div>
+                <div class="trafficInfo__desc">
+                  <span class="transpotation">徒歩</span>
+                  <span class="time"><span class="num">10</span>分</span>
+                </div>
+              </div>
+              <div class="trafficInfo">
+                <div class="trafficInfo__term">
+                  <div class="line">相鉄・東急新横浜線<br>横浜市営地下鉄ブルーライン</div>
+                  <div class="station"><span class="name">「大手町」</span>駅まで</div>
+                </div>
+                <div class="trafficInfo__desc">
+                  <span class="time"><span class="num">16</span>分</span>
+                </div>
+              </div>
+              <p class="option">※フラットアプローチ</p>
+            </div>
+            <div class="uspCard__bgSquare"></div>
+          </div>
+
         </div>
 
-        <div class="uspCard__cont" data-sai="fade" data-sai-duration="1500">
-          <h4 class="uspCard__subheading">2駅2路線利用可能<sup>※1</sup></h4>
-          <div class="trafficInfo">
-            <div class="trafficInfo__term">
-              <div class="line">◯◯◯◯線</div>
-              <div class="station"><span class="name">「◯◯」</span>駅</div>
-            </div>
-            <div class="trafficInfo__desc">
-              <span class="transpotation">徒歩</span>
-              <span class="time"><span class="num">0</span>分</span>
-            </div>
-          </div>
-          <div class="trafficInfo">
-            <div class="trafficInfo__term">
-              <div class="line">◯◯◯◯線</div>
-              <div class="station"><span class="name">「◯◯◯◯」</span>駅</div>
-            </div>
-            <div class="trafficInfo__desc">
-              <span class="transpotation">徒歩</span>
-              <span class="time"><span class="num">0</span>分</span>
-            </div>
-          </div>
-        </div>
-        <div class="uspCard__bgSquare"></div>
+
       </div>
-      <div class="uspCard is-reverse" data-sai="target">
-        <h3 class="uspCard__heading" data-sai="fade" data-sai-duration="1500">02 PLAN</h3>
-        <div class="uspCard__visual" data-sai="fade" data-sai-duration="1500">
+
+      <div class="uspCard is-reverse" data-sai="target" data-sai-offset="-110">
+        <h3 class="uspCard__heading">02 PLAN</h3>
+        <div class="uspCard__visual">
           <img src="./imgs/img-usp-02.jpg" alt="02 PLAN" width="550" height="309">
         </div>
-        <div class="uspCard__cont" data-sai="fade" data-sai-duration="1500">
-          <h4 class="uspCard__subheading">全戸角住戸</h4>
+        <div class="uspCard__cont">
+          <h4 class="uspCard__subheading"><span class="num">3LDK</span>中心<br>全<span class="num">13</span>タイプの多彩なプラン</h4>
           <div class="roomInfo roomInfo--ldk">
-            <div class="roomInfo__term"><span class="large">0</span>LDK</div>
+            <div class="roomInfo__term"><span class="large">2</span>LDK</div>
             <span class="roomInfo__line"></span>
-            <div class="roomInfo__desc"><span class="large">0</span>LDK+S</div>
+            <div class="roomInfo__desc"><span class="large">4</span>LDK</div>
           </div>
           <div class="roomInfo roomInfo--length">
-            <div class="roomInfo__term"><span class="num"><span class="large">00</span>.00</span><span class="meter">m&sup2;</span></div>
+            <div class="roomInfo__term"><span class="num"><span class="large">55</span>.01</span><span class="meter">m&sup2;</span></div>
             <span class="roomInfo__line"></span>
-            <div class="roomInfo__desc"><span class="num"><span class="large">00</span>.00</span><span class="meter">m&sup2;</span></div>
+            <div class="roomInfo__desc"><span class="num"><span class="large">78</span>.71</span><span class="meter">m&sup2;</span></div>
           </div>
         </div>
         <div class="uspCard__bgSquare"></div>
       </div>
-      <div class="uspCard" data-sai="target">
-        <h3 class="uspCard__heading" data-sai="fade" data-sai-duration="1500">03 LOCATION</h3>
-        <div class="uspCard__visual" data-sai="fade" data-sai-duration="1500">
-          <img src="./imgs/img-usp-03.jpg" alt="03 LOCATION" width="530" height="298">
+      <div class="uspCard" data-sai="target" data-sai-offset="-110">
+        <h3 class="uspCard__heading">03 MERIT</h3>
+        <div class="uspCard__visual">
+          <img src="./imgs/img-usp-03.jpg" alt="03 MERIT" width="530" height="298">
         </div>
-        <div class="uspCard__cont" data-sai="fade" data-sai-duration="1500">
-          <h4 class="uspCard__subheading">駅までフラットアプローチ</h4>
+        <div class="uspCard__cont">
+          <!-- <h4 class="uspCard__subheading">安心の完成後販売</h4> -->
+          <div class="trafficInfo">
+            <div class="trafficInfo__term">
+              <div class="station"><span class="name">ダミー小学校</span></div>
+            </div>
+            <div class="trafficInfo__desc">
+              <span class="time">徒歩<span class="num">10</span>分</span>
+            </div>
+          </div>
+          <div class="trafficInfo">
+            <div class="trafficInfo__term">
+              <div class="station"><span class="name">ダミー公園</span></div>
+            </div>
+            <div class="trafficInfo__desc">
+              <span class="time">徒歩<span class="num">16</span>分</span>
+            </div>
+          </div>
         </div>
         <div class="uspCard__bgSquare"></div>
       </div>
@@ -162,4 +220,4 @@
   </div>
 </main>
 <%- include('/common/inc/bottomInfo/_bottomInfo.ejs') %>
-<%- include('/common/inc/footer/_footer.ejs', {pageId: pageData.pageDir, footerCap: '※フッターキャプションが入りますフッターキャプションが入りますフッターキャプションが入ります'}) %>
+<%- include('/common/inc/footer/_footer.ejs', {pageId: pageData.pageDir, footerCap: '※all image photo<br>※注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります注釈が入ります注釈が入ります注釈が入ります。'}) %>

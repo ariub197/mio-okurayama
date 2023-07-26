@@ -61,8 +61,9 @@ export default class common {
       },
       false
     );
+
     const options = {
-      offset: 150,
+      offset: 150, // 初期のoffset値
       delay: 0,
       easing: 'ease',
       duration: 600,
@@ -82,10 +83,12 @@ export default class common {
       });
     };
 
-    const option = { rootMargin: -options.offset + 'px 0px' };
-    const io = new IntersectionObserver(callback, option);
     const targets = document.querySelectorAll('.sai-init');
     targets.forEach(target => {
+      const offsetAttr = target.getAttribute('data-sai-offset');
+      const offset = offsetAttr ? parseInt(offsetAttr, 10) : options.offset;
+      const option = { rootMargin: -offset + 'px 0px' };
+      const io = new IntersectionObserver(callback, option);
       io.observe(target);
     });
   }

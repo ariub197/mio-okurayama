@@ -36,8 +36,22 @@
     }
 
     &:nth-of-type(n+3) {
+      @include pc {
+        margin-top: 25px;
+      }
       @include sp {
         margin-top: 10px;
+      }
+    }
+
+    &:nth-of-type(3) {
+      @include pc {
+        margin: 25px auto 0;
+      }
+
+      @include sp {
+        margin: 10px auto 0;
+        width: 280px;
       }
     }
 
@@ -117,3 +131,4 @@
     }
   }
 }
+
