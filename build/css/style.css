@@ -1307,7 +1307,7 @@
             align-items: center;
     margin: 0 auto;
     padding-left: 10px;
-    width: 220px;
+    width: 250px;
   }
 }
 
@@ -1462,7 +1462,7 @@
 
 @media screen and (max-width: 768px) {
   .trafficInfo + .trafficInfo {
-    margin-top: 20px;
+    margin-top: 30px;
   }
 }
 
@@ -1608,13 +1608,19 @@
   }
 }
 
-.uspCard__cont .option {
-  font-size: 14px;
+@media screen and (min-width: 768px) {
+  .uspCard__cont .option {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .uspCard__cont .option {
     font-size: 10px;
+    position: absolute;
+    bottom: -8px;
+    right: 0;
   }
 }
 
