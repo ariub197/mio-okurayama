@@ -132,6 +132,14 @@
     }
   }
 
+  &--location {
+    .trafficInfo__desc {
+      .num {
+        color: #907e5e;
+      }
+    }
+  }
+
   & + .trafficInfo {
     @include pc {
       margin-top: 24px;

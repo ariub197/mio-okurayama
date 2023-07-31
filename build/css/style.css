@@ -1173,7 +1173,7 @@
 }
 
 .roomInfo__term .num, .roomInfo__desc .num {
-  color: #907e5e;
+  color: #94afaa;
 }
 
 .roomInfo__term .large, .roomInfo__desc .large {
@@ -1454,6 +1454,10 @@
   }
 }
 
+.trafficInfo--location .trafficInfo__desc .num {
+  color: #907e5e;
+}
+
 @media screen and (min-width: 768px) {
   .trafficInfo + .trafficInfo {
     margin-top: 24px;
@@ -1608,6 +1612,10 @@
   }
 }
 
+.uspCard__cont .option {
+  color: #464646;
+}
+
 @media screen and (min-width: 768px) {
   .uspCard__cont .option {
     font-size: 12px;
@@ -1619,8 +1627,8 @@
   .uspCard__cont .option {
     font-size: 10px;
     position: absolute;
-    bottom: -8px;
-    right: 0;
+    top: -8px;
+    right: -5px;
   }
 }
 
@@ -1692,7 +1700,7 @@
 }
 
 .uspCard__subheading .num {
-  color: #907e5e;
+  color: #94afaa;
 }
 
 @media screen and (min-width: 768px) {
