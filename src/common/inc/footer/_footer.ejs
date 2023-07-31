@@ -13,9 +13,9 @@ const params = ejsUtils.defaultParamsMapper(locals, {
       <p class="caption"><%- params.footerCap %></p>
     </div>
     <div class="footer-facility">
-      <a href="https://www.yamada-kensetsu.co.jp/zizai" target="_blank" class="footer-facility__bnrLink">
-        <img src="<%= relativePath %>common/imgs/bnr-gooddesign.jpg" alt="GOOD DESIGN 自在空間">
-      </a>
+      <%# <a href="https://www.yamada-kensetsu.co.jp/zizai" target="_blank" class="footer-facility__bnrLink">
+        <img src="< %= relativePath % >common/imgs/bnr-gooddesign.jpg" alt="GOOD DESIGN 自在空間">
+      </a> %>
       <div class="footer-facility__wrap">
         <div class="footer-facility__inner">
           <a href="https://home.tokyo-gas.co.jp/living/bathroom/hotdry/index.html" target="_blank" class="footer-facility__bnr footer-facility__bnr--misty">
@@ -66,7 +66,7 @@ const params = ejsUtils.defaultParamsMapper(locals, {
         <div class="footer-schedule">
           <div class="footer-schedule__detail">
             <div class="footer-schedule__term">営業時間</div>
-            <div class="footer-schedule__desc">00：00-00：00</div>
+            <div class="footer-schedule__desc">10：00～19：00</div>
           </div>
           <div class="footer-schedule__detail">
             <div class="footer-schedule__term">定休日</div>

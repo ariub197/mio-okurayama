@@ -103,6 +103,7 @@
 
     .option {
       color: #464646;
+
       @include pc {
         font-size: 12px;
         margin-bottom: 8px;
@@ -110,10 +111,10 @@
 
       @include sp {
         font-size: 10px;
-        position: absolute;
         letter-spacing: 0;
-        top: -5px;
+        position: absolute;
         right: -5px;
+        top: -5px;
       }
     }
 
@@ -138,6 +139,16 @@
       font-size: 20px;
 
       @include lhCrop(50/40);
+    }
+
+    small {
+      @include pc {
+        font-size: 18px;
+      }
+
+      @include sp {
+        font-size: 12px;
+      }
     }
 
     sup {

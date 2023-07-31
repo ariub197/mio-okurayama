@@ -1623,10 +1623,10 @@
 @media screen and (max-width: 768px) {
   .uspCard__cont .option {
     font-size: 10px;
-    position: absolute;
     letter-spacing: 0;
-    top: -5px;
+    position: absolute;
     right: -5px;
+    top: -5px;
   }
 }
 
@@ -1678,6 +1678,18 @@
     display: block;
     height: 0;
     width: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .uspCard__subheading small {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .uspCard__subheading small {
+    font-size: 12px;
   }
 }
 
@@ -1992,4 +2004,87 @@
 
 .container {
   padding-top: 0;
+}
+
+.bnr {
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .bnr {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .bnr:hover {
+    opacity: .8;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .bnr:hover {
+    opacity: .8;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bnr {
+    display: block;
+    width: 100%;
+  }
+}
+
+.bnr__link {
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .bnr__link {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 auto;
+    padding-bottom: 100px;
+    -webkit-transition: .3s;
+    transition: .3s;
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .bnr__link:hover {
+    opacity: .8;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .bnr__link:hover {
+    opacity: .8;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bnr__link {
+    display: block;
+    padding: 0 20px;
+    padding-bottom: 50px;
+    width: 100%;
+  }
 }

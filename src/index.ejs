@@ -90,24 +90,32 @@
       <div class="uspCard is-reverse" data-sai="target" data-sai-offset="-110">
         <h3 class="uspCard__heading">02 LOCATION</h3>
         <div class="uspCard__visual">
-          <img src="./imgs/img-usp-03.jpg" alt="03 LOCATION" width="530" height="298">
+          <img src="./imgs/img-usp-02.jpg" alt="02 LOCATION" width="550" height="309">
         </div>
         <div class="uspCard__cont">
           <!-- <h4 class="uspCard__subheading">安心の完成後販売</h4> -->
           <div class="trafficInfo trafficInfo--location">
             <div class="trafficInfo__term">
-              <div class="station"><span class="name">ダミー小学校</span></div>
+              <div class="station"><span class="name">大豆戸小学校</span></div>
             </div>
             <div class="trafficInfo__desc">
-              <span class="time">徒歩<span class="num">10</span>分</span>
+              <span class="time">徒歩<span class="num">5</span>分</span>
             </div>
           </div>
           <div class="trafficInfo trafficInfo--location">
             <div class="trafficInfo__term">
-              <div class="station"><span class="name">ダミー公園</span></div>
+              <div class="station"><span class="name">大綱中学校</span></div>
             </div>
             <div class="trafficInfo__desc">
-              <span class="time">徒歩<span class="num">16</span>分</span>
+              <span class="time">徒歩<span class="num">5</span>分</span>
+            </div>
+          </div>
+          <div class="trafficInfo trafficInfo--location">
+            <div class="trafficInfo__term">
+              <div class="station"><span class="name">太尾南公園</span></div>
+            </div>
+            <div class="trafficInfo__desc">
+              <span class="time">徒歩<span class="num">6</span>分</span>
             </div>
           </div>
         </div>
@@ -117,10 +125,10 @@
       <div class="uspCard" data-sai="target" data-sai-offset="-110">
         <h3 class="uspCard__heading">03 PLAN</h3>
         <div class="uspCard__visual">
-          <img src="./imgs/img-usp-02.jpg" alt="02 PLAN" width="550" height="309">
+          <img src="./imgs/img-usp-03.jpg" alt="03 PLAN" width="550" height="309">
         </div>
         <div class="uspCard__cont">
-          <h4 class="uspCard__subheading"><span class="num">3LDK</span>中心<br>全<span class="num">13</span>タイプの多彩なプラン</h4>
+          <h4 class="uspCard__subheading"><span class="num">3LDK</span>中心 <small>※1</small><br>全<span class="num">13</span>タイプの多彩なプラン</h4>
           <div class="roomInfo roomInfo--ldk">
             <div class="roomInfo__term"><span class="large">2</span>LDK</div>
             <span class="roomInfo__line"></span>
@@ -134,6 +142,11 @@
         </div>
         <div class="uspCard__bgSquare"></div>
       </div>
+    </div>
+    <div class="bnr">
+      <a href="https://www.yamada-kensetsu.co.jp/zizai" target="_blank" class="bnr__link">
+        <img src="<%= relativePath %>common/imgs/bnr-gooddesign.jpg" alt="GOOD DESIGN 自在空間">
+      </a>  
     </div>
     <div class="contentsGuide contentsGuide--comingSoon">
       <div class="contentsGuide__head" data-sai="fade" data-sai-duration="1500">
@@ -222,4 +235,4 @@
   </div>
 </main>
 <%- include('/common/inc/bottomInfo/_bottomInfo.ejs') %>
-<%- include('/common/inc/footer/_footer.ejs', {pageId: pageData.pageDir, footerCap: '※all image photo<br>※注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります注釈が入ります注釈が入ります注釈が入ります。'}) %>
+<%- include('/common/inc/footer/_footer.ejs', {pageId: pageData.pageDir, footerCap: '※1：全30戸中20戸<br>※徒歩分数は80ｍあたり1分として換算しております。<br>※all image photo'}) %>
