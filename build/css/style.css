@@ -1280,6 +1280,9 @@
 }
 
 .trafficInfo {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1293,18 +1296,12 @@
 
 @media screen and (min-width: 768px) {
   .trafficInfo {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
     padding-bottom: 15px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .trafficInfo {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     margin: 0 auto;
     padding-left: 10px;
     width: 250px;
@@ -1627,7 +1624,8 @@
   .uspCard__cont .option {
     font-size: 10px;
     position: absolute;
-    top: -10px;
+    letter-spacing: 0;
+    top: -5px;
     right: -5px;
   }
 }

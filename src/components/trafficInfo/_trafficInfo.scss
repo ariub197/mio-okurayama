@@ -1,16 +1,15 @@
 .trafficInfo {
+  align-items: flex-end;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   position: relative;
 
   @include pc {
-    align-items: flex-end;
     padding-bottom: 15px;
   }
 
   @include sp {
-    align-items: center;
     margin: 0 auto;
     padding-left: 10px;
     width: 250px;
