@@ -1550,6 +1550,11 @@
   z-index: -1;
 }
 
+.uspCard__cap {
+  margin-top: 10px;
+  text-align: right;
+}
+
 .uspCard__heading {
   color: #94afaa;
   font-family: "Cinzel", serif;
@@ -1615,7 +1620,7 @@
 
 @media screen and (min-width: 768px) {
   .uspCard__cont .option {
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 8px;
   }
 }
@@ -1626,7 +1631,13 @@
     letter-spacing: 0;
     position: absolute;
     right: -5px;
-    top: -5px;
+    top: -7px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .uspCard__cont .option--low {
+    top: 3px;
   }
 }
 
@@ -1998,7 +2009,7 @@
 
 @media screen and (max-width: 768px) {
   .uspIntroduction {
-    padding: 72px 30px 80px;
+    padding: 72px 30px 50px;
   }
 }
 

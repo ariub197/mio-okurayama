@@ -58,6 +58,11 @@
     }
   }
 
+  &__cap {
+    margin-top: 10px;
+    text-align: right;
+  }
+
   &__heading {
     color: #94afaa;
     font-family: $font-en;
@@ -105,7 +110,7 @@
       color: #464646;
 
       @include pc {
-        font-size: 12px;
+        font-size: 14px;
         margin-bottom: 8px;
       }
 
@@ -114,7 +119,13 @@
         letter-spacing: 0;
         position: absolute;
         right: -5px;
-        top: -5px;
+        top: -7px;
+      }
+
+      &--low {
+        @include sp {
+          top: 3px;
+        }
       }
     }
 
