@@ -2085,3 +2085,20 @@
     width: 100%;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .bnr__link img.only-sp {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bnr__link img {
+    display: block;
+    margin: 0 auto;
+    width: 95%;
+  }
+  .bnr__link img.only-pc {
+    display: none;
+  }
+}
