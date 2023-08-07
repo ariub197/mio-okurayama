@@ -10,11 +10,11 @@
       "new": false,
       "off": false
     },
-    {
-      "id": "redevelopemnt",
+     {
+      "id": "concept",
       "display": true,
-      "linkPath": "redevelopemnt",
-      "en": "REDEVELOPMENT",
+      "linkPath": "concept",
+      "en": "CONCEPT",
       "new": false,
       "off": true
     },
@@ -27,14 +27,6 @@
       "off": true
     },
     {
-      "id": "access",
-      "display": true,
-      "linkPath": "access",
-      "en": "ACCESS",
-      "new": false,
-      "off": true
-    },
-    {
       "id": "plan",
       "display": true,
       "linkPath": "plan",
@@ -43,10 +35,18 @@
       "off": true
     },
     {
-      "id": "design",
+      "id": "access",
       "display": true,
-      "linkPath": "design",
-      "en": "DESIGN",
+      "linkPath": "access",
+      "en": "ACCESS",
+      "new": false,
+      "off": true
+    },
+    {
+      "id": "roomspace",
+      "display": true,
+      "linkPath": "roomspace",
+      "en": "ROOM SPACE",
       "new": false,
       "off": true
     },
