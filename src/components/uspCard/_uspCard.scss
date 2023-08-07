@@ -153,13 +153,7 @@
     }
 
     small {
-      @include pc {
-        font-size: 18px;
-      }
-
-      @include sp {
-        font-size: 12px;
-      }
+      font-size: 10px;
     }
 
     sup {
@@ -178,11 +172,11 @@
       color: #94afaa;
 
       @include pc {
-        font-size: 38px;
+        font-size: 42px;
       }
 
       @include sp {
-        font-size: 22px;
+        font-size: 30px;
       }
     }
 
@@ -222,11 +216,11 @@
       color: #907e5e;
 
       @include pc {
-        font-size: 38px;
+        font-size: 42px;
       }
 
       @include sp {
-        font-size: 22px;
+        font-size: 30px;
       }
     }
   }

@@ -31,16 +31,12 @@
     }
 
     .large {
-      vertical-align: top;
-
       @include pc {
         font-size: 42px;
-        line-height: .65;
       }
 
       @include sp {
         font-size: 30px;
-        line-height: .75;
       }
     }
 
@@ -108,11 +104,11 @@
 
   & + .roomInfo {
     @include pc {
-      margin-top: 20px;
+      margin-top: 25px;
     }
 
     @include sp {
-      margin-top: 15px;
+      margin-top: 20px;
     }
   }
 }

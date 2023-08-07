@@ -1176,21 +1176,15 @@
   color: #94afaa;
 }
 
-.roomInfo__term .large, .roomInfo__desc .large {
-  vertical-align: top;
-}
-
 @media screen and (min-width: 768px) {
   .roomInfo__term .large, .roomInfo__desc .large {
     font-size: 42px;
-    line-height: .65;
   }
 }
 
 @media screen and (max-width: 768px) {
   .roomInfo__term .large, .roomInfo__desc .large {
     font-size: 30px;
-    line-height: .75;
   }
 }
 
@@ -1269,13 +1263,13 @@
 
 @media screen and (min-width: 768px) {
   .roomInfo + .roomInfo {
-    margin-top: 20px;
+    margin-top: 25px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .roomInfo + .roomInfo {
-    margin-top: 15px;
+    margin-top: 20px;
   }
 }
 
@@ -1692,16 +1686,8 @@
   }
 }
 
-@media screen and (min-width: 768px) {
-  .uspCard__subheading small {
-    font-size: 18px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .uspCard__subheading small {
-    font-size: 12px;
-  }
+.uspCard__subheading small {
+  font-size: 10px;
 }
 
 .uspCard__subheading sup {
@@ -1726,13 +1712,13 @@
 
 @media screen and (min-width: 768px) {
   .uspCard__subheading .num {
-    font-size: 38px;
+    font-size: 42px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .uspCard__subheading .num {
-    font-size: 22px;
+    font-size: 30px;
   }
 }
 
@@ -1805,13 +1791,13 @@
 
 @media screen and (min-width: 768px) {
   .uspCard__lead .num {
-    font-size: 38px;
+    font-size: 42px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .uspCard__lead .num {
-    font-size: 22px;
+    font-size: 30px;
   }
 }
 
