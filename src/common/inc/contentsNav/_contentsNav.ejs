@@ -5,7 +5,7 @@
     modifiers: []
   });
 
-  const navSet = incJson.nav_set.filter(elm => elm.display && (params.parent !== 'contentsGuide' || elm.id !== 'top'));
+  const navSet = incJson.nav_set.filter(elm => elm.display);
   const className = navSet.length % 3 === 0 && params.parent !== 'contentsGuide' ? 'contentsNav contentsNav--oneThird' : 'contentsNav contentsNav--oneFourth';
 
 %><ul class="<%- className %>">
