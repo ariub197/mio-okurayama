@@ -1161,15 +1161,11 @@
 }
 
 .roomInfo__term, .roomInfo__desc {
+  display: inline-block;
   font-family: "Cinzel", serif;
   letter-spacing: 0;
   line-height: .8;
-}
-
-@media screen and (min-width: 768px) {
-  .roomInfo__term, .roomInfo__desc {
-    width: 180px;
-  }
+  position: relative;
 }
 
 .roomInfo__term .num, .roomInfo__desc .num {
@@ -1226,7 +1222,10 @@
 }
 
 .roomInfo__desc .caption {
-  padding-left: 10px;
+  padding-top: 5px;
+  position: absolute;
+  right: 0;
+  top: 100%;
 }
 
 @media screen and (min-width: 768px) {
