@@ -1225,6 +1225,10 @@
   }
 }
 
+.roomInfo__desc .caption {
+  padding-left: 10px;
+}
+
 @media screen and (min-width: 768px) {
   .roomInfo--ldk {
     font-size: 34px;

@@ -70,6 +70,10 @@
     @include sp {
       text-align: right;
     }
+
+    .caption {
+      padding-left: 10px;
+    }
   }
 
   &--ldk {
