@@ -62,15 +62,6 @@ const fmtTtl = params.pageId !== 'top' ? `${offcialTtl}${params.title}｜${split
   <meta property="og:url" content="<%- common.url %>" />
   <meta property="og:image" content="<%- common.url %>ogp/index.jpg" />
   <meta property="og:description" content="<%- common.description %>" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X261YZT1TN"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-X261YZT1TN');
-  </script>
-  <!-- assets -->
   <link rel="stylesheet" href="<%= relativePath %>common/css/common.css" />
   <link rel="stylesheet" href="./css/style.css" /><% if (params.pageId == 'interactionPattern') { %>
   <script src="//maps.google.com/maps/api/js?key=AIzaSyBdQtnBRaQf1kiXDNIG-hmXGQOuWnt8TmQ&amp;language=ja"></script><% }%>
@@ -85,6 +76,15 @@ const fmtTtl = params.pageId !== 'top' ? `${offcialTtl}${params.title}｜${split
     <script src="<%= relativePath %>common/js/vendor/smoothscroll.js"></script>
     <script src="./js/function.js"></script>
   <% }%>
+   <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-X261YZT1TN"></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'G-X261YZT1TN');
+   </script>
+   <!-- assets -->
 </head>
 
 <!--cookie-->
