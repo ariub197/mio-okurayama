@@ -7,6 +7,7 @@ import flowModal from './flowModal.js';
 import _breakP from './utils.js';
 import top from '../../../js/_function.js';
 import outline from '../../../outline/js/_function.js';
+import brand from '../../../brand/js/_function.js';
 
 document.addEventListener(
   'DOMContentLoaded',
@@ -27,6 +28,12 @@ document.addEventListener(
         _log('PAGE NAME', 'INDEX', 'orange');
 
         new top();
+
+        break;
+      case 'brand':
+        _log('PAGE NAME', 'INDEX', 'orange');
+
+        new brand();
 
         break;
       case 'outline':

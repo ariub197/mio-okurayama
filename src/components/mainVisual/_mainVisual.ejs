@@ -1,14 +1,22 @@
-<div class="mainVisual">
+<div id="mainVisual" class="mainVisual is-init">
   <div class="mainVisual__head">
-    <img src="./imgs/logo-mainvisual.svg" alt="" class="mainVisual__logo" width="36" height="37">
-    <div class="mainVisual__ttl mainVisual__ttl--en">
-      <div class="brand">MioCastello</div>
-      <div class="bukken">OKURAYAMA</div>
-    </div>
-    <div class="mainVisual__ttl mainVisual__ttl--jp"><span class="bukken">ミオカステーロ大倉山</span></div>
+    <h2 class="mainVisual__heading">
+      <img src="./imgs/pc/ttl-mv.png" alt="" class="ttlSVG" width="115" height="572">
+    </h2>
+    <div class="mainVisual__squareBG"><span></span></div>
   </div>
-  <h2 class="mainVisual__heading">新発表</h2>
+  <div class="mainVisual__cont">
+    <%- include('/common/components/pic/_pic.ejs', {
+      imagePathPC: '<img src="./imgs/pc/img-mv@2x.jpg" alt="" width="1056" height="660">',
+      imagePathSP: '<img src="./imgs/sp/img-mv.jpg" alt="" width="710" height="710">',
+      alt: '現地周辺航空写真',
+      pictureMode: 'on',
+    }) %>
+    <!--<p class="mainVisual__cap capIn" data-color="sdw-wh">現地周辺航空写真</p>-->
+  </div>
+
   <a href="#anchorBottomInfo" class="newsBox">
+      <!--a href="#contentsGuide" class="newsBox" コンテンツリストにリンク -->
     <dl class="newsBox__detail">
       <dt class="newsBox__term">2023.08.08</dt>
       <dd class="newsBox__desc">エントリー受付開始<span class="new">new</span></dd>
@@ -17,4 +25,14 @@
       <svg class="arrowSVG" width="21.5px" height="12.5px" viewBox="0 0 21.5 12.5"><path fill-rule="evenodd" fill="rgba(70, 70, 70,.8)" d="M11.500,11.500 L11.500,10.500 L17.899,6.500 L0.500,6.500 L0.500,5.500 L17.899,5.500 L11.500,1.500 L11.500,0.499 L20.500,5.500 L20.500,6.500 L11.500,11.500 Z"/></svg>
     </div>
   </a>
+  <!-- リンクを使用しない場合はこちらのnewsBoxを使用 -->
+  <!-- <div class="newsBox">
+    <dl class="newsBox__detail">
+      <dt class="newsBox__term">2023.05.26</dt>
+      <dd class="newsBox__desc">「アクセス」「ロケーション」<br class="only-sp">「プラン」ページを公開致しました。<span class="new">new</span></dd>
+    </dl>
+    <div class="newsBox__icon">
+      <svg class="arrowSVG" width="21.5px" height="12.5px" viewBox="0 0 21.5 12.5"><path fill-rule="evenodd" fill="rgba(70, 70, 70,.8)" d="M11.500,11.500 L11.500,10.500 L17.899,6.500 L0.500,6.500 L0.500,5.500 L17.899,5.500 L11.500,1.500 L11.500,0.499 L20.500,5.500 L20.500,6.500 L11.500,11.500 Z"/></svg>
+    </div>
+  </div> -->
 </div>

@@ -1,0 +1,11 @@
+.columnSect {
+  .generalSect {
+    width: 100%;
+
+    @include pc {
+    }
+
+    @include sp {
+    }
+  }
+}

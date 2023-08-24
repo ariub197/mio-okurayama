@@ -1,0 +1,39 @@
+.workGallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include pc {
+    column-gap: 10px;
+  }
+
+  @include sp {
+    column-gap: 5px;
+  }
+
+  .photo {
+    @include pc {
+      width: 228px;
+    }
+
+    @include sp {
+      width: 165px;
+    }
+
+    &:nth-of-type(n+3) {
+      @include sp {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .txt + & {
+    @include pc {
+      margin-top: 60px;
+    }
+
+    @include sp {
+      margin-top: 40px;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.qualitySect {
+  text-align: center;
+
+  &__ttl {
+    @include pc {
+      width: 150px;
+    }
+
+    @include sp {
+      width: 115px;
+    }
+
+    & + .qualitySect__heading {
+      @include pc {
+        margin-top: 20px;
+      }
+
+      @include sp {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  &__heading {
+    color: #464646;
+    font-weight: 700;
+    line-height: 1;
+
+    @include pc {
+      font-size: 32px;
+    }
+
+    @include sp {
+      font-size: 20px;
+    }
+
+    & + .qualitySect__subheading {
+      @include pc {
+        margin-top: 40px;
+      }
+
+      @include sp {
+        margin-top: 28px;
+      }
+    }
+  }
+
+  &__subheading {
+    letter-spacing: .12em;
+
+    @include pc {
+      font-size: 20px;
+
+      @include lhCrop(32 / 20);
+    }
+
+    @include sp {
+      font-size: 14px;
+
+      @include lhCrop(44 / 28);
+    }
+
+    & + .txt {
+      @include pc {
+        margin-top: 50px;
+      }
+
+      @include sp {
+        margin-top: 36px;
+      }
+    }
+  }
+
+  .txt {
+    @include pc {
+      @include lhCrop(38 / 16);
+    }
+
+    @include sp {
+      @include lhCrop(52 / 24);
+    }
+  }
+}

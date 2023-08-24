@@ -2,51 +2,88 @@
   align-items: center;
   color: #464646;
   display: flex;
+  justify-content: center;
 
-  @include pc {
-    justify-content: center;
-  }
 
   @include sp {
-    justify-content: space-between;
     margin: 0 auto;
     width: 220px;
   }
 
   &__term,
   &__desc {
-    display: inline-block;
     font-family: $font-en;
-    letter-spacing: 0;
+    letter-spacing: .06em;
     line-height: .8;
-    position: relative;
 
+    @include pc {
+      font-size: 34px;
+    }
 
     @include sp {
+      font-size: 24px;
     }
 
     .num {
-      color: #94afaa;
+      color: $color-autumn-sub-01;
     }
 
     .large {
+      color: $color-autumn-sub-01;
+      vertical-align: top;
+
       @include pc {
         font-size: 42px;
+        line-height: .65;
       }
 
       @include sp {
         font-size: 30px;
+        line-height: .75;
+      }
+    }
+
+    .small {
+      color: $color-autumn-sub-01;
+
+      @include pc {
+        font-size: 28px;
+      }
+
+      @include sp {
+        font-size: 22px;
+        line-height: .6;
       }
     }
 
     .meter {
       font-family: $font-jp;
+
+      @include pc {
+        font-size: 28px;
+      }
+
+      @include sp {
+        font-size: 22px;
+      }
+    }
+
+    sup {
+      @include pc {
+        font-size: 10px;
+      }
+
+      @include sp {
+        font-size: 8px;
+      }
     }
   }
 
   &__term {
-    @include pc {
-      text-align: right;
+    text-align: center;
+
+    .large {
+      color: #464646;
     }
   }
 
@@ -61,20 +98,13 @@
 
     @include sp {
       flex-grow: 1;
-      width: auto;
+      max-width: 14px;
     }
   }
 
   &__desc {
     @include sp {
       text-align: right;
-    }
-
-    .caption {
-      padding-top: 5px;
-      position: absolute;
-      right: 0;
-      top: 100%;
     }
   }
 
@@ -110,11 +140,31 @@
 
   & + .roomInfo {
     @include pc {
-      margin-top: 25px;
+      margin-top: 20px;
     }
 
     @include sp {
-      margin-top: 20px;
+      margin-top: 15px;
+    }
+  }
+
+  & + .option {
+    margin-bottom: 30px;
+    margin-top: 5px;
+    text-align: right;
+
+    @include pc {
+      margin-right: 50px;
+    }
+  }
+
+  & + .moreBtn {
+    @include pc {
+      margin-top: 40px;
+    }
+
+    @include sp {
+      margin-top: 30px;
     }
   }
 }

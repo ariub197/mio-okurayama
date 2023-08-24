@@ -1,0 +1,37 @@
+@import '../../common/css/variables/_variables';
+@import '../../common/css/mixins/_easing';
+@import '../../common/css/mixins/_mixins';
+@import '../components/**/*';
+
+.brand-wrapper {
+  margin: 0 auto;
+
+  @include pc {
+    width: 1056px;
+  }
+
+  @include sp {
+    padding: 0 20px;
+  }
+}
+
+.brand-leadGallery {
+  @include pc {
+    padding: 60px 0 90px;
+  }
+
+  @include sp {
+    padding: 25px 0 50px;
+  }
+}
+
+
+.brand-quality {
+  @include pc {
+    padding: 100px 0 180px;
+  }
+
+  @include sp {
+    padding: 50px 0 80px;
+  }
+}

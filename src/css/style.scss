@@ -3,6 +3,10 @@
 @import '../common/css/mixins/_mixins';
 @import '../components/**/*';
 
+[data-color="darkGreen"] {
+  color: $color-autumn-sub-01;
+}
+
 .container{
   padding-top: 0;
 }

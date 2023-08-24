@@ -1,0 +1,45 @@
+.awardBox {
+  background-color: #fbfbfb;
+  box-shadow: 0 8px 16px 0 rgba(102, 102, 102, .1);
+  margin: 0 auto;
+
+  @include pc {
+    padding: 100px 96px 70px;
+    width: 960px;
+  }
+
+  @include sp {
+    margin: 0 -10px;
+    padding: 50px 20px 30px;
+  }
+
+  &__ttl {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+
+    @include pc {
+      width: 454px;
+    }
+
+    @include sp {
+      width: 227px;
+    }
+
+    & + .txt {
+      @include pc {
+        margin-top: 48px;
+      }
+
+      @include sp {
+        margin-top: 17px;
+      }
+    }
+  }
+
+  .txt {
+    @include sp {
+      letter-spacing: .04em;
+    }
+  }
+}

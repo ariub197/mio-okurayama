@@ -2,7 +2,8 @@ import smoothscroll from 'smoothscroll-polyfill';
 import throttle from 'lodash/throttle';
 export default class top {
   constructor() {
-    this.headerAnimation();
+    //this.headerAnimation();
+    this.mvFunc();
     // this.contentScroll();
   }
 
@@ -33,5 +34,12 @@ export default class top {
         }
       }, durationTime)
     );
+  }
+
+  mvFunc() {
+    const mainVisual = document.getElementById('mainVisual');
+    window.addEventListener('load', () => {
+      mainVisual.classList.add('is-animate');
+    });
   }
 }

@@ -1,0 +1,38 @@
+.flexSect {
+  .generalSect {
+    width: 100%;
+
+    @include pc {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @include sp {
+    }
+  }
+
+  .generalSect__head {
+    @include pc {
+    }
+
+    @include sp {
+    }
+  }
+
+  .generalSect__cont {
+    @include pc {
+    }
+
+    @include sp {
+    }
+  }
+
+  &--start {
+    .generalSect {
+      @include pc {
+        align-items: flex-start;
+      }
+    }
+  }
+}

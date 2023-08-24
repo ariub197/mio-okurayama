@@ -1,6 +1,6 @@
 .newsBox {
   align-items: center;
-  background-color: rgba(255,255,255,.4);
+  background-color: rgba(255,255,255,.9);
   box-shadow: 0 8px 16px 0 rgba(102, 102, 102, .1);
   cursor: pointer;
   display: flex;
@@ -10,9 +10,9 @@
   z-index: 2;
 
   @include pc {
-    bottom: 48px;
+    bottom: 0;
     height: 50px;
-    left: 48px;
+    left: 0;
     padding: 0 24px;
     width: 528px;
 
@@ -21,12 +21,22 @@
     }
   }
 
+/*
   @include sp {
     bottom: 20px;
     height: 38px;
     left: 20px;
     padding: 0 11px;
     width: 335px;
+  }
+*/
+
+  @include sp {
+    position: relative;
+    height: 38px;
+    padding: 0 11px;
+    width: calc(100% - 60px);
+    margin: 32px 30px 0;
   }
 
   @include hover {

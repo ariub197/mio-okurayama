@@ -1,0 +1,37 @@
+.generalSect {
+
+  &__head {
+    & + .generalSect__cont {
+      @include pc {
+        margin-top: 48px;
+      }
+
+      @include sp {
+        margin-top: 32px;
+      }
+    }
+  }
+
+  &__cont {
+    @include pc {
+    }
+
+    @include sp {
+    }
+
+    & + .generalSect__head {
+      @include pc {
+        margin-top: 64px;
+        padding: 0 48px;
+      }
+
+      @include sp {
+        margin-top: 48px;
+      }
+    }
+
+    .photo + .caption {
+      margin-top: 20px;
+    }
+  }
+}

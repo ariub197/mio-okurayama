@@ -1,0 +1,13 @@
+.businessGroup {
+
+
+  .systemValue + &  {
+    @include pc {
+      margin-top: 90px;
+    }
+
+    @include sp {
+      margin-top: 50px;
+    }
+  }
+}

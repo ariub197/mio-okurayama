@@ -1,0 +1,23 @@
+<% include('/_utils.ejs');
+	const params = ejsUtils.defaultParamsMapper(locals,{
+		gallery:'',
+		caption:'',
+    type:'',
+    ttl:'',
+    bukken:'',
+		modifiers: []
+	});
+	const className = ejsUtils.mapModifiers('awardCard', params.modifiers);
+%><div class="<%- className %>">
+  <div class="awardCard__head">
+    <% params.gallery.forEach(visual => { %><%- include('/common/components/photo/_photo.ejs', visual) %><% });%>
+    <p class="caption"><%- params.caption %></p>
+  </div>
+  <div class="awardCard__cont">
+    <div class="awardCard__name">
+      <div class="awardCard__type"><%- params.type %></div>
+      <div class="awardCard__ttl"><%- params.ttl %></div>
+    </div>
+    <div class="awardCard__bukken"><%- params.bukken %></div>
+  </div>
+</div>

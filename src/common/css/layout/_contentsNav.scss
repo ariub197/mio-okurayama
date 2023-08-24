@@ -50,12 +50,12 @@
 
     @include pc {
       font-size: 18px;
-      height: 30px;
+      //height: 30px;
     }
 
     @include sp {
       font-size: 14px;
-      height: 21px;
+      //height: 21px;
     }
 
     @include hover {
@@ -75,6 +75,74 @@
     &.is-off {
       opacity: .5;
       pointer-events: none;
+
+      .contentsNav__image {
+        &:before {
+          content: 'COMING SOON';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          white-space: nowrap;
+          line-height: 1;
+          color: #ffffff;
+
+          @include pc {
+            font-size: 16px;
+          }
+
+          @include sp {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .contentsGuide &.is-off {
+      opacity: 1;
+    }
+  }
+
+  &__image {
+    position: relative;
+
+    & + .contentsNav__txt {
+      @include pc {
+        margin-top: 20px;
+      }
+
+      @include sp {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  &__txt {
+    font-family: $font-en;
+    letter-spacing: .12em;
+    line-height: .8;
+    position: relative;
+    transition: .3s;
+
+    @include pc {
+      font-size: 18px;
+      height: 30px;
+    }
+
+    @include sp {
+      font-size: 13px;
+      height: 21px;
+    }
+
+
+    .arrowSVG {
+      position: absolute;
+      right: 0;
+      top: 5px;
+      transition: .3s;
+    }
+
+    &--lowerCase {
     }
   }
 

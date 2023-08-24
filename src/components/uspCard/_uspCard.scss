@@ -1,4 +1,322 @@
 .uspCard {
+  color: #474747;
+  position: relative;
+
+  @include pc {
+    padding-bottom: 40px;
+
+  }
+
+  &:nth-child(odd) {
+    .uspCard__heading {
+      color: rgba($color: $color-autumn-sub-01, $alpha: 1);
+    }
+
+    .uspCard__bgSquare {
+      &:before {
+        background: url(../imgs/bg-pattern-01.jpg) no-repeat center center / cover;
+        opacity: 0.2;
+      }
+    }
+
+    .moreBtn {
+      background: rgba($color: $color-autumn-sub-01, $alpha: .8);
+    }
+  }
+
+  &:nth-child(even) {
+    .uspCard__heading {
+      color: rgba($color: $color-autumn-main-01, $alpha: 1);
+    }
+
+    .uspCard__bgSquare {
+      &:before {
+        background: url(../imgs/bg-pattern-02.jpg) no-repeat center center / cover;
+        opacity: 0.2;
+      }
+    }
+
+    .photo {
+      &__capIn {
+        left: 5px;
+        right: auto;
+      }
+    }
+
+    .moreBtn {
+      background: rgba($color: $color-autumn-main-01, $alpha: .8);
+    }
+
+    &.sai-init {
+      &.sai-animate {
+        .uspCard__bgSquare:before {
+          transform: rotate(-5deg) rotateX(0deg);
+        }
+      }
+    }
+  }
+
+  &__visual {
+    @include pc {
+      position: relative;
+      width: 720px;
+    }
+
+    .photo {
+
+      &--capTop {
+
+        .capIn {
+          @include pc {
+            bottom: auto;
+            top: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  &__cont {
+    background-size: cover;
+    box-shadow: 0 8px 16px 0 rgba(102, 102, 102, .1);
+    z-index: 2;
+
+    @include pc {
+      bottom: 0;
+      padding: 50px;
+      position: absolute;
+      right: 0;
+      width: 503px;
+    }
+
+    @include sp {
+      padding: 32px 20px;
+    }
+
+    &:after {
+      background: url('../common/imgs/bg-pattern.jpg');
+      content: '';
+      height: 100%;
+      left: 0;
+      opacity: .9;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+    }
+
+    .option {
+      font-size: 10px;
+
+      @include sp {
+        font-size: 10px;
+      }
+    }
+
+    .caption {
+      text-align: right;
+    }
+  }
+
+  &__heading {
+    bottom: 100%;
+    font-family: $font-en;
+    font-weight: 400;
+    line-height: .65;
+    position: absolute;
+    right: 0;
+
+    @include pc {
+      font-size: 64px;
+    }
+
+    @include sp {
+      bottom: calc(100% - 1px);
+      font-size: 40px;
+    }
+  }
+
+  &__subheading {
+    font-family: $font-mix-serif;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: center;
+
+    @include pc {
+      font-size: 32px;
+    }
+
+    @include sp {
+      font-size: 20px;
+    }
+
+    .block {
+      display: block;
+      @include pc {
+        margin-top: 16px;
+      }
+
+      @include sp {
+        margin-top: 8px;
+      }
+    }
+
+    .num {
+      color: $color-autumn-sub-01;
+      @include pc {
+        font-size: 42px;
+      }
+
+      @include sp {
+        font-size: 24px;
+      }
+    }
+
+    .kana {
+      letter-spacing: 0;
+    }
+
+    sup {
+      font-size: 10px;
+    }
+
+    .caption {
+      display: inline;
+    }
+
+    & + .accessTrafficInfo,
+    & + .roomInfo {
+      @include pc {
+        margin-top: 30px;
+      }
+
+      @include sp {
+        margin-top: 25px;
+      }
+    }
+
+    & + .moreBtn {
+      @include pc {
+        margin-top: 40px;
+      }
+
+      @include sp {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &__bgSquare {
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -9;
+
+    &:before {
+      background-color: #cccccc;
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transform: rotate(5deg);
+      width: 100%;
+      z-index: -1;
+    }
+  }
+
+  &__cursiveTxt {
+    color: rgba(255, 255, 255, .6);
+    font-family: $font-en-cursive;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translate(10px,10px) rotate(-10deg);
+    z-index: 2;
+
+    @include pc {
+      font-size: 40px;
+    }
+
+    @include sp {
+      font-size: 24px;
+    }
+
+    &[data-color='grey'] {
+      color: rgba(70, 70, 70, .6);
+    }
+  }
+
+  &.is-reverse {
+
+    .uspCard {
+
+      &__visual {
+        @include pc {
+          margin: 0 0 0 auto;
+        }
+      }
+
+      &__cont {
+        @include pc {
+          left: 0;
+          right: unset;
+        }
+      }
+
+      &__heading {
+        @include pc {
+          left: 0;
+          right: unset;
+        }
+      }
+
+      &__cursiveTxt {
+        @include pc {
+          left: unset;
+          right: 0;
+          transform: rotate(10deg) translate(-10px,10px);
+        }
+      }
+    }
+  }
+
+  & + .uspCard {
+    @include pc {
+      margin-top: 160px;
+    }
+
+    @include sp {
+      margin-top: 100px;
+    }
+  }
+
+  &.sai-init {
+    opacity: 0;
+    perspective: 300px;
+    transform: translate(0,30%);
+    transition: 3s;
+
+
+    .uspCard__bgSquare:before {
+      transform: rotate(25deg) rotateX(15deg);
+      transform-origin: center;
+      transition: 1s;
+    }
+
+    &.sai-animate {
+      opacity: 1;
+      transform: translate(0,0);
+
+      .uspCard__bgSquare:before {
+        transform: rotate(5deg) rotateX(0deg);
+      }
+    }
+  }
+/*
   position: relative;
   z-index: 1;
 
@@ -58,11 +376,6 @@
     }
   }
 
-  &__cap {
-    margin-top: 10px;
-    text-align: right;
-  }
-
   &__heading {
     color: #94afaa;
     font-family: $font-en;
@@ -107,25 +420,10 @@
     }
 
     .option {
-      color: #464646;
-
-      @include pc {
-        font-size: 14px;
-        margin-bottom: 8px;
-      }
+      font-size: 14px;
 
       @include sp {
         font-size: 10px;
-        letter-spacing: 0;
-        position: absolute;
-        right: -5px;
-        top: -7px;
-      }
-
-      &--low {
-        @include sp {
-          top: 3px;
-        }
       }
     }
 
@@ -152,10 +450,6 @@
       @include lhCrop(50/40);
     }
 
-    small {
-      font-size: 10px;
-    }
-
     sup {
       vertical-align: top;
 
@@ -169,14 +463,14 @@
     }
 
     .num {
-      color: #94afaa;
+      color: #907e5e;
 
       @include pc {
-        font-size: 42px;
+        font-size: 38px;
       }
 
       @include sp {
-        font-size: 30px;
+        font-size: 22px;
       }
     }
 
@@ -216,11 +510,11 @@
       color: #907e5e;
 
       @include pc {
-        font-size: 42px;
+        font-size: 38px;
       }
 
       @include sp {
-        font-size: 30px;
+        font-size: 22px;
       }
     }
   }
@@ -313,4 +607,5 @@
     }
 
   }
+*/
 }
