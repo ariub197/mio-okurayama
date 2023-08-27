@@ -1,0 +1,799 @@
+.pickupDetail {
+  background: url('../../common/imgs/bg-pattern.jpg');
+  box-shadow: 10px 10px 40px 0 rgba(41, 41, 41, .6);
+  display: block;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  @include pc {
+    padding: 105px 96px 70px;
+  }
+
+  @include sp {
+    margin: 0 -20px;
+    padding: 70px 20px 40px;
+    width: calc(100% + 40px);
+  }
+
+  &__head {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    text-align: left;
+
+    @include pc {
+      margin: 0 auto;
+      width: 480px;
+    }
+
+
+    .roomSpec {
+      color: #322f33;
+      margin-left: 20px;
+
+      @include pc {
+        max-width: 364px;
+      }
+
+      &__variation {
+        font-family: $font-en;
+        letter-spacing: .05em;
+        line-height: .7;
+        white-space: nowrap;
+
+        @include pc {
+          font-size: 26px;
+        }
+
+        @include sp {
+          font-size: 16px;
+        }
+
+        .num {
+          @include pc {
+            font-size: 48px;
+          }
+
+          @include sp {
+            font-size: 28px;
+          }
+        }
+
+        .large {
+          @include pc {
+            font-size: 34px;
+          }
+
+          @include sp {
+            font-size: 20px;
+          }
+        }
+
+        & + .mainLength {
+          @include pc {
+            margin-top: 40px;
+          }
+
+          @include sp {
+            margin-top: 15px;
+          }
+        }
+      }
+
+      &__caption {
+        line-height: 1;
+
+        @include pc {
+          padding-left: 15px;
+        }
+      }
+
+      & + .clickableAttention {
+        @include pc {
+          margin-top: 40px;
+        }
+
+        @include sp {
+          margin-top: 32px;
+        }
+      }
+    }
+
+
+    .mainLength {
+      line-height: 1;
+
+      .num {
+        font-family: $font-en;
+        letter-spacing: .05em;
+        line-height: .7;
+
+        @include pc {
+          font-size: 40px;
+        }
+
+        @include sp {
+          font-size: 24px;
+        }
+      }
+
+      .meter {
+        @include pc {
+          font-size: 18px;
+        }
+
+        @include sp {
+          font-size: 16px;
+        }
+      }
+
+      .tsubo {
+        font-size: 10px;
+        line-height: 1;
+        margin-left: 5px;
+      }
+
+      & + .subLength {
+        @include pc {
+          margin-top: 15px;
+        }
+
+        @include sp {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .subLength {
+      align-items: center;
+      color: #464646;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      line-height: 1;
+      width: 100%;
+
+      &__item {
+        font-size: 10px;
+        line-height: 1;
+        vertical-align: bottom;
+
+        @include pc {
+        }
+
+        @include sp {
+        }
+
+        .num {
+          font-family: $font-en;
+          font-size: 10px;
+          line-height: .7;
+        }
+
+        &:not(:last-of-type) {
+          @include pc {
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+    }
+
+  }
+
+
+  &__cont {
+    position: relative;
+    text-align: center;
+
+    @include pc {
+      padding-bottom: 32px;
+      padding-top: 45px;
+    }
+
+    @include sp {
+      padding-bottom: 32px;
+      padding-top: 14px;
+    }
+  }
+
+  &__type {
+    align-items: center;
+    background-color: rgba(76,152,170,.2);
+    color: #4c98aa;
+    display: flex;
+    font-family: $font-en;
+    justify-content: center;
+    left: 50%;
+    line-height: .8;
+    position: absolute;
+    top: 0;
+    transform: translate(-50%,-50%);
+
+    @include pc {
+      font-size: 16px;
+      height: 62px;
+      width: 576px;
+    }
+
+    @include sp {
+      font-size: 12px;
+      height: 50px;
+      width: 315px;
+    }
+
+    .name {
+      @include pc {
+        font-size: 28px;
+      }
+
+      @include sp {
+        font-size: 16px;
+      }
+    }
+
+    & + .roomSpec {
+    }
+  }
+
+  &__pickupTtl {
+    align-items: center;
+    background-color: rgba(76,152,170,.2);
+    box-shadow: 0 0 16px 0 rgba($color: #666666, $alpha: .1);
+    color: #464646;
+    display: flex;
+    font-family: $font-en;
+    justify-content: center;
+    left: 50%;
+    line-height: .8;
+    position: absolute;
+    top: 0;
+    transform: translate(-50%,0);
+    width: 100%;
+
+    @include pc {
+      font-size: 16px;
+      height: 62px;
+    }
+
+    @include sp {
+      font-size: 12px;
+      height: 50px;
+    }
+
+    .name {
+      @include pc {
+        font-size: 28px;
+      }
+
+      @include sp {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__bottom {
+    position: relative;
+
+    @include pc {
+      margin: 0 auto;
+      width: 768px;
+    }
+
+    .caption {
+      color: #666666;
+      letter-spacing: 0;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .hanreiArea {
+      position: relative;
+
+
+    }
+
+  }
+
+  &--pickup {
+
+    .pickupDetail {
+
+
+      &__type {
+        position: static;
+        transform: translate(0,0);
+
+        @include pc {
+          height: 134px;
+          width: 96px;
+
+        }
+
+        @include sp {
+          height: 76px;
+          width: 53px;
+
+        }
+
+        span {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+        }
+
+        .type {
+          margin-top: 10px;
+          writing-mode: vertical-rl;
+        }
+      }
+    }
+
+  }
+
+
+  .hanreiList {
+    align-items: center;
+    color: #666666;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    &__item {
+      align-items: center;
+      border-radius: 4px;
+      box-shadow: 0 4px 8px 0 rgba(102, 102, 102, .2);
+      display: flex;
+      font-size: 12px;
+      justify-content: center;
+      letter-spacing: 0;
+
+      @include pc {
+        height: 30px;
+        margin-bottom: 5px;
+        padding: 0 20px;
+      }
+
+      @include sp {
+        height: 20px;
+        margin-right: 6px;
+        padding: 0 8px;
+      }
+
+      &:nth-of-type(n+5) {
+        @include sp {
+          margin-top: 8px;
+        }
+      }
+    }
+
+    .icon {
+      position: relative;
+
+
+      &--storage,
+      &--floor {
+        @include pc {
+          padding-left: 25px;
+        }
+
+        @include sp {
+          padding-left: 17px;
+        }
+
+        &:before {
+          content: '';
+          display: block;
+          left: 0;
+          position: absolute;
+          top: 50%;
+          transform: translate(0, -50%);
+
+          @include pc {
+            height: 12px;
+            width: 22px;
+          }
+
+          @include sp {
+            height: 10px;
+            width: 15px;
+          }
+        }
+      }
+
+      &--storage {
+
+        &:before {
+          background-color: #d6cbac;
+        }
+      }
+
+      &--floor {
+
+        &:before {
+          background-color: #f5e6e2;
+        }
+      }
+
+      &--ventilation {
+
+        svg {
+          height: 8px;
+          width: 38px;
+        }
+
+        path {
+          clip-rule: evenodd;
+          fill: #84bae5;
+          fill-rule: evenodd;
+        }
+      }
+
+      &--lighting {
+
+        svg {
+          height: 8px;
+          width: 18px;
+        }
+
+        polygon {
+          fill: #facd89;
+        }
+      }
+
+      &--magnet {
+
+        svg {
+          height: auto;
+          width: 18px;
+        }
+      }
+
+      &--passive {
+
+        svg {
+          height: auto;
+          width: 18px;
+        }
+      }
+    }
+
+  }
+}
+
+.clickableAttention {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+
+  &__icon {
+    align-items: center;
+    background-color: rgba(223, 178, 85, .902);
+    border-radius: 50%;
+    box-shadow: 0 8px 16px 0 rgba(102, 102, 102, .1);
+    display: flex;
+    justify-content: center;
+
+    @include pc {
+      height: 49px;
+      margin-right: 20px;
+      width: 49px;
+    }
+
+    @include sp {
+      height: 28px;
+      margin-right: 10px;
+      width: 28px;
+    }
+
+    .searchSVG {
+      height: auto;
+
+      @include pc {
+        width: 26px;
+      }
+
+      @include sp {
+        width: 15px;
+      }
+    }
+  }
+
+  &__txt {
+    letter-spacing: .08em;
+
+    @include pc {
+      font-size: 16px;
+    }
+
+    @include sp {
+      font-size: 12px;
+    }
+
+  }
+}
+
+.roomCopy {
+  align-items: center;
+  box-shadow: 0 8px 16px 0 rgba(102, 102, 102, .1);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+
+
+  @include pc {
+    height: 64px;
+    margin-bottom: 32px;
+  }
+
+  @include sp {
+    height: 60px;
+    margin-bottom: 24px;
+  }
+
+  &__icon {
+    align-items: center;
+    background-color: rgba(223, 178, 85,.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+
+    @include pc {
+      height: 48px;
+      left: 24px;
+      width: 48px;
+    }
+
+    @include sp {
+      height: 40px;
+      left: 12px;
+      width: 40px;
+    }
+
+    .sellSVG {
+      height: auto;
+
+      @include pc {
+        width: 26px;
+      }
+
+      @include sp {
+        width: 18px;
+      }
+    }
+  }
+
+  &__txt {
+    color: #dfb255;
+
+    @include pc {
+      font-size: 20px;
+
+      @include lhCrop(32/20); }
+
+    @include sp {
+      font-size: 14px;
+
+      @include lhCrop(32/28); }
+  }
+}
+
+.searchPoint {
+  cursor: pointer;
+  position: absolute;
+
+  &__icon {
+    align-items: center;
+    background-color: rgba(223,178,85,.9);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+
+    @include pc {
+      height: 49px;
+      width: 49px;
+    }
+
+    @include sp {
+      height: 28px;
+      width: 28px;
+    }
+
+    .searchSVG {
+      height: auto;
+
+      @include pc {
+        width: 26px;
+      }
+
+      @include sp {
+        width: 15px;
+      }
+    }
+  }
+
+  &--a {
+    @include pc {
+      right: 212px;
+      top: 285px;
+    }
+
+    @include sp {
+      right: 70px;
+      top: 160px;
+    }
+  }
+
+  &--b {
+    @include pc {
+      left: 160px;
+      top: 490px;
+    }
+
+    @include sp {
+      left: 15px;
+      top: 278px;
+    }
+  }
+
+  &--c {
+    @include pc {
+      left: 335px;
+      top: 670px;
+    }
+
+    @include sp {
+      left: 120px;
+      top: 380px;
+    }
+  }
+}
+
+.pointBox {
+  align-items: center;
+  background-color: rgba(223,178,85,.95);
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  position: absolute;
+  transition: .3s;
+
+  @include pc {
+    padding: 20px 13px;
+  }
+
+  @include sp {
+    padding: 10px 8px;
+  }
+
+  &:before {
+    border-style: solid;
+    content: '';
+    height: 0;
+    position: absolute;
+    width: 0;
+
+    @include pc {
+      top: 32px;
+    }
+  }
+
+  &__txt {
+    color: #ffffff;
+    letter-spacing: 0;
+    text-align: left;
+
+    @include pc {
+      font-size: 16px;
+
+      @include lhCrop(25/16);
+    }
+
+    @include sp {
+      font-size: 11px;
+
+      @include lhCrop(30/22);
+    }
+  }
+
+  &--a {
+    @include pc {
+      right: -57px;
+      top: 265px;
+      width: 230px;
+    }
+
+    @include sp {
+      right: 12px;
+      top: 200px;
+      width: 155px;
+    }
+
+    &:before {
+      @include pc {
+        border-color: transparent rgba(223,178,85,.95) transparent transparent;
+        border-width: 10px 16px 10px 0;
+        right: 100%;
+      }
+
+      @include sp {
+        border-color: transparent transparent rgba(223,178,85,.95) transparent;
+        border-width: 0 4.5px 7px 4.5px;
+        bottom: 100%;
+        right: 68px;
+      }
+    }
+  }
+
+  &--b {
+    @include pc {
+      left: -60px;
+      top: 470px;
+      width: 194px;
+    }
+
+    @include sp {
+      left: 0;
+      top: 315px;
+      width: 121px;
+    }
+
+    &:before {
+      @include pc {
+        border-color: transparent transparent transparent rgba(223,178,85,.95);
+        border-width: 10px 0 10px 16px;
+        left: 100%;
+      }
+
+      @include sp {
+        border-color: transparent transparent rgba(223,178,85,.95) transparent;
+        border-width: 0 4.5px 7px 4.5px;
+        bottom: 100%;
+        left: 25px;
+      }
+    }
+  }
+
+  &--c {
+    @include pc {
+      right: 130px;
+      top: 655px;
+      width: 230px;
+    }
+
+    @include sp {
+      right: 0;
+      top: 380px;
+      width: 150px;
+    }
+
+    &:before {
+      @include pc {
+        border-color: transparent rgba(223,178,85,.95) transparent transparent;
+        border-width: 10px 16px 10px 0;
+        right: 100%;
+      }
+
+      @include sp {
+        border-color: transparent rgba(223,178,85,.95) transparent transparent;
+        border-width: 5px 8px 5px 0;
+        right: 100%;
+        top: 10px;
+      }
+    }
+  }
+
+  &.is-active {
+    opacity: 1;
+  }
+}

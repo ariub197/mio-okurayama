@@ -1,0 +1,160 @@
+<%include('/_utils');
+const params = ejsUtils.defaultParamsMapper(locals, {
+  type: '',
+  variation:'',
+  specCaption: '',
+  roomLength:{
+    en:'',
+    jp:'',
+  },
+  subLength:[],
+  point:[],
+  specCaption: '',
+  directory: '',
+  buildingCaption: '',
+  modifiers:[],
+});
+
+let iniT,formatLdk,typeVariation,roomType;
+const variationArr = variation.toLowerCase().split('+');
+const variationUpperArr = variation.split('+');
+roomType = variationArr[0].substr(1);
+typeVariation = variationUpperArr.shift();
+ldkInt = variationArr[0].substr(0, 1);
+if(variationArr.length <= 1) {
+  typeVariation = `${variationUpperArr.join('+')}`;
+} else {
+  typeVariation = `+${variationUpperArr.join('+')}`;
+}
+
+switch (roomType){
+  case 'r':
+    formatLdk = '<span class="num">' + ldkInt + '</span><span class="large">R</span>';
+    break;
+  case 'dk':
+    formatLdk = '<span class="num">' + ldkInt + '</span><span class="large">DK</span>';
+    break;
+  default:
+    formatLdk = '<span class="num">' + ldkInt + '</span><span class="large">LDK</span>';
+}
+let nando,wic,sic,wtc;
+
+for (let i = 0; i < variationArr.length; i++) {
+  if(variationArr[i].includes('n')) {
+    nando = '';
+  }
+  if(variationArr[i].includes('wic')) {
+    wic = '';
+  }
+  if(variationArr[i].includes('wtc')) {
+    wtc = '';
+  }
+  if(variationArr[i].includes('sic')) {
+    sic = '';
+  }
+}
+
+// const keywords = ['n', 'wic', 'wtc', 'sic'];
+// const variables = [nando, wic, wtc, sic];
+
+// for (let i = 0; i < variationArr.length; i++) {
+//   const variation = variationArr[i];
+
+//   keywords.forEach((keyword, index) => {
+//     if (variation.includes(keyword)) {
+//       variables[index] = '';
+//     }
+//   });
+// }
+
+
+const fmtSubLength = subLength.map((str) => {
+  const regex = /([0-9]{2}\.[0-9]{2})/; // 小数点以下2桁の数字にマッチする正規表現
+  const matches = str.match(regex); // 文字列内のマッチする部分を取得
+
+  if (matches && matches.length > 0) {
+    const num = matches[0]; // マッチした数字部分
+    const formattedStr = str.replace(num, `<span class="num">${num}</span>`); // 数字部分を整形
+    const replacedStr = formattedStr.replace("m2", "m&sup2;"); // "m2"を"m&sup2;"に置換
+    return replacedStr;
+  }
+
+  return str; // マッチしない場合はそのまま返す
+});
+
+
+const rLArray = params.roomLength.en.split('.'),
+rlInt = rLArray[0];
+fmtRlInt = '<span class="num">' + rLArray[0] + '.</span>',
+foramtRL = fmtRlInt + '<span class="num">' + rLArray[1] + '</span>';
+
+pagePath = type.toLowerCase();
+thisPage = 'plan-' + pagePath;
+
+const className = ejsUtils.mapModifiers('roomDetail', params.modifiers);
+%>
+<div class="<%- className %>">
+  <div class="roomDetail__head">
+    <% if(params.modifiers.includes('pickup')) { %><div class="roomDetail__pickupTtl"><span class="name">2</span>LDK PICK UP PLAN</div><% } %>
+    <div class="roomDetail__type"><span class="name"><%- params.type %></span> <span class="type">TYPE</span><% if (params.specCaption) { %><span class="floor">（<%- params.specCaption %>）</span><% } %></div>
+    <div class="roomSpec">
+      <div class="roomSpec__variation"><%- formatLdk %><%- typeVariation %></div>
+      <div class="mainLength"><%- foramtRL %><span class="meter">㎡</span><span class="tsubo"><%- params.roomLength.jp %></span></div>
+      <ul class="subLength">
+        <% fmtSubLength.forEach(function (value, key) { %><li class="subLength__item"><%- value %></li><% }); %>
+      </ul>
+    </div>
+    <% if(params.point.length>0){%>
+    <ul class="pointList">
+      <% params.point.forEach(function (value, key) { %><li class="pointList__item"><%- value %></li><% }); %>
+    </ul>
+    <%}%>
+  </div>
+
+
+
+  <div class="roomDetail__cont">
+    <% if (params.specCaption.includes('10') ) { %>
+      <img src="./imgs/m-<%- pagePath %>-10.png" alt="<%- params.type %> TYPE">
+    <% }  else {%>  
+      <img src="./imgs/m-<%- pagePath %>.png" alt="<%- params.type %> TYPE">
+    <% } %>  
+  </div>
+  <div class="roomDetail__bottom">
+    <div class="hanreiArea">
+      <ul class="hanreiList">
+        <li class="hanreiList__item"><span class="icon icon--storage">：収納</span></li>
+        <li class="hanreiList__item"><span class="icon icon--floor">：床暖房</span></li>
+        <li class="hanreiList__item"><span class="icon icon--ventilation"><svg x="0px" y="0px" viewBox="0 0 32.6 6.3" style="enable-background: new 0 0 32.6 6.3;" xml:space="preserve">
+              <path d="M32.6,4.2c0,0-7.7-3.4-15.9,0.6c0,0-9,5.2-16.7-4.3c7.1,6.4,15.9,0.7,15.9,0.7C24.7-2.8,32.6,4.2,32.6,4.2" />
+            </svg>：通風</span></li>
+        <li class="hanreiList__item"><span class="icon icon--lighting"><svg x="0px" y="0px" viewBox="0 0 32.5 6.5" style="enable-background: new 0 0 32.5 6.5;" xml:space="preserve">
+              <polygon points="0,0 32.5,2.5 0,6.5 " />
+            </svg>：採光</span></li>
+        <li class="hanreiList__item"><span class="icon icon--magnet"><svg viewBox="0 0 11.97 11.97">
+              <path fill="#356e9d" d="m11.97,5.99c0,3.31-2.68,5.98-5.99,5.98S0,9.29,0,5.99,2.68,0,5.98,0s5.99,2.68,5.99,5.99" />
+              <path fill="#fff" d="m6.48,9.22h-.98L3.42,3.17c0,.23.02,1.41.02,1.68v4.37h-.78V2.48h1.27l2.05,6.05,2.05-6.05h1.28v6.74h-.8v-4.37c0-.28.02-1.46.03-1.68l-2.07,6.05Z" />
+            </svg>：マグネットセンサー</span></li>
+        <li class="hanreiList__item"><span class="icon icon--passive"><svg viewBox="0 0 11.97 11.98">
+              <path fill="#9b565f" d="m11.97,5.99c0,3.31-2.68,5.99-5.99,5.99S0,9.3,0,5.99,2.68,0,5.99,0s5.99,2.68,5.99,5.99" />
+              <path fill="#fff" d="m6.94,2.5c1.36,0,2.03.6,2.03,2.04,0,1.6-.79,2.08-2.1,2.08h-2.59v2.61h-.82V2.5h3.48Zm-2.66.74v2.63h2.55c.74,0,1.32-.14,1.32-1.32s-.55-1.31-1.32-1.31h-2.55Z" />
+            </svg>：パッシブセンサー</span></li>
+        <li class="hanreiList__item">WIC：ウォークインクローゼット</li>
+        <% if (params.type === "B") { %>
+        <li class="hanreiList__item">FC：ファミリークローゼット</li>
+        <% } else { %>
+        <li class="hanreiList__item">FC：ファミリークローク</li>
+        <% } %>
+        <li class="hanreiList__item">SIC：シューズインクローク</li>
+      </ul>
+      <p class="caption">※掲載の図面は、計画段階の図面を基に描いたもので、今後変更になる場合がございます。予めご了承ください。</p>
+    </div>
+  </div>
+</div>
+
+<!-- <ul class="hanreiList">
+  <%# if (nando == '') { %><li class="hanreiList__item">N：納戸</li><%# }%>
+  <%# if (wic == '') { %><li class="hanreiList__item">WIC：ウォークインクローゼット</li><%# }%>
+  <%# if (wtc == '') { %><li class="hanreiList__item">WTC：ウォークスルークローゼット</li><%# }%>
+  <%# if (sic == '') { %><li class="hanreiList__item">SIC：シューズインクローゼット</li><%# }%>
+</ul> -->

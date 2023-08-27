@@ -1,0 +1,149 @@
+<% var pageData = {
+		pageDir: 'plan'
+	};
+%>
+<%- include('/_head', {
+  pageId: pageData.pageDir,
+  title: 'プラン詳細',
+  canonical:'plan/plan-d.html',
+  }) %>
+<%- include('/common/inc/header/_header.ejs', {pageId: pageData.pageDir}) %>
+<main class="main">
+  <div class="container">
+    <h2 class="pageTtl">
+      <div class="en">PLAN detail</div>
+      <div class="jp">プラン詳細</div>
+    </h2>
+  <div class="wrap">
+    <section class="plan-detail">
+      <div class="planDetail">
+        <div class="panel">
+          <div class="name"><span><strong>D</strong> TYPE</span></div>
+          <div class="plan"><strong>3</strong>ldk+3wic+fc+sic</div>
+          <div class="size">
+            <div class="primary"><span class="num">70.01</span>m&sup2;<span class="small">（21.17坪）</span></div>
+            <dl class="secondary">
+              <dt>バルコニー面積</dt>
+              <dd><span class="num">9.32</span>m&sup2;（0.00坪）</dd>
+              <dt>サービスバルコニー面積</dt>
+              <dd><span class="num">1.08</span>m&sup2;（0.00坪）</dd>
+            </dl>
+          </div>
+          <ol class="point">
+            <li>通風・採光に優れた南東向き角住戸</li>
+            <li>全洋室にウォークインクローゼットを配し、ファミリークロゼットやシューズインクローゼットも設置した収納充実プラン</li>
+            <li>浴室には窓を設置し、換気にも配慮</li>
+          </ol>
+          <div class="image typeD">
+            <img src="imgs/m-d.svg" alt="Dtype" width="431" height="743">
+          </div>
+          <ul class="hanreiList">
+            <li class="hanreiList__item"><span class="icon icon--storage">：収納</span></li>
+            <li class="hanreiList__item"><span class="icon icon--floor">：床暖房</span></li>
+            <li class="hanreiList__item"><span class="icon icon--ventilation"><svg x="0px" y="0px"
+                  viewBox="0 0 32.6 6.3" style="enable-background: new 0 0 32.6 6.3;" xml:space="preserve">
+                  <path
+                    d="M32.6,4.2c0,0-7.7-3.4-15.9,0.6c0,0-9,5.2-16.7-4.3c7.1,6.4,15.9,0.7,15.9,0.7C24.7-2.8,32.6,4.2,32.6,4.2">
+                  </path>
+                </svg>：通風</span></li>
+            <li class="hanreiList__item"><span class="icon icon--lighting"><svg x="0px" y="0px" viewBox="0 0 32.5 6.5"
+                  style="enable-background: new 0 0 32.5 6.5;" xml:space="preserve">
+                  <polygon points="0,0 32.5,2.5 0,6.5 "></polygon>
+                </svg>：採光</span></li>
+            <li class="hanreiList__item"><span class="icon icon--magnet"><svg viewBox="0 0 11.97 11.97">
+                  <path fill="#356e9d"
+                    d="m11.97,5.99c0,3.31-2.68,5.98-5.99,5.98S0,9.29,0,5.99,2.68,0,5.98,0s5.99,2.68,5.99,5.99"></path>
+                  <path fill="#fff"
+                    d="m6.48,9.22h-.98L3.42,3.17c0,.23.02,1.41.02,1.68v4.37h-.78V2.48h1.27l2.05,6.05,2.05-6.05h1.28v6.74h-.8v-4.37c0-.28.02-1.46.03-1.68l-2.07,6.05Z">
+                  </path>
+                </svg>：マグネットセンサー</span></li>
+            <li class="hanreiList__item"><span class="icon icon--passive"><svg viewBox="0 0 11.97 11.98">
+                  <path fill="#9b565f"
+                    d="m11.97,5.99c0,3.31-2.68,5.99-5.99,5.99S0,9.3,0,5.99,2.68,0,5.99,0s5.99,2.68,5.99,5.99"></path>
+                  <path fill="#fff"
+                    d="m6.94,2.5c1.36,0,2.03.6,2.03,2.04,0,1.6-.79,2.08-2.1,2.08h-2.59v2.61h-.82V2.5h3.48Zm-2.66.74v2.63h2.55c.74,0,1.32-.14,1.32-1.32s-.55-1.31-1.32-1.31h-2.55Z">
+                  </path>
+                </svg>：パッシブセンサー</span></li>
+          </ul>
+          <div class="note">※掲載の図面は、計画段階の図面を基に描いたもので、今後変更になる場合がございます。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="plan-list">
+      <div class="menu">
+        <div class="label">PLAN LIST</div>
+        <div class="list">
+          <a href="plan-d.html" class="item item--01">
+            <div class="image">
+              <img src="imgs/btn-d.gif" alt="Dtype" width="180" height="280">
+            </div>
+            <div class="text">
+              <div class="name"><strong>D</strong>type</div>
+              <div class="plan">
+                <div class="primary"><strong>3</strong>LDK</div>
+                <div class="secondary">+3WIC+FC+SIC</div>
+              </div>
+              <div class="size">
+                <div class="primary"><span class="num"><strong>70</strong>.01</span>m&sup2;<span class="small">（約21.17坪）</span></div>
+                <div class="secondary">バルコニー面積：9.32m&sup2;<br>サービスバルコニー面積1.08m&sup2;</div>
+              </div>
+            </div>
+          </a>
+          <a href="plan-f.html" class="item item--02">
+            <div class="image">
+              <img src="imgs/btn-f.gif" alt="Ftype" width="180" height="280">
+            </div>
+            <div class="text">
+              <div class="name"><strong>F</strong>type</div>
+              <div class="plan">
+                <div class="primary"><strong>3</strong>LDK</div>
+                <div class="secondary">+3WIC+2FC+SIC</div>
+              </div>
+              <div class="size">
+                <div class="primary"><span class="num"><strong>70</strong>.16</span>m&sup2;<span class="small">（約21.22坪）</span></div>
+                <div class="secondary">バルコニー面積：9.70m&sup2;</div>
+              </div>
+            </div>
+          </a>
+          <a href="plan-g.html" class="item item--03">
+            <div class="image">
+              <img src="imgs/btn-g.gif" alt="Gtype" width="180" height="280">
+            </div>
+            <div class="text">
+              <div class="name"><strong>G</strong>type<span class="sub">（2・3階）</span></div>
+              <div class="plan">
+                <div class="primary"><strong>2</strong>LDK</div>
+                <div class="secondary">+WIC+SIC</div>
+              </div>
+              <div class="size">
+                <div class="primary"><span class="num"><strong>55</strong>.01</span>m&sup2;<span class="small">（約16.64坪）</span></div>
+                <div class="secondary">バルコニー面積：21.04m&sup2;</div>
+              </div>
+            </div>
+          </a>
+          <a href="plan-mr.html" class="item item--04">
+            <div class="image">
+              <img src="imgs/btn-mr.gif" alt="Mrtype" width="180" height="280">
+            </div>
+            <div class="text">
+              <div class="name"><strong>Mr</strong>type</div>
+              <div class="plan">
+                <div class="primary"><strong>4</strong>LDK</div>
+                <div class="secondary">+3WIC+SIC</div>
+              </div>
+              <div class="size">
+                <div class="primary"><span class="num"><strong>78</strong>.60</span>m&sup2;<span class="small">（約23.77坪）</span></div>
+                <div class="secondary">バルコニー面積：10.27m&sup2;<br>ルーフバルコニー面積31.06m&sup2;</div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+  </div>
+  <%- include('/common/components/contentsGuide/_contentsGuide.ejs') %>
+</main>
+<%- include('/common/inc/bottomInfo/_bottomInfo.ejs', {pageId: pageData.pageDir}) %>
+<%- include('/common/inc/footer/_footer.ejs', {pageId: pageData.pageDir, footerCap: ''}) %>

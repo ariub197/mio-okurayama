@@ -67,7 +67,7 @@
       }
 
       @include sp {
-        font-size: 17px;
+        font-size: 15px;
       }
     }
 
@@ -184,7 +184,7 @@
   }
 
   & + .option {
-    margin-bottom: 30px;
+    //margin-bottom: 30px;
     margin-top: 5px;
     text-align: right;
   }

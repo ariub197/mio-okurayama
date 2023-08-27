@@ -1,111 +1,128 @@
 .featureSect {
 
   &__head {
+/*
     align-items: flex-start;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  
+
     & + .featureSect__cont {
       @include pc {
         margin-top: 54px;
       }
-  
+
       @include sp {
         margin-top: 30px;
       }
     }
+*/
   }
-  
+
   &__cont {
     background: url('../imgs/bg-pattern.jpg');
     box-shadow: 0 8px 16px 0 rgba(102, 102, 102, .1);
-  
+
     @include pc {
+      margin-top: 60px;
       padding: 60px 72px;
     }
-  
+
     @include sp {
+      margin-top: 40px;
       padding: 32px 10px;
     }
-  
+
     .touchFigure {
       @include sp {
         height: 210px;
-        width: 100%;
+      }
+    }
+
+    &--bgNone {
+      background: transparent;
+      box-shadow: none;
+
+      @include pc {
+        margin-top: 60px;
+        padding: 0;
+      }
+
+      @include sp {
+        margin-top: 40px;
+        padding: 0;
       }
     }
   }
-  
+
   &__heading,
   &__txt {
     @include pc {
       width: 456px;
     }
   }
-  
+
   &__heading {
     background-color: #d5e7eb;
-  
+
     @include pc {
       padding: 20px;
     }
-  
+
     @include sp {
       margin-left: -30px;
       padding: 10px 30px;
       width: calc(100% + 30px);
     }
-  
+
     span {
       color: #4c98aa;
       letter-spacing: .12em;
-  
+
       @include pc {
         font-size: 20px;
-  
+
         @include lhCrop(32 / 20);
       }
-  
+
       @include sp {
         font-size: 14px;
-  
+
         @include lhCrop(44 / 28);
       }
     }
-  
+
     & + .featureSect__txt {
       @include sp {
         margin-top: 30px;
       }
     }
   }
-  
-  
+
   &__txt {
     color: #464646;
     letter-spacing: .04em;
-  
+
     @include pc {
       font-size: 16px;
-  
+
       @include lhCrop(28 / 16);
     }
-  
+
     @include sp {
       font-size: 12px;
-  
+
       @include lhCrop(38 / 24);
     }
   }
-  
+
   & + .featureSect {
     @include pc {
-      margin-top: 120px;
+      margin-top: 160px;
     }
-  
+
     @include sp {
-      margin-top: 60px;
+      margin-top: 80px;
     }
   }
 }

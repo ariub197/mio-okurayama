@@ -1,10 +1,10 @@
 .txt {
-  letter-spacing: .15em;
+  letter-spacing: .12em;
 
   @include min-screen($breakP) {
-    font-size: 14px;
+    font-size: 16px;
 
-    @include lhCrop(32 / 14);
+    @include lhCrop(32 / 16);
   }
 
   @include max-screen($breakP) {

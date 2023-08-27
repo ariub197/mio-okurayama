@@ -1,0 +1,20 @@
+<svg id="arrow01.svg" xmlns="http://www.w3.org/2000/svg" width="38.38" height="38.38" viewBox="0 0 38.38 38.38">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-opacity: 0.8;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #94afaa;
+      }
+    </style>
+  </defs>
+  <path id="b" class="cls-1" d="M1403,2156.8a19.2,19.2,0,1,1-19.2,19.2A19.2,19.2,0,0,1,1403,2156.8Z" transform="translate(-1383.81 -2156.81)"/>
+  <path id="_" data-name="▶" class="cls-2" d="M1406.93,2175.63l-8.28,4.05,1.86-4.04-1.86-4.06Z" transform="translate(-1383.81 -2156.81)"/>
+</svg>

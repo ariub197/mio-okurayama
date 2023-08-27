@@ -1,0 +1,82 @@
+<%include('/_utils');
+const params = ejsUtils.defaultParamsMapper(locals, {
+  type:'',
+  variation:'',
+  roomLength:'',
+  floor:'',
+  label: '',
+  pathLayer: '',
+  modifiers: []
+});
+const capitalizeTypeName = () => {
+  if (typeof params.type !== 'string' || !params.type) return params.type;
+  return params.type.charAt(0).toUpperCase() + params.type.slice(1).toLowerCase();
+};
+const altPlanName = capitalizeTypeName();
+dirPath = params.type.toLowerCase();
+
+let iniT,formatLdk,typeVariation,roomType;
+const variationArr = variation.toLowerCase().split('+');
+const variationUpperArr = variation.split('+');
+roomType = variationArr[0].substr(1);
+typeVariation = variationUpperArr.shift();
+ldkInt = variationArr[0].substr(0, 1);
+if(variationArr.length <= 1) {
+  typeVariation = `${variationUpperArr.join('+')}`;
+} else {
+  typeVariation = `+${variationUpperArr.join('+')}`;
+}
+
+switch (roomType){
+  case 'r':
+    formatLdk = '<span class="num">' + ldkInt + '</span><span class="large">R</span>';
+    break;
+  case 'dk':
+    formatLdk = '<span class="num">' + ldkInt + '</span><span class="large">DK</span>';
+    break;
+  default:
+    formatLdk = '<span class="num">' + ldkInt + '</span><span class="large">LDK</span>';
+}
+
+
+const transformedTxt = params.roomLength.replace(/(\d+\.\d+)(m2)/, '<span class="num">$1</span><span class="meter">m&sup2;</span>');
+const finalTxt = transformedTxt.replace(/（約(\d+\.\d+)坪）/, '<span class="tsubo">（約$1坪）</span>');
+
+const className = ejsUtils.mapModifiers('planBtn', params.modifiers);
+%>
+<div class="<%- className %>">
+    <% if (params.floor.includes('10') ) { %>
+      <a href="./plan-<%- dirPath %>-10.html" class="planBtn__link">
+    <% }  else {%>  
+      <a href="./plan-<%- dirPath %>.html" class="planBtn__link">
+    <% } %>  
+    <div class="planBtn__head">
+      <div class="planBtn__type"><span class="alphabet"><%- params.type %></span><span class="type">TYPE</span></div>
+    </div>
+    <div class="planBtn__cont">
+      <% if(!params.modifiers.includes('comingSoon')) { %><div class="btnSpec">
+        <div class="btnSpec__data">
+          <div class="btnSpec__variation"><span class="ldk"><%- formatLdk %></span><%- typeVariation %></div>
+          <% if (params.floor) { %><div class="btnSpec__floor"><span class="num"><%- params.floor %></span>F</div><% } %>
+          <div class="btnSpec__length"><%- finalTxt %></div>
+        </div>
+      </div><% } else {%>
+      <div class="planBtn__csTxt">coming soon</div>
+      <% } %>
+    </div>
+    <% if(!params.modifiers.includes('comingSoon')) { %><div class="planBtn__icon">
+      <svg class="arrowSVG" width="17.5px" height="10.5px" viewBox="0 0 17.5 10.5">
+        <path fill-rule="evenodd" stroke="rgb(76, 152, 170)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M9.499,9.500 L9.499,8.500 L13.1000,5.500 L0.500,5.500 L0.500,4.500 L14.000,4.500 L9.499,1.500 L9.499,0.500 L16.500,4.500 L16.500,5.500 L9.499,9.500 Z" />
+      </svg>
+    </div><% } %>
+  </a>
+  <div class="planBtn__bg">
+    <%- include('/common/components/photo/_photo.ejs', {
+      imagePath: `<img src="./imgs/bg-btn-${dirPath}.jpg" alt="">`,
+      alt: `${altPlanName} TYPE`,
+      captionPosition: 'noCap',
+      pictureMode: '',
+      modifiers: []
+    }) %>
+  </div>
+</div>

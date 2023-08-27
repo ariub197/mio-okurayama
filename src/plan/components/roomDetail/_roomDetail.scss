@@ -1,0 +1,605 @@
+.roomDetail {
+  background: url('../../common/imgs/bg-pattern.jpg');
+  box-shadow: 10px 10px 40px 0 rgba(41, 41, 41, .6);
+  display: block;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  @include pc {
+    padding: 105px 30px 70px;
+  }
+
+  @include sp {
+    margin: 0 -20px;
+    padding: 70px 20px 40px;
+    width: calc(100% + 40px);
+  }
+
+  &__head {
+    text-align: center;
+
+    @include pc {
+    }
+
+    @include sp {
+    }
+
+    .roomSpec {
+      color: #322f33;
+
+      @include pc {
+
+      }
+
+      &__variation {
+        font-family: $font-en;
+        letter-spacing: .05em;
+        line-height: .7;
+
+        @include pc {
+          font-size: 40px;
+        }
+
+        @include sp {
+          font-size: 24px;
+        }
+
+        .num {
+          @include pc {
+            font-size: 48px;
+          }
+
+          @include sp {
+            font-size: 28px;
+          }
+        }
+
+        & + .mainLength {
+          @include pc {
+            margin-top: 40px;
+          }
+
+          @include sp {
+            margin-top: 15px;
+          }
+        }
+      }
+
+      &__caption {
+        line-height: 1;
+
+        @include pc {
+          padding-left: 15px;
+        }
+      }
+
+      & + .pointSwitch {
+        @include pc {
+          margin-top: 40px;
+        }
+
+        @include sp {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    .mainLength {
+      line-height: 1;
+
+      .num {
+        font-family: $font-en;
+        letter-spacing: .05em;
+        line-height: .7;
+
+        @include pc {
+          font-size: 40px;
+        }
+
+        @include sp {
+          font-size: 24px;
+        }
+      }
+
+      .meter {
+        @include pc {
+          font-size: 18px;
+        }
+
+        @include sp {
+          font-size: 16px;
+        }
+      }
+
+      .tsubo,.floor {
+        font-size: 10px;
+        line-height: 1;
+        margin-left: 5px;
+      }
+
+      & + .subLength {
+        @include pc {
+          margin-top: 15px;
+        }
+
+        @include sp {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .subLength {
+      align-items: center;
+      color: #464646;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      line-height: 1;
+      width: 100%;
+
+      &__item {
+        font-size: 10px;
+        line-height: 1;
+        vertical-align: bottom;
+
+        @include pc {
+        }
+
+        @include sp {
+        }
+
+        .num {
+          font-family: $font-en;
+          font-size: 16px;
+          line-height: .7;
+        }
+
+        &:not(:last-of-type) {
+          @include pc {
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+    }
+
+  }
+
+  &__cont {
+    text-align: center;
+
+    @include pc {
+      padding-bottom: 70px;
+      padding-top: 45px;
+    }
+
+    @include sp {
+      padding-bottom: 32px;
+      padding-top: 14px;
+    }
+  }
+
+  &__type {
+    align-items: center;
+    background-color: rgba(76,152,170,.2);
+    box-shadow: 0 0 16px 0 rgba($color: #666666, $alpha: .1);
+    color: #4c98aa;
+    display: flex;
+    font-family: $font-en;
+    justify-content: center;
+    left: 50%;
+    line-height: .8;
+    position: absolute;
+    top: 0;
+    transform: translate(-50%,0);
+    width: 100%;
+
+    @include pc {
+      font-size: 16px;
+      height: 62px;
+    }
+
+    @include sp {
+      font-size: 12px;
+      height: 50px;
+    }
+
+    .name {
+      @include pc {
+        font-size: 28px;
+      }
+
+      @include sp {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__pickupTtl {
+    align-items: center;
+    background-color: rgba(76,152,170,.2);
+    color: #4c98aa;
+    display: flex;
+    font-family: $font-en;
+    justify-content: center;
+    left: 50%;
+    line-height: .8;
+    position: absolute;
+    top: 0;
+    transform: translate(-50%,-50%);
+
+    @include pc {
+      font-size: 16px;
+      height: 62px;
+      width: 576px;
+    }
+
+    @include sp {
+      font-size: 12px;
+      height: 50px;
+      width: 315px;
+    }
+
+    .name {
+      @include pc {
+        font-size: 28px;
+      }
+
+      @include sp {
+        font-size: 16px;
+      }
+    }
+
+  }
+
+
+  &__bottom {
+    position: relative;
+
+
+    @include pc {
+      margin: 0 auto;
+      width: 768px;
+    }
+
+    .caption {
+      color: #666666;
+      letter-spacing: 0;
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    .hanreiArea {
+      position: relative;
+
+
+    }
+
+  }
+
+  &--pickup {
+    @include pc {
+      padding: 85px 96px 70px;
+    }
+
+    .roomDetail {
+
+      &__head {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        text-align: left;
+
+        .subLength {
+          justify-content: flex-start;
+
+          &__item {
+
+            .num {
+              font-size: 10px;
+            }
+          }
+        }
+
+        .roomSpec {
+          margin-left: 20px;
+
+          & + .pointSwitch {
+            @include pc {
+              margin: 0 0 0 auto;
+            }
+
+            @include sp {
+              margin: 25px auto 0;
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      &__type {
+        position: static;
+        transform: translate(0,0);
+
+        @include pc {
+          height: 134px;
+          width: 96px;
+
+        }
+
+        @include sp {
+          height: 76px;
+          width: 53px;
+
+        }
+
+        span {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+        }
+
+        .type {
+          margin-top: 10px;
+          writing-mode: vertical-rl;
+        }
+      }
+    }
+
+  }
+
+  .hanreiList {
+    align-items: center;
+    color: #666666;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    &__item {
+      align-items: center;
+      border-radius: 4px;
+      box-shadow: 0 4px 8px 0 rgba(102, 102, 102, .2);
+      display: flex;
+      font-size: 12px;
+      justify-content: center;
+      letter-spacing: 0;
+
+      @include pc {
+        height: 30px;
+        margin-bottom: 5px;
+        padding: 0 20px;
+      }
+
+      @include sp {
+        height: 20px;
+        margin-right: 6px;
+        padding: 0 8px;
+      }
+
+      &:nth-of-type(n+5) {
+        @include sp {
+          margin-top: 8px;
+        }
+      }
+    }
+
+    .icon {
+      position: relative;
+
+
+      &--storage,
+      &--floor {
+        @include pc {
+          padding-left: 25px;
+        }
+
+        @include sp {
+          padding-left: 17px;
+        }
+
+        &:before {
+          content: '';
+          display: block;
+          left: 0;
+          position: absolute;
+          top: 50%;
+          transform: translate(0, -50%);
+
+          @include pc {
+            height: 12px;
+            width: 22px;
+          }
+
+          @include sp {
+            height: 10px;
+            width: 15px;
+          }
+        }
+      }
+
+      &--storage {
+
+        &:before {
+          background-color: #d6cbac;
+        }
+      }
+
+      &--floor {
+
+        &:before {
+          background-color: #f5e6e2;
+        }
+      }
+
+      &--ventilation {
+
+        svg {
+          height: 8px;
+          width: 38px;
+        }
+
+        path {
+          clip-rule: evenodd;
+          fill: #84bae5;
+          fill-rule: evenodd;
+        }
+      }
+
+      &--lighting {
+
+        svg {
+          height: 8px;
+          width: 18px;
+        }
+
+        polygon {
+          fill: #facd89;
+        }
+      }
+
+      &--magnet {
+
+        svg {
+          height: auto;
+          width: 18px;
+        }
+      }
+
+      &--passive {
+
+        svg {
+          height: auto;
+          width: 18px;
+        }
+      }
+    }
+
+  }
+
+  .pointList{
+    background: rgba(#4c98aa,.8);
+    counter-reset: number 0;
+
+
+    @include pc {
+      column-gap: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 58px;
+      padding: 40px;
+      row-gap: 20px;
+    }
+
+    @include sp {
+      margin-top: 30px;
+      padding: 30px 20px;
+    }
+
+    &__item {
+      border-bottom: solid 1px rgba(#ffffff,.5);
+      color: #ffffff;
+      counter-increment: number 1;
+      letter-spacing: .12em;
+      position: relative;
+      text-align: left;
+
+
+      @include lhCrop(22 / 16);
+
+      @include pc {
+        align-items: center;
+        display: flex;
+        font-size: 16px;
+        padding-bottom: 15px;
+        padding-left: 35px;
+        width: calc(50% - 16px);
+      }
+
+      @include sp {
+        font-size: 12px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+      }
+
+      &:before {
+        align-items: center;
+        background: rgba(#ffffff,.8);
+        color: #4c98aa;
+        content: counter(number);
+        display: flex;
+        font-size: 12px;
+        justify-content: center;
+        left: 0;
+        letter-spacing: 0;
+        position: absolute;
+
+        @include pc {
+          height: 24px;
+          top: .75em;
+          width: 24px;
+
+        }
+
+        @include sp {
+          height: 20px;
+          top: 50%;
+          transform: translate(0,-50%);
+          width: 20px;
+
+        }
+      }
+
+      & + .pointList__item {
+        @include sp {
+          margin-top: 20px;
+        }
+      }
+    }
+
+  }
+
+}
+/* ----------------------------------------------------------------------
+  印刷用PDFレイアウトCSS 幅1440px
+---------------------------------------------------------------------- */
+/*
+.header-menu,
+.keyVisual,
+.nextBackLink,
+.roomBnrs,
+.flowSect,
+.cvBnr,
+.bottomCV,
+.usableBtn,
+.bottomArea,
+.pageDirection,
+.footer-contact,
+.footer-recommend {
+  display: none !important;
+}
+
+.noVisual {
+  height: 200px !important;
+}
+
+.container {
+  padding-bottom: 0 !important;
+}
+
+.buildingBlock {
+  margin: 60px auto 0;
+
+  .photo {
+    width: 80%;
+  }
+}
+
+.plan-detail {
+  padding: 150px 0 100px !important;
+}
+*/

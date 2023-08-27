@@ -51,6 +51,7 @@
   }
 
   &__visual {
+    position: relative;
     box-shadow: 0 8px 16px 0 rgba(102, 102, 102, .5);
     overflow: hidden;
     transition: 1s;

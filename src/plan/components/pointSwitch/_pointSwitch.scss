@@ -1,0 +1,41 @@
+.pointSwitch {
+  position: relative;
+
+  @include sp {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-top: 25px;
+  }
+
+  &:before {
+    background-color: #b1b1b1;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    @include sp {
+      content: '';
+
+    }
+  }
+
+  &__txt {
+    font-size: 12px;
+    letter-spacing: .08em;
+
+    @include lhCrop(16/12);
+
+    @include pc {
+      margin-bottom: 10px;
+    }
+
+    @include sp {
+      text-align: left;
+    }
+  }
+}
+

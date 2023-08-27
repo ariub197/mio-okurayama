@@ -1,0 +1,155 @@
+.keyVisual {
+  position: relative;
+
+  @include pc {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+
+  @include sp {
+  }
+
+  &__head,
+  &__cont {
+    @include pc {
+    }
+  }
+
+  &__head {
+    position: relative;
+    @include pc {
+      box-shadow: 0 0 16px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .keyVisual__heading {
+      @include pc {
+        display: none;
+      }
+    }
+  }
+
+  &__cont {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    @include pc {
+      position: relative;
+      z-index: 3;
+    }
+
+    @include sp {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+
+    @include pc {
+      bottom: 40px;
+      left: 40px;
+      z-index: 2;
+    }
+
+    @include sp {
+      align-items: center;
+      bottom: 40px;
+      left: 0;
+      right: 0;
+      position: absolute;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 1), 0 0 15px rgba(255, 255, 255, 1), 0 0 10px rgba(255, 255, 255, 1), 0 0 10px rgba(255, 255, 255, 1);
+    }
+
+    .en {
+      display: block;
+    }
+
+    .en {
+      font-family: $font-en;
+      letter-spacing: .06em;
+      line-height: .65;
+
+      @include pc {
+        font-size: 60px;
+      }
+
+      @include sp {
+        font-size: 40px;
+      }
+    }
+  }
+
+  &__picture {
+  }
+
+  &__image {
+  }
+
+  &__capIn {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    z-index: 3;
+  }
+
+  &--spWhite {
+    @include sp {
+
+      .keyVisual__heading {
+        color: #ffffff;
+      }
+    }
+  }
+
+  &--spShadow {
+    @include sp {
+
+      .keyVisual__heading {
+        color: #ffffff;
+        text-shadow: rgba(0, 0, 0, .7) 1px 1px 10px, rgba(0, 0, 0, .7) 1px 1px 10px, rgba(0, 0, 0, .7) 1px 1px 10px,
+          rgba(0, 0, 0, .7) 1px 1px 10px, rgba(0, 0, 0, .7) 1px 1px 10px, rgba(0, 0, 0, .7) 1px 1px 10px;
+      }
+    }
+  }
+
+  &--lowerCase {
+
+    .keyVisual__heading {
+
+      .en {
+
+        .lowercase {
+
+          @include pc {
+            font-size: 38px;
+          }
+
+          @include sp {
+            font-size: 24px;
+          }
+        }
+
+      }
+    }
+  }
+
+  & + .lead {
+    @include pc {
+      margin-top: 160px;
+    }
+
+    @include sp {
+      margin-top: 80px;
+    }
+  }
+}

@@ -1,0 +1,167 @@
+<%include('/_utils');
+const params = ejsUtils.defaultParamsMapper(locals, {
+  type: '',
+  variation:'',
+  roomLength:{
+    en:'',
+    jp:'',
+  },
+  subLength:[],
+  specCaption: '',
+  directory: '',
+  buildingCaption: '',
+  modifiers:[],
+});
+
+let iniT,formatLdk,typeVariation,roomType;
+const variationArr = variation.toLowerCase().split('+');
+const variationUpperArr = variation.split('+');
+roomType = variationArr[0].substr(1);
+typeVariation = variationUpperArr.shift();
+ldkInt = variationArr[0].substr(0, 1);
+if(variationArr.length <= 1) {
+  typeVariation = `${variationUpperArr.join('+')}`;
+} else {
+  typeVariation = `+${variationUpperArr.join('+')}`;
+}
+
+switch (roomType){
+  case 'r':
+    formatLdk = '<span class="num">' + ldkInt + '</span><span class="large">R</span>';
+    break;
+  case 'dk':
+    formatLdk = '<span class="num">' + ldkInt + '</span><span class="large">DK</span>';
+    break;
+  default:
+    formatLdk = '<span class="num">' + ldkInt + '</span><span class="large">LDK</span>';
+}
+let nando,wic,sic,wtc;
+
+for (let i = 0; i < variationArr.length; i++) {
+  if(variationArr[i].includes('n')) {
+    nando = '';
+  }
+  if(variationArr[i].includes('wic')) {
+    wic = '';
+  }
+  if(variationArr[i].includes('wtc')) {
+    wtc = '';
+  }
+  if(variationArr[i].includes('sic')) {
+    sic = '';
+  }
+}
+
+// const keywords = ['n', 'wic', 'wtc', 'sic'];
+// const variables = [nando, wic, wtc, sic];
+
+// for (let i = 0; i < variationArr.length; i++) {
+//   const variation = variationArr[i];
+
+//   keywords.forEach((keyword, index) => {
+//     if (variation.includes(keyword)) {
+//       variables[index] = '';
+//     }
+//   });
+// }
+
+
+const fmtSubLength = subLength.map((str) => {
+  const regex = /([0-9]{2}\.[0-9]{2})/; // 小数点以下2桁の数字にマッチする正規表現
+  const matches = str.match(regex); // 文字列内のマッチする部分を取得
+
+  if (matches && matches.length > 0) {
+    const num = matches[0]; // マッチした数字部分
+    const formattedStr = str.replace(num, `<span class="num">${num}</span>`); // 数字部分を整形
+    const replacedStr = formattedStr.replace("m2", "m&sup2;"); // "m2"を"m&sup2;"に置換
+    return replacedStr;
+  }
+
+  return str; // マッチしない場合はそのまま返す
+});
+
+
+const rLArray = params.roomLength.en.split('.'),
+rlInt = rLArray[0];
+fmtRlInt = '<span class="num">' + rLArray[0] + '.</span>',
+foramtRL = fmtRlInt + '<span class="num">' + rLArray[1] + '</span>';
+
+pagePath = type.toLowerCase();
+thisPage = 'plan-' + pagePath;
+
+const className = ejsUtils.mapModifiers('pickupDetail', params.modifiers);
+%>
+<div class="<%- className %>">
+  <div class="pickupDetail__head">
+    <% if(params.modifiers.includes('pickup')) { %><div class="pickupDetail__pickupTtl"><span class="name">2</span>LDK PICK UP PLAN</div><% } %>
+    <%#
+    <div class="roomCopy">
+      <div class="roomCopy__icon">
+        <svg class="sellSVG" viewBox="0 0 36.04 36.05"><path fill="#dfb255" d="m20.87,35.57c-.32.32-.69.48-1.12.48s-.8-.16-1.12-.48L.5,17.44c-.18-.18-.31-.37-.39-.57s-.12-.41-.12-.63V1.54c0-.43.15-.79.45-1.09S1.11,0,1.54,0h14.7c.19,0,.4.03.6.1.21.07.4.18.58.32l18.07,18.07c.35.35.53.75.55,1.21.01.45-.14.84-.47,1.17l-14.7,14.7Zm-1.07-1.05l14.72-14.74L16.26,1.54H1.54v14.7s18.27,18.28,18.27,18.28ZM6.67,8.45c.5,0,.92-.18,1.27-.54.35-.36.53-.79.53-1.29s-.17-.92-.52-1.27c-.35-.35-.77-.53-1.27-.53-.52,0-.96.17-1.31.52-.35.35-.53.77-.53,1.27s.17.93.52,1.29c.35.36.78.54,1.31.54Z"/></svg>
+      </div>
+      <div class="roomCopy__txt">明るく爽やかな角住戸</div>
+    </div>
+     %>
+    <div class="pickupDetail__type"><span><span class="name"><%- params.type %></span> <span class="type">TYPE</span></span></div>
+    <div class="roomSpec">
+      <div class="roomSpec__variation"><%- formatLdk %><%- typeVariation %></div>
+      <div class="mainLength"><%- foramtRL %><span class="meter">㎡</span><span class="tsubo"><%- params.roomLength.jp %></span></div>
+      <ul class="subLength">
+        <% fmtSubLength.forEach(function (value, key) { %><li class="subLength__item"><%- value %></li><% }); %>
+      </ul>
+    </div>
+    <div class="clickableAttention">
+      <div class="clickableAttention__icon"><svg class="searchSVG" viewBox="0 0 32.77 32.77"><path fill="#ffffff" d="m31.65,32.77l-12.8-12.8c-.99.89-2.14,1.58-3.46,2.05-1.32.47-2.65.7-3.98.7-3.19,0-5.88-1.1-8.09-3.3C1.1,17.21,0,14.53,0,11.36S1.1,5.51,3.3,3.31C5.5,1.1,8.18,0,11.35,0c3.16,0,5.86,1.1,8.08,3.3,2.22,2.2,3.33,4.88,3.33,8.05,0,1.37-.25,2.72-.74,4.04-.49,1.32-1.18,2.47-2.06,3.46l12.82,12.75s-1.12,1.16-1.12,1.16Zm-20.26-11.59c2.76,0,5.08-.95,6.98-2.84s2.85-4.22,2.85-6.98-.95-5.09-2.85-6.98c-1.9-1.89-4.22-2.84-6.98-2.84s-5.09.95-7,2.84c-1.9,1.89-2.85,4.22-2.85,6.98s.95,5.09,2.85,6.98c1.9,1.89,4.23,2.84,7,2.84Z"/></svg></div>
+      <div class="clickableAttention__txt">クリックするとポイントがご覧いただけます。</div>
+    </div>
+  </div>
+
+  <div class="pickupDetail__cont">
+    <div class="searchPoint searchPoint--a js-searchPoint">
+      <div class="searchPoint__icon"><svg class="searchSVG" viewBox="0 0 32.77 32.77"><path fill="#ffffff" d="m31.65,32.77l-12.8-12.8c-.99.89-2.14,1.58-3.46,2.05-1.32.47-2.65.7-3.98.7-3.19,0-5.88-1.1-8.09-3.3C1.1,17.21,0,14.53,0,11.36S1.1,5.51,3.3,3.31C5.5,1.1,8.18,0,11.35,0c3.16,0,5.86,1.1,8.08,3.3,2.22,2.2,3.33,4.88,3.33,8.05,0,1.37-.25,2.72-.74,4.04-.49,1.32-1.18,2.47-2.06,3.46l12.82,12.75s-1.12,1.16-1.12,1.16Zm-20.26-11.59c2.76,0,5.08-.95,6.98-2.84s2.85-4.22,2.85-6.98-.95-5.09-2.85-6.98c-1.9-1.89-4.22-2.84-6.98-2.84s-5.09.95-7,2.84c-1.9,1.89-2.85,4.22-2.85,6.98s.95,5.09,2.85,6.98c1.9,1.89,4.23,2.84,7,2.84Z"/></svg></div>
+    </div>
+    <div class="pointBox pointBox--a">
+      <div class="pointBox__txt">ウォークインクローゼットをはじめ、ファミリークローク、シューズインクロークを<br>配した収納充実プラン</div>
+    </div>
+
+    <div class="searchPoint searchPoint--b js-searchPoint">
+      <div class="searchPoint__icon"><svg class="searchSVG" viewBox="0 0 32.77 32.77"><path fill="#ffffff" d="m31.65,32.77l-12.8-12.8c-.99.89-2.14,1.58-3.46,2.05-1.32.47-2.65.7-3.98.7-3.19,0-5.88-1.1-8.09-3.3C1.1,17.21,0,14.53,0,11.36S1.1,5.51,3.3,3.31C5.5,1.1,8.18,0,11.35,0c3.16,0,5.86,1.1,8.08,3.3,2.22,2.2,3.33,4.88,3.33,8.05,0,1.37-.25,2.72-.74,4.04-.49,1.32-1.18,2.47-2.06,3.46l12.82,12.75s-1.12,1.16-1.12,1.16Zm-20.26-11.59c2.76,0,5.08-.95,6.98-2.84s2.85-4.22,2.85-6.98-.95-5.09-2.85-6.98c-1.9-1.89-4.22-2.84-6.98-2.84s-5.09.95-7,2.84c-1.9,1.89-2.85,4.22-2.85,6.98s.95,5.09,2.85,6.98c1.9,1.89,4.23,2.84,7,2.84Z"/></svg></div>
+    </div>
+    <div class="pointBox pointBox--b">
+      <div class="pointBox__txt">浴室にも窓を設置し、<br>通気性に配慮</div>
+    </div>
+
+    <div class="searchPoint searchPoint--c js-searchPoint">
+      <div class="searchPoint__icon"><svg class="searchSVG" viewBox="0 0 32.77 32.77"><path fill="#ffffff" d="m31.65,32.77l-12.8-12.8c-.99.89-2.14,1.58-3.46,2.05-1.32.47-2.65.7-3.98.7-3.19,0-5.88-1.1-8.09-3.3C1.1,17.21,0,14.53,0,11.36S1.1,5.51,3.3,3.31C5.5,1.1,8.18,0,11.35,0c3.16,0,5.86,1.1,8.08,3.3,2.22,2.2,3.33,4.88,3.33,8.05,0,1.37-.25,2.72-.74,4.04-.49,1.32-1.18,2.47-2.06,3.46l12.82,12.75s-1.12,1.16-1.12,1.16Zm-20.26-11.59c2.76,0,5.08-.95,6.98-2.84s2.85-4.22,2.85-6.98-.95-5.09-2.85-6.98c-1.9-1.89-4.22-2.84-6.98-2.84s-5.09.95-7,2.84c-1.9,1.89-2.85,4.22-2.85,6.98s.95,5.09,2.85,6.98c1.9,1.89,4.23,2.84,7,2.84Z"/></svg></div>
+    </div>
+    <div class="pointBox pointBox--c">
+      <div class="pointBox__txt">洋室２の引込戸を<br>開放すれば、<br>約17.7畳の広々リビング<br>・ダイニング・キッチンに</div>
+    </div>
+
+    <img src="./imgs/pc/m-a-pickup.jpg" class="only-pc" alt="<%- params.type %> TYPE">
+    <img src="./imgs/sp/m-a-pickup.jpg" class="only-sp" alt="<%- params.type %> TYPE">
+  </div>
+  <div class="pickupDetail__bottom">
+    <div class="hanreiArea">
+      <ul class="hanreiList">
+        <li class="hanreiList__item"><span class="icon icon--storage">：収納</span></li>
+        <li class="hanreiList__item"><span class="icon icon--floor">：床暖房</span></li>
+        <li class="hanreiList__item"><span class="icon icon--ventilation"><svg x="0px" y="0px" viewBox="0 0 32.6 6.3" style="enable-background: new 0 0 32.6 6.3;" xml:space="preserve"><path d="M32.6,4.2c0,0-7.7-3.4-15.9,0.6c0,0-9,5.2-16.7-4.3c7.1,6.4,15.9,0.7,15.9,0.7C24.7-2.8,32.6,4.2,32.6,4.2" /></svg>：通風</span></li>
+        <li class="hanreiList__item"><span class="icon icon--lighting"><svg x="0px" y="0px" viewBox="0 0 32.5 6.5" style="enable-background: new 0 0 32.5 6.5;" xml:space="preserve"><polygon points="0,0 32.5,2.5 0,6.5 "/></svg>：採光</span></li>
+        <li class="hanreiList__item"><span class="icon icon--magnet"><svg viewBox="0 0 11.97 11.97"><path fill="#356e9d" d="m11.97,5.99c0,3.31-2.68,5.98-5.99,5.98S0,9.29,0,5.99,2.68,0,5.98,0s5.99,2.68,5.99,5.99"/><path fill="#fff" d="m6.48,9.22h-.98L3.42,3.17c0,.23.02,1.41.02,1.68v4.37h-.78V2.48h1.27l2.05,6.05,2.05-6.05h1.28v6.74h-.8v-4.37c0-.28.02-1.46.03-1.68l-2.07,6.05Z"/></svg>：マグネットセンサー</span></li>
+        <li class="hanreiList__item"><span class="icon icon--passive"><svg viewBox="0 0 11.97 11.98"><path fill="#9b565f" d="m11.97,5.99c0,3.31-2.68,5.99-5.99,5.99S0,9.3,0,5.99,2.68,0,5.99,0s5.99,2.68,5.99,5.99"/><path fill="#fff" d="m6.94,2.5c1.36,0,2.03.6,2.03,2.04,0,1.6-.79,2.08-2.1,2.08h-2.59v2.61h-.82V2.5h3.48Zm-2.66.74v2.63h2.55c.74,0,1.32-.14,1.32-1.32s-.55-1.31-1.32-1.31h-2.55Z"/></svg>：パッシブセンサー</span></li>
+        <li class="hanreiList__item">WIC：ウォークインクローゼット</li>
+        <li class="hanreiList__item">FC：ファミリークローク</li>
+        <li class="hanreiList__item">SIC：シューズインクローク</li>
+      </ul>
+      <p class="caption">※掲載の図面は、計画段階の図面を基に描いたもので、今後変更になる場合がございます。予めご了承ください。</p>
+    </div>
+  </div>
+</div>
+
+<!-- <ul class="hanreiList">
+  <%# if (nando == '') { %><li class="hanreiList__item">N：納戸</li><%# }%>
+  <%# if (wic == '') { %><li class="hanreiList__item">WIC：ウォークインクローゼット</li><%# }%>
+  <%# if (wtc == '') { %><li class="hanreiList__item">WTC：ウォークスルークローゼット</li><%# }%>
+  <%# if (sic == '') { %><li class="hanreiList__item">SIC：シューズインクローゼット</li><%# }%>
+</ul> -->
