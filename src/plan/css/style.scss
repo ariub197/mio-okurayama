@@ -88,10 +88,12 @@
 .plan-detail {
   @include pc {
     padding-top: 100px;
+    padding-bottom: 200px;
   }
 
   @include sp {
     padding-top: 70px;
+    padding-bottom: 80px;
   }
 }
 

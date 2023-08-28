@@ -3423,12 +3423,14 @@
 @media screen and (min-width: 768px) {
   .plan-detail {
     padding-top: 100px;
+    padding-bottom: 200px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .plan-detail {
     padding-top: 70px;
+    padding-bottom: 80px;
   }
 }
 
