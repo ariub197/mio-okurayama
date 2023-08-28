@@ -1,0 +1,35 @@
+.detailButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 20px;
+  background: #ffffff;
+  border-radius: 19px;
+  box-sizing: border-box;
+  box-shadow: 0 8px 16px rgba(102, 102, 102, 0.2);
+
+  @include pc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 38px;
+    font-size: 16px;
+  }
+
+  @include sp {
+    position: relative;
+    margin-top: 22px;
+    height: 32px;
+    font-size: 13px;
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 9px;
+    transform: translateY(-50%);
+    transition: .4s;
+  }
+}

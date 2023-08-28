@@ -11,6 +11,16 @@
   @include sp {
     padding-top: 60px;
   }
+
+  .heading--02 {
+    @include pc {
+      margin-top: 36px;
+    }
+
+    @include sp {
+      margin-top: 24px;
+    }
+  }
 }
 
 .plan-list {
@@ -198,13 +208,10 @@
     }
 
     &:before {
-      @extend %boxShadow;
 
-      background: url(../imgs/arrow01.svg) 0 0 / contain no-repeat;
-      border-radius: 50%;
       bottom: 20px;
       content: '';
-      display: block;
+      display: none;
       height: 38px;
       position: absolute;
       right: 124px;
@@ -218,6 +225,15 @@
       }
     }
 
+
+    &:hover {
+      .detailButton {
+        svg {
+          right: 15px;
+        }
+      }
+    }
+/*
     &:hover {
 
       &:before {
@@ -228,6 +244,7 @@
         }
       }
     }
+*/
 
     .image {
       @extend %boxShadow;
@@ -240,17 +257,25 @@
     }
 
     .text {
+      position: relative;
       letter-spacing: .06em;
       line-height: 1;
       padding: 15px 0 0;
       width: 235px;
+      height: 100%;
+
+      @include pc {
+      }
 
       @include sp {
         width: calc(100% - 140px);
       }
 
       .name {
-        color: $color-autumn-sub-01;
+        display: inline-block;
+        padding: 4px 24px 8px;
+        background: #2f4f47;
+        color: #ffffff;
         font-family: $font-en-eb;
         font-size: 24px;
         letter-spacing: .08em;
@@ -523,7 +548,7 @@
       counter-reset: num;
       display: flex;
       flex-wrap: wrap;
-      gap: 36px 40px;
+      gap: 20px 40px;
       justify-content: space-between;
       letter-spacing: .06em;
       line-height: (22.4/16);
@@ -650,13 +675,30 @@
     color: #666666;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     @include pc {
+      justify-content: space-between;
       margin-top: 70px;
+      gap: 20px;
     }
 
     @include sp {
+      justify-content: flex-start;
       margin-top: 40px;
+      gap: 5px 10px;
+    }
+  }
+
+  .hanreiList + .hanreiList {
+    margin-top: 5px;
+
+    @include pc {
+      justify-content: flex-start;
+      gap: 20px;
+    }
+
+    @include sp {
+      justify-content: flex-start;
+      gap: 5px 10px;
     }
   }
 
@@ -674,7 +716,6 @@
 
     .hanreiList__item {
       height: 30px;
-      margin-bottom: 5px;
       padding: 0 20px;
     }
   }
@@ -683,7 +724,6 @@
 
     .hanreiList__item {
       height: 20px;
-      margin-right: 6px;
       padding: 0 8px;
     }
   }
@@ -697,6 +737,7 @@
 
   .hanreiList .icon {
     position: relative;
+    margin-right: 3px;
   }
 
   @media screen and (min-width:768px) {
@@ -745,7 +786,7 @@
   }
 
   .hanreiList .icon--storage:before {
-    background-color: #f2d4a1;
+    background-color: #f2d5a5;
   }
 
   .hanreiList .icon--floor:before {
@@ -759,7 +800,7 @@
 
   .hanreiList .icon--ventilation path {
     clip-rule: evenodd;
-    fill: #84bae5;
+    fill: #2a8ec5;
     fill-rule: evenodd;
   }
 
@@ -769,7 +810,7 @@
   }
 
   .hanreiList .icon--lighting polygon {
-    fill: #facd89;
+    fill: #df8f1b;
   }
 
   .hanreiList .icon--magnet svg {
@@ -1220,8 +1261,8 @@
 }
 
 .bg__darkGreenLayer {
-	background: $color-autumn-sub-01;
-	border: solid 1px $color-autumn-sub-01;
+	background: #443131;
+	border: solid 1px #443131;
 	color: #fff;
 }
 

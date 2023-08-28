@@ -26,6 +26,56 @@
   }
 }
 
+.detailButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 0 20px;
+  background: #ffffff;
+  border-radius: 19px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 8px 16px rgba(102, 102, 102, 0.2);
+          box-shadow: 0 8px 16px rgba(102, 102, 102, 0.2);
+}
+
+@media screen and (min-width: 768px) {
+  .detailButton {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 38px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .detailButton {
+    position: relative;
+    margin-top: 22px;
+    height: 32px;
+    font-size: 13px;
+  }
+}
+
+.detailButton svg {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  width: 9px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
 .galleryCard {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -3295,6 +3345,18 @@
 }
 
 @media screen and (min-width: 768px) {
+  .plan-catch .heading--02 {
+    margin-top: 36px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .plan-catch .heading--02 {
+    margin-top: 24px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .plan-list {
     padding-bottom: 200px;
     padding-top: 100px;
@@ -3370,7 +3432,7 @@
   }
 }
 
-.menu .item, .menu .item:before, .menu .item .image, .planDetail .panel, .planDetail .panel .name, .planDetail .panel .legend li {
+.menu .item, .menu .item .image, .planDetail .panel, .planDetail .panel .name, .planDetail .panel .legend li {
   -webkit-box-shadow: 0 8px 16px rgba(102, 102, 102, 0.2);
           box-shadow: 0 8px 16px rgba(102, 102, 102, 0.2);
 }
@@ -3492,6 +3554,18 @@
   padding: 20px;
   position: relative;
   width: 488px;
+  /*
+    &:hover {
+
+      &:before {
+        transform: translate3d(100%, 0, 0);
+
+        @include sp {
+          transform: none;
+        }
+      }
+    }
+*/
 }
 
 @media screen and (max-width: 768px) {
@@ -3503,11 +3577,9 @@
 }
 
 .menu .item:before {
-  background: url(../imgs/arrow01.svg) 0 0/contain no-repeat;
-  border-radius: 50%;
   bottom: 20px;
   content: '';
-  display: block;
+  display: none;
   height: 38px;
   position: absolute;
   right: 124px;
@@ -3526,16 +3598,8 @@
   }
 }
 
-.menu .item:hover:before {
-  -webkit-transform: translate3d(100%, 0, 0);
-          transform: translate3d(100%, 0, 0);
-}
-
-@media screen and (max-width: 768px) {
-  .menu .item:hover:before {
-    -webkit-transform: none;
-            transform: none;
-  }
+.menu .item:hover .detailButton svg {
+  right: 15px;
 }
 
 .menu .item .image {
@@ -3549,10 +3613,12 @@
 }
 
 .menu .item .text {
+  position: relative;
   letter-spacing: .06em;
   line-height: 1;
   padding: 15px 0 0;
   width: 235px;
+  height: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -3562,7 +3628,10 @@
 }
 
 .menu .item .text .name {
-  color: #315048;
+  display: inline-block;
+  padding: 4px 24px 8px;
+  background: #2f4f47;
+  color: #ffffff;
   font-family: "EB Garamond", serif;
   font-size: 24px;
   letter-spacing: .08em;
@@ -3881,7 +3950,7 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 36px 40px;
+  gap: 20px 40px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -4036,20 +4105,47 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 @media screen and (min-width: 768px) {
   .planDetail .hanreiList {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-top: 70px;
+    gap: 20px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .planDetail .hanreiList {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     margin-top: 40px;
+    gap: 5px 10px;
+  }
+}
+
+.planDetail .hanreiList + .hanreiList {
+  margin-top: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .planDetail .hanreiList + .hanreiList {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .planDetail .hanreiList + .hanreiList {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 5px 10px;
   }
 }
 
@@ -4073,7 +4169,6 @@
 @media screen and (min-width: 768px) {
   .planDetail .hanreiList__item {
     height: 30px;
-    margin-bottom: 5px;
     padding: 0 20px;
   }
 }
@@ -4081,7 +4176,6 @@
 @media screen and (max-width: 768px) {
   .planDetail .hanreiList__item {
     height: 20px;
-    margin-right: 6px;
     padding: 0 8px;
   }
 }
@@ -4094,6 +4188,7 @@
 
 .planDetail .hanreiList .icon {
   position: relative;
+  margin-right: 3px;
 }
 
 @media screen and (min-width: 768px) {
@@ -4138,7 +4233,7 @@
 }
 
 .planDetail .hanreiList .icon--storage:before {
-  background-color: #f2d4a1;
+  background-color: #f2d5a5;
 }
 
 .planDetail .hanreiList .icon--floor:before {
@@ -4152,7 +4247,7 @@
 
 .planDetail .hanreiList .icon--ventilation path {
   clip-rule: evenodd;
-  fill: #84bae5;
+  fill: #2a8ec5;
   fill-rule: evenodd;
 }
 
@@ -4162,7 +4257,7 @@
 }
 
 .planDetail .hanreiList .icon--lighting polygon {
-  fill: #facd89;
+  fill: #df8f1b;
 }
 
 .planDetail .hanreiList .icon--magnet svg {
@@ -4755,8 +4850,8 @@
 }
 
 .bg__darkGreenLayer {
-  background: #315048;
-  border: solid 1px #315048;
+  background: #443131;
+  border: solid 1px #443131;
   color: #fff;
 }
 

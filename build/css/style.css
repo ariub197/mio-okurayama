@@ -778,6 +778,7 @@
             justify-content: center;
     position: relative;
     width: calc(238 / 1440 * 100vw);
+    margin: 10px 0;
     z-index: 3;
   }
 }
@@ -798,8 +799,8 @@
 
 @media screen and (min-width: 768px) {
   .mainVisual__heading .ttlSVG {
-    width: calc(115 / 1440 * 100vw);
-    max-width: 115px;
+    width: calc(137 / 1440 * 100vw);
+    max-width: 137px;
   }
 }
 
@@ -962,6 +963,31 @@
   top: 0;
   width: 100%;
   z-index: -1;
+  /*
+    span {
+      background-color: $color-autumn-sub-01;
+      display: block;
+      height: 100%;
+      position: relative;
+      width: 100%;
+      z-index: 1;
+    }
+
+    &:before,
+    &:after {
+      background-color: rgba($color: $color-autumn-sub-01, $alpha: .2);
+      content: '';
+      height: 100%;
+      opacity: .2;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      z-index: -3;
+    }
+*/
 }
 
 @media screen and (max-width: 768px) {
@@ -971,7 +997,7 @@
 }
 
 .mainVisual__squareBG span {
-  background-color: #315048;
+  background-color: rgba(49, 80, 72, 0.8);
   display: block;
   height: 100%;
   position: relative;
@@ -983,14 +1009,22 @@
   background-color: rgba(49, 80, 72, 0.2);
   content: '';
   height: 100%;
+  left: 0;
   opacity: .2;
   position: absolute;
   top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   width: 100%;
   z-index: -3;
+}
+
+.mainVisual__squareBG:before {
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+}
+
+.mainVisual__squareBG:after {
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
 }
 
 .mainVisual.is-init .mainVisual__head {
@@ -1015,6 +1049,8 @@
 
 .mainVisual.is-init .mainVisual__squareBG:before, .mainVisual.is-init .mainVisual__squareBG:after {
   opacity: 0;
+  -webkit-transform: rotate(25deg) rotateX(15deg);
+          transform: rotate(25deg) rotateX(15deg);
   -webkit-transition: 2.8s;
   transition: 2.8s;
 }
@@ -1028,17 +1064,25 @@
 }
 
 .mainVisual.is-init.is-animate .mainVisual__squareBG:before {
-  top: 10px;
-  bottom: -10px;
-  left: 10px;
-  right: -10px;
+  /*
+          top: 10px;
+          bottom: -10px;
+          left: 10px;
+          right: -10px;
+*/
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
 }
 
 .mainVisual.is-init.is-animate .mainVisual__squareBG:after {
-  top: 20px;
-  bottom: -20px;
-  left: 20px;
-  right: -20px;
+  /*
+          top: 20px;
+          bottom: -20px;
+          left: 20px;
+          right: -20px;
+*/
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
 }
 
 .mainVisual.is-init.is-animate .mainVisual__head {
@@ -2893,6 +2937,10 @@
   .uspIntroduction {
     padding: 72px 30px 50px;
   }
+}
+
+[data-color="darkGreen_typeB"] {
+  color: #248068 !important;
 }
 
 .container {
