@@ -3,6 +3,10 @@
 @import '../common/css/mixins/_mixins';
 @import '../components/**/*';
 
+[data-color="darkGreen_typeB"] {
+  color: #248068 !important;
+}
+
 .container{
   padding-top: 0;
 }
