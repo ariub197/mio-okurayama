@@ -4496,6 +4496,10 @@ body[data-sai-easing='ease-in-out-quart'] [data-sai] {
   background-color: #ffffff;
 }
 
+.globalMenu__cont .contentsNav__image {
+  display: none;
+}
+
 .globalMenu__cont .primaryNav {
   width: 100%;
 }
