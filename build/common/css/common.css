@@ -2548,10 +2548,6 @@ body[data-sai-easing='ease-in-out-quart'] [data-sai] {
   }
 }
 
-.bottomCV {
-  background-color: rgba(76, 152, 170, 0.1);
-}
-
 @media screen and (min-width: 768px) {
   .bottomCV {
     margin-bottom: -128px;
