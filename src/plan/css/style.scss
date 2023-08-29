@@ -87,13 +87,13 @@
 
 .plan-detail {
   @include pc {
-    padding-top: 100px;
     padding-bottom: 200px;
+    padding-top: 100px;
   }
 
   @include sp {
-    padding-top: 70px;
     padding-bottom: 80px;
+    padding-top: 70px;
   }
 }
 
@@ -104,65 +104,71 @@
 .outFrameIllust {
   margin-left: auto;
   margin-right: auto;
+
   @include pc {
     width: max-content;
   }
 }
 
 .photo {
-	position: relative;
+  position: relative;
 
-	.caption {
-		display: inline-block;
-		position: absolute;
-		box-sizing: border-box;
-		letter-spacing: .05em;
+  .caption {
+    box-sizing: border-box;
+    display: inline-block;
+    letter-spacing: .05em;
+    position: absolute;
 
-		&--inRight {
-			bottom: 5px;
-			right: 5px;
+    &--inRight {
+      bottom: 5px;
+      right: 5px;
+
       @include sp {
-				bottom: 3px;
-				right: 3px;
-			}
-		}
+        bottom: 3px;
+        right: 3px;
+      }
+    }
 
-		&--inLeft {
-			bottom: 8px;
-			left: 8px;
-		}
+    &--inLeft {
+      bottom: 8px;
+      left: 8px;
+    }
 
-		&--outRight {
-			right: 0px;
-			top: 100%;
-		}
+    &--outRight {
+      right: 0;
+      top: 100%;
+    }
 
-		&--outLeft {
-			left: 0;
-			top: 100%;
-		}
+    &--outLeft {
+      left: 0;
+      top: 100%;
+    }
 
-		&[data-color="white"] {
-        color: #ffffff;
+    &[data-color='white'] {
+      color: #ffffff;
     }
-    &[data-color="black"] {
-        color: #000000;
+
+    &[data-color='black'] {
+      color: #000000;
     }
-    &[data-color="lightgrey"] {
-        color: #999999;
+
+    &[data-color='lightgrey'] {
+      color: #999999;
     }
-    &[data-color="shadow"] {
-        color: #ffffff;
-        text-shadow: rgba(0, 0, 0, 0.7) 1px 1px 10px, rgba(0, 0, 0, 0.7) 1px 1px 10px, rgba(0, 0, 0, 0.7) 1px 1px 10px, rgba(0, 0, 0, 0.7) 1px 1px 10px, rgba(0, 0, 0, 0.7) 1px 1px 10px, rgba(0, 0, 0, 0.7) 1px 1px 10px;
+
+    &[data-color='shadow'] {
+      color: #ffffff;
+      text-shadow: rgba(0, 0, 0, .7) 1px 1px 10px, rgba(0, 0, 0, .7) 1px 1px 10px, rgba(0, 0, 0, .7) 1px 1px 10px, rgba(0, 0, 0, .7) 1px 1px 10px, rgba(0, 0, 0, .7) 1px 1px 10px, rgba(0, 0, 0, .7) 1px 1px 10px;
     }
-    &[data-color="shadow-bl"] {
-        color: #000000;
-        text-shadow: #ffffff 1px 1px 2px, #ffffff -1px 1px 2px, #ffffff 1px -1px 2px, #ffffff -1px -1px 2px;
+
+    &[data-color='shadow-bl'] {
+      color: #000000;
+      text-shadow: #ffffff 1px 1px 2px, #ffffff -1px 1px 2px, #ffffff 1px -1px 2px, #ffffff -1px -1px 2px;
     }
-	}
+  }
 }
-
 /* list */
+
 .menu {
   @include pc {
   }
@@ -210,7 +216,6 @@
     }
 
     &:before {
-
       bottom: 20px;
       content: '';
       display: none;
@@ -229,13 +234,15 @@
 
 
     &:hover {
+
       .detailButton {
+
         svg {
           right: 15px;
         }
       }
     }
-/*
+    /*
     &:hover {
 
       &:before {
@@ -259,12 +266,12 @@
     }
 
     .text {
-      position: relative;
+      height: 100%;
       letter-spacing: .06em;
       line-height: 1;
       padding: 15px 0 0;
+      position: relative;
       width: 235px;
-      height: 100%;
 
       @include pc {
       }
@@ -274,13 +281,13 @@
       }
 
       .name {
-        display: inline-block;
-        padding: 4px 24px 8px;
         background: #2f4f47;
         color: #ffffff;
+        display: inline-block;
         font-family: $font-en-eb;
         font-size: 24px;
         letter-spacing: .08em;
+        padding: 4px 24px 8px;
 
         @include sp {
           font-size: 16px;
@@ -306,8 +313,8 @@
       }
 
       .plan {
-        margin: 15px 0 0;
         font-family: $font-en;
+        margin: 15px 0 0;
 
         @include sp {
           margin: 10px 0 0;
@@ -408,6 +415,7 @@
 }
 
 .planDetail {
+
   .panel {
     @extend %boxShadow;
 
@@ -568,14 +576,14 @@
         border-bottom: 1px solid $color-autumn-sub-01;
         counter-increment: num;
         display: flex;
+        line-height: 1.5;
         padding: 0 0 20px;
         width: calc(50% - 20px);
-        line-height: 1.5;
 
         @include sp {
+          font-size: 12px;
           padding: 12px 0;
           width: auto;
-          font-size: 12px;
         }
 
         &:before {
@@ -586,8 +594,8 @@
           font-size: 12px;
           line-height: 24px;
           margin: 0 10px 0 0;
-          text-align: center;
           min-width: 24px;
+          text-align: center;
         }
       }
     }
@@ -597,14 +605,14 @@
       text-align: center;
 
       @include pc {
-        min-height: 800px;
         margin-top: 120px;
+        min-height: 800px;
       }
 
       @include sp {
+        background: #ffffff url(../imgs/img-hoi.png) no-repeat right bottom;
         margin-top: 60px;
         padding-bottom: 60px;
-        background: #ffffff url(../imgs/img-hoi.png) no-repeat right bottom;
 
         img {
           max-width: 100%;
@@ -662,11 +670,13 @@
     }
 
     .note {
-      @include lhCrop(1.5);
-
+      color: #666666;
       font-size: 10px;
       letter-spacing: 0;
+      opacity: .8;
       padding: 10px 0 0;
+	  
+      @include lhCrop(1.5);
 
       @include sp {}
     }
@@ -677,16 +687,17 @@
     color: #666666;
     display: flex;
     flex-wrap: wrap;
+
     @include pc {
+      gap: 20px;
       justify-content: space-between;
       margin-top: 70px;
-      gap: 20px;
     }
 
     @include sp {
+      gap: 5px 10px;
       justify-content: flex-start;
       margin-top: 40px;
-      gap: 5px 10px;
     }
   }
 
@@ -694,13 +705,13 @@
     margin-top: 5px;
 
     @include pc {
-      justify-content: flex-start;
       gap: 20px;
+      justify-content: flex-start;
     }
 
     @include sp {
-      justify-content: flex-start;
       gap: 5px 10px;
+      justify-content: flex-start;
     }
   }
 
@@ -738,8 +749,8 @@
   }
 
   .hanreiList .icon {
-    position: relative;
     margin-right: 3px;
+    position: relative;
   }
 
   @media screen and (min-width:768px) {
@@ -826,21 +837,24 @@
   }
 
 }
-
 /* -------------------------------------------
 	flexbox
 --------------------------------------------- */
+
 .layoutCol {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 .is-reverse {
   flex-direction: row-reverse;
 }
+
 .is-center {
   align-items: center;
 }
+
 .is-end {
   align-items: flex-end;
 }
@@ -848,18 +862,22 @@
 .clmFull__item {
   width: 100%;
 }
+
 .clmHalf__item {
   width: 50%;
 }
 
 .clmTwo__item {
   width: calc(480/1000*100%);
+
   @include sp {
     width: 100%;
   }
 }
+
 .clmTwo__item .clmTwo__item {
   width: calc(226/480*100%);
+
   @include sp {
     width: calc(226/480*100%);
   }
@@ -867,23 +885,30 @@
 
 .clmThree__item {
   width: calc(308/1000*100%);
+
   @include sp {
     width: 100%;
   }
 }
+
 .clmThree__item--Double {
   width: calc(654/1000*100%);
+
   @include sp {
     width: 100%;
   }
 }
+
 .clmFour__item {
   width: calc(226/1000*100%);
+
   @include sp {
     width: calc(50% - 10px);
   }
 }
+
 @include sp {
+
   .layoutCol__SP {
     display: flex;
     flex-wrap: wrap;
@@ -891,1052 +916,1184 @@
   }
 }
 
-	.heading--02 + .txt {
-		margin-top: 20px;
-	}
+.heading--02 + .txt {
+  margin-top: 20px;
+}
 
-	.txt + .txt {
-		margin-top: 20px;
-	}
-	.txt + .caption {
-		margin-top: 20px;
-	}
+.txt + .txt {
+  margin-top: 20px;
+}
 
+.txt + .caption {
+  margin-top: 20px;
+}
 /* section */
+
 .planNav {
-	padding-top: 100px;
-	padding-bottom: 100px;
-	@include sp {
-		padding-top: 60px;
-		padding-bottom: 60px;
-	}
+  padding-bottom: 100px;
+  padding-top: 100px;
 
-	&__row + .caption {
-		margin-top: 30px;
-	}
-	&__item {
-		width: calc(480/1000*100%);
-		&:nth-child(n+3) {
-			margin-top: 40px;
-		}
-		@include sp {
-			width: 100%;
-			& + & {
-				margin-top: 30px;
-			}
-		}
-	}
+  @include sp {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+
+  &__row + .caption {
+    margin-top: 30px;
+  }
+
+  &__item {
+    width: calc(480/1000*100%);
+
+    &:nth-child(n+3) {
+      margin-top: 40px;
+    }
+
+    @include sp {
+      width: 100%;
+
+      & + & {
+        margin-top: 30px;
+      }
+    }
+  }
 
 
-	&__link {
-		display: block;
-		padding: 10px;
-		background: #f4f6d2;
-		@include pc {
-			&:hover {
-				opacity: .7;
-			}
-		}
-	}
+  &__link {
+    background: #f4f6d2;
+    display: block;
+    padding: 10px;
 
-	&__spec {
-		padding: 10px 20px 25px 10px;
-		@include sp {
-			padding: 10px 5px 25px 10px;
-		}
-	}
+    @include pc {
 
-	&__type {
-		position: relative;
-		width: 120px;
-/*
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+
+  &__spec {
+    padding: 10px 20px 25px 10px;
+
+    @include sp {
+      padding: 10px 5px 25px 10px;
+    }
+  }
+
+  &__type {
+    /*
 		padding: 5px 0;
 */
-		font-family: $font-en;
-		font-size: 24px;
-		letter-spacing: .025em;
-		line-height: 1;
-		white-space: nowrap;
-		text-align: center;
-		@include sp {
-			top: 3px;
-			width: 90px;
-			font-size: 20px;
-		}
-		span {
-			display: inline-block;
-			margin-right: 5px;
-			font-size: 60px;
-			letter-spacing: 0;
-			line-height: .8;
-			small {
-				font-size: 40px;
-			}
-			@include sp {
-				font-size: 50px;
-			}
-		}
-		&--setting {
-			padding: 0;
-			span {
-			}
-		}
-	}
+    font-family: $font-en;
+    font-size: 24px;
+    letter-spacing: .025em;
+    line-height: 1;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: 120px;
+
+    @include sp {
+      font-size: 20px;
+      top: 3px;
+      width: 90px;
+    }
+
+    span {
+      display: inline-block;
+      font-size: 60px;
+      letter-spacing: 0;
+      line-height: .8;
+      margin-right: 5px;
+
+      small {
+        font-size: 40px;
+      }
+
+      @include sp {
+        font-size: 50px;
+      }
+    }
+
+    &--setting {
+      padding: 0;
+
+      span {
+      }
+    }
+  }
 
 
-	&__details {
-		width: 50%;
-		@include sp {
-			justify-content: flex-end;
-			width: calc(100% - 90px);
-		}
-		&.long {
-			width: calc(50% + 20px);
-			@include sp {
-				width: calc(100% - 90px);
-			}
-		}
-	}
-	&__details--ldk {
-		font-family: $font-en;
-		font-size: 18px;
-		font-weight: 500;
-		letter-spacing: .075em;
-		line-height: 1;
-		@include sp {
-/*
+  &__details {
+    width: 50%;
+
+    @include sp {
+      justify-content: flex-end;
+      width: calc(100% - 90px);
+    }
+
+    &.long {
+      width: calc(50% + 20px);
+
+      @include sp {
+        width: calc(100% - 90px);
+      }
+    }
+  }
+
+  &__details--ldk {
+    font-family: $font-en;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: .075em;
+    line-height: 1;
+
+    @include sp {
+      /*
 			top: 0;
 */
-			font-size: 16px;
-		}
-		.font__number {
-			font-size: 36px;
-			@include sp {
-				font-size: 34px;
-			}
-		}
-		.font__en {
-			font-size: 30px;
-			@include sp {
-				font-size: 24px;
-			}
-		}
-		small {
-			display: block;
-			margin-bottom: 5px;
-			font-size: 12px;
-			letter-spacing: .05em;
-			white-space: nowrap;
-		}
-		small.short {
-			margin-right: -18px;
-		}
-		span {
-			font-size: 26px;
-			line-height: .8;
-		}
-		span.block {
-			position: relative;
-			top: 5px;
-			display: inline-block;
-			margin-left: 5px;
-			font-size: 18px;
-			line-height: 1.1;
-			text-align: left;
-			@include sp {
-				top: 0;
-			}
-		}
-	}
+      font-size: 16px;
+    }
 
-	&__details--area {
-		font-size: 16px;
-		letter-spacing: 0;
-		line-height: 1;
-		white-space: nowrap;
-		@include sp {
-			margin-left: 10px;
-		}
-		small {
-			position: relative;
-			left: 10px;
-			display: block;
-			margin-bottom: 7px;
-			font-size: 12px;
-			@include sp {
-				left: 8px;
-				margin-bottom: 9px;
-/*
+    .font__number {
+      font-size: 36px;
+
+      @include sp {
+        font-size: 34px;
+      }
+    }
+
+    .font__en {
+      font-size: 30px;
+
+      @include sp {
+        font-size: 24px;
+      }
+    }
+
+    small {
+      display: block;
+      font-size: 12px;
+      letter-spacing: .05em;
+      margin-bottom: 5px;
+      white-space: nowrap;
+    }
+
+    small.short {
+      margin-right: -18px;
+    }
+
+    span {
+      font-size: 26px;
+      line-height: .8;
+    }
+
+    span.block {
+      display: inline-block;
+      font-size: 18px;
+      line-height: 1.1;
+      margin-left: 5px;
+      position: relative;
+      text-align: left;
+      top: 5px;
+
+      @include sp {
+        top: 0;
+      }
+    }
+  }
+
+  &__details--area {
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 1;
+    white-space: nowrap;
+
+    @include sp {
+      margin-left: 10px;
+    }
+
+    small {
+      display: block;
+      font-size: 12px;
+      left: 10px;
+      margin-bottom: 7px;
+      position: relative;
+
+      @include sp {
+        left: 8px;
+        margin-bottom: 9px;
+        /*
 				display: inline-block;
 				margin-right: 5px;
 */
-			}
-		}
-		.font__num {
-			display: inline-block;
-			font-size: 24px;
-			line-height: .8;
-			@include sp {
-				font-size: 20px;
-			}
-		}
-		.font__numL {
-			display: inline-block;
-			margin-left: 10px;
-			font-size: 32px;
-			line-height: .8;
-			@include sp {
-				font-size: 28px;
-			}
-		}
-	}
+      }
+    }
+
+    .font__num {
+      display: inline-block;
+      font-size: 24px;
+      line-height: .8;
+
+      @include sp {
+        font-size: 20px;
+      }
+    }
+
+    .font__numL {
+      display: inline-block;
+      font-size: 32px;
+      line-height: .8;
+      margin-left: 10px;
+
+      @include sp {
+        font-size: 28px;
+      }
+    }
+  }
 
 
-	&__zu {
-		background: #fff;
-		text-align: center;
-	}
+  &__zu {
+    background: #ffffff;
+    text-align: center;
+  }
 
-	&__more {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
+  &__more {
+    align-items: center;
+    background: url(../imgs/bg-more.jpg) no-repeat center center;
+    background-size: cover;
+    box-shadow: 0 5px 7px -5px rgba(0, 0, 0, .2);
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Cormorant Infant', serif;
+    font-size: 18px;
+    height: 50px;
+    justify-content: center;
+    position: relative;
+    width: 100%;
 
-		position: relative;
-		width: 100%;
-		height: 50px;
-		background: url(../imgs/bg-more.jpg) no-repeat center center;
-		background-size: cover;
-		font-family: 'Cormorant Infant', serif;
-		font-size: 18px;
-		box-shadow: 0 5px 7px -5px rgba(0, 0, 0, .2);
-		@include sp {
-			height: 42px;
-			font-size: 14px;
-		}
+    @include sp {
+      font-size: 14px;
+      height: 42px;
+    }
 
-		span {
-			position: relative;
-			display: inline-block;
-			padding-left: 20px;
-		}
-		span:before {
-			content: '';
-			position: absolute;
-			top: 50%;
-			left: 0;
-			width: 7px;
-			height: 7px;
-			border-top: 1px solid #333;
-			border-right: 1px solid #333;
-			-webkit-transform: rotate(45deg);
-			transform: rotate(45deg);
-			margin-top: -4px;
-		}
-	}
+    span {
+      display: inline-block;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    span:before {
+      border-right: 1px solid #333333;
+      border-top: 1px solid #333333;
+      content: '';
+      height: 7px;
+      left: 0;
+      margin-top: -4px;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      width: 7px;
+    }
+  }
 }
 
 .planSection {
-	padding-top: 120px;
-	@include sp {
-		padding-top: 60px;
-	}
+  padding-top: 120px;
 
-	.heading--01 + .heading--02 {
-		margin-top: 60px;
-	}
-	.heading--02 {
-		font-size: 20px;
-		color: #659e8b;
-		@include sp {
-			font-size: calc(32/750*100vw);
-		}
-	}
+  @include sp {
+    padding-top: 60px;
+  }
 
-	&__box {
-		margin-top: 30px;
-		padding: 47px 79px;
-		background: #fff;
-		border: solid 1px #bfbfbf;
-		@include sp {
-			padding: 30px;
-		}
-	}
-	@include sp {
-		&__text {
-			margin-top: 20px;
-			font-size: 12px;
-		}
+  .heading--01 + .heading--02 {
+    margin-top: 60px;
+  }
 
-		&__row--outframe {
-			margin-top: 60px;
-		}
-	}
+  .heading--02 {
+    color: #659e8b;
+    font-size: 20px;
+
+    @include sp {
+      font-size: calc(32/750*100vw);
+    }
+  }
+
+  &__box {
+    background: #ffffff;
+    border: solid 1px #bfbfbf;
+    margin-top: 30px;
+    padding: 47px 79px;
+
+    @include sp {
+      padding: 30px;
+    }
+  }
+
+  @include sp {
+
+    &__text {
+      font-size: 12px;
+      margin-top: 20px;
+    }
+
+    &__row--outframe {
+      margin-top: 60px;
+    }
+  }
 }
 
 .hikido__row {
-	.hikido__item {
-		position: relative;
-		width: calc(386/840*100%);
-		@include sp {
-			width: 100%;
-		}
-	}
-	@include sp {
-		.hikido__item + .hikido__item {
-			margin-top: 52px;
-		}
-	}
-	.hikido__item + .hikido__item::before {
-		content: "";
-		position: absolute;
-		top: 50%;
-		left: -47px;
-		width: 27px;
-		height: 23px;
-		margin-top: -12px;
-		background: url(../imgs/img-arrow.png) no-repeat 0 0;
-		@include sp {
-			top: -37px;
-			left: 0;
-			right: 0;
-			margin: auto;
-			transform: rotate(90deg);
-		}
-	}
-	.hikido__title {
-		position: absolute;
-		top: 10px;
-		left: 10px;
-		font-family: "Noto Sans Japanese", sans-serif;
-		font-size: 16px;
-		font-weight: bold;
-		text-shadow: 0 0 3px rgba(0, 0, 0, 1);
-		line-height: 1;
-		color: #fff;
-		@include sp {
-			position: absolute;
-			top: 10px;
-			left: 10px;
-			font-size: 16px;
-			text-shadow: 0 0 3px rgba(0, 0, 0, 1);
-		}
-	}
+
+  .hikido__item {
+    position: relative;
+    width: calc(386/840*100%);
+
+    @include sp {
+      width: 100%;
+    }
+  }
+
+  @include sp {
+
+    .hikido__item + .hikido__item {
+      margin-top: 52px;
+    }
+  }
+
+  .hikido__item + .hikido__item:before {
+    background: url(../imgs/img-arrow.png) no-repeat 0 0;
+    content: '';
+    height: 23px;
+    left: -47px;
+    margin-top: -12px;
+    position: absolute;
+    top: 50%;
+    width: 27px;
+
+    @include sp {
+      left: 0;
+      margin: auto;
+      right: 0;
+      top: -37px;
+      transform: rotate(90deg);
+    }
+  }
+
+  .hikido__title {
+    color: #ffffff;
+    font-family: 'Noto Sans Japanese', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    left: 10px;
+    line-height: 1;
+    position: absolute;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 1);
+    top: 10px;
+
+    @include sp {
+      font-size: 16px;
+      left: 10px;
+      position: absolute;
+      text-shadow: 0 0 3px rgba(0, 0, 0, 1);
+      top: 10px;
+    }
+  }
 }
 
 .planSection__photo {
-	margin-top: 30px;
-	border: solid 1px #bfbfbf;
+  border: solid 1px #bfbfbf;
+  margin-top: 30px;
 }
 
 .selectBox {
-	margin-top: 40px;
-	padding: 40px 39px;
-	@include sp {
-		padding: 30px;
-	}
+  margin-top: 40px;
+  padding: 40px 39px;
 
-	&__item--texts {
-		width: calc(318/920*100%);
-		@include sp {
-			width: 100%;
-		}
-	}
-	&__item--images {
-		width: calc(564/920*100%);
-		@include sp {
-			width: 100%;
-			margin-top: 30px;
-		}
-	}
+  @include sp {
+    padding: 30px;
+  }
+
+  &__item--texts {
+    width: calc(318/920*100%);
+
+    @include sp {
+      width: 100%;
+    }
+  }
+
+  &__item--images {
+    width: calc(564/920*100%);
+
+    @include sp {
+      margin-top: 30px;
+      width: 100%;
+    }
+  }
 }
 
 .selectPhotos__item {
-	@include pc {
+  @include pc {
     width: 272px;
   }
 
-	@include sp {
-		width: calc(50% - 10px);
-	}
+  @include sp {
+    width: calc(50% - 10px);
+  }
 }
 
 .bg__darkGreenLayer {
-	background: #443131;
-	border: solid 1px #443131;
-	color: #fff;
+  background: #443131;
+  border: solid 1px #443131;
+  color: #ffffff;
 }
 
 .bg__whiteLayer {
-	background: #fff;
-	border: solid 1px #bfbfbf;
+  background: #ffffff;
+  border: solid 1px #bfbfbf;
 }
 
 .madoriSection {
-	padding-top: 100px;
-	padding-bottom: 80px;
-	@include sp {
-		padding-top: 60px;
-		padding-bottom: 60px;
-	}
+  padding-bottom: 80px;
+  padding-top: 100px;
 
-	&__heading {
-		font-family: 'Cormorant Infant', serif;
-		font-size: 30px;
-		letter-spacing: .25em;
-		line-height: 1;
-		text-align: center;
-		@include sp {
-			font-size: calc(36/750*100vw);
-		}
-	}
+  @include sp {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
 
-	&__box {
-		margin-top: 60px;
-		padding: 0 10px 10px;
-		background: #f4f6d2;
-		@include sp {
-			margin-top: 40px;
-		}
-	}
+  &__heading {
+    font-family: 'Cormorant Infant', serif;
+    font-size: 30px;
+    letter-spacing: .25em;
+    line-height: 1;
+    text-align: center;
 
-	&__spec {
-		padding: 20px 0;
-		line-height: 1;
-		@include sp {
-			padding: 30px 20px;
-		}
-	}
-	&__type {
-		width: 200px;
-		font-family: $font-en;
-		font-size: 38px;
-		letter-spacing: .035em;
-		line-height: .8;
-		text-align: center;
-		@include sp {
-			width: 100%;
-			font-size: 28px;
-			text-align: center;
-		}
-		span {
-			font-size: 88px;
-			@include sp {
-				font-size: 64px;
-			}
-			small {
-				font-size: 60px;
-				@include sp {
-					font-size: 50px;
-				}
-			}
-		}
-	}
+    @include sp {
+      font-size: calc(36/750*100vw);
+    }
+  }
 
-	&__details {
-		width: calc(100% - 234px);
-		@include sp {
-			width: 100%;
-			margin-top: 20px;
-		}
-	}
+  &__box {
+    background: #f4f6d2;
+    margin-top: 60px;
+    padding: 0 10px 10px;
 
-	&__list {
-		align-items: flex-end;
+    @include sp {
+      margin-top: 40px;
+    }
+  }
 
-		&--ldk {
-			font-family: $font-en;
-			font-size: 26px;
-			letter-spacing: .075em;
-			line-height: 1;
-			@include sp {
-				width: 100%;
-				font-size: 20px;
-				text-align: center;
-			}
-			span {
-				@include sp {
-					width: 100%;
-					font-size: 28px;
-				}
-			}
-			.font__number {
-				font-size: 46px;
-			}
-			.font__en {
-				font-size: 34px;
-			}
-			small {
-				display: block;
-				margin-bottom: 8px;
-				font-size: 12px;
-				@include sp {
-					font-size: 12px;
-				}
-			}
-		}
+  &__spec {
+    line-height: 1;
+    padding: 20px 0;
 
-		&--area {
-			position: relative;
-			margin-top: 20px;
-			font-size: 12px;
-			line-height: 1;
-			@include sp {
-				margin-top: 20px;
-				margin-left: auto;
-				margin-right: auto;
-				font-size: 13px;
-				letter-spacing: .1em;
-				text-align: center;
-			}
-			.font__numL {
-				font-size: 36px;
-				letter-spacing: .02em;
-				line-height: .8;
-				@include sp {
-					font-size: 28px;
-				}
-			}
-			.font__num {
-				font-size: 24px;
-				line-height: .8;
-				@include sp {
-					font-size: 20px;
-				}
-			}
+    @include sp {
+      padding: 30px 20px;
+    }
+  }
 
-		}
-		&--caption {
-			margin-top: 8px;
-			padding-top: 5px;
-			border-top: solid 1px #c3c5a8;
-			font-size: 12px;
-			letter-spacing: .075em;
-			line-height: 19px;
-			@include sp {
-				margin-top: 20px;
-				margin-left: 0;
-				font-size: 12px;
-				letter-spacing: .04em;
-			}
-		}
-	}
+  &__type {
+    font-family: $font-en;
+    font-size: 38px;
+    letter-spacing: .035em;
+    line-height: .8;
+    text-align: center;
+    width: 200px;
 
-	&__zu {
-		padding: 40px 20px;
-		@include sp {
-			padding: 40px 0;
-		}
-		background: #fff;
-		text-align: center;
-	}
+    @include sp {
+      font-size: 28px;
+      text-align: center;
+      width: 100%;
+    }
 
-	&__caption {
-		margin-top: 20px;
-		text-align: right;
-	}
+    span {
+      font-size: 88px;
+
+      @include sp {
+        font-size: 64px;
+      }
+
+      small {
+        font-size: 60px;
+
+        @include sp {
+          font-size: 50px;
+        }
+      }
+    }
+  }
+
+  &__details {
+    width: calc(100% - 234px);
+
+    @include sp {
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
+
+  &__list {
+    align-items: flex-end;
+
+    &--ldk {
+      font-family: $font-en;
+      font-size: 26px;
+      letter-spacing: .075em;
+      line-height: 1;
+
+      @include sp {
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+      }
+
+      span {
+        @include sp {
+          font-size: 28px;
+          width: 100%;
+        }
+      }
+
+      .font__number {
+        font-size: 46px;
+      }
+
+      .font__en {
+        font-size: 34px;
+      }
+
+      small {
+        display: block;
+        font-size: 12px;
+        margin-bottom: 8px;
+
+        @include sp {
+          font-size: 12px;
+        }
+      }
+    }
+
+    &--area {
+      font-size: 12px;
+      line-height: 1;
+      margin-top: 20px;
+      position: relative;
+
+      @include sp {
+        font-size: 13px;
+        letter-spacing: .1em;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .font__numL {
+        font-size: 36px;
+        letter-spacing: .02em;
+        line-height: .8;
+
+        @include sp {
+          font-size: 28px;
+        }
+      }
+
+      .font__num {
+        font-size: 24px;
+        line-height: .8;
+
+        @include sp {
+          font-size: 20px;
+        }
+      }
+
+    }
+
+    &--caption {
+      border-top: solid 1px #c3c5a8;
+      font-size: 12px;
+      letter-spacing: .075em;
+      line-height: 19px;
+      margin-top: 8px;
+      padding-top: 5px;
+
+      @include sp {
+        font-size: 12px;
+        letter-spacing: .04em;
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__zu {
+    background: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+
+    @include sp {
+      padding: 40px 0;
+    }
+  }
+
+  &__caption {
+    margin-top: 20px;
+    text-align: right;
+  }
 }
 
 .madoriSection__hanrei {
-	margin-top: 10px;
-	font-size: 0;
-	letter-spacing: -.4em;
-	line-height: 0;
-	text-align: right;
-	@include sp {
-		max-width: 240px;
-		margin-left: auto;
-		margin-right: 0;
-		text-align: right;
-	}
+  font-size: 0;
+  letter-spacing: -.4em;
+  line-height: 0;
+  margin-top: 10px;
+  text-align: right;
 
-	& li {
-		position: relative;
-		display: inline-block;
-		margin-right: 12px;
-		font-size: 11px;
-		letter-spacing: .1em;
-		line-height: 1.5;
-		&:last-child {
-			margin-right: 0;
-		}
-		@include sp {
-			margin-right: 12px;
-			font-size: 10px;
+  @include sp {
+    margin-left: auto;
+    margin-right: 0;
+    max-width: 240px;
+    text-align: right;
+  }
 
-			&:nth-child(n+3) {
-				margin-top: 8px;
-			}
-			&:nth-of-type(2),
-			&:nth-of-type(4) {
-				margin-right: 0;
-			}
-		}
-	}
+  & li {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: .1em;
+    line-height: 1.5;
+    margin-right: 12px;
+    position: relative;
 
-	.madoriSection__icon {
-		padding-left: 33px;
-		&--mc,
-		&--pc,
-		&--outframe {
-			padding-left: 18px;
-		}
-		&--yuka,
-		&--storage {
-			padding-left: 22px;
-		}
+    &:last-child {
+      margin-right: 0;
+    }
 
-		&:before {
-			content: "";
-			position: absolute;
-			top: 4px;
-			left: 0;
-			width: 18px;
-			height: 10px;
-		}
-		&--mc::before,
-		&--pc::before,
-		&--outframe::before {
-			top: 2px;
-			left: 0;
-			width: 15px;
-			height: 15px;
-		}
-		&--wind::before,
-		&--light::before {
-			top: 5px;
-			left: 0;
-			width: 29px;
-			height: 9px;
-		}
+    @include sp {
+      font-size: 10px;
+      margin-right: 12px;
 
-		&--yuka:before {
-			background: #f7f5e6;
-		}
-		&--storage:before {
-			background: #f2d4a1;
-		}
+      &:nth-child(n+3) {
+        margin-top: 8px;
+      }
 
-		&--wind:before {
-			background: url(../imgs/icon-wind.png) no-repeat center center;
-		}
-		&--light:before {
-			background: url(../imgs/icon-light.png) no-repeat center center;
-		}
-		&--mc:before {
-			background: url(../imgs/icon-mc.png) no-repeat center center;
-		}
-		&--pc:before {
-			background: url(../imgs/icon-pc.png) no-repeat center center;
-		}
-		&--outframe:before {
-			background: url(../imgs/icon-outframe.png) no-repeat center center;
-		}
-		@include sp {
-			&--mc::before,
-			&--pc::before,
-			&--outframe::before {
-				top: 0;
-			}
-			&--wind::before,
-			&--light::before {
-				top: 3px;
-			}
-		}
-	}
+      &:nth-of-type(2),
+      &:nth-of-type(4) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .madoriSection__icon {
+    padding-left: 33px;
+
+    &--mc,
+    &--pc,
+    &--outframe {
+      padding-left: 18px;
+    }
+
+    &--yuka,
+    &--storage {
+      padding-left: 22px;
+    }
+
+    &:before {
+      content: '';
+      height: 10px;
+      left: 0;
+      position: absolute;
+      top: 4px;
+      width: 18px;
+    }
+
+    &--mc:before,
+    &--pc:before,
+    &--outframe:before {
+      height: 15px;
+      left: 0;
+      top: 2px;
+      width: 15px;
+    }
+
+    &--wind:before,
+    &--light:before {
+      height: 9px;
+      left: 0;
+      top: 5px;
+      width: 29px;
+    }
+
+    &--yuka:before {
+      background: #f7f5e6;
+    }
+
+    &--storage:before {
+      background: #f2d4a1;
+    }
+
+    &--wind:before {
+      background: url(../imgs/icon-wind.png) no-repeat center center;
+    }
+
+    &--light:before {
+      background: url(../imgs/icon-light.png) no-repeat center center;
+    }
+
+    &--mc:before {
+      background: url(../imgs/icon-mc.png) no-repeat center center;
+    }
+
+    &--pc:before {
+      background: url(../imgs/icon-pc.png) no-repeat center center;
+    }
+
+    &--outframe:before {
+      background: url(../imgs/icon-outframe.png) no-repeat center center;
+    }
+
+    @include sp {
+
+      &--mc:before,
+      &--pc:before,
+      &--outframe:before {
+        top: 0;
+      }
+
+      &--wind:before,
+      &--light:before {
+        top: 3px;
+      }
+    }
+  }
 }
 
 
 
 .roomspaceSection {
+
   .bgLayer {
     @include pc {
-      padding-top: 120px;
       padding-bottom: 120px;
+      padding-top: 120px;
     }
 
     @include sp {
-      padding-top: 80px;
       padding-bottom: 80px;
+      padding-top: 80px;
     }
   }
 
-	&__row {
-		.roomspaceSection__item--texts {
-			@include pc {
+  &__row {
+
+    .roomspaceSection__item--texts {
+      @include pc {
         width: 575px;
       }
 
-			@include sp {
-				width: 100%;
-			}
-		}
+      @include sp {
+        width: 100%;
+      }
+    }
 
-		.roomspaceSection__item--images {
-			@include pc {
+    .roomspaceSection__item--images {
+      @include pc {
         width: 379px;
       }
 
-			@include sp {
-				width: 100%;
-				margin-top: 30px;
-			}
-		}
+      @include sp {
+        margin-top: 30px;
+        width: 100%;
+      }
+    }
 
-		@include sp {
-			.roomspacePhotos__item {
-				width: calc(50% - 10px);
-			}
+    @include sp {
 
-			.roomspacePhotos__item:nth-child(n+2) {
-				margin-top: 0 !important;
-			}
-		}
+      .roomspacePhotos__item {
+        width: calc(50% - 10px);
+      }
 
-		&--step {
-			margin-top: 30px;
-			.roomspaceSection__item {
-				position: relative;
-				width: calc(216/1000*100%);
-				@include sp {
-					width: 100%;
-					text-align: center;
-					&:nth-child(n+2) {
-						margin-top: 65px;
-					}
-				}
-			}
-			.roomspaceSection__item::after {
-				content: "";
-				position: absolute;
-				bottom: 30px;
-				right: -36px;
-				width: 23px;
-				height: 28px;
-				background: url(../imgs/step-arrow.png) no-repeat bottom center;
-				@include sp {
-					bottom: -46px;
-					left: 0;
-					right: 0;
-					margin: 0 auto;
-					transform: rotate(90deg);
-				}
-			}
-			.roomspaceSection__item:last-child::after {
-				display: none;
-			}
-		}
+      .roomspacePhotos__item:nth-child(n+2) {
+        margin-top: 0 !important;
+      }
+    }
 
-		&--change {
-			margin-top: 40px;
+    &--step {
+      margin-top: 30px;
 
-			.roomspaceSection__item {
-				position: relative;
+      .roomspaceSection__item {
+        position: relative;
+        width: calc(216/1000*100%);
 
-				@include pc {
+        @include sp {
+          text-align: center;
+          width: 100%;
+
+          &:nth-child(n+2) {
+            margin-top: 65px;
+          }
+        }
+      }
+
+      .roomspaceSection__item:after {
+        background: url(../imgs/step-arrow.png) no-repeat bottom center;
+        bottom: 30px;
+        content: '';
+        height: 28px;
+        position: absolute;
+        right: -36px;
+        width: 23px;
+
+        @include sp {
+          bottom: -46px;
+          left: 0;
+          margin: 0 auto;
+          right: 0;
+          transform: rotate(90deg);
+        }
+      }
+
+      .roomspaceSection__item:last-child:after {
+        display: none;
+      }
+    }
+
+    &--change {
+      margin-top: 40px;
+
+      .roomspaceSection__item {
+        position: relative;
+
+        @include pc {
           width: 216px;
         }
 
-				@include sp {
-					width: calc(50% - 10px);
-					&:nth-child(n+3) {
-						margin-top: 30px;
-					}
-				}
+        @include sp {
+          width: calc(50% - 10px);
 
-				.label {
-					display: flex;
-					flex-wrap: wrap;
-					justify-content: center;
-					align-items: center;
-					height: 24px;
-					margin-top: 10px;
-					border: solid 1px #bfbfbf;
-					font-size: 15px;
-					text-align: center;
-					@include sp {
-						height: auto;
-						padding: 4px 0;
-						font-size: 13px;
-					}
-				}
-			}
-		}
-	}
+          &:nth-child(n+3) {
+            margin-top: 30px;
+          }
+        }
+
+        .label {
+          align-items: center;
+          border: solid 1px #bfbfbf;
+          display: flex;
+          flex-wrap: wrap;
+          font-size: 15px;
+          height: 24px;
+          justify-content: center;
+          margin-top: 10px;
+          text-align: center;
+
+          @include sp {
+            font-size: 13px;
+            height: auto;
+            padding: 4px 0;
+          }
+        }
+      }
+    }
+  }
 }
 
 .roomspacePhotos__item:nth-child(n+2) {
-	margin-top: 30px !important;
+  margin-top: 30px !important;
 }
 
 
 .defaultBtn {
-	&__list {
-		margin-top: 60px;
-		@include pc {
-			margin-top: 40px;
-		}
-	}
-	&__item {
-		position: relative;
-		width: 220px;
-		span {
-			padding-left: 25px;
-		}
 
-		&--print::after {
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 60px;
-			width: 18px;
-			height: 17px;
-			margin-top: -8px;
-			background: url(../imgs/icon-print.png) no-repeat 0 0;
-		}
-		&--print .defaultBtn__link {
-			background: url(../imgs/bg-print.jpg) no-repeat center center;
-			background-size: cover;
-		}
-		&--close .defaultBtn__link {
-			background: url(../imgs/bg-close.jpg) no-repeat center center;
-			background-size: cover;
-		}
-		&--close::after {
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 60px;
-			width: 15px;
-			height: 15px;
-			margin-top: -7px;
-			background: url(../imgs/icon-close.png) no-repeat 0 0;
-		}
-	}
+  &__list {
+    margin-top: 60px;
 
-	&__link {
-		height: 50px;
-		font-size: 13px;
-	}
+    @include pc {
+      margin-top: 40px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: 220px;
+
+    span {
+      padding-left: 25px;
+    }
+
+    &--print:after {
+      background: url(../imgs/icon-print.png) no-repeat 0 0;
+      content: '';
+      height: 17px;
+      left: 60px;
+      margin-top: -8px;
+      position: absolute;
+      top: 50%;
+      width: 18px;
+    }
+
+    &--print .defaultBtn__link {
+      background: url(../imgs/bg-print.jpg) no-repeat center center;
+      background-size: cover;
+    }
+
+    &--close .defaultBtn__link {
+      background: url(../imgs/bg-close.jpg) no-repeat center center;
+      background-size: cover;
+    }
+
+    &--close:after {
+      background: url(../imgs/icon-close.png) no-repeat 0 0;
+      content: '';
+      height: 15px;
+      left: 60px;
+      margin-top: -7px;
+      position: absolute;
+      top: 50%;
+      width: 15px;
+    }
+  }
+
+  &__link {
+    font-size: 13px;
+    height: 50px;
+  }
 }
 
 .casbee {
-	text-align: center;
-	@include sp {
-		width: 60%;
-		margin-left: auto;
-		margin-right: auto;
-	}
+  text-align: center;
+
+  @include sp {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
 }
 
 @media print {
-	body {
-		zoom: .8;
-	}
-	#gHeader,
-	.defaultBtn__list,
-	.footer {
-		display: none;
-	}
 
-	.pop #mainContent {
-		border-bottom: none;
-	}
-	.madoriSection {
-		padding-top: 0;
-	}
+  body {
+    zoom: .8;
+  }
+
+  #gHeader,
+  .defaultBtn__list,
+  .footer {
+    display: none;
+  }
+
+  .pop #mainContent {
+    border-bottom: none;
+  }
+
+  .madoriSection {
+    padding-top: 0;
+  }
 }
 
 .changeArea {
-	margin-top: 75px;
+  margin-top: 75px;
 
-	&__ttlClm {
-    min-height: 70px;
-		background: $color-autumn-sub-01;
-		color: #ffffff;
-		padding: 0 20px;
-		display: flex;
+  &__ttlClm {
     align-items: center;
+    background: $color-autumn-sub-01;
+    color: #ffffff;
+    display: flex;
+    min-height: 70px;
+    padding: 0 20px;
 
-		@include sp {
-			display: block;
-			padding: 15px 20px 20px;
-		}
-	}
+    @include sp {
+      display: block;
+      padding: 15px 20px 20px;
+    }
+  }
 
-	&__ttlItem {
-		&--small {
-			border-right: 1px solid #a1c2b7;
-			font-size: 20px;
-			letter-spacing: 0.2em;
-			padding: 10px 30px 10px 0;
+  &__ttlItem {
 
-			@include sp {
-				font-size: 2px;
-				padding: 0;
-				border-right: none;
-				margin-bottom: 5px;
-			}
-		}
+    &--small {
+      border-right: 1px solid #a1c2b7;
+      font-size: 20px;
+      letter-spacing: .2em;
+      padding: 10px 30px 10px 0;
 
-		&--large {
-			display: flex;
+      @include sp {
+        border-right: none;
+        font-size: 2px;
+        margin-bottom: 5px;
+        padding: 0;
+      }
+    }
+
+    &--large {
       align-items: flex-end;
-			padding-left: 23px;
-			@include sp {
-				padding-left: 0;
-				flex-wrap: wrap;
-			}
-			> div {
-				margin-right: 25px;
-			}
+      display: flex;
+      padding-left: 23px;
 
-			.type {
-				font-size: 26px;
-				font-family: $font-en;
-				.large {
-					font-size: 36px;
-				}
+      @include sp {
+        flex-wrap: wrap;
+        padding-left: 0;
+      }
 
-				@include sp {
-					font-size: 20px;
-					.large {
-						font-size: 26px;
-					}
-				}
-			}
+      > div {
+        margin-right: 25px;
+      }
 
-			.area {
-				font-size: 14px;
-				.num {
-					font-size: 22px;
-					&--large {
-						font-size: 36px;
-						line-height: 1.4;
-					}
-				}
-				@include sp {
-					font-size: 12px;
-					.num {
-						font-size: 16px;
-						&--large {
-							font-size: 26px;
-							line-height: 1.4;
-						}
-					}
-				}
-			}
+      .type {
+        font-family: $font-en;
+        font-size: 26px;
 
-			.subArea {
-				font-size: 14px;
+        .large {
+          font-size: 36px;
+        }
 
-				@include pc {
+        @include sp {
+          font-size: 20px;
+
+          .large {
+            font-size: 26px;
+          }
+        }
+      }
+
+      .area {
+        font-size: 14px;
+
+        .num {
+          font-size: 22px;
+
+          &--large {
+            font-size: 36px;
+            line-height: 1.4;
+          }
+        }
+
+        @include sp {
+          font-size: 12px;
+
+          .num {
+            font-size: 16px;
+
+            &--large {
+              font-size: 26px;
+              line-height: 1.4;
+            }
+          }
+        }
+      }
+
+      .subArea {
+        font-size: 14px;
+
+        @include pc {
           padding-bottom: 10px;
         }
 
-				@include sp {
-					font-size: 12px;
-				}
-			}
-		}
-	}
+        @include sp {
+          font-size: 12px;
+        }
+      }
+    }
+  }
 
-	&__cont {
-		padding: 40px;
-		background: #ffffff;
-		@include sp {
-			padding: 30px 20px;
-		}
-	}
+  &__cont {
+    background: #ffffff;
+    padding: 40px;
 
-	&__contClm {
-		display: flex;
-		justify-content: space-between;
+    @include sp {
+      padding: 30px 20px;
+    }
+  }
 
-		@include sp {
-			display: block;
-		}
-	}
+  &__contClm {
+    display: flex;
+    justify-content: space-between;
 
-	&__contItem {
-		&--large {
-			width: 39.1304%;
+    @include sp {
+      display: block;
+    }
+  }
 
-			@include sp {
-        display: flex;
+  &__contItem {
+
+    &--large {
+      width: 39.1304%;
+
+      @include sp {
         align-items: center;
+        display: flex;
         flex-direction: column;
-				width: 100%;
-			}
-		}
+        width: 100%;
+      }
+    }
 
-		&--small {
-			color: #629987;
-			margin-top: 340px;
+    &--small {
+      color: #629987;
+      margin-top: 340px;
 
-			@include sp {
-				width: 100%;
-				margin: 30px auto;
-				text-align: center;
+      @include sp {
+        margin: 30px auto;
+        text-align: center;
+        width: 100%;
 
-				.changeArea__contTxt {
-					display: inline-block;
-					text-align: left;
-				}
-			}
-		}
-	}
+        .changeArea__contTxt {
+          display: inline-block;
+          text-align: left;
+        }
+      }
+    }
+  }
 
-	&__contTxt {
+  &__contTxt {
     color: $color-autumn-sub-01;
     white-space: nowrap;
+
     @include lhCrop(1.7);
 
-		@include pc {
+    @include pc {
       font-size: 14px;
     }
 
-		@include sp {
+    @include sp {
       font-size: 12px;
     }
   }
 
-	&__contTxtArea {
-		margin-top: 30px;
+  &__contTxtArea {
+    margin-top: 30px;
 
     @include sp {
       width: 100%;
     }
-	}
+  }
 
-	&__contTxtInner {
-		padding-left: 1em;
-		text-indent: -1em;
+  &__contTxtInner {
+    padding-left: 1em;
+    text-indent: -1em;
 
-		@include pc {
+    @include pc {
       font-size: 14px;
-      letter-spacing: 0.06em;
+      letter-spacing: .06em;
     }
 
-		@include sp {
+    @include sp {
       font-size: 12px;
     }
-	}
+  }
 
-	&__contIcon {
-		width: 25px;
-		margin: 15px auto 0;
-		@include sp {
-			transform: rotate(90deg);
-			margin: 0 auto;
-		}
-	}
+  &__contIcon {
+    margin: 15px auto 0;
+    width: 25px;
 
-	&__contHanrei {
-    display: flex;
+    @include sp {
+      margin: 0 auto;
+      transform: rotate(90deg);
+    }
+  }
+
+  &__contHanrei {
     align-items: center;
-		margin-top: 40px;
+    display: flex;
+    margin-top: 40px;
 
     @include pc {
       gap: 10px;
@@ -1948,73 +2105,80 @@
       gap: 5px;
     }
 
-		.hanreiTtl {
-			@include pc {
-				font-size: 12px;
-			}
+    .hanreiTtl {
+      @include pc {
+        font-size: 12px;
+      }
 
-			@include sp {
-				font-size: 12px;
-			}
-		}
+      @include sp {
+        font-size: 12px;
+      }
+    }
 
-		.hanreiList {
-			font-size: 12px;
-			display: inline-block;
-			margin-right: 14px;
-			@include sp {
-				font-size: 10px;
-			}
+    .hanreiList {
+      display: inline-block;
+      font-size: 12px;
+      margin-right: 14px;
 
-			.icon {
-				display: inline-block;
-				height: 19px;
-				background-size: cover;
-				background-repeat: no-repeat;
-				background-position: center center;
-				line-height: 0;
-				position: relative;
-				bottom: -4px;
-				margin-right: 5px;
-				&--saikou {
-					width: 31px;
-					background-image: url('../imgs/icon--saikou@2x.jpg');
-				}
-				&--tufu {
-					width: 31px;
-					background-image: url('../imgs/icon--tufu@2x.jpg');
-				}
-				&--magnet {
-					width: 18px;
-					background-image: url('../imgs/icon--magnet@2x.jpg');
-				}
-				&--passive {
-					width: 17px;
-					background-image: url('../imgs/icon--passive@2x.jpg');
-				}
-				&--outframe {
-					width: 20px;
-					background-image: url('../imgs/icon--outframe@2x.jpg');
-				}
-				&--yukadan {
-					width: 28px;
-					background-image: url('../imgs/icon--yukadan@2x.jpg');
-				}
-			}
-		}
-	}
+      @include sp {
+        font-size: 10px;
+      }
 
-	&__contCap {
-    letter-spacing: 0.05em;
+      .icon {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        bottom: -4px;
+        display: inline-block;
+        height: 19px;
+        line-height: 0;
+        margin-right: 5px;
+        position: relative;
+
+        &--saikou {
+          background-image: url('../imgs/icon--saikou@2x.jpg');
+          width: 31px;
+        }
+
+        &--tufu {
+          background-image: url('../imgs/icon--tufu@2x.jpg');
+          width: 31px;
+        }
+
+        &--magnet {
+          background-image: url('../imgs/icon--magnet@2x.jpg');
+          width: 18px;
+        }
+
+        &--passive {
+          background-image: url('../imgs/icon--passive@2x.jpg');
+          width: 17px;
+        }
+
+        &--outframe {
+          background-image: url('../imgs/icon--outframe@2x.jpg');
+          width: 20px;
+        }
+
+        &--yukadan {
+          background-image: url('../imgs/icon--yukadan@2x.jpg');
+          width: 28px;
+        }
+      }
+    }
+  }
+
+  &__contCap {
+    letter-spacing: .05em;
     line-height: 1.55;
-		margin-top: 15px;
+    margin-top: 15px;
 
-		@include pc {
-			font-size: 12px;
-		}
+    @include pc {
+      font-size: 12px;
+    }
 
-		@include sp {
-			font-size: 10px;
-		}
-	}
+    @include sp {
+      font-size: 10px;
+    }
+  }
 }

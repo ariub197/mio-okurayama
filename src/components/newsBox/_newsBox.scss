@@ -20,8 +20,7 @@
       left: calc(100 / 1440 * 100vw);
     }
   }
-
-/*
+  /*
   @include sp {
     bottom: 20px;
     height: 38px;
@@ -32,11 +31,11 @@
 */
 
   @include sp {
-    position: relative;
     height: 38px;
-    padding: 0 11px;
-    width: calc(100% - 60px);
     margin: 32px 30px 0;
+    padding: 0 11px;
+    position: relative;
+    width: calc(100% - 60px);
   }
 
   @include hover {
@@ -117,7 +116,7 @@
     }
 
     .new {
-      color: #666666;
+      color: #16382f;
       font-family: $font-en-cursive;
       line-height: .8;
       opacity: .7;

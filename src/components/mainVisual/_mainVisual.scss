@@ -13,7 +13,7 @@
   }
 
   @include sp {
-/*
+    /*
     padding-bottom: 70px;
     padding-top: 100px;
 */
@@ -26,9 +26,9 @@
       align-items: center;
       display: flex;
       justify-content: center;
+      margin: 10px 0;
       position: relative;
       width: calc(238 / 1440 * 100vw);
-      margin: 10px 0;
       z-index: 3;
     }
 
@@ -47,8 +47,8 @@
       margin: 0 auto;
 
       @include pc {
-        width: calc(137 / 1440 * 100vw);
         max-width: 137px;
+        width: calc(137 / 1440 * 100vw);
       }
 
       @include sp {
@@ -145,7 +145,7 @@
     }
 
     @include sp {
-/*
+      /*
       margin-top: 15px;
       padding: 0 10px;
 */
@@ -188,7 +188,7 @@
     @include sp {
       display: none;
     }
-/*
+    /*
     span {
       background-color: $color-autumn-sub-01;
       display: block;
@@ -213,8 +213,9 @@
       z-index: -3;
     }
 */
+
     span {
-      background-color: rgba($color: $color-autumn-sub-01, $alpha: .8);
+      background-color: rgba($color: #16382f, $alpha: .8);
       display: block;
       height: 100%;
       position: relative;
@@ -287,7 +288,7 @@
         }
 
         &:before {
-/*
+          /*
           top: 10px;
           bottom: -10px;
           left: 10px;
@@ -297,7 +298,7 @@
         }
 
         &:after {
-/*
+          /*
           top: 20px;
           bottom: -20px;
           left: 20px;
