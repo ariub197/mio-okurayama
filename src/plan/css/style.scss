@@ -2054,6 +2054,61 @@
     }
   }
 
+  &__contTtlArea {
+    display: flex;
+    margin-bottom: 20px;
+
+    .box {
+      background-color: #aeaeae;
+      color: #ffffff;
+      font-size: 15px;
+      height: 55px;
+      letter-spacing: .12em;
+      line-height: calc(20 / 15);
+      padding-top: 8px;
+      text-align: center;
+      width: 55px;
+
+      @include sp {
+        font-size: 12px;
+        height: 48px;
+        width: 48px;
+      }
+
+      &--brown {
+        background-color: #7c3a26;
+      }
+    }
+
+    .type {
+      font-size: 30px;
+      letter-spacing: .07em;
+      padding-left: 20px;
+
+      @include sp {
+        font-size: 20px;
+      }
+
+      .num {
+        font-size: 40px;
+
+        @include sp {
+          font-size: 30px;
+        }
+      }
+
+      .small {
+        font-size: 20px;
+        letter-spacing: .02em;
+
+        @include sp {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+
   &__contTxt {
     color: $color-autumn-sub-01;
     white-space: nowrap;
