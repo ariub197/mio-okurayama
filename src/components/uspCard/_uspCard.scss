@@ -8,14 +8,16 @@
   }
 
   &:nth-child(odd) {
+
     .uspCard__heading {
       color: rgba($color: $color-autumn-sub-01, $alpha: 1);
     }
 
     .uspCard__bgSquare {
+
       &:before {
         background: url(../imgs/bg-pattern-01.jpg) no-repeat center center / cover;
-        opacity: 0.2;
+        opacity: .2;
       }
     }
 
@@ -25,18 +27,22 @@
   }
 
   &:nth-child(even) {
+
     .uspCard__heading {
       color: rgba($color: $color-autumn-main-01, $alpha: 1);
+      text-shadow: 0 0 30px #ffffff;
     }
 
     .uspCard__bgSquare {
+
       &:before {
         background: url(../imgs/bg-pattern-02.jpg) no-repeat center center / cover;
-        opacity: 0.2;
+        opacity: .2;
       }
     }
 
     .photo {
+
       &__capIn {
         left: 5px;
         right: auto;
@@ -48,7 +54,9 @@
     }
 
     &.sai-init {
+
       &.sai-animate {
+
         .uspCard__bgSquare:before {
           transform: rotate(-5deg) rotateX(0deg);
         }
@@ -139,8 +147,8 @@
   &__subheading {
     font-family: $font-mix-serif;
     font-weight: 400;
-    white-space: nowrap;
     text-align: center;
+    white-space: nowrap;
 
     @include pc {
       font-size: 32px;
@@ -152,6 +160,7 @@
 
     .block {
       display: block;
+
       @include pc {
         margin-top: 16px;
       }
@@ -163,6 +172,7 @@
 
     .num {
       color: $color-autumn-sub-01;
+
       @include pc {
         font-size: 42px;
       }
@@ -316,7 +326,7 @@
       }
     }
   }
-/*
+  /*
   position: relative;
   z-index: 1;
 

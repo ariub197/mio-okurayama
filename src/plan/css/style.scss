@@ -384,6 +384,16 @@
           }
         }
 
+        .caption {
+          @include pc {
+            margin-left: 120px;
+          }
+
+          @include sp {
+            text-align: right;
+          }
+        }
+
         .secondary {
           font-size: 12px;
           line-height: (20/12);
@@ -736,6 +746,7 @@
   @media screen and (max-width:768px) {
 
     .hanreiList__item {
+      font-size: 11px;
       height: 20px;
       padding: 0 8px;
     }

@@ -166,15 +166,8 @@
   &__cap {
     bottom: 5px;
     position: absolute;
+    right: 5px;
 
-    @include pc {
-      right: 5px;
-    }
-
-    @include sp {
-      right: 25px;
-
-    }
   }
 
   &__squareBG {

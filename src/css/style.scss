@@ -3,7 +3,7 @@
 @import '../common/css/mixins/_mixins';
 @import '../components/**/*';
 
-[data-color="darkGreen_typeB"] {
+[data-color='darkGreen_typeB'] {
   color: #248068 !important;
 }
 
@@ -32,13 +32,12 @@
   }
 
   &__link {
+    display: block;
+    margin: 0 auto;
     position: relative;
 
+
     @include pc {
-      align-items: center;
-      display: flex;
-      justify-content: space-between;
-      margin: 0 auto;
       padding-bottom: 100px;
       transition: .3s;
       width: 1000px;
@@ -49,10 +48,29 @@
     }
 
     @include sp {
-      display: block;
       padding: 0 20px;
       padding-bottom: 50px;
-      width: 100%;
+      width: 94%;
+    }
+
+    .caption {
+      position: absolute;
+      
+      @include pc {
+        bottom: 120px;
+        right: 5px;
+      }
+
+      @include sp {
+        bottom: 70px;
+        right: 25px;
+      }
+    }
+
+    .option {
+      font-size: 10px;
+      margin-top: 5px;
+      text-align: right;
     }
 
   }
@@ -76,7 +94,6 @@
 
       display: block;
       margin: 0 auto;
-      width: 94%;
     }
   }
 }

@@ -3755,6 +3755,18 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  .menu .item .text .size .caption {
+    margin-left: 120px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu .item .text .size .caption {
+    text-align: right;
+  }
+}
+
 .menu .item .text .size .secondary {
   font-size: 12px;
   line-height: 1.66667;
@@ -4179,6 +4191,7 @@
 
 @media screen and (max-width: 768px) {
   .planDetail .hanreiList__item {
+    font-size: 11px;
     height: 20px;
     padding: 0 8px;
   }

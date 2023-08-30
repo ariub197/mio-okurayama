@@ -943,18 +943,7 @@
 .mainVisual__cap {
   bottom: 5px;
   position: absolute;
-}
-
-@media screen and (min-width: 768px) {
-  .mainVisual__cap {
-    right: 5px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .mainVisual__cap {
-    right: 25px;
-  }
+  right: 5px;
 }
 
 .mainVisual__squareBG {
@@ -2510,7 +2499,7 @@
 
 .uspCard:nth-child(odd) .uspCard__bgSquare:before {
   background: url(../imgs/bg-pattern-01.jpg) no-repeat center center/cover;
-  opacity: 0.2;
+  opacity: .2;
 }
 
 .uspCard:nth-child(odd) .moreBtn {
@@ -2519,11 +2508,12 @@
 
 .uspCard:nth-child(even) .uspCard__heading {
   color: #7c3a26;
+  text-shadow: 0 0 30px #ffffff;
 }
 
 .uspCard:nth-child(even) .uspCard__bgSquare:before {
   background: url(../imgs/bg-pattern-02.jpg) no-repeat center center/cover;
-  opacity: 0.2;
+  opacity: .2;
 }
 
 .uspCard:nth-child(even) .photo__capIn {
@@ -2628,8 +2618,8 @@
 .uspCard__subheading {
   font-family: "YakuHanMP", "Cinzel", "Shippori Mincho B1", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
   font-weight: 400;
-  white-space: nowrap;
   text-align: center;
+  white-space: nowrap;
 }
 
 @media screen and (min-width: 768px) {
@@ -2940,7 +2930,7 @@
   }
 }
 
-[data-color="darkGreen_typeB"] {
+[data-color='darkGreen_typeB'] {
   color: #248068 !important;
 }
 
@@ -2988,21 +2978,13 @@
 }
 
 .bnr__link {
+  display: block;
+  margin: 0 auto;
   position: relative;
 }
 
 @media screen and (min-width: 768px) {
   .bnr__link {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin: 0 auto;
     padding-bottom: 100px;
     -webkit-transition: .3s;
     transition: .3s;
@@ -3024,11 +3006,34 @@
 
 @media screen and (max-width: 768px) {
   .bnr__link {
-    display: block;
     padding: 0 20px;
     padding-bottom: 50px;
-    width: 100%;
+    width: 94%;
   }
+}
+
+.bnr__link .caption {
+  position: absolute;
+}
+
+@media screen and (min-width: 768px) {
+  .bnr__link .caption {
+    bottom: 120px;
+    right: 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bnr__link .caption {
+    bottom: 70px;
+    right: 25px;
+  }
+}
+
+.bnr__link .option {
+  font-size: 10px;
+  margin-top: 5px;
+  text-align: right;
 }
 
 @media screen and (min-width: 768px) {
@@ -3041,7 +3046,6 @@
   .bnr__link img {
     display: block;
     margin: 0 auto;
-    width: 94%;
   }
   .bnr__link img.only-pc {
     display: none;
