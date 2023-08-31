@@ -7425,6 +7425,10 @@ button.swiper-pagination-bullet {
   }
 }
 
+.infoCard__link {
+  border-bottom: 1px solid #464646;
+}
+
 .infoCard__head {
   -webkit-box-align: center;
       -ms-flex-align: center;

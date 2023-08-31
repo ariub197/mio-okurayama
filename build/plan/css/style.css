@@ -5718,13 +5718,13 @@
 }
 
 .changeArea__contTtlArea .type .small {
-  font-size: 20px;
+  font-size: 24px;
   letter-spacing: .02em;
 }
 
 @media screen and (max-width: 768px) {
   .changeArea__contTtlArea .type .small {
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 

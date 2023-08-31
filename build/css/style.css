@@ -1308,6 +1308,7 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  width: 100%;
 }
 
 .newsBox__term {
@@ -1315,6 +1316,7 @@
   font-family: "Cinzel", serif;
   letter-spacing: .08em;
   line-height: .8;
+  white-space: nowrap;
 }
 
 @media screen and (min-width: 768px) {
@@ -1333,6 +1335,11 @@
   color: #464646;
   letter-spacing: .16em;
   position: relative;
+}
+
+.newsBox__desc--center {
+  width: 100%;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {

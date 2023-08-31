@@ -2132,11 +2132,11 @@
       }
 
       .small {
-        font-size: 20px;
+        font-size: 24px;
         letter-spacing: .02em;
 
         @include sp {
-          font-size: 14px;
+          font-size: 18px;
         }
       }
     }

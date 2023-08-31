@@ -79,6 +79,7 @@
     align-items: flex-end;
     display: flex;
     justify-content: flex-start;
+    width: 100%;
   }
 
   &__term {
@@ -86,6 +87,7 @@
     font-family: $font-en;
     letter-spacing: .08em;
     line-height: .8;
+    white-space: nowrap;
 
     @include pc {
       font-size: 16px;
@@ -100,6 +102,11 @@
     color: #464646;
     letter-spacing: .16em;
     position: relative;
+
+    &--center {
+      width: 100%;
+      text-align: center;
+    }
 
     @include pc {
       font-size: 16px;
