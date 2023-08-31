@@ -5680,14 +5680,14 @@
   line-height: calc(20 / 15);
   padding-top: 8px;
   text-align: center;
-  width: 55px;
+  min-width: 55px;
 }
 
 @media screen and (max-width: 768px) {
   .changeArea__contTtlArea .box {
     font-size: 12px;
     height: 48px;
-    width: 48px;
+    min-width: 48px;
   }
 }
 
@@ -5718,7 +5718,7 @@
 }
 
 .changeArea__contTtlArea .type .small {
-  font-size: 24px;
+  font-size: 26px;
   letter-spacing: .02em;
 }
 
