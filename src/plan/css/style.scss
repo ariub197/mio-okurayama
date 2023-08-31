@@ -3,6 +3,12 @@
 @import '../../common/css/mixins/_mixins';
 @import '../components/**/*';
 
+.container {
+  @include sp {
+    padding-top: 0;
+  }
+}
+
 .plan-catch {
   @include pc {
     padding-top: 120px;
@@ -13,13 +19,7 @@
   }
 
   .heading--02 {
-    @include pc {
-      margin-top: 36px;
-    }
-
-    @include sp {
-      margin-top: 24px;
-    }
+    margin-top: 36px;
   }
 }
 
@@ -290,7 +290,8 @@
         padding: 4px 24px 8px;
 
         @include sp {
-          font-size: 16px;
+          padding: 4px 8px 8px;
+          font-size: 14px;
         }
 
         strong {
@@ -298,7 +299,7 @@
           font-weight: inherit;
 
           @include sp {
-            font-size: 20px;
+            font-size: 18px;
           }
         }
 
@@ -307,7 +308,7 @@
           font-size: 16px;
 
           @include sp {
-            font-size: 14px;
+            font-size: 12px;
           }
         }
       }
@@ -530,6 +531,15 @@
         .small {
           font-size: 10px;
         }
+
+        .caption {
+          max-width: 210px;
+          margin: 0 auto;
+          text-align: right;
+          @include sp {
+            max-width: 190px;
+          }
+        }
       }
 
       .secondary {
@@ -685,7 +695,7 @@
       letter-spacing: 0;
       opacity: .8;
       padding: 10px 0 0;
-	  
+
       @include lhCrop(1.5);
 
       @include sp {}
@@ -1357,11 +1367,35 @@
   background: #443131;
   border: solid 1px #443131;
   color: #ffffff;
+
+  .heading--03 {
+    @include sp {
+      font-size: 16px;
+    }
+  }
+
+  .txt {
+    @include sp {
+      font-size: 12px;
+    }
+  }
 }
 
 .bg__whiteLayer {
   background: #ffffff;
   border: solid 1px #bfbfbf;
+
+  .heading--03 {
+    @include sp {
+      font-size: 16px;
+    }
+  }
+
+  .txt {
+    @include sp {
+      font-size: 12px;
+    }
+  }
 }
 
 .madoriSection {
@@ -2112,6 +2146,8 @@
   &__contTxt {
     color: $color-autumn-sub-01;
     white-space: nowrap;
+    font-weight: bold;
+    letter-spacing: 0.08em;
 
     @include lhCrop(1.7);
 

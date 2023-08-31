@@ -114,6 +114,17 @@
     }
   }
 
+  & + & {
+    @include pc {
+      margin-top: 40px;
+    }
+
+    @include sp {
+      margin-top: 30px;
+    }
+  }
+
+
   & + .infoCV {
     @include pc {
       margin-top: 68px;
