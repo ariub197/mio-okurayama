@@ -80,6 +80,10 @@
     display: flex;
     justify-content: flex-start;
     width: 100%;
+
+    @include sp {
+      align-items: center;
+    }
   }
 
   &__term {
