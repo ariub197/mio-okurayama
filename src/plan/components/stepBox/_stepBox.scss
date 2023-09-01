@@ -1,0 +1,39 @@
+.stepBox{
+  @include pc{
+    font-size: 20px !important;
+  }
+  
+  @include sp{
+    font-size: calc(28vw / 750 * 100) !important;
+    white-space: nowrap;
+  }
+
+  .heading--label{
+    font-family: $font-en;
+    
+
+    @include pc{
+      height: 45px;
+    }
+
+    @include sp{
+      height: calc(70vw / 750 * 100);
+    }
+  }
+
+  &__body{
+    background-color: #ffffff;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    
+
+    @include pc{
+      height: 86px;
+    }
+
+    @include sp{
+      height: calc(80vw / 750 * 100);
+    }
+  }
+}

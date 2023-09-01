@@ -1,0 +1,16 @@
+<%include('/_utils');
+const params = ejsUtils.defaultParamsMapper(locals, {
+head:'',
+txt:'',
+modifiers: []
+});
+const className = ejsUtils.mapModifiers('stepBox', params.modifiers);
+%>
+<div class="<%- className %>">
+   <div class="heading--label">
+    <%- params.head %>
+   </div>
+   <div class="stepBox__body">
+    <%- params.txt %>
+   </div>
+</div>

@@ -41,7 +41,7 @@
   }
 
   @include sp {
-    margin-top: 60px;
+    margin-top: 90px;
   }
 }
 
@@ -290,8 +290,8 @@
         padding: 4px 24px 8px;
 
         @include sp {
-          padding: 4px 8px 8px;
           font-size: 14px;
+          padding: 4px 8px 8px;
         }
 
         strong {
@@ -430,7 +430,7 @@
   .panel {
     @extend %boxShadow;
 
-    background: #ffffff url(../imgs/bg01.jpg) 0 0 repeat;
+    background: #ffffff;
     padding: 80px 50px 40px;
     position: relative;
 
@@ -514,7 +514,7 @@
       }
 
       .primary {
-        font-size: 24px;
+        font-size: 16px;
         letter-spacing: .04em;
         line-height: 1;
 
@@ -533,9 +533,10 @@
         }
 
         .caption {
-          max-width: 210px;
           margin: 0 auto;
+          max-width: 210px;
           text-align: right;
+
           @include sp {
             max-width: 190px;
           }
@@ -1766,6 +1767,12 @@
     &--step {
       margin-top: 30px;
 
+      @include sp{
+        margin: auto;
+        margin-top: 30px;
+        width: calc(440vw / 750 * 100);
+      }
+
       .roomspaceSection__item {
         position: relative;
         width: calc(216/1000*100%);
@@ -1844,7 +1851,7 @@
 }
 
 .roomspacePhotos__item:nth-child(n+2) {
-  margin-top: 30px !important;
+  margin-top: 50px !important;
 }
 
 
@@ -2099,9 +2106,9 @@
       height: 55px;
       letter-spacing: .12em;
       line-height: calc(20 / 15);
+      min-width: 55px;
       padding-top: 8px;
       text-align: center;
-      min-width: 55px;
 
       @include sp {
         font-size: 12px;
@@ -2118,6 +2125,10 @@
       font-size: 30px;
       letter-spacing: .07em;
       padding-left: 20px;
+
+      &--flex{
+        display: flex;
+      }
 
       @include sp {
         font-size: 20px;
@@ -2145,9 +2156,9 @@
 
   &__contTxt {
     color: $color-autumn-sub-01;
-    white-space: nowrap;
     font-weight: bold;
-    letter-spacing: 0.08em;
+    letter-spacing: .08em;
+    white-space: nowrap;
 
     @include lhCrop(1.7);
 

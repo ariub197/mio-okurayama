@@ -21,7 +21,7 @@
     <div class="wrap">
 
       <section class="plan-catch">
-        <h4 class="planHead"><span class="num">3LDK</span>中心<br>全<span class="num">13</span>タイプの多彩なプラン</h4>
+        <h4 class="planHead"><span class="num" data-color="darkGreen_typeB">3LDK</span>中心<br>全<span class="num" data-color="darkGreen_typeB">13</span>タイプの多彩なプラン</h4>
         <div class="heading--02" data-align="center">住戸プランは3LDKを中心に<br>2LDK〜4LDKの多彩なプランを<br class="only-sp">ご用意致しました。</div>
       </section>
 
@@ -37,7 +37,7 @@
 				<div class="layoutCol roomspaceSection__row">
 					<div class="roomspaceSection__item--texts">
 						<h3 class="heading--01">「自在空間システム」とは？</h3>
-						<div class="heading--03" data-color="darkGreen">「自分を住まいに合わせる」のではなく<br>「自分に住まいを合わせる」という発想。</div>
+						<div class="heading--03" data-color="darkGreen"><strong>「自分を住まいに合わせる」のではなく<br>「自分に住まいを合わせる」という発想。</strong></div>
 						<p class="txt">「自在空間システム」は、こだわり派のあなたや、今までのマンションに満足出来なかった方、百人百様のライフスタイルにお応えするために誕生しました。「自在空間システム」なら、もっと自分を主張して、個性的なライフスタイルが実現できます。自分流のキッチン空間が欲しい方、大きなリビングダイニングが欲しい方、お子様みんなのお部屋が欲しい方、仕上げの素材にこだわりたい方、そんな方はぜひ私たちにご相談ください。</p>
 						<p class="caption">※ミオカステーロ大倉山では「水廻りの位置の変更」には対応出来ません。詳しくは係員へお尋ねください。</p>
 					</div>
@@ -46,8 +46,8 @@
 							<div class="roomspacePhotos__item">
                 <%- include('/common/components/photo/_photo.ejs', {
                   imagePath: '<img src="./imgs/img-08.jpg" alt="" width="379" height="240">',
-                  alt: '',
-                  captionPosition: 'noCap',
+                  alt: '当社施工物件、工事段階のものに一部CG加工を施してあります。<br>（平成21年3月撮影）',
+                  captionPosition: 'capOut',
                   captionColor: '',
                   pictureMode: '',
                 }) %>
@@ -69,39 +69,31 @@
           <div class="heading--03">「自在空間システム」の流れ<span class="label">設計料無料</span></div>
           <div class="layoutCol roomspaceSection__row--step">
             <div class="roomspaceSection__item">
-              <%- include('/common/components/photo/_photo.ejs', {
-                imagePath: '<img src="./imgs/img-step-01@2x.png" alt="">',
-                alt: '',
-                captionPosition: 'noCap',
-                captionColor: '',
-                pictureMode: '',
+              <%- include('./components/stepBox/_stepBox.ejs', {
+                head:'step 1',
+                txt:'お部屋の選定',
+                modifiers:['']
               }) %>
             </div>
             <div class="roomspaceSection__item">
-              <%- include('/common/components/photo/_photo.ejs', {
-                imagePath: '<img src="./imgs/img-step-02@2x.png" alt="">',
-                alt: '',
-                captionPosition: 'noCap',
-                captionColor: '',
-                pictureMode: '',
+              <%- include('./components/stepBox/_stepBox.ejs', {
+                head:'step 2',
+                txt:'間取りの決定',
+                modifiers:['']
               }) %>
             </div>
             <div class="roomspaceSection__item">
-              <%- include('/common/components/photo/_photo.ejs', {
-                imagePath: '<img src="./imgs/img-step-03@2x.png" alt="">',
-                alt: '',
-                captionPosition: 'noCap',
-                captionColor: '',
-                pictureMode: '',
+              <%- include('./components/stepBox/_stepBox.ejs', {
+                head:'step 3',
+                txt:'プラン細部の<br class="only-pc">決定',
+                modifiers:['']
               }) %>
             </div>
             <div class="roomspaceSection__item">
-              <%- include('/common/components/photo/_photo.ejs', {
-                imagePath: '<img src="./imgs/img-step-04@2x.png" alt="">',
-                alt: '',
-                captionPosition: 'noCap',
-                captionColor: '',
-                pictureMode: '',
+              <%- include('./components/stepBox/_stepBox.ejs', {
+                head:'step 4',
+                txt:'床・住設備の<br class="only-pc">カラーの選定',
+                modifiers:['']
               }) %>
             </div>
           </div>
@@ -149,7 +141,13 @@
 							<div class="changeArea__contItem changeArea__contItem--large">
                 <div class="changeArea__contTtlArea">
                   <div class="box box--brown">最終<br>プラン</div>
-                  <div class="type"><span class="num">2</span>LDK<span class="small">+テレワークスペース</span></div>
+                  <div class="type type--flex">
+                    <span>
+                      <span class="num">2</span>LDK<span class="small">+</span>
+                    </span>
+                    <span class="small">
+                      テレワーク<br>スペース
+                    </span></div>
                 </div>
                 <img src="imgs/img-change-02.png" alt="" class="only-pc">
                 <img src="imgs/sp/img-change-02.png" alt="" class="only-sp">
@@ -318,7 +316,7 @@
               <div class="heading--label">
                 <p class="heading--03">アウトフレーム</p>
               </div>
-              <p class="txt" data-align="pc-center">リビングのバルコニー側の柱を室外側に設ける事で、<br>部屋のコーナーと窓まわりがすっきりとし、家具の配置がしやすくなります。<span class="caption">（一部を除く）</span></p>
+              <p class="txt" data-align="pc-center">リビングのバルコニー側の柱を室外側に設ける事で、<br class="only-pc">部屋のコーナーと窓まわりがすっきりとし、家具の配置がしやすくなります。<span class="caption">（一部を除く）</span></p>
             </div>
             <div class="featureSect__cont featureSect__cont--bgNone">
               <div class="outFrameIllust">

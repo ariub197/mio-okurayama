@@ -2185,8 +2185,8 @@
 .planHead {
   font-family: "YakuHanMP", "Cinzel", "Shippori Mincho B1", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
   font-weight: 400;
-  white-space: nowrap;
   text-align: center;
+  white-space: nowrap;
 }
 
 @media screen and (min-width: 768px) {
@@ -2219,6 +2219,10 @@
 
 .planHead .num {
   color: #315048;
+}
+
+.planHead .num[data-color='darkGreen_typeB'] {
+  color: #248068 !important;
 }
 
 @media screen and (min-width: 768px) {
@@ -3267,6 +3271,54 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  .stepBox {
+    font-size: 20px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .stepBox {
+    font-size: calc(28vw / 750 * 100) !important;
+    white-space: nowrap;
+  }
+}
+
+.stepBox .heading--label {
+  font-family: "Cinzel", serif;
+}
+
+@media screen and (min-width: 768px) {
+  .stepBox .heading--label {
+    height: 45px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .stepBox .heading--label {
+    height: calc(70vw / 750 * 100);
+  }
+}
+
+.stepBox__body {
+  background-color: #ffffff;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .stepBox__body {
+    height: 86px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .stepBox__body {
+    height: calc(80vw / 750 * 100);
+  }
+}
+
 .switchBtn {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -3376,7 +3428,7 @@
 
 @media screen and (max-width: 768px) {
   .plan-flow {
-    margin-top: 60px;
+    margin-top: 90px;
   }
 }
 
@@ -3639,8 +3691,8 @@
 
 @media screen and (max-width: 768px) {
   .menu .item .text .name {
-    padding: 4px 8px 8px;
     font-size: 14px;
+    padding: 4px 8px 8px;
   }
 }
 
@@ -3795,7 +3847,7 @@
 }
 
 .planDetail .panel {
-  background: #ffffff url(../imgs/bg01.jpg) 0 0 repeat;
+  background: #ffffff;
   padding: 80px 50px 40px;
   position: relative;
 }
@@ -3899,7 +3951,7 @@
 }
 
 .planDetail .panel .size .primary {
-  font-size: 24px;
+  font-size: 16px;
   letter-spacing: .04em;
   line-height: 1;
 }
@@ -3921,8 +3973,8 @@
 }
 
 .planDetail .panel .size .primary .caption {
-  max-width: 210px;
   margin: 0 auto;
+  max-width: 210px;
   text-align: right;
 }
 
@@ -5300,6 +5352,14 @@
   margin-top: 30px;
 }
 
+@media screen and (max-width: 768px) {
+  .roomspaceSection__row--step {
+    margin: auto;
+    margin-top: 30px;
+    width: calc(440vw / 750 * 100);
+  }
+}
+
 .roomspaceSection__row--step .roomspaceSection__item {
   position: relative;
   width: calc(216/1000*100%);
@@ -5391,7 +5451,7 @@
 }
 
 .roomspacePhotos__item:nth-child(n+2) {
-  margin-top: 30px !important;
+  margin-top: 50px !important;
 }
 
 .defaultBtn__list {
@@ -5678,9 +5738,9 @@
   height: 55px;
   letter-spacing: .12em;
   line-height: calc(20 / 15);
+  min-width: 55px;
   padding-top: 8px;
   text-align: center;
-  min-width: 55px;
 }
 
 @media screen and (max-width: 768px) {
@@ -5699,6 +5759,12 @@
   font-size: 30px;
   letter-spacing: .07em;
   padding-left: 20px;
+}
+
+.changeArea__contTtlArea .type--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media screen and (max-width: 768px) {
@@ -5730,9 +5796,9 @@
 
 .changeArea__contTxt {
   color: #315048;
-  white-space: nowrap;
   font-weight: bold;
-  letter-spacing: 0.08em;
+  letter-spacing: .08em;
+  white-space: nowrap;
   line-height: 1.7;
 }
 
