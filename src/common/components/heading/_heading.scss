@@ -12,19 +12,19 @@
   }
 
   &--label {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    height: 60px;
     background: $color-autumn-sub-01;
-    color: #ffffff;
     box-shadow: 0 8px 16px rgba(102, 102, 102, .2);
+    color: #ffffff;
+    display: flex;
+    height: 60px;
+    justify-content: center;
 
     @include sp {
       height: auto;
-      padding: 10px 6px;
-      letter-spacing: 0.04em;
+      letter-spacing: .04em;
       line-height: 1.5;
+      padding: 10px 6px;
     }
 
     & + .txt {
@@ -36,6 +36,10 @@
         margin-top: 30px;
       }
     }
+  }
+
+  &--gray {
+    background: #595959;
   }
 
   &--01 {
@@ -87,6 +91,7 @@
 
     .sub {
       display: block;
+
       @include min-screen($breakP) {
         font-size: 24px;
       }
@@ -133,6 +138,7 @@
 
   &--03 {
     @include lhCrop(1.5);
+
     @include min-screen($breakP) {
       font-size: 20px;
     }
@@ -152,20 +158,20 @@
     }
 
     .label {
-      padding: 2px 8px;
       background: $color-autumn-main-01;
-      letter-spacing: 0.04em;
       color: #ffffff;
+      letter-spacing: .04em;
+      padding: 2px 8px;
 
       @include pc {
         display: inline-block;
-        margin-left: 10px;
         font-size: 16px;
+        margin-left: 10px;
       }
 
       @include sp {
-        margin-left: 5px;
         font-size: 13px;
+        margin-left: 5px;
       }
     }
   }

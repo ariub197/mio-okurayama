@@ -7127,28 +7127,28 @@ button.swiper-pagination-bullet {
 }
 
 .heading--label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 60px;
   background: #315048;
-  color: #ffffff;
   -webkit-box-shadow: 0 8px 16px rgba(102, 102, 102, 0.2);
           box-shadow: 0 8px 16px rgba(102, 102, 102, 0.2);
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (max-width: 768px) {
   .heading--label {
     height: auto;
-    padding: 10px 6px;
-    letter-spacing: 0.04em;
+    letter-spacing: .04em;
     line-height: 1.5;
+    padding: 10px 6px;
   }
 }
 
@@ -7162,6 +7162,10 @@ button.swiper-pagination-bullet {
   .heading--label + .txt {
     margin-top: 30px;
   }
+}
+
+.heading--gray {
+  background: #595959;
 }
 
 @media screen and (min-width: 768px) {
@@ -7367,24 +7371,24 @@ button.swiper-pagination-bullet {
 }
 
 .heading--03 .label {
-  padding: 2px 8px;
   background: #7c3a26;
-  letter-spacing: 0.04em;
   color: #ffffff;
+  letter-spacing: .04em;
+  padding: 2px 8px;
 }
 
 @media screen and (min-width: 768px) {
   .heading--03 .label {
     display: inline-block;
-    margin-left: 10px;
     font-size: 16px;
+    margin-left: 10px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .heading--03 .label {
-    margin-left: 5px;
     font-size: 13px;
+    margin-left: 5px;
   }
 }
 
