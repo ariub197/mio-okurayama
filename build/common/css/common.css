@@ -8023,6 +8023,12 @@ button.swiper-pagination-bullet {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .pageTtl--wide {
+    width: 1056px;
+  }
+}
+
 .pageTtl:after {
   background-color: rgba(70, 70, 70, 0.6);
   bottom: 0;

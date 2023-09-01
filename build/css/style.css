@@ -1346,8 +1346,8 @@
 }
 
 .newsBox__desc--center {
-  width: 100%;
   text-align: center;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -1392,7 +1392,7 @@
   }
 }
 
-.newsBox__desc .new {
+.newsBox .new {
   color: #16382f;
   font-family: "Licorice", cursive;
   line-height: .8;
@@ -1403,7 +1403,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .newsBox__desc .new {
+  .newsBox .new {
     font-size: 32px;
     -webkit-transform: translate(22px, -13px) rotate(15deg);
             transform: translate(22px, -13px) rotate(15deg);
@@ -1411,10 +1411,10 @@
 }
 
 @media screen and (max-width: 768px) {
-  .newsBox__desc .new {
+  .newsBox .new {
     font-size: 20px;
-    -webkit-transform: translate(14px, -8px) rotate(15deg);
-            transform: translate(14px, -8px) rotate(15deg);
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
   }
 }
 

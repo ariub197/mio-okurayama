@@ -108,8 +108,8 @@
     position: relative;
 
     &--center {
-      width: 100%;
       text-align: center;
+      width: 100%;
     }
 
     @include pc {
@@ -126,24 +126,25 @@
       @include lhCrop(24/22);
     }
 
-    .new {
-      color: #16382f;
-      font-family: $font-en-cursive;
-      line-height: .8;
-      opacity: .7;
-      position: absolute;
-      right: 0;
-      top: 0;
+  }
 
-      @include pc {
-        font-size: 32px;
-        transform: translate(22px,-13px) rotate(15deg);
-      }
+  .new {
+    color: #16382f;
+    font-family: $font-en-cursive;
+    line-height: .8;
+    opacity: .7;
+    position: absolute;
+    right: 0;
+    top: 0;
 
-      @include sp {
-        font-size: 20px;
-        transform: translate(14px,-8px) rotate(15deg);
-      }
+    @include pc {
+      font-size: 32px;
+      transform: translate(22px,-13px) rotate(15deg);
+    }
+
+    @include sp {
+      font-size: 20px;
+      transform: rotate(15deg);
     }
   }
 

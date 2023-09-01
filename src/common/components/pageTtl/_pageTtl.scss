@@ -15,6 +15,12 @@
     padding-top: 80px;
   }
 
+  &--wide{
+    @include pc {
+      width: 1056px;
+    }
+  }
+
   &:after {
     background-color: rgba(70,70,70,.6);
     bottom: 0;
