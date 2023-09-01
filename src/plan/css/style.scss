@@ -518,13 +518,21 @@
         letter-spacing: .04em;
         line-height: 1;
 
+        @include sp {
+          font-size: 12px;
+        }
+
         .num {
+          display: inline-block;
           font-family: $font-en;
           font-size: 40px;
           letter-spacing: .08em;
+          line-height: .76;
+          vertical-align: text-bottom;
 
           @include sp {
             font-size: 30px;
+            padding-left: 8px;
           }
         }
 
@@ -551,7 +559,7 @@
         gap: 4px 1em;
         letter-spacing: .04em;
         line-height: 1;
-        margin: 10px 0 0;
+        margin: 24px 0 0;
 
         dt,
         dd {
@@ -1753,14 +1761,20 @@
       }
     }
 
-    @include sp {
+    .roomspacePhotos__item {
+      @include pc {
 
-      .roomspacePhotos__item {
-        width: calc(50% - 10px);
+        .capOut {
+          text-align: right;
+        }
       }
 
-      .roomspacePhotos__item:nth-child(n+2) {
-        margin-top: 0 !important;
+      @include sp {
+        width: calc(50% - 10px);
+
+        &:nth-child(n+2) {
+          margin-top: 0 !important;
+        }
       }
     }
 
@@ -2143,8 +2157,10 @@
       }
 
       .small {
+        display: inline-block;
         font-size: 26px;
         letter-spacing: .02em;
+        line-height: 1;
 
         @include sp {
           font-size: 18px;

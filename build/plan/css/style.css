@@ -3956,15 +3956,25 @@
   line-height: 1;
 }
 
+@media screen and (max-width: 768px) {
+  .planDetail .panel .size .primary {
+    font-size: 12px;
+  }
+}
+
 .planDetail .panel .size .primary .num {
+  display: inline-block;
   font-family: "Cinzel", serif;
   font-size: 40px;
   letter-spacing: .08em;
+  line-height: .76;
+  vertical-align: text-bottom;
 }
 
 @media screen and (max-width: 768px) {
   .planDetail .panel .size .primary .num {
     font-size: 30px;
+    padding-left: 8px;
   }
 }
 
@@ -3997,7 +4007,7 @@
   gap: 4px 1em;
   letter-spacing: .04em;
   line-height: 1;
-  margin: 10px 0 0;
+  margin: 24px 0 0;
 }
 
 .planDetail .panel .size .secondary dt,
@@ -5339,6 +5349,12 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  .roomspaceSection__row .roomspacePhotos__item .capOut {
+    text-align: right;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .roomspaceSection__row .roomspacePhotos__item {
     width: calc(50% - 10px);
@@ -5784,8 +5800,10 @@
 }
 
 .changeArea__contTtlArea .type .small {
+  display: inline-block;
   font-size: 26px;
   letter-spacing: .02em;
+  line-height: 1;
 }
 
 @media screen and (max-width: 768px) {
