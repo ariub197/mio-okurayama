@@ -5,10 +5,11 @@
 
 .map-current {
   @include pc {
+    padding-bottom: 80px;
     padding-top: 80px;
   }
 
   @include sp {
-    padding: 40px 20px 0;
+    padding: 40px 20px;
   }
 }
