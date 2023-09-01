@@ -1,0 +1,307 @@
+<% var pageData = {
+		pageDir: 'brand'
+	};
+%>
+<%- include('/_head', {
+  pageId: pageData.pageDir,
+  title: 'ブランド',
+  canonical:'brand/',
+  }) %>
+<%- include('/common/inc/header/_header.ejs', {pageId: pageData.pageDir}) %>
+<main class="main">
+  <div class="container">
+    <h2 class="pageTtl">
+      <div class="en">BRAND</div>
+      <div class="jp">ブランド</div>
+    </h2>
+    <div class="brand-wrapper">
+      <div class="brand-leadGallery">
+        <div class="leadGallery">
+          <div class="leadGallery__cont">
+            <div class="leadGallery__item">
+              <%- include('/common/components/photo/_photo.ejs', {
+                imagePathPC: '<img src="./imgs/pc/img-lead-01.jpg" alt="" width="345" height="240">',
+                imagePathSP: '<img src="./imgs/sp/img-lead-01.jpg" alt="" width="219" height="220">',
+                alt: 'ミオカステーロ六町',
+                captionPosition: 'noCap',
+                captionColor: '',
+                pictureMode: 'on',
+              }) %>
+            </div>
+            <div class="leadGallery__item">
+              <%- include('/common/components/photo/_photo.ejs', {
+                imagePathPC: '<img src="./imgs/pc/img-lead-02.jpg" alt="" width="345" height="240">',
+                imagePathSP: '<img src="./imgs/sp/img-lead-02.jpg" alt="" width="220" height="220">',
+                alt: 'ミオカステーロセンター南',
+                captionPosition: 'noCap',
+                captionColor: '',
+                pictureMode: 'on',
+              }) %>
+            </div>
+            <div class="leadGallery__item">
+              <%- include('/common/components/photo/_photo.ejs', {
+                imagePathPC: '<img src="./imgs/pc/img-lead-03.jpg" alt="" width="345" height="240">',
+                imagePathSP: '<img src="./imgs/sp/img-lead-03.jpg" alt="" width="220" height="220">',
+                alt: 'ミオカステーロ鎌倉大船Ⅱ',
+                captionPosition: 'noCap',
+                captionColor: '',
+                pictureMode: 'on',
+              }) %>
+            </div>
+          </div>
+          <div class="leadGallery__ttl">Mio Castello</div>
+          <div class="leadGallery__cont">
+            <div class="leadGallery__item">
+              <%- include('/common/components/photo/_photo.ejs', {
+                imagePathPC: '<img src="./imgs/pc/img-lead-04.jpg" alt="" width="345" height="240">',
+                imagePathSP: '<img src="./imgs/sp/img-lead-04.jpg" alt="" width="219" height="220">',
+                alt: 'ミオカステーロ辻堂',
+                captionPosition: 'noCap',
+                captionColor: '',
+                pictureMode: 'on',
+              }) %>
+            </div>
+            <div class="leadGallery__item">
+              <%- include('/common/components/photo/_photo.ejs', {
+                imagePathPC: '<img src="./imgs/pc/img-lead-05.jpg" alt="" width="345" height="240">',
+                imagePathSP: '<img src="./imgs/sp/img-lead-05.jpg" alt="" width="220" height="220">',
+                alt: 'ミオカステーロ鎌倉大船Ⅱ',
+                captionPosition: 'noCap',
+                captionColor: '',
+                pictureMode: 'on',
+              }) %>
+            </div>
+            <div class="leadGallery__item">
+              <%- include('/common/components/photo/_photo.ejs', {
+                imagePathPC: '<img src="./imgs/pc/img-lead-06.jpg" alt="" width="345" height="240">',
+                imagePathSP: '<img src="./imgs/sp/img-lead-06.jpg" alt="" width="220" height="220">',
+                alt: 'ミオカステーロ目黒本町',
+                captionPosition: 'noCap',
+                captionColor: '',
+                pictureMode: 'on',
+              }) %>
+            </div>
+          </div>
+          <ul class="captionList">
+            <li class="captionList__item">1：ミオカステーロ六町</li>
+            <li class="captionList__item">2：ミオカステーロセンター南</li>
+            <li class="captionList__item">3：ミオカステーロ鎌倉大船Ⅱ</li>
+            <li class="captionList__item">4：ミオカステーロ辻堂</li>
+            <li class="captionList__item">5：ミオカステーロ鎌倉大船Ⅱ</li>
+            <li class="captionList__item">6：ミオカステーロ目黒本町</li>
+          </ul>
+          <section class="leadSect">
+            <h3 class="leadSect__heading">愛されて23,000戸。</h3>
+            <p class="txt">山田建設グループは、<br>良質なマンションをお届けすることに<br class="only-sp">邁進してまいりました。<br>良いものを自信を持ってお届けするためには、<br>多くの日本の製造業が辿ってきたように、<br>ものづくりの全ての段階で妥協なく<br class="only-sp">改良改善することが大切と考えています。<br><br>山田建設では用地取得から企画、<br class="only-sp">設計、施工に至るまで、<br>自社で行うことにより、<br class="only-sp">日々進化を重ねてまいりました。<br>その結果、お客様の生活スタイルに合った<br>分譲マンションを安定して<br class="only-sp">供給できるようになりました。</p>
+          </section>
+        </div>
+      </div>
+      <div class="brand-award">
+        <div class="awardBox">
+          <img src="./imgs/ttl-award.svg" alt="優良事業表彰 受賞" class="awardBox__ttl" width="211" height="41">
+          <p class="txt">掲載の各プロジェクトが、事業コンセプト、商品企画、事業成果で高い評価を頂き、<br class="only-pc">それぞれ受賞いたしました。</p>
+          <div class="awardSlider js-awardSlider">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <%- include('./components/awardCard/_awardCard.ejs', {
+                    gallery: [{
+                      imagePath: '<img src="./imgs/img-slider-minamikawa.png" alt="" width="550" height="550">',
+                      alt: '',
+                      captionPosition: 'noCap',
+                      lazy:'',
+                      pictureMode: '',
+                    }],
+                    caption:'※2022年10月撮影',
+                    type:'第13回優良事業表彰<span class="series">3年連続受賞</span>',
+                    ttl:'中高層分譲住宅部門(中規模)',
+                    bukken:'ミオカステーロセンター南Ⅲ'
+                  }) %>
+                </div>
+                <div class="swiper-slide">
+                  <%- include('./components/awardCard/_awardCard.ejs', {
+                    gallery: [{
+                      imagePath: '<img src="./imgs/img-slider-tuduki.png" alt="" width="550" height="550">',
+                      alt: '',
+                      captionPosition: 'noCap',
+                      lazy:'',
+                      pictureMode: '',
+                    }],
+                    caption:'※2021年2月撮影',
+                    type:'第12回優良事業表彰<span class="series">2年連続受賞</span>',
+                    ttl:'中高層分譲住宅部門(中規模)',
+                    bukken:'ミオカステーロ都筑ふれあいの丘<br>'
+                  }) %>
+                </div>
+                <div class="swiper-slide">
+                  <%- include('./components/awardCard/_awardCard.ejs', {
+                    gallery: [{
+                      imagePath: '<img src="./imgs/img-slider-mukogaoka.png" alt="" width="550" height="550">',
+                      alt: '',
+                      captionPosition: 'noCap',
+                      lazy:'',
+                      pictureMode: '',
+                    }],
+                    caption:'※2020年3月撮影',
+                    type:'第11回優良事業表彰',
+                    ttl:'中高層分譲住宅部門(小規模)',
+                    bukken:'ミオカステーロ向ヶ丘遊園Ⅱ<br class="only-sp"><span class="sub">－ステーションプレミア－</span>'
+                  }) %>
+                </div>
+                <div class="swiper-slide">
+                  <%- include('./components/awardCard/_awardCard.ejs', {
+                    gallery: [{
+                      imagePath: '<img src="./imgs/img-slider-hachioji.png" alt="" width="550" height="550">',
+                      alt: '',
+                      captionPosition: 'noCap',
+                      lazy:'',
+                      pictureMode: '',
+                    }],
+                    caption:'※2018年10月撮影',
+                    type:'第9回優良事業表彰<span class="series">2年連続受賞</span>',
+                    ttl:'中高層分譲住宅部門(大規模)',
+                    bukken:'ミオカステーロ八王子Ⅱ',
+                    modifiers: ['pattern01']
+                  }) %>
+                </div>
+                <div class="swiper-slide">
+                  <%- include('./components/awardCard/_awardCard.ejs', {
+                    gallery: [{
+                      imagePath: '<img src="./imgs/img-slider-nikotamagawa.png" alt="" width="550" height="550">',
+                      alt: '',
+                      captionPosition: 'noCap',
+                      lazy:'',
+                      pictureMode: '',
+                    }],
+                    caption:'※2017年3月撮影',
+                    type:'第8回優良事業表彰',
+                    ttl:'中高層分譲住宅部門(小規模)',
+                    bukken:'ミオカステーロ二子多摩川'
+                  }) %>
+                </div>
+              </div>
+            </div>
+            <div class="awardSlider__controller">
+              <div class="swiper-pagination"></div>
+              <div class="awardSlider__direction">
+                <div class="awardSlider__circleBtn js-awardSlider-prev">
+                  <svg class="arrowSVG" width="8.5px" height="10.5px" viewBox="0 0 8.5 10.5"><path fill-rule="evenodd"  stroke="none" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="#434343" d="M7.500,9.500 L0.500,5.500 L0.1000,5.000 L0.500,4.500 L7.500,0.500 L7.500,1.499 L2.250,5.000 L7.500,8.500 L7.500,9.500 Z"/></svg>
+                </div>
+                <div class="awardSlider__circleBtn js-awardSlider-next">
+                  <svg class="arrowSVG" width="8.5px" height="10.5px" viewBox="0 0 8.5 10.5"><path fill-rule="evenodd"  stroke="none" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="#434343" d="M7.500,5.500 L0.500,9.499 L0.500,8.500 L5.750,4.1000 L0.500,1.499 L0.500,0.500 L7.500,4.500 L7.000,4.1000 L7.500,5.500 Z"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="brand-quality">
+        <section class="qualitySect">
+          <img src="./imgs/ttl-trust.svg" alt="信頼とときめき" class="qualitySect__ttl" width="383" height="58">
+          <h3 class="qualitySect__heading">山田建設の総合力</h3>
+          <h3 class="qualitySect__subheading">企画から管理までトータルで提案。<br>それが山田建設の総合力。</h3>
+          <p class="txt">製販管一貫体制でマンション分譲に関わる業務を<br class="only-sp">手がけ、ノウハウを蓄積。<br class="only-pc">お客様の声に耳を傾け、<br class="only-sp">それを商品企画や管理体制に活かすことで、<br>よりきめ細やかな提案と対応を心がけています。</p>
+          <div class="workGallery">
+            <%- include('/common/components/photo/_photo.ejs', {
+              imagePath: '<img src="./imgs/img-yamadakensetsu-01@2x.jpg" alt="" width="660" height="440">',
+              alt: '',
+              captionPosition: 'noCap',
+              captionColor: '',
+              pictureMode: '',
+            }) %>
+            <%- include('/common/components/photo/_photo.ejs', {
+              imagePath: '<img src="./imgs/img-yamadakensetsu-02@2x.jpg" alt="" width="660" height="440">',
+              alt: '',
+              captionPosition: 'noCap',
+              captionColor: '',
+              pictureMode: '',
+            }) %>
+            <%- include('/common/components/photo/_photo.ejs', {
+              imagePath: '<img src="./imgs/img-yamadakensetsu-03@2x.jpg" alt="" width="660" height="440">',
+              alt: '',
+              captionPosition: 'noCap',
+              captionColor: '',
+              pictureMode: '',
+            }) %>
+            <%- include('/common/components/photo/_photo.ejs', {
+              imagePath: '<img src="./imgs/img-yamadakensetsu-04@2x.jpg" alt="" width="660" height="440">',
+              alt: '',
+              captionPosition: 'noCap',
+              captionColor: '',
+              pictureMode: '',
+            }) %>
+          </div>
+        </section>
+        <div class="systemValue">
+          <div class="systemValue__head">
+            <div class="valueBoard">
+              <span class="jp">一貫体制</span>
+              <span class="en">CONCENTRATE ON THE VALUE</span>
+            </div>
+          </div>
+          <div class="systemValue__cont">
+            <%- include('/common/components/photo/_photo.ejs', {
+              imagePath: '<img src="./imgs/img-system-fig.png" alt="" width="670" height="669">',
+              alt: 'YAMADA GROUP TOTAL SYSTEM',
+              captionPosition: 'noCap',
+              captionColor: '',
+              pictureMode: '',
+            }) %>
+          </div>
+        </div>
+        <div class="businessGroup">
+          <div class="businessDetail">
+            <div class="businessDetail__head">
+              <div class="businessDetail__heading">新築分譲マンション事業</div>
+            </div>
+            <div class="businessDetail__cont">
+              <ul class="seriesList">
+                <li class="seriesList__item">ミオカステーロシリーズ</li>
+                <li class="seriesList__item">マイキャッスルシリーズ </li>
+                <li class="seriesList__item">スタジオデンシリーズ</li>
+                <li class="seriesList__item">マイネシュロッスシリーズ</li>
+              </ul>
+            </div>
+          </div>
+          <div class="businessDetail">
+            <div class="businessDetail__head">
+              <div class="businessDetail__heading">建築請負事業</div>
+            </div>
+            <div class="businessDetail__cont">
+              <p class="txt">山田建設は、建設会社として数多くのマンションを施工・分譲してまいりました。<br>その施工実績に基づく確かな技術とノウハウが高く評価され、自社物件以外でも施工の受注を多数請けてまいりました。<br>これからも山田建設は、マンションを通じてより良い街づくりに貢献してまいります。</p>
+              <ul class="detailList">
+                <li class="detailList__item">分譲マンション、学校、病院、工場、倉庫、店舗など、各種施工実績があるため、<br class="only-pc">お客様の期待に沿える施工を致します。</li>
+                <li class="detailList__item">分譲マンションに関しては、自社分譲マンションの実績が多いため、内覧会や1年点検など、<br class="only-pc">分譲マンション固有の取り扱いにも熟練しています。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="businessDetail">
+            <div class="businessDetail__head">
+              <div class="businessDetail__heading">設計請負事業</div>
+            </div>
+            <div class="businessDetail__cont">
+              <p class="txt">自社設計部がこれまで培ってきた技術を活用し、立地や敷地形状、<br class="only-pc">コンセプトに従った意匠性・機能性を両立した建築プランを実現致します。<br>確かな耐震性をお約束する為、綿密な調査・構造計算を行います。<br>数々の制約をひとつひとつクリアしながら、多様化するお客様のニーズにお応えし、<br class="only-pc">これまでの設計経験を活かした信頼性の高い設計をご提供致します。</p>
+            </div>
+          </div>
+          <div class="businessDetail">
+            <div class="businessDetail__head">
+              <div class="businessDetail__heading">等価交換事業</div>
+            </div>
+            <div class="businessDetail__cont">
+              <p class="txt">日々の営業活動の中で地権者様と土地活用についてご相談いただくことがあります。<br>建築費用の借入に対しての不安を感じられている方に紹介しているのが「等価交換」という方法です。<br>地権者様には土地を提供して頂き、当社はその上にマンションを建設します。<br>マンション完成後、地権者様にはマンションの特定のお部屋を所有して頂き、当社はその他の部屋を分譲します。<br>このような「等価交換」事業も山田建設では承っております。</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+  <%- include('/common/components/contentsGuide/_contentsGuide.ejs') %>
+</main>
+<%- include('/common/inc/bottomInfo/_bottomInfo.ejs', {pageId: pageData.pageDir}) %>
+<%- include('/common/inc/footer/_footer.ejs', {pageId: pageData.pageDir, footerCap: ''}) %>

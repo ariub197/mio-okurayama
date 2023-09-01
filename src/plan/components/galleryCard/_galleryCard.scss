@@ -1,0 +1,51 @@
+.galleryCard {
+  align-items: center;
+  background: url('../../common/imgs/bg-pattern.jpg');
+  box-shadow: 0 8px 16px 0 rgba(102, 102, 102, .1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include pc {
+    padding: 48px 48px 20px;
+  }
+
+  @include sp {
+    padding: 20px 10px;
+  }
+
+  &__ttl {
+    color: #4c98aa;
+    font-family: $font-en;
+    letter-spacing: .04;
+    line-height: .7;
+
+    @include pc {
+      font-size: 16px;
+      margin-top: 30px;
+    }
+
+    @include sp {
+      font-size: 12px;
+      margin-top: 15px;
+    }
+  }
+
+  &__heading {
+    letter-spacing: .12;
+
+    @include pc {
+      font-size: 16px;
+      margin-top: 15px;
+
+      @include lhCrop(38/16);
+    }
+
+    @include sp {
+      font-size: 12px;
+      margin-top: 10px;
+
+      @include lhCrop(38/24);
+    }
+  }
+}

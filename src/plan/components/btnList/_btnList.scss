@@ -1,0 +1,22 @@
+.btnList {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: hidden;
+
+  .planBtn {
+
+    &:nth-of-type(n+3) {
+      @include pc {
+        margin-top: 48px;
+      }
+    }
+
+    &:not(:last-of-type) {
+      @include sp {
+        margin-bottom: 48px;
+      }
+    }
+  }
+}

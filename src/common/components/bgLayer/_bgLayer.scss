@@ -1,0 +1,25 @@
+.bgLayer {
+  position: relative;
+  z-index: 2;
+
+  &:before {
+    content: '';
+    height: 100%;
+    left: 50%;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transform: translate(-50%, 0);
+    width: 100vw;
+  }
+
+  &--pattern01 {
+    &:before {
+      background-color: rgba(148,175,170,.1);
+
+      @include pc {
+        width: calc(100vw - 40px);
+      }
+    }
+  }
+}

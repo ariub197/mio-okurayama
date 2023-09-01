@@ -89,6 +89,10 @@ img {
     @include min-screen($breakP) {
         width: 1024px;
     }
+
+    @include sp {
+      padding: 0 30px;
+    }
 }
 
 .caption,
@@ -319,4 +323,18 @@ img {
             }
         }
     }
+}
+
+[data-color="darkGreen"] {
+  color: $color-autumn-sub-01;
+}
+
+[data-align="pc-center"] {
+  @include pc {
+    text-align: center;
+  }
+}
+
+[data-align="center"] {
+  text-align: center;
 }

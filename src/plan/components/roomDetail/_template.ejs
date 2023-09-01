@@ -1,0 +1,18 @@
+<%include('/_utils');
+  const params = ejsUtils.defaultParamsMapper(locals, {
+    directory: '',
+  });
+%><%- include('../roomDetail/_roomDetail.ejs', {
+  type: 'I2',
+  variation:'3ldk+0wic+sic',
+  roomLength: {
+    en: '76.60',
+    jp: '（約00.00坪）'
+  },
+  areaTsubo:'',
+  subLength:['バルコニー面積：00.00㎡'],
+  specCaption: '',
+  directory: '',
+  buildingCaption: '',
+  modifiers: []
+}) %>

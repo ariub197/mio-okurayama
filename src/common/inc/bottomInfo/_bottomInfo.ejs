@@ -1,4 +1,10 @@
-<div class="bottomInfo" id="anchorBottomInfo">
+<%include('/_utils');
+
+const params = ejsUtils.defaultParamsMapper(locals, {
+  pageId: '',
+});
+
+%><% if (params.pageId == 'top') { %><div class="bottomInfo" id="anchorBottomInfo">
   <div class="bottomInfo__inner">
     <div class="bottomInfo__head" data-sai="fade-up">
       <div class="bottomInfo__ttl">INFORMATION</div>
@@ -6,15 +12,28 @@
     <div class="bottomInfo__cont" data-sai="fade-up">
       <div class="infoCard">
         <div class="infoCard__head">
-          <span class="infoCard__date">08.08</span>
+          <span class="infoCard__date">2023.09.01</span>
           <span class="infoCard__status">new</span>
         </div>
         <div class="infoCard__cont">
-          <div class="infoCard__heading">物件エントリー受付開始</div>
-          <p class="infoCard__txt">エントリーいただいた方には、<br class="only-sp">最新の情報やスケジュールをご案内いたします。</p>
+          <div class="infoCard__heading">ページ公開しました</div>
+          <p class="infoCard__txt">
+            <a class="infoCard__link" href="./plan/">PLAN</a>　<a class="infoCard__link" href="./brand/">BRAND</a>
+          </p>
         </div>
       </div>
-      <a href="https://www.yamada-kensetsu.co.jp/mansion/form/entry/okurayama/" target="_blank" class="infoCV">
+
+      <div class="infoCard">
+        <div class="infoCard__head">
+          <span class="infoCard__date">2023.09.01</span>
+          <span class="infoCard__status">new</span>
+        </div>
+        <div class="infoCard__cont">
+          <div class="infoCard__heading">物件エントリー受付中</div>
+          <p class="infoCard__txt">エントリーいただいた方には、<br class="only-sp">最新の情報やスケジュールをご案内いたします</p>
+        </div>
+      </div>
+      <!--<a href="https://www.yamada-kensetsu.co.jp/mansion/form/entry/okurayama/" target="_blank" class="infoCV">
         <div class="infoCV__visual">
           <%- include('/common/components/pic/_pic.ejs', {
             imagePathPC:`<img src="${relativePath}common/imgs/pc/img-info-entry.jpg" alt="" width="240" height="80">`,
@@ -47,8 +66,66 @@
             <svg class="plusSVG" width="22.5px" height="22.5px" viewBox="0 0 22.5 22.5"><path fill-rule="evenodd" fill="rgb(67, 67, 67)" d="M21.500,11.500 L11.500,11.500 L11.500,21.500 L10.500,21.500 L10.500,11.500 L0.500,11.500 L0.500,10.499 L10.500,10.500 L10.500,0.500 L11.500,0.500 L11.500,10.500 L21.500,10.500 L21.500,11.500 Z"/></svg>
           </div>
         </div>
-      </a>
+      </a>-->
     </div>
+  </div>
+</div><% }%>
+<div class="bottomCV">
+  <div class="bottomCV__inner">
+    <a href="https://www.yamada-kensetsu.co.jp/mansion/form/entry/okurayama/" target="_blank" class="infoCV" target="_blank">
+      <div class="infoCV__visual">
+        <%- include('/common/components/pic/_pic.ejs', {
+          imagePathPC:`<img src="${relativePath}common/imgs/pc/img-info-entry.jpg" alt="" width="240" height="80">`,
+          imagePathSP:`<img src="${relativePath}common/imgs/sp/img-info-entry.jpg" alt="" width="160" height="160">`,
+          alt:'',
+          sai:'',
+          modifiers: []
+        }) %>
+        <span class="caption">image photo</span>
+      </div>
+      <div class="infoCV__cont">
+        <div class="infoCV__ttl">エントリーはこちら</div>
+        <div class="infoCV__icon">
+          <svg class="arrowSVG" width="21.5px" height="12.5px" viewBox="0 0 21.5 12.5"><path fill-rule="evenodd" fill="rgb(67, 67, 67)" d="M11.500,11.500 L11.500,10.499 L17.900,6.500 L0.500,6.500 L0.500,5.500 L17.899,5.500 L11.500,1.501 L11.500,0.499 L20.500,5.500 L20.500,6.500 L11.500,11.500 Z"/></svg>
+        </div>
+      </div>
+    </a>
+    <a href="#" class="infoCV js-flowModal-btn">
+      <div class="infoCV__visual">
+        <%- include('/common/components/pic/_pic.ejs', {
+          imagePathPC:`<img src="${relativePath}common/imgs/pc/img-info-flow.jpg" alt="" width="240" height="80">`,
+          imagePathSP:`<img src="${relativePath}common/imgs/sp/img-info-flow.jpg" alt="" width="160" height="160">`,
+          alt:'',
+          sai:'',
+          modifiers: []
+        }) %>
+        <span class="caption">image photo</span>
+      </div>
+      <div class="infoCV__cont">
+        <div class="infoCV__ttl">エントリー後の<br>ご案内の流れ</div>
+        <div class="infoCV__icon">
+          <svg class="plusSVG" width="22.5px" height="22.5px" viewBox="0 0 22.5 22.5"><path fill-rule="evenodd" fill="rgb(67, 67, 67)" d="M21.500,11.500 L11.500,11.500 L11.500,21.500 L10.500,21.500 L10.500,11.500 L0.500,11.500 L0.500,10.499 L10.500,10.500 L10.500,0.500 L11.500,0.500 L11.500,10.500 L21.500,10.500 L21.500,11.500 Z"/></svg>
+        </div>
+      </div>
+    </a>
+    <!--<a href="#" class="infoCV" target="_blank">
+      <div class="infoCV__visual">
+        <%- include('/common/components/pic/_pic.ejs', {
+          imagePathPC:`<img src="${relativePath}common/imgs/pc/img-info-reserve.jpg" alt="" width="240" height="80">`,
+          imagePathSP:`<img src="${relativePath}common/imgs/sp/img-info-reserve.jpg" alt="" width="160" height="160">`,
+          alt:'',
+          sai:'',
+          modifiers: []
+        }) %>
+        <span class="caption">image photo</span>
+      </div>
+      <div class="infoCV__cont">
+        <div class="infoCV__ttl">来場予約はこちら</div>
+        <div class="infoCV__icon">
+          <svg class="arrowSVG" width="21.5px" height="12.5px" viewBox="0 0 21.5 12.5"><path fill-rule="evenodd" fill="rgb(67, 67, 67)" d="M11.500,11.500 L11.500,10.499 L17.900,6.500 L0.500,6.500 L0.500,5.500 L17.899,5.500 L11.500,1.501 L11.500,0.499 L20.500,5.500 L20.500,6.500 L11.500,11.500 Z"/></svg>
+        </div>
+      </div>
+    </a>-->
   </div>
 </div>
 <%- include('/common/inc/flowModal/_flowModal.ejs') %>

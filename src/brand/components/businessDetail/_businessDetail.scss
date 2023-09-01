@@ -1,0 +1,72 @@
+.businessDetail {
+  text-align: center;
+
+  &__head {
+    margin: 0 auto;
+    position: relative;
+
+    @include pc {
+      padding-bottom: 20px;
+      width: 404px;
+    }
+
+    @include sp {
+      padding-bottom: 12px;
+    }
+
+    &:after {
+      background-color: #000000;
+      bottom: 0;
+      content: '';
+      height: 1px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  &__heading {
+    line-height: 1;
+
+    @include pc {
+      font-size: 20px;
+    }
+
+    @include sp {
+      font-size: 14px;
+    }
+  }
+
+  &__cont {
+    @include pc {
+      margin-top: 30px;
+    }
+
+    @include sp {
+      margin-top: 15px;
+    }
+
+    .txt {
+      @include pc {
+        @include lhCrop(26/14);
+      }
+
+      @include sp {
+        font-size: 12px;
+        text-align: left;
+
+        @include lhCrop(38/24);
+      }
+    }
+  }
+
+  & + .businessDetail {
+    @include pc {
+      margin-top: 80px;
+    }
+
+    @include sp {
+      margin-top: 40px;
+    }
+  }
+}

@@ -1,0 +1,126 @@
+.infoCard {
+  position: relative;
+
+  @include pc {
+    padding-left: 27px;
+  }
+
+  @include sp {
+    padding-left: 20px;
+  }
+
+  &:before {
+    background-color: #c4c5c6;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+
+    @include pc {
+      width: 4px;
+    }
+
+    @include sp {
+      width: 2px;
+    }
+  }
+
+  &__head {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__date {
+    color: rgba(70, 70, 70, .6);
+    font-family: $font-en;
+    line-height: .5;
+
+    @include pc {
+      font-size: 22px;
+      letter-spacing: .08em;
+    }
+
+    @include sp {
+      font-size: 14px;
+      letter-spacing: .16em;
+    }
+  }
+
+  &__status {
+    color: rgba(148,175,170,.8);
+    font-family: $font-en-cursive;
+    line-height: .6;
+
+    @include pc {
+      font-size: 34px;
+      letter-spacing: .08em;
+      margin-left: 20px;
+    }
+
+    @include sp {
+      font-size: 22px;
+      letter-spacing: .04em;
+      margin-left: 10px;
+    }
+  }
+
+  &__cont {
+    @include pc {
+      margin-top: 16px;
+    }
+
+    @include sp {
+      margin-top: 10px;
+    }
+  }
+
+  &__heading {
+    letter-spacing: .02em;
+
+    @include pc {
+      font-size: 24px;
+    }
+
+    @include sp {
+      font-size: 16px;
+    }
+
+    & + .infoCard__txt {
+      @include pc {
+        margin-top: 8px;
+      }
+
+      @include sp {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &__txt {
+    letter-spacing: .02em;
+
+    @include pc {
+      font-size: 16px;
+
+      @include lhCrop(26/16);
+    }
+
+    @include sp {
+      font-size: 12px;
+
+      @include lhCrop(38/24);
+    }
+  }
+
+  & + .infoCV {
+    @include pc {
+      margin-top: 68px;
+    }
+
+    @include sp {
+      margin-top: 40px;
+    }
+  }
+}

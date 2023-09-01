@@ -1,0 +1,47 @@
+.switchBtn {
+  align-items: center;
+  background-color: rgba(70,70,70,.1);
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  @include pc {
+    border-radius: 32px;
+    height: 64px;
+    margin: 0 auto;
+    width: 192px;
+  }
+
+  @include sp {
+    border-radius: 20px;
+    height: 40px;
+    width: 120px;
+  }
+
+  &__txt {
+    letter-spacing: .08em;
+    line-height: 1;
+
+    @include pc {
+      font-size: 16px;
+    }
+
+    @include sp {
+      font-size: 12px;
+    }
+  }
+
+  &__lever {
+    background-color: rgba(70, 70, 70, .8);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    @include pc {
+      height: 48px;
+      left: 8px;
+      width: 48px;
+    }
+  }
+}

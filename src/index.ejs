@@ -13,6 +13,137 @@
     <%- include('./components/mainVisual/_mainVisual.ejs') %>
 
     <div class="uspIntroduction">
+      <div class="uspCard" data-sai="target">
+        <div class="uspCard__visual">
+          <%- include('/common/components/photo/_photo.ejs', {
+            imagePath: '<img src="./imgs/img-usp-01.jpg" alt="" width="720" height="480">',
+            alt: 'image photo',
+            captionPosition: 'capIn',
+            captionColor: 'sdw-wh',
+            pictureMode: '',
+            modifiers:['capTop','spCapShadowDark']
+          }) %>
+          <div class="uspCard__bgSquare"></div>
+        </div>
+        <div class="uspCard__cont">
+          <h3 class="uspCard__heading" data-color="darkGreen_typeB">ACCESS</h3>
+          <div class="accessTrafficInfo">
+            <div class="accessTrafficInfo__term">
+              <div class="line">東急東横線</div>
+              <div class="station"><span class="name">「大倉山」</span>駅</div>
+            </div>
+            <div class="accessTrafficInfo__desc">
+              <div class="flat">フラットアプローチ</div>
+              <span class="transpotation">徒歩</span>
+              <span class="time"><span class="num" data-color="darkGreen_typeB">10</span>分</span>
+              <!--<span class="info"></span>-->
+            </div>
+          </div>
+          <div class="accessTrafficInfo">
+            <div class="accessTrafficInfo__term">
+              <div class="line">相鉄・東急新横浜線<br>横浜市営地下鉄ブルーライン</div>
+              <div class="station"><span class="name">「新横浜」</span>駅まで</div>
+            </div>
+            <div class="accessTrafficInfo__desc">
+              <div class="flat">フラットアプローチ</div>
+              <span class="transpotation">徒歩</span>
+              <span class="time"><span class="num" data-color="darkGreen_typeB">16</span>分</span>
+              <!--<span class="info"></span>-->
+            </div>
+          </div>
+          <p class="option">※1</p>
+          <!--<a href="./access/" class="moreBtn">
+            <span class="moreBtn__txt">MORE</span>
+            <svg class="arrowSVG" width="17.5px" height="10.5px" viewBox="0 0 17.5 10.5"><path fill-rule="evenodd"  stroke="rgb(255, 255, 255)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(144, 126, 94)" d="M9.500,9.500 L9.500,8.500 L14.000,5.500 L0.500,5.500 L0.500,4.500 L13.1000,4.500 L9.500,1.500 L9.500,0.500 L16.500,4.500 L16.500,5.500 L9.500,9.500 Z"/></svg>
+          </a>-->
+        </div>
+      </div>
+
+      <div class="uspCard is-reverse" data-sai="target">
+        <div class="uspCard__visual">
+          <%- include('/common/components/photo/_photo.ejs', {
+            imagePath: '<img src="./imgs/img-usp-02.jpg" alt="" width="720" height="480">',
+            alt: 'image photo',
+            captionPosition: 'capIn',
+            captionColor: 'sdw-wh',
+            pictureMode: '',
+            modifiers:['capTop']
+          }) %>
+          <div class="uspCard__bgSquare"></div>
+        </div>
+        <div class="uspCard__cont">
+          <h3 class="uspCard__heading">LOCATION</h3>
+          <div class="accessTrafficInfo">
+            <div class="accessTrafficInfo__term">
+              <div class="location">大豆戸小学校</div>
+            </div>
+            <div class="accessTrafficInfo__desc">
+              <span class="transpotation">徒歩</span>
+              <span class="time"><span class="num">5</span>分</span>
+              <!--<span class="info">（約610m）</span>-->
+            </div>
+          </div>
+          <div class="accessTrafficInfo">
+            <div class="accessTrafficInfo__term">
+              <div class="location">大綱中学校</div>
+            </div>
+            <div class="accessTrafficInfo__desc">
+              <span class="transpotation">徒歩</span>
+              <span class="time"><span class="num">5</span>分</span>
+              <!--<span class="info">（約610m）</span>-->
+            </div>
+          </div>
+          <div class="accessTrafficInfo">
+            <div class="accessTrafficInfo__term">
+              <div class="location">太尾町公園</div>
+            </div>
+            <div class="accessTrafficInfo__desc">
+              <span class="transpotation">徒歩</span>
+              <span class="time"><span class="num">2</span>分</span>
+              <!--<span class="info">（約610m）</span>-->
+            </div>
+          </div>
+          <!--<a href="./location/" class="moreBtn">
+            <span class="moreBtn__txt">MORE</span>
+            <svg class="arrowSVG" width="17.5px" height="10.5px" viewBox="0 0 17.5 10.5"><path fill-rule="evenodd"  stroke="rgb(255, 255, 255)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(144, 126, 94)" d="M9.500,9.500 L9.500,8.500 L14.000,5.500 L0.500,5.500 L0.500,4.500 L13.1000,4.500 L9.500,1.500 L9.500,0.500 L16.500,4.500 L16.500,5.500 L9.500,9.500 Z"/></svg>
+          </a>-->
+        </div>
+      </div>
+
+      <div class="uspCard" data-sai="target">
+        <div class="uspCard__visual">
+          <%- include('/common/components/photo/_photo.ejs', {
+            imagePath: '<img src="./imgs/img-usp-03.jpg" alt="" width="720" height="480">',
+            alt: 'image photo',
+            captionPosition: 'capIn',
+            captionColor: 'black',
+            pictureMode: '',
+            modifiers:['capTop']
+          }) %>
+          <div class="uspCard__bgSquare"></div>
+        </div>
+        <div class="uspCard__cont">
+          <h3 class="uspCard__heading" data-color="darkGreen_typeB">PLAN</h3>
+          <h4 class="uspCard__subheading"><span class="num" data-color="darkGreen_typeB">3LDK</span>中心<br>全<span class="num" data-color="darkGreen_typeB">13</span>タイプの多彩なプラン</h4>
+          <div class="roomInfo roomInfo--ldk">
+            <div class="roomInfo__term"><span class="large">2</span>LDK</div>
+            <span class="roomInfo__line"></span>
+            <div class="roomInfo__term"><span class="large">4</span>LDK</div>
+          </div>
+          <div class="roomInfo roomInfo--length">
+            <div class="roomInfo__desc"><span class="num"><span class="large" data-color="darkGreen_typeB">55</span><span class="small" data-color="darkGreen_typeB">.01</span></span><span class="meter">m&sup2;</span></div>
+            <span class="roomInfo__line"></span>
+            <div class="roomInfo__desc"><span class="num"><span class="large" data-color="darkGreen_typeB">78</span><span class="small" data-color="darkGreen_typeB">.60</span></span><span class="meter">m&sup2;</span></div>
+          </div>
+          <p class="option">※2</p>
+          <a href="./plan/" class="moreBtn">
+            <span class="moreBtn__txt">MORE</span>
+            <svg class="arrowSVG" width="17.5px" height="10.5px" viewBox="0 0 17.5 10.5"><path fill-rule="evenodd" fill="#fff" d="M9.500,9.500 L9.500,8.500 L14.000,5.500 L0.500,5.500 L0.500,4.500 L14.000,4.500 L9.500,1.500 L9.500,0.500 L16.500,4.500 L16.500,5.500 L9.500,9.500 Z"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--<div class="uspIntroduction">
       <div class="uspCardWrap">
         <div class="uspCardWrap__inner">
           <div class="uspCard only-pc" data-sai="target" data-sai-offset="-110">
@@ -22,7 +153,7 @@
             </div>
 
             <div class="uspCard__cont">
-              <!-- <h4 class="uspCard__subheading">2駅2路線利用可能<sup>※1</sup></h4> -->
+              <h4 class="uspCard__subheading">2駅2路線利用可能<sup>※1</sup></h4>
               <div class="trafficInfo">
                 <div class="trafficInfo__term">
                   <div class="line">東急東横線</div>
@@ -58,7 +189,7 @@
             </div>
 
             <div class="uspCard__cont">
-              <!-- <h4 class="uspCard__subheading">2駅2路線利用可能<sup>※1</sup></h4> -->
+              <h4 class="uspCard__subheading">2駅2路線利用可能<sup>※1</sup></h4>
               <div class="trafficInfo">
                 <div class="trafficInfo__term">
                   <div class="line">東急東横線</div>
@@ -94,7 +225,7 @@
           <img src="./imgs/img-usp-02.jpg" alt="02 LOCATION" width="550" height="309">
         </div>
         <div class="uspCard__cont">
-          <!-- <h4 class="uspCard__subheading">安心の完成後販売</h4> -->
+          <h4 class="uspCard__subheading">安心の完成後販売</h4>
           <div class="trafficInfo trafficInfo--location">
             <div class="trafficInfo__term">
               <div class="station"><span class="name">大豆戸小学校</span></div>
@@ -143,23 +274,16 @@
         </div>
         <div class="uspCard__bgSquare"></div>
       </div>
-    </div>
+    </div>-->
     <div class="bnr">
       <a href="https://www.yamada-kensetsu.co.jp/zizai" target="_blank" class="bnr__link">
         <img src="<%= relativePath %>common/imgs/pc/bnr-gooddesign.jpg" alt="GOOD DESIGN 自在空間" class="only-pc">
         <img src="<%= relativePath %>common/imgs/sp/bnr-gooddesign.jpg" alt="GOOD DESIGN 自在空間" class="only-sp">
+        <p class="caption capIn" data-color="sdw-wh">image photo</p>
+        <p class="option">※3</p>
       </a>
     </div>
-    <div class="contentsGuide contentsGuide--comingSoon">
-      <div class="contentsGuide__head" data-sai="fade" data-sai-duration="1500">
-        <h3 class="contentsGuide__heading">CONTENTS LIST<span class="comingSoon">coming soon</span></h3>
-        <h4 class="contentsGuide__subheading">9月上旬 公開予定</h4>
-      </div>
-      <div class="contentsGuide__cont" data-sai="fade" data-sai-duration="1500">
-        <%- include('/common/inc/contentsNav/_contentsNav.ejs', {parent: 'contentsGuide'}) %>
-        <%- include('/common/inc/primaryNav/_primaryNav.ejs') %>
-      </div>
-    </div>
+    <%- include('/common/components/contentsGuide/_contentsGuide.ejs') %>
     <div class="constructionTruck">
       <section class="resultSect">
         <div class="resultSect__head">
@@ -236,5 +360,5 @@
     </div>
   </div>
 </main>
-<%- include('/common/inc/bottomInfo/_bottomInfo.ejs') %>
-<%- include('/common/inc/footer/_footer.ejs', {pageId: pageData.pageDir, footerCap: '※1：「大倉山」駅西口まで/「新横浜」駅出口10まで。徒歩分数は80ｍあたり1分として換算しております。<br>※2：3LDK中心/全30戸中20戸。55.01㎡～78.71㎡（A・Atg・D・ItpタイプはMB面積を除外）。<br>※「自在空間システム」には一部制限・期限などがあります。ミオカステーロ大倉山では「水廻りの位置の変更」には対応出来ません。予めご了承ください。<br>※all image photo(施工実績写真除く)'}) %>
+<%- include('/common/inc/bottomInfo/_bottomInfo.ejs', {pageId: pageData.pageDir}) %>
+<%- include('/common/inc/footer/_footer.ejs', {pageId: pageData.pageDir, footerCap: '※1：「大倉山」駅西口まで/「新横浜」駅出口10まで。徒歩分数は80ｍあたり1分として換算しております。<br>※2：3LDK中心/全30戸中20戸。55.01㎡～78.71㎡（A・Atg・D・ItpタイプはMB面積を除く）。<br>※3：「自在空間システム」には一部制限・期限などがあります。ミオカステーロ大倉山では「水廻りの位置の変更」には対応出来ません。予めご了承ください。'}) %>

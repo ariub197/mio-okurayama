@@ -5,15 +5,28 @@
     modifiers: []
   });
 
-  const navSet = incJson.nav_set.filter(elm => elm.display);
-  const className = navSet.length % 3 === 0 && params.parent !== 'contentsGuide' ? 'contentsNav contentsNav--oneThird' : 'contentsNav contentsNav--oneFourth';
+  //const navSet = incJson.nav_set.filter(elm => elm.display);
+  //const className = navSet.length % 3 === 0 && params.parent !== 'contentsGuide' ? 'contentsNav contentsNav--oneThird' : 'contentsNav contentsNav--oneFourth';
 
+  const navSet = incJson.nav_set.filter(elm => elm.display && (params.parent !== 'contentsGuide' || elm.id !== 'top'));
+  const className = navSet.length % 3 === 0 && params.parent !== 'contentsGuide' ? 'contentsNav contentsNav--oneThird' : 'contentsNav contentsNav--oneFourth';
+  const svgPathColor = params.parent !== 'contentsGuide' ? '#fff' : '#464646';
 %><ul class="<%- className %>">
-  <% navSet.forEach(elm => { %><li class="contentsNav__item<%- elm.linkPath.length < 10 ? '': ' contentsNav__item--narrow' %>">
+  <% navSet.forEach(elm => { %><li class="contentsNav__item<%- elm.en.length < 10 ? '': ' contentsNav__item--narrow' %>">
     <a href="<% relativePath %><%- elm.linkPath !== 'top' ? `${relativePath}${elm.linkPath}/` : `${relativePath}index.html` %>" class="contentsNav__link<%- params.pageId === elm.id ? ' is-current' : '' %><%- elm.off === true ? ' is-off' : '' %>">
-      <%- elm.en %>
-      <%- !elm.off ? '<svg class="arrowSVG" width="17.5px" height="10.5px" viewBox="0 0 17.5 10.5"><path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M9.500,9.500 L9.500,8.500 L14.000,5.500 L0.500,5.500 L0.500,4.500 L14.000,4.500 L9.500,1.500 L9.500,0.500 L16.500,4.500 L16.500,5.500 L9.500,9.500 Z"></path></svg>' : '' %>
+      <div class="contentsNav__image">
+        <% if(params.parent === 'contentsGuide') { %><%- elm.off ? `<img src="${relativePath}common/imgs/img-nav-comingsoon.jpg" alt="">` : `<img src="${relativePath}common/imgs/img-nav-${elm.linkPath}.jpg" alt="">` %><% } %>
+      </div>
+      <div class="contentsNav__txt<% if(elm.lowerCase) { %> contentsNav__txt--lowerCase<% } %>">
+        <%- elm.en %>
+        <%- !elm.off ? `<svg class="arrowSVG" width="17.5px" height="10.5px" viewBox="0 0 17.5 10.5"><path fill-rule="evenodd" fill="${svgPathColor }" d="M9.500,9.500 L9.500,8.500 L14.000,5.500 L0.500,5.500 L0.500,4.500 L14.000,4.500 L9.500,1.500 L9.500,0.500 L16.500,4.500 L16.500,5.500 L9.500,9.500 Z"></path></svg>` : '' %>
+      </div>
     </a>
   </li>
   <% }); %>
+  <% if(navSet.length % 3 != 0 && params.parent == 'contentsGuide'){ %>
+  <p class="caption">
+    1.image photo 2.ミオカステーロ目黒本町（分譲済）
+  </p>
+  <% } %>
 </ul>

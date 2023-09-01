@@ -1,0 +1,37 @@
+.valueBoard {
+  align-items: center;
+  background-color: #464646;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 90px;
+  justify-content: center;
+  width: 100%;
+
+  .jp {
+    line-height: 1;
+
+    @include pc {
+      font-size: 26px;
+    }
+
+    @include sp {
+      font-size: 26px;
+    }
+  }
+
+  .en {
+    font-family: $font-en;
+    line-height: .8;
+
+    @include pc {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    @include sp {
+      font-size: 11px;
+      margin-top: 8px;
+    }
+  }
+}

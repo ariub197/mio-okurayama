@@ -10,4 +10,169 @@
 
     @include lhCrop(50 / 32);
   }
+
+  &--label {
+    align-items: center;
+    background: $color-autumn-sub-01;
+    box-shadow: 0 8px 16px rgba(102, 102, 102, .2);
+    color: #ffffff;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+
+    @include sp {
+      height: auto;
+      letter-spacing: .04em;
+      line-height: 1.5;
+      padding: 10px 6px;
+    }
+
+    & + .txt {
+      @include pc {
+        margin-top: 40px;
+      }
+
+      @include sp {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &--gray {
+    background: #595959;
+  }
+
+  &--01 {
+    @include min-screen($breakP) {
+      font-size: 32px;
+
+      @include lhCrop(52 / 32);
+    }
+
+    @include max-screen($breakP) {
+      font-size: 20px;
+
+      @include lhCrop(50 / 32);
+    }
+
+    & + .txt {
+      @include pc {
+        margin-top: 40px;
+      }
+
+      @include sp {
+        margin-top: 30px;
+      }
+    }
+
+    & + .heading--label {
+      @include pc {
+        margin-top: 120px;
+      }
+
+      @include sp {
+        margin-top: 60px;
+      }
+    }
+
+    & + .heading--03 {
+      @include pc {
+        margin-top: 60px;
+      }
+
+      @include sp {
+        margin-top: 40px;
+      }
+    }
+
+    .en {
+      font-family: $font-en;
+    }
+
+    .sub {
+      display: block;
+
+      @include min-screen($breakP) {
+        font-size: 24px;
+      }
+
+      @include max-screen($breakP) {
+        font-size: 16px;
+      }
+    }
+
+    .cap {
+      display: block;
+      font-size: 10px;
+      line-height: 1.5;
+    }
+  }
+
+  &--02 {
+    @include min-screen($breakP) {
+      font-size: 24px;
+
+      @include lhCrop(36 / 24);
+    }
+
+    @include max-screen($breakP) {
+      font-size: 16px;
+
+      @include lhCrop(50 / 32);
+    }
+
+    .en {
+      font-family: $font-en;
+    }
+
+    & + .txt {
+      @include pc {
+        margin-top: 32px;
+      }
+
+      @include sp {
+        margin-top: 24px;
+      }
+    }
+  }
+
+  &--03 {
+    @include lhCrop(1.5);
+
+    @include min-screen($breakP) {
+      font-size: 20px;
+    }
+
+    @include max-screen($breakP) {
+      font-size: 14px;
+    }
+
+    & + .txt {
+      @include pc {
+        margin-top: 30px;
+      }
+
+      @include sp {
+        margin-top: 20px;
+      }
+    }
+
+    .label {
+      background: $color-autumn-main-01;
+      color: #ffffff;
+      letter-spacing: .04em;
+      padding: 2px 8px;
+
+      @include pc {
+        display: inline-block;
+        font-size: 16px;
+        margin-left: 10px;
+      }
+
+      @include sp {
+        font-size: 13px;
+        margin-left: 5px;
+      }
+    }
+  }
 }

@@ -1,0 +1,39 @@
+.leadSect {
+  text-align: center;
+
+  &__heading {
+    @include lhCrop(43 / 32);
+
+    @include pc {
+      font-size: 32px;
+    }
+
+    @include sp {
+      font-size: 20px;
+    }
+
+    & + .txt {
+      @include pc {
+        margin-top: 40px;
+      }
+
+      @include sp {
+        margin-top: 36px;
+      }
+    }
+  }
+
+  .txt {
+    @include pc {
+      @include lhCrop(40 / 16);
+    }
+
+    @include sp {
+      @include lhCrop(52 / 24);
+    }
+  }
+
+  .captionList + & {
+    margin-top: 60px;
+  }
+}

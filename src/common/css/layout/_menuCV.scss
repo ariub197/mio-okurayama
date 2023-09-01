@@ -56,7 +56,7 @@
       }
 
       &--entry {
-        background-color: rgba(144, 126, 94, .7);
+        background-color: $color-autumn-globalmenu;
 
         @include pc {
           padding-left: 50px;

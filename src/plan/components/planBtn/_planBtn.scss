@@ -1,0 +1,234 @@
+.planBtn {
+  position: relative;
+
+  @include pc {
+    height: 220px;
+    width: 456px;
+  }
+
+  &__link  {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &__head {
+    align-items: center;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    width: 48px;
+  }
+
+  &__cont {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 20px 40px;
+  }
+
+  &__type{
+    align-items: center;
+    color: #4c98aa;
+    display: flex;
+    flex-direction: column;
+    font-family: $font-en;
+    justify-content: center;
+    line-height: .8;
+
+    .alphabet {
+      font-size: 32px;
+    }
+
+    .type {
+      font-size: 16px;
+      writing-mode: vertical-rl;
+    }
+  }
+
+  &__csTxt {
+    color: #4c98aa;
+    font-family: $font-en-cursive;
+    letter-spacing: .04em;
+    margin: 0 auto;
+
+    @include pc {
+      font-size: 56px;
+    }
+
+    @include sp {
+      font-size: 32px;
+    }
+  }
+
+  &__icon {
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 50%;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 10px;
+
+    @include pc {
+      height: 48px;
+      width: 48px;
+    }
+
+    @include sp {
+      height: 28px;
+      width: 28px;
+    }
+
+    .arrowSVG {
+      @include pc {
+        width: 18px;
+      }
+
+      @include sp {
+        width: 10px;
+      }
+    }
+  }
+
+  &--comingSoon {
+    pointer-events: none;
+  }
+
+  &--small {
+
+    .btnSpec__variation {
+      line-height: 1.2;
+
+      @include pc {
+        font-size: 35px;
+      }
+    }
+  }
+}
+
+.btnSpec {
+
+  &__variation {
+    font-family: $font-en;
+    letter-spacing: 0;
+    line-height: .7;
+
+    @include pc {
+      font-size: 40px;
+    }
+
+    @include sp {
+      font-size: 24px;
+    }
+
+    .num {
+      @include pc {
+        font-size: 48px;
+      }
+
+      @include sp {
+        font-size: 28px;
+      }
+    }
+
+    & + .btnSpec__length {
+      @include pc {
+        margin-top: 20px;
+      }
+
+      @include sp {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  &__floor {
+    background-color: rgba(61, 61, 61, .5);
+    color: #ffffff;
+    line-height: 1;
+    width: fit-content;
+
+    @include pc {
+      font-size: 20px;
+      margin: 5px 0 20px;
+      padding: 6px 17px 8px;
+    }
+
+    @include sp {
+      font-size: 12px;
+      margin: 3px 0 15px;
+      padding: 1px 8px 4px;
+    }
+
+    .num {
+      @include pc {
+        font-size: 28px;
+      }
+
+      @include sp {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__length {
+    line-height: 1;
+
+    @include pc {
+      font-size: 16px;
+    }
+
+    @include sp {
+      font-size: 14px;
+    }
+
+    .num {
+      font-family: $font-en;
+      letter-spacing: .05em;
+      line-height: .7;
+
+      @include pc {
+        font-size: 40px;
+      }
+
+      @include sp {
+        font-size: 24px;
+      }
+    }
+
+    .meter {
+      @include pc {
+        font-size: 18px;
+      }
+
+      @include sp {
+        font-size: 16px;
+      }
+    }
+
+    .tsubo,.floor {
+      font-size: 10px;
+      margin-left: 5px;
+
+      @include pc {
+        font-size: 16px;
+        line-height: 1;
+      }
+  
+      @include sp {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+    }
+
+  }
+}

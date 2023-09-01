@@ -1,0 +1,31 @@
+.systemValue {
+  margin: 0 auto;
+
+  @include pc {
+    width: 670px;
+  }
+
+  &__head {
+
+  }
+
+  &__cont {
+    @include pc {
+      margin-top: 60px;
+    }
+
+    @include sp {
+      margin-top: 20px;
+    }
+  }
+
+  .qualitySect + &  {
+    @include pc {
+      margin-top: 100px;
+    }
+
+    @include sp {
+      margin-top: 40px;
+    }
+  }
+}

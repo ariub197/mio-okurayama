@@ -1,0 +1,47 @@
+.detailList {
+  color: #464646;
+  margin: 0 auto;
+  text-align: left;
+
+  @include pc {
+    width: 656px;
+
+    @include lhCrop(26 / 14);
+
+  }
+
+  @include sp {
+    @include lhCrop(38 / 24);
+  }
+
+  &__item {
+    letter-spacing: .02em;
+    position: relative;
+
+    @include sp {
+      font-size: 12px;
+      padding-left: 10px;
+    }
+
+    &:before {
+      content: '・';
+      left: 0;
+      position: absolute;
+      top: 0;
+
+      @include pc {
+        transform: translate(-100%,0);
+      }
+    }
+  }
+
+  .txt + & {
+    @include pc {
+      margin-top: 30px;
+    }
+
+    @include sp {
+      margin-top: 15px;
+    }
+  }
+}

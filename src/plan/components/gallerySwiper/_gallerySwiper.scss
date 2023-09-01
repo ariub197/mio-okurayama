@@ -1,0 +1,160 @@
+.gallerySwiper {
+  margin: 0 calc(50% - 50vw);
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+
+
+  &__controller {
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+
+    @include pc {
+      justify-content: flex-end;
+      margin: 20px auto 0;
+      width: 960px;
+    }
+
+    @include sp {
+      justify-content: center;
+      margin-top: 22px;
+      width: 315px;
+    }
+
+
+    .swiper-pagination {
+      display: flex;
+      position: static;
+
+      @include pc {
+        margin: 0 auto;
+        width: 480px;
+      }
+
+      @include sp {
+        width: 240px;
+      }
+
+      &:after {
+        background-color: #d3d8d9;
+        content: '';
+        display: block;
+        height: 2px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+      }
+    }
+
+    .swiper-pagination-bullet {
+      background: none;
+      background-color: #464646;
+      border-radius: 0;
+      content: '';
+      display: block;
+      height: 2px;
+      opacity: 1;
+      transform: scale(0, 1);
+      transform-origin: right top;
+      transition: transform 1s;
+      width: 100%;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #666666;
+      transform: scale(1, 1);
+      transform-origin: left top;
+      transition: transform 1s;
+    }
+
+  }
+
+  .swiper-container {
+    overflow: visible;
+
+    @include pc {
+      margin-left: auto;
+      margin-right: auto;
+      width: 960px;
+    }
+
+    @include sp {
+      margin: 0 calc(50% - 50vw);
+      overflow: visible;
+      width: 100vw;
+    }
+  }
+
+  .swiper-wrapper {
+    overflow: visible;
+
+  }
+
+  .swiper-slide {
+    height: auto;
+
+    @include pc {
+      transition: 2s;
+      width: 315px;
+    }
+
+    @include sp {
+      transition: 1s;
+      width: 255px;
+    }
+
+    &.swiper-slide-prev {
+      transform: translate(-100%,0);
+    }
+  }
+}
+
+.gallerySwiper {
+
+  &__direction {
+    align-items: center;
+    display: flex;
+
+    @include pc {
+      cursor: pointer;
+      justify-content: center;
+    }
+
+    @include sp {
+      bottom: 0;
+      justify-content: space-between;
+      padding: 0 10px;
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+
+  &__circleBtn {
+    align-items: center;
+    background-color: rgba(255,255,255,.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+
+    @include pc {
+      height: 48px;
+      width: 48px;
+    }
+
+    @include sp {
+      height: 28px;
+      width: 28px;
+    }
+
+    .arrowSVG {
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 20px;
+    }
+  }
+}

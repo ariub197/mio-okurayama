@@ -1,0 +1,110 @@
+.leadGallery {
+  counter-reset: itemOrder;
+  margin: 0 auto;
+
+  @include pc {
+    width: 1056px;
+  }
+
+  @include sp {
+    width: 100%;
+  }
+
+  &__cont {
+    display: flex;
+    justify-content: space-between;
+
+    @include pc {
+      column-gap: 10px;
+    }
+
+    @include sp {
+      column-gap: 4px;
+    }
+  }
+
+  &__ttl {
+    color: #797c7e;
+    font-family: $font-en;
+    letter-spacing: .05em;
+    line-height: .8;
+    text-align: center;
+
+    @include pc {
+      font-size: 90px;
+      margin: 30px auto;
+    }
+
+    @include sp {
+      font-size: 40px;
+      margin: 20px auto;
+    }
+  }
+
+  &__item {
+    counter-increment: itemOrder;
+    position: relative;
+
+    &:after {
+      align-items: center;
+      background-color: #53575a;
+      bottom: 0;
+      color: #ffffff;
+      content: counter(itemOrder);
+      display: flex;
+      font-size: 12px;
+      height: 20px;
+      justify-content: center;
+      letter-spacing: 0;
+      position: absolute;
+      right: 0;
+      width: 20px;
+    }
+  }
+
+  .captionList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 10px 0 0 auto;
+
+    @include pc {
+      width: 390px;
+    }
+
+    @include lhCrop(16 / 10);
+
+    &__item {
+      color: #464646;
+      font-size: 10px;
+      letter-spacing: .04em;
+
+      @include sp {
+        width: 145px;
+      }
+
+      &:nth-of-type(1),
+      &:nth-of-type(4) {
+        @include pc {
+          width: 110px;
+        }
+
+      }
+
+      &:nth-of-type(2),
+      &:nth-of-type(5) {
+        @include pc {
+          width: 143px;
+        }
+
+      }
+
+      &:nth-of-type(3),
+      &:nth-of-type(6) {
+        @include pc {
+        }
+
+      }
+    }
+  }
+}

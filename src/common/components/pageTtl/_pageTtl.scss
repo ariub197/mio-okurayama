@@ -6,7 +6,7 @@
     margin: 0 auto;
     padding-bottom: 40px;
     padding-top: 120px;
-    width: 1056px;
+    width: 1024px;
   }
 
   @include sp {
@@ -16,7 +16,7 @@
   }
 
   &:after {
-    background-color: rgba(148,175,170,.8);
+    background-color: rgba(70,70,70,.6);
     bottom: 0;
     content: '';
     height: 1px;
@@ -26,6 +26,7 @@
   }
 
   .en {
+    font-family: $font-en;
     line-height: .8;
 
     @include pc {
