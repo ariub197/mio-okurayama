@@ -3988,6 +3988,15 @@
   font-size: 10px;
 }
 
+@media screen and (max-width: 768px) {
+  .planDetail .panel .size .primary .small .option {
+    display: block;
+    padding-right: calc(45 / 750 * 100vw);
+    padding-top: 5px;
+    text-align: right;
+  }
+}
+
 .planDetail .panel .size .primary .caption {
   margin: 0 auto;
   max-width: 210px;

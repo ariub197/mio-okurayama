@@ -93,7 +93,7 @@
       }
 
       @include sp {
-        font-size: 13px;
+        font-size: 17px;
       }
     }
   }
@@ -151,6 +151,7 @@
 
     .flat {
       width: 100%;
+
       @include pc {
         font-size: 14px;
         margin-bottom: 10px;
