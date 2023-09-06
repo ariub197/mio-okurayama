@@ -6599,6 +6599,7 @@ button.swiper-pagination-bullet {
 }
 
 .accessTrafficInfo + .option {
+  margin-bottom: 5px;
   margin-top: 5px;
   text-align: right;
 }
