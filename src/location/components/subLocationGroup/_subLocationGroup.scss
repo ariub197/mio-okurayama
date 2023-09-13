@@ -1,0 +1,30 @@
+.subLocationGroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .placeCard {
+    @include pc {
+      width: 456px;
+    }
+
+    @include sp {
+      width: 148px;
+    }
+
+    &:nth-of-type(n + 3) {
+      @include pc {
+        margin-top: 40px;
+      }
+
+      @include sp {
+        margin-top: 30px;
+      }
+    }
+
+    .photo,
+    .photo__image {
+      width: 100%;
+    }
+  }
+}

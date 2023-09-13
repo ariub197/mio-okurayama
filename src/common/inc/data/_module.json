@@ -23,8 +23,8 @@
       "display": true,
       "linkPath": "location",
       "en": "LOCATION",
-      "new": false,
-      "off": true
+      "new": true,
+      "off": false
     },
     {
       "id": "plan",
@@ -39,8 +39,8 @@
       "display": true,
       "linkPath": "access",
       "en": "ACCESS",
-      "new": false,
-      "off": true
+      "new": true,
+      "off": false
     },
     {
       "id": "roomspace",

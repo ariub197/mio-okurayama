@@ -1,0 +1,29 @@
+.boxCard {
+  position: relative;
+  background: #ffffff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+  @include pc {
+    padding: 48px;
+  }
+
+  @include sp {
+    padding: 20px;
+  }
+
+  .layoutSect__item--half {
+    @include pc {
+      width: 432px;
+    }
+  }
+
+  .layoutSect + .layoutSect {
+    @include pc {
+      margin-top: 48px;
+    }
+
+    @include sp {
+      margin-top: 36px;
+    }
+  }
+}

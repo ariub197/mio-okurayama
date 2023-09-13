@@ -1,0 +1,26 @@
+.stationGallery {
+  display: flex;
+  position: relative;
+  @include sp {
+    margin: 0 -40px;
+  }
+
+  &__item {
+  }
+
+  .caption {
+    position: absolute;
+    right: 0;
+    top: 100%;
+  }
+
+  & + .routeMap {
+    @include pc {
+      margin-top: 80px;
+    }
+
+    @include sp {
+      margin-top: 64px;
+    }
+  }
+}

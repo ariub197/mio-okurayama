@@ -1,0 +1,19 @@
+.locationSect {
+  @include pc {
+    margin-top: 120px;
+  }
+
+  @include sp {
+    margin-top: 100px;
+  }
+
+  .bgLayer {
+    @include pc {
+      padding: 200px 0;
+    }
+
+    @include sp {
+      padding: 100px 0;
+    }
+  }
+}

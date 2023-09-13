@@ -7,6 +7,8 @@ import flowModal from './flowModal.js';
 import _breakP from './utils.js';
 import top from '../../../js/_function.js';
 import outline from '../../../outline/js/_function.js';
+import access from '../../../access/js/_function.js';
+import location from '../../../location/js/_function.js';
 import brand from '../../../brand/js/_function.js';
 
 document.addEventListener(
@@ -28,6 +30,19 @@ document.addEventListener(
         _log('PAGE NAME', 'INDEX', 'orange');
 
         new top();
+
+        break;
+      case 'access':
+        _log('PAGE NAME', 'INDEX', 'orange');
+
+        new access();
+
+        break;
+
+      case 'location':
+        _log('PAGE NAME', 'INDEX', 'orange');
+
+        new location();
 
         break;
       case 'brand':

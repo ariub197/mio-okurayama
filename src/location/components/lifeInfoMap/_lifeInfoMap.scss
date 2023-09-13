@@ -1,0 +1,12 @@
+.lifeInfoMap {
+
+  & + .lifeInfoGroup {
+    @include pc {
+      margin-top: 40px;
+    }
+
+    @include sp {
+      margin-top: 36px;
+    }
+  }
+}

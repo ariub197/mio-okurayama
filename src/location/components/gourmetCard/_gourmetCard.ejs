@@ -1,0 +1,18 @@
+<% include('/_utils.ejs');
+	const params = ejsUtils.defaultParamsMapper(locals,{
+		visual:'',
+		ttl:'',
+		walk: '',
+		distance: '',
+		tagList: [],
+		modifiers: []
+	});
+	const className = ejsUtils.mapModifiers('gourmetCard', params.modifiers);
+  let fmtDistance = params.distance.replace(/徒歩(\d+)分/g, '徒歩<span class="num">$1</span>分');
+  fmtDistance = fmtDistance.replace(/（/g, '<small>（').replace(/）/g, '）</small>');
+%><div class="<%- className %>">
+  <%- include('/common/components/photo/_photo.ejs', visual) %>
+  <div class="gourmetCard__ttl"><%- params.ttl %></div>
+  <% if(params.walk !== ''){ %><div class="gourmetCard__walk">徒歩<span class="num"><%- params.walk %></span>分<% if(params.distance !== ''){ %><span class="placeCard__distance"><%- params.distance %></span><% } %></div><% } %>
+  <% if(params.tagList !== ''){ %><ul class="tagList"><% params.tagList.forEach(tag => { %><li class="tagList__item"><%- tag %></li><% });%></ul><% } %>
+</div>

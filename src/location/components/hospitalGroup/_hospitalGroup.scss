@@ -1,0 +1,32 @@
+.hospitalGroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 10px;
+
+  .specialCard {
+    width: 100%;
+  }
+
+  .placeCard {
+    @include pc {
+      width: 288px;
+    }
+
+    @include sp {
+      margin-top: 25px;
+      width: 148px;
+    }
+
+    &:nth-of-type(n + 2) {
+      @include pc {
+        margin-top: 40px;
+      }
+    }
+
+    .photo,
+    .photo__image {
+      width: 100%;
+    }
+  }
+}

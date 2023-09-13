@@ -1,0 +1,108 @@
+.featureIntro {
+
+  &__head {
+    position: relative;
+
+    .photo {
+
+      &--capSpTop {
+
+        .capIn {
+          @include sp {
+            bottom: auto;
+            top: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  &__lead {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  &__ttl {
+    font-family: $font-en;
+    letter-spacing: 0.12em;
+    line-height: .8;
+    @include pc {
+      font-size: 40px;
+    }
+
+    @include sp {
+      font-size: 16px;
+    }
+  }
+
+  &__txt {
+    @include pc {
+      margin-top: 24px;
+      font-size: 18px;
+    }
+
+    @include sp {
+      margin-top: 16px;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      line-height: 1.8;
+    }
+  }
+
+  &__cont {
+    @include pc {
+      margin-top: 75px;
+    }
+
+    @include sp {
+      margin-top: 55px;
+    }
+
+    .txt {
+      @include pc {
+        margin: 32px auto 0;
+        width: 670px;
+      }
+
+      @include sp {
+        margin-top: 27px;
+      }
+
+    }
+
+  }
+
+  &__heading {
+    color: rgb(70, 70, 70);
+    letter-spacing: .12em;
+    text-align: center;
+
+    @include pc {
+      font-size: 24px;
+
+      @include lhCrop(44 / 24);
+    }
+
+    @include sp {
+      font-size: 16px;
+
+      @include lhCrop(51 / 32);
+    }
+  }
+
+  & + .areaSect {
+    @include pc {
+      margin-top: 85px;
+    }
+
+    @include sp {
+      margin-top: 60px;
+    }
+  }
+}

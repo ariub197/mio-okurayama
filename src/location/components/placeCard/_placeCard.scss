@@ -1,0 +1,282 @@
+.placeCard {
+  position: relative;
+  height: 100%;
+
+  &__flex {
+    display: flex;
+
+    @include pc {
+      align-items: flex-end;
+      gap: 32px;
+    }
+
+    @include sp {
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    & + .txt {
+      @include pc {
+        margin-top: 30px;
+      }
+
+      @include sp {
+        margin-top: 20px;
+      }
+    }
+
+    .placeCard__walk {
+      margin-top: 0;
+    }
+  }
+
+  &__body {
+    @include pc {
+      margin-top: 20px;
+    }
+
+    @include sp {
+      margin-top: 10px;
+    }
+
+    &--row {
+      display: flex;
+      align-items: flex-end;
+      gap: 16px;
+      @include sp {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .placeCard__walk {
+        margin-top: 0;
+      }
+    }
+
+    &--marginTopWide {
+      @include sp {
+        margin-top: 24px;
+      }
+    }
+
+    & + .txt {
+      @include pc {
+        margin-top: 30px;
+      }
+
+      @include sp {
+        margin-top: 24px;
+      }
+    }
+  }
+
+  &__ttl {
+    letter-spacing: .08em;
+
+    @include pc {
+      font-size: 20px;
+      @include lhCrop(28 / 20);
+    }
+
+    @include sp {
+      font-size: 14px;
+      @include lhCrop(38 / 24);
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    & + .txt {
+      letter-spacing: 0.08em;
+      line-height: 1.75;
+
+      @include pc {
+        margin-top: 24px;
+      }
+
+      @include sp {
+        margin-top: 16px;
+      }
+    }
+
+    small {
+      @include pc {
+        font-size: 12px;
+      }
+
+      @include sp {
+        font-size: 10px;
+      }
+    }
+
+    &--small {
+      @include pc {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__walk {
+    line-height: 1;
+    color: #248068;
+
+    @include pc {
+      margin-top: 12px;
+      font-size: 16px;
+    }
+
+    @include sp {
+      margin-top: 8px;
+      font-size: 13px;
+    }
+
+    .num {
+      font-family: $font-en;
+      @include pc {
+        font-size: 40px;
+        line-height: .8;
+      }
+
+      @include sp {
+        font-size: 20px;
+      }
+    }
+
+    .numSmall {
+      font-family: $font-en;
+      @include pc {
+        font-size: 32px;
+        line-height: .8;
+      }
+
+      @include sp {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__distance {
+    color: #248068;
+
+    font-size: 10px;
+    letter-spacing: 0.05em;
+
+    &--middle {
+      font-size: 12px;
+    }
+  }
+
+  &__subTxt {
+    margin-top: 16px;
+    padding-top: 10px;
+    border-top: solid 1px #d6d8d9;
+    font-size: 12px;
+    line-height: 1.5;
+
+    @include sp {
+      font-size: 10px;
+    }
+
+    &--marginWide {
+      margin-top: 40px;
+
+      @include sp {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__info {
+    width: 100%;
+    margin-top: 24px;
+    @include pc {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    .txt + .caption {
+      margin-top: 8px !important;
+    }
+  }
+
+  &__infoHead {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+    font-size: 12px;
+
+    &:after {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background: rgba(70, 70, 70, 0.2);
+    }
+
+    & + .txt {
+      margin-top: 16px;
+    }
+  }
+
+  .txt {
+    letter-spacing: 0.08em;
+    line-height: 1.75;
+  }
+
+  .txt + .caption {
+    letter-spacing:  0.05em;
+
+    @include pc {
+      margin-top: 12px;
+    }
+
+    @include sp {
+      margin-top: 10px;
+    }
+  }
+
+  .tagList {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+
+    @include pc {
+      margin-top: 15px;
+    }
+
+    @include sp {
+      margin-top: 5px;
+    }
+
+    &__item {
+      box-shadow: 0 4px 8px 0 rgba(102, 102, 102, .2);
+      letter-spacing: 0;
+      line-height: 1;
+      padding: 5px;
+
+      @include pc {
+        border-radius: 4px;
+        font-size: 12px;
+      }
+
+      @include sp {
+        font-size: 10px;
+      }
+
+      &:not(:last-of-type) {
+        @include pc {
+          margin-right: 10px;
+        }
+
+        @include sp {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}

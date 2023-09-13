@@ -1,0 +1,41 @@
+.accrArea {
+
+  &__head {
+    cursor: pointer;
+
+    &.is-open {
+
+      .stateIcon {
+
+        &__circle {
+          transform: scale(1,-1);
+
+          .arrowSVG {
+          }
+        }
+      }
+    }
+  }
+
+  &__body {
+    overflow: hidden;
+    transition: .3s;
+
+    &.is-open {
+      overflow: visible;
+      height: auto;
+    }
+  }
+
+  &__cont {
+    padding-top: 64px;
+
+    @include sp {
+      padding-top: 24px;
+    }
+
+    .touchFigure__inner {
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+  }
+}

@@ -1,0 +1,155 @@
+.gourmetSwiper {
+  position: relative;
+
+  @include pc {
+    margin-top: 32px;
+  }
+
+  @include sp {
+    margin-top: 24px;
+  }
+
+  &__controller {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+    width: 100%;
+
+    @include pc {
+      margin: 20px auto 0;
+    }
+
+    @include sp {
+      margin-top: 22px;
+    }
+
+
+    .swiper-pagination {
+      display: flex;
+      position: static;
+
+      @include pc {
+        margin: 0 auto;
+        width: 480px;
+      }
+
+      @include sp {
+        width: 240px;
+      }
+
+      &:after {
+        background-color: #d3d8d9;
+        content: '';
+        display: block;
+        height: 2px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+      }
+    }
+
+    .swiper-pagination-bullet {
+      background: none;
+      background-color: #464646;
+      border-radius: 0;
+      content: '';
+      display: block;
+      height: 2px;
+      opacity: 1;
+      transform: scale(0, 1);
+      transform-origin: right top;
+      transition: transform 1s;
+      width: 100%;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #666666;
+      transform: scale(1, 1);
+      transform-origin: left top;
+      transition: transform 1s;
+    }
+
+  }
+
+  .swiper-container {
+    @include pc {
+    }
+
+    @include sp {
+    }
+  }
+
+  .swiper-wrapper {
+
+  }
+
+  .swiper-slide {
+    height: auto;
+
+    @include pc {
+    }
+
+    @include sp {
+      transition: 1s;
+    }
+
+    .photo img {
+      width: 100%;
+    }
+
+    &.swiper-slide-prev {
+    }
+  }
+
+  & + .caption {
+    margin-top: 30px;
+  }
+}
+
+.gourmetSwiper {
+
+  &__direction {
+    align-items: center;
+    display: flex;
+
+    @include pc {
+      justify-content: center;
+    }
+
+    @include sp {
+      justify-content: flex-end;
+    }
+  }
+
+  &__circleBtn {
+    align-items: center;
+    background-color: rgba(47,79,71,1);
+    box-shadow: 0 8px 16px 0 rgba(102, 102, 102, .1);
+    display: flex;
+    justify-content: center;
+
+    @include pc {
+      height: 48px;
+      width: 48px;
+    }
+
+    @include sp {
+      height: 28px;
+      width: 28px;
+    }
+
+    .arrowSVG {
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 48px;
+
+      @include sp {
+        margin-right: 20px;
+      }
+    }
+  }
+}

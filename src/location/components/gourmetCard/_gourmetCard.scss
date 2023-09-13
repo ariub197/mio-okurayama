@@ -1,0 +1,168 @@
+.gourmetCard {
+  background-color: rgba(221, 226, 225, 1);
+  position: relative;
+  //box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+  @include pc {
+    height: 100%;
+    padding: 40px 24px 30px;
+  }
+
+  @include sp {
+    padding: 20px;
+  }
+
+  &__ttl {
+    letter-spacing: .02em;
+
+    @include pc {
+      font-size: 16px;
+      margin-top: 20px;
+
+      @include lhCrop(28 / 20);
+    }
+
+    @include sp {
+      font-size: 13px;
+      margin-top: 10px;
+
+      @include lhCrop(38 / 24);
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &--large {
+      @include pc {
+        font-size: 24px;
+      }
+
+      @include sp {
+        font-size: 14px;
+      }
+
+      & + .placeCard__walk {
+        @include sp {
+          font-size: 20px;
+        }
+
+        .num {
+          @include sp {
+            font-size: 32px;
+          }
+        }
+      }
+    }
+
+    small {
+      @include pc {
+        font-size: 12px;
+      }
+
+      @include sp {
+        font-size: 10px;
+      }
+    }
+  }
+
+  &__walk {
+    margin-top: 8px;
+    line-height: 1;
+    color: #248068;
+
+    @include pc {
+      font-size: 16px;
+    }
+
+    @include sp {
+      font-size: 13px;
+    }
+
+    .num {
+      font-family: $font-en;
+      @include pc {
+        font-size: 200%;
+        line-height: .8;
+      }
+
+      @include sp {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__distance {
+    color: #464646;
+
+    font-size: 10px;
+    letter-spacing: 0.05em;
+
+    &--middle {
+      font-size: 12px;
+    }
+  }
+
+  &__subTxt {
+    margin-top: 16px;
+    padding-top: 10px;
+    border-top: solid 1px #d6d8d9;
+    font-size: 12px;
+    line-height: 1.5;
+
+    @include sp {
+      font-size: 10px;
+    }
+
+    &--marginWide {
+      margin-top: 40px;
+
+      @include sp {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .tagList {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+
+    @include pc {
+      margin-top: 15px;
+    }
+
+    @include sp {
+      margin-top: 5px;
+    }
+
+    &__item {
+      background: #ffffff;
+      box-shadow: 0 4px 8px 0 rgba(102, 102, 102, .2);
+      letter-spacing: 0;
+      line-height: 1;
+      padding: 5px;
+
+      @include pc {
+        border-radius: 4px;
+        font-size: 12px;
+      }
+
+      @include sp {
+        font-size: 10px;
+      }
+
+      &:not(:last-of-type) {
+        @include pc {
+          margin-right: 10px;
+        }
+
+        @include sp {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}

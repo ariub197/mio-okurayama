@@ -1,0 +1,35 @@
+.shoppingSect {
+
+  &__head {
+  }
+
+  &__cont {
+    @include pc {
+      margin-top: 64px;
+    }
+
+    @include sp {
+      margin-top: 48px;
+    }
+  }
+
+  .layoutSect + .photo {
+    @include pc {
+      margin-top: 40px;
+    }
+
+    @include sp {
+      margin-top: 24px;
+    }
+  }
+
+  .boxCard + .layoutSect {
+    @include pc {
+      margin-top: 64px;
+    }
+
+    @include sp {
+      margin-top: 48px;
+    }
+  }
+}

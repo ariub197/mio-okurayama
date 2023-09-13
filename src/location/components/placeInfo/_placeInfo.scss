@@ -1,0 +1,91 @@
+.placeInfo {
+  align-items: flex-end;
+  color: #464646;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  padding-bottom: 10px;
+  border-bottom: solid 1px rgba(70, 70, 70, 0.5);
+
+  @include lhCrop(1.3);
+
+  @include pc {
+    width: 480px;
+  }
+
+  @include sp {
+    width: 100%;
+  }
+
+  &__term {
+    letter-spacing: .04em;
+    position: relative;
+    z-index: 2;
+
+    @include pc {
+      font-size: 14px;
+    }
+
+    @include sp {
+      font-size: 11px;
+    }
+
+  }
+
+  &__desc {
+    letter-spacing: .04em;
+    color: #248068;
+
+    @include pc {
+      font-size: 14px;
+    }
+
+    @include sp {
+      font-size: 10px;
+    }
+
+    .num {
+      font-family: $font-en;
+      line-height: .7;
+
+      @include pc {
+        font-size: 26px;
+      }
+
+      @include sp {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .dot {
+    align-items: center;
+    background-image: repeating-linear-gradient(to right, #1a1a1a, #1a1a1a 1px, transparent 1px, transparent 2px);
+    background-repeat: repeat-x;
+    display: flex;
+    flex-grow: 1;
+    height: 1px;
+    justify-content: space-between;
+    margin: 0 5px 7px 7px;
+    opacity: .6;
+    width: auto;
+    opacity: 0;
+  }
+
+  &:nth-child(n+2) {
+    @include sp {
+      margin-top: 10px;
+    }
+  }
+
+  &:nth-child(n+3) {
+    @include pc {
+      margin-top: 30px;
+    }
+
+    @include sp {
+      margin-top: 10px;
+    }
+  }
+}

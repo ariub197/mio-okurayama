@@ -1,0 +1,91 @@
+.floorMap {
+  &__item {
+    display: flex;
+    gap: 1px;
+    width: 100%;
+    letter-spacing: 0.06em;
+    line-height: 1.5;
+
+    @include pc {
+      font-size: 14px;
+    }
+
+    @include sp {
+      font-size: 12px;
+    }
+
+    &:last-child {
+      .floorMap__floor {
+        border-bottom: solid 1px #ffffff;
+      }
+
+      .floorMap__summary {
+        border-bottom: solid 1px rgba(70, 70, 70, 0.2);
+      }
+    }
+
+    &--paddingNarrow {
+      .floorMap__floor {
+        @include pc {
+          padding: 8px 0;
+        }
+
+        @include sp {
+          padding: 5px 0;
+        }
+      }
+
+      .floorMap__summary {
+        @include pc {
+          padding: 8px 10px;
+        }
+
+        @include sp {
+          padding: 5px 10px;
+        }
+      }
+    }
+
+    &--mobileBorderNone {
+      &:last-child {
+        .floorMap__floor {
+          @include sp {
+            border-bottom: 0;
+          }
+        }
+
+        .floorMap__summary {
+          @include sp {
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__floor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background: #2f4f47;
+    text-align: center;
+    border-top: solid 1px #ffffff;
+    color: #ffffff;
+
+    @include pc {
+      min-width: 70px;
+    }
+
+    @include sp {
+      min-width: 50px;
+    }
+  }
+
+  &__summary {
+    width: 100%;
+    padding: 5px 10px;
+    border-top: solid 1px rgba(70, 70, 70, 0.2);
+    box-sizing: border-box;
+  }
+}

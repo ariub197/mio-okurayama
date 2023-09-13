@@ -1,0 +1,166 @@
+@import '../../common/css/variables/_variables';
+@import '../../common/css/mixins/_easing';
+@import '../../common/css/mixins/_mixins';
+@import '../components/**/*';
+
+.container {
+  @include sp {
+    padding-top: 0;
+  }
+}
+
+.keyVisual {
+  &__heading {
+    color: #ffffff;
+    text-shadow: none;
+  }
+}
+
+.wrap {
+  @include pc {
+    width: 1008px;
+  }
+}
+
+.bottomCV {
+  @include sp {
+    margin-top: 0;
+  }
+}
+
+.access-catch {
+  @include pc {
+    margin-top: 96px;
+  }
+
+  @include sp {
+    margin-top: 64px;
+  }
+}
+
+.access-station {
+  @include pc {
+    margin-top: 64px;
+  }
+
+  @include sp {
+    margin-top: 48px;
+  }
+}
+
+.routeMap {
+  text-align: right;
+
+  .touchFigure {
+    &--swipe {
+      @include sp {
+        height: 400px;
+      }
+    }
+
+    &__inner {
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+.travel-section {
+  @include pc {
+    margin-top: 160px;
+  }
+
+  @include sp {
+    margin-top: 80px;
+  }
+
+  .layoutSect {
+    @include pc {
+      margin-top: 64px;
+    }
+
+    @include sp {
+      margin-top: 48px;
+    }
+  }
+
+  .touchFigure {
+    &--swipe {
+      @include sp {
+        height: 300px;
+      }
+    }
+  }
+}
+
+.airport-section {
+  @include pc {
+    margin-top: 120px;
+  }
+
+  @include sp {
+    margin-top: 48px;
+  }
+
+  .photo {
+    &__capOut {
+      @include sp {
+        letter-spacing: 0.02em;
+        text-align: right;
+      }
+    }
+  }
+}
+
+.bus-section {
+  @include pc {
+    margin-top: 120px;
+  }
+
+  @include sp {
+    margin-top: 80px;
+  }
+
+  .photo {
+    @include sp {
+      margin: 0 -40px;
+    }
+
+    &__capOut {
+      @include sp {
+        left: 20px;
+        right: 20px;
+        letter-spacing: 0.02em;
+        text-align: right;
+      }
+    }
+  }
+
+  .caption {
+    @include sp {
+      letter-spacing: 0.02em;
+      text-align: right;
+    }
+  }
+}
+
+.car-section {
+  @include pc {
+    margin-top: 120px;
+    padding-bottom: 80px;
+  }
+
+  @include sp {
+    margin-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  .layoutSect {
+    @include pc {
+      margin-top: 64px;
+    }
+
+    @include sp {
+      margin-top: 24px;
+    }
+  }
+}

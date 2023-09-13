@@ -12,4 +12,16 @@
 
     @include lhCrop(52 / 26);
   }
+
+  &--small {
+    letter-spacing: 0.06em;
+
+    @include min-screen($breakP) {
+      font-size: 12px;
+    }
+
+    @include max-screen($breakP) {
+      font-size: 11px;
+    }
+  }
 }

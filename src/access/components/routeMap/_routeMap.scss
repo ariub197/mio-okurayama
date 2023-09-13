@@ -1,0 +1,22 @@
+.routeMap {
+
+  .touchFigure {
+    @include pc {
+      width: 100%;
+    }
+
+    @include sp {
+      width: 100vw;
+    }
+  }
+
+  & + .transportation {
+    @include pc {
+      margin-top: 82px;
+    }
+
+    @include sp {
+      margin-top: 96px;
+    }
+  }
+}
