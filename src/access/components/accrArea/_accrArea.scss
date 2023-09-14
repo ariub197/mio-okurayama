@@ -3,7 +3,33 @@
   &__head {
     cursor: pointer;
 
+    @include pc {
+      pointer-events: none;
+    }
+
+
+    .stateIcon {
+      transition: 0.3s;
+      @include pc {
+        display: none;
+      }
+    }
+
+    .more {
+    }
+
+    .close {
+      display: none;
+    }
+
     &.is-open {
+      .more {
+        display: none;
+      }
+
+      .close {
+        display: block;
+      }
 
       .stateIcon {
 
@@ -18,8 +44,11 @@
   }
 
   &__body {
-    overflow: hidden;
     transition: .3s;
+
+    @include sp {
+      overflow: hidden;
+    }
 
     &.is-open {
       overflow: visible;

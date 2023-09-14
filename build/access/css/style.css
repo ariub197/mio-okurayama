@@ -2,15 +2,49 @@
   cursor: pointer;
 }
 
+@media screen and (min-width: 768px) {
+  .accrArea__head {
+    pointer-events: none;
+  }
+}
+
+.accrArea__head .stateIcon {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media screen and (min-width: 768px) {
+  .accrArea__head .stateIcon {
+    display: none;
+  }
+}
+
+.accrArea__head .close {
+  display: none;
+}
+
+.accrArea__head.is-open .more {
+  display: none;
+}
+
+.accrArea__head.is-open .close {
+  display: block;
+}
+
 .accrArea__head.is-open .stateIcon__circle {
   -webkit-transform: scale(1, -1);
           transform: scale(1, -1);
 }
 
 .accrArea__body {
-  overflow: hidden;
   -webkit-transition: .3s;
   transition: .3s;
+}
+
+@media screen and (max-width: 768px) {
+  .accrArea__body {
+    overflow: hidden;
+  }
 }
 
 .accrArea__body.is-open {
@@ -132,9 +166,7 @@
 
 .accrDoor .stateIcon {
   position: absolute;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  bottom: 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -773,7 +805,7 @@
 
 @media screen and (max-width: 768px) {
   .airport-section {
-    margin-top: 48px;
+    margin-top: 60px;
   }
 }
 
@@ -786,13 +818,13 @@
 
 @media screen and (min-width: 768px) {
   .bus-section {
-    margin-top: 120px;
+    margin-top: 160px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .bus-section {
-    margin-top: 80px;
+    margin-top: 60px;
   }
 }
 
@@ -820,14 +852,14 @@
 
 @media screen and (min-width: 768px) {
   .car-section {
-    margin-top: 120px;
+    margin-top: 140px;
     padding-bottom: 80px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .car-section {
-    margin-top: 80px;
+    margin-top: 60px;
     padding-bottom: 40px;
   }
 }
