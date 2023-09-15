@@ -32,6 +32,11 @@
   &__body {
     transition: .3s;
 
+    @include pc {
+      height: 100% !important;
+      max-height: 100% !important;
+    }
+
     @include sp {
       overflow: hidden;
     }

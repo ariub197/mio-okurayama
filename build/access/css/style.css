@@ -29,6 +29,13 @@
   transition: .3s;
 }
 
+@media screen and (min-width: 768px) {
+  .accrArea__body {
+    height: 100% !important;
+    max-height: 100% !important;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .accrArea__body {
     overflow: hidden;
@@ -699,6 +706,7 @@
 
 @media screen and (max-width: 768px) {
   .container {
+    overflow: hidden;
     padding-top: 0;
   }
 }
