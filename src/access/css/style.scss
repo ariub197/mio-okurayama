@@ -3,6 +3,10 @@
 @import '../../common/css/mixins/_mixins';
 @import '../components/**/*';
 
+[data-color="lightGreen"] {
+  color: #248068;
+}
+
 .container {
   @include sp {
     padding-top: 0;
@@ -13,6 +17,7 @@
   &__heading {
     color: #ffffff;
     text-shadow: none;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 1), 0 0 5px rgba(0, 0, 0, 1), 0 0 5px rgba(0, 0, 0, 1);
   }
 }
 

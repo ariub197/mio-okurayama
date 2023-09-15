@@ -15,21 +15,7 @@
       }
     }
 
-    .more {
-    }
-
-    .close {
-      display: none;
-    }
-
     &.is-open {
-      .more {
-        display: none;
-      }
-
-      .close {
-        display: block;
-      }
 
       .stateIcon {
 

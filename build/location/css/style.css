@@ -499,7 +499,7 @@
 
 @media screen and (max-width: 768px) {
   .featureIntro__ttl {
-    font-size: 16px;
+    font-size: 25px;
   }
 }
 
@@ -2731,6 +2731,10 @@
 .subLocationGroup .placeCard .photo,
 .subLocationGroup .placeCard .photo__image {
   width: 100%;
+}
+
+[data-color="lightGreen"] {
+  color: #248068;
 }
 
 .keyVisual__heading {

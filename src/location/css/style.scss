@@ -3,6 +3,10 @@
 @import '../../common/css/mixins/_mixins';
 @import '../components/**/*';
 
+[data-color="lightGreen"] {
+  color: #248068;
+}
+
 .keyVisual {
   &__heading {
     color: #ffffff;
