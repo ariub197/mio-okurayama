@@ -2734,7 +2734,7 @@
 }
 
 [data-color="lightGreen"] {
-  color: #248068;
+  color: #248068 !important;
 }
 
 .keyVisual__heading {
