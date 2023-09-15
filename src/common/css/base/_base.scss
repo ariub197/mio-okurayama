@@ -86,7 +86,7 @@ img {
 .wrap {
     margin: 0 auto;
 
-    @include min-screen($breakP) {
+    @include pc {
         width: 1024px;
     }
 

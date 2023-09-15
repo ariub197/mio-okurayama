@@ -5,7 +5,7 @@
   overflow: hidden;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .outlineIframe {
     width: 1056px;
   }
@@ -27,7 +27,7 @@
   position: relative;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCV {
     padding-bottom: 20px;
   }
@@ -39,7 +39,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCV:hover .infoCV__visual {
     -webkit-box-shadow: 0 8px 16px 0 rgba(102, 102, 102, 0);
             box-shadow: 0 8px 16px 0 rgba(102, 102, 102, 0);
@@ -93,7 +93,7 @@
   transition: 1s;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCV__visual {
     position: relative;
     width: 240px;
@@ -116,7 +116,7 @@
   position: absolute;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCV__visual .caption {
     bottom: 3px;
     color: #ffffff;
@@ -154,7 +154,7 @@
   transition: 1s;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCV__ttl {
     font-size: 18px;
     line-height: 1.38889;
@@ -217,7 +217,7 @@
   transition: 1s;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCV__icon {
     height: 48px;
     width: 48px;
@@ -236,7 +236,7 @@
   height: auto;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCV__icon .arrowSVG,
   .infoCV__icon .plusSVG {
     width: 16px;
@@ -250,7 +250,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .outline-first {
     padding: 80px 0;
   }
