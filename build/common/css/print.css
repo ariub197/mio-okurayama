@@ -87,16 +87,8 @@ img {
   width: 3000px !important;
 }
 
-#plan .main {
-  width: 100% !important;
-}
-
 #plan .main .container .wrap .changeArea__contHanrei img {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-}
-
-.keyVisual {
-  width: 1020px !important;
 }

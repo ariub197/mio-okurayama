@@ -1949,27 +1949,6 @@
   }
 }
 
-@media print {
-
-  body {
-    zoom: .8;
-  }
-
-  #gHeader,
-  .defaultBtn__list,
-  .footer {
-    display: none;
-  }
-
-  .pop #mainContent {
-    border-bottom: none;
-  }
-
-  .madoriSection {
-    padding-top: 0;
-  }
-}
-
 .changeArea {
   margin-top: 75px;
 
