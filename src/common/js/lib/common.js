@@ -7,6 +7,7 @@ export default class common {
     // this.menuApperance();
     this.fixBnrAppearance();
     this.codeClipy();
+    this.printFunc();
   }
 
   // commonFunc(TOPページの関数)
@@ -198,6 +199,34 @@ export default class common {
         setTimeout(() => {
           el.classList.remove('is-clicked');
         }, timeout);
+      });
+    });
+  }
+
+  printFunc() {
+    window.addEventListener('beforeprint', () => {
+      const imgArr = document.querySelectorAll('img');
+      const srcArr = document.querySelectorAll('source');
+      const saiArr = document.querySelectorAll('.sai-init');
+
+      srcArr.forEach(elm => {
+        if (elm.nextElementSibling.classList.contains('lazyload')) {
+          elm.setAttribute('srcset', elm.dataset.srcset);
+        }
+      });
+
+      imgArr.forEach(elm => {
+        if (elm.classList.contains('lazyload')) {
+          elm.classList.remove('lazyload');
+          elm.classList.add('lazyloaded');
+          elm.setAttribute('src', elm.dataset.src);
+        }
+      });
+
+      saiArr.forEach(elm => {
+        if (!elm.classList.contains('sai-animate')) {
+          elm.classList.add('sai-animate');
+        }
       });
     });
   }

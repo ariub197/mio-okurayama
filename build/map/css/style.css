@@ -8,7 +8,7 @@
   position: relative;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCV {
     padding-bottom: 20px;
   }
@@ -20,7 +20,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCV:hover .infoCV__visual {
     -webkit-box-shadow: 0 8px 16px 0 rgba(102, 102, 102, 0);
             box-shadow: 0 8px 16px 0 rgba(102, 102, 102, 0);
@@ -74,7 +74,7 @@
   transition: 1s;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCV__visual {
     position: relative;
     width: 240px;
@@ -97,7 +97,7 @@
   position: absolute;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCV__visual .caption {
     bottom: 3px;
     color: #ffffff;
@@ -135,7 +135,7 @@
   transition: 1s;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCV__ttl {
     font-size: 18px;
     line-height: 1.38889;
@@ -198,7 +198,7 @@
   transition: 1s;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCV__icon {
     height: 48px;
     width: 48px;
@@ -217,7 +217,7 @@
   height: auto;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCV__icon .arrowSVG,
   .infoCV__icon .plusSVG {
     width: 16px;
@@ -247,7 +247,7 @@
   position: relative;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .mapBtn {
     padding-bottom: 16px;
     width: 240px;
@@ -276,7 +276,7 @@
   line-height: .8;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .mapBtn__txt {
     font-size: 16px;
   }
@@ -311,7 +311,7 @@
   width: 32px;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .mapFigure__spIcon {
     display: none;
   }
@@ -322,7 +322,7 @@
   width: 17px;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .mapFigure + .mapBtn {
     margin-top: 60px;
   }
@@ -334,7 +334,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .map-current {
     padding-bottom: 80px;
     padding-top: 80px;

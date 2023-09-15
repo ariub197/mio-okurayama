@@ -14,7 +14,7 @@
   overflow: hidden;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .btnList .planBtn:nth-of-type(n+3) {
     margin-top: 48px;
   }
@@ -46,7 +46,7 @@
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .detailButton {
     bottom: 0;
     font-size: 16px;
@@ -95,7 +95,7 @@
           justify-content: center;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .galleryCard {
     padding: 48px 48px 20px;
   }
@@ -114,7 +114,7 @@
   line-height: .7;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .galleryCard__ttl {
     font-size: 16px;
     margin-top: 30px;
@@ -132,7 +132,7 @@
   letter-spacing: .12;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .galleryCard__heading {
     font-size: 16px;
     margin-top: 15px;
@@ -191,7 +191,7 @@
   margin: 0 auto;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .gallerySwiper__controller {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
@@ -218,7 +218,7 @@
   position: static;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .gallerySwiper__controller .swiper-pagination {
     margin: 0 auto;
     width: 480px;
@@ -278,7 +278,7 @@
   overflow: visible;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .gallerySwiper .swiper-container {
     margin-left: auto;
     margin-right: auto;
@@ -302,7 +302,7 @@
   height: auto;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .gallerySwiper .swiper-slide {
     -webkit-transition: 2s;
     transition: 2s;
@@ -332,7 +332,7 @@
   display: flex;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .gallerySwiper__direction {
     cursor: pointer;
     -webkit-box-pack: center;
@@ -368,7 +368,7 @@
           justify-content: center;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .gallerySwiper__circleBtn {
     height: 48px;
     width: 48px;
@@ -390,7 +390,7 @@
   position: relative;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCard {
     padding-left: 27px;
   }
@@ -411,7 +411,7 @@
   top: 0;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCard:before {
     width: 4px;
   }
@@ -441,7 +441,7 @@
   line-height: .5;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCard__date {
     font-size: 22px;
     letter-spacing: .08em;
@@ -461,7 +461,7 @@
   line-height: .6;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCard__status {
     font-size: 34px;
     letter-spacing: .08em;
@@ -477,7 +477,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCard__cont {
     margin-top: 16px;
   }
@@ -493,7 +493,7 @@
   letter-spacing: .02em;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCard__heading {
     font-size: 24px;
   }
@@ -505,7 +505,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCard__heading + .infoCard__txt {
     margin-top: 8px;
   }
@@ -521,7 +521,7 @@
   letter-spacing: .02em;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCard__txt {
     font-size: 16px;
     line-height: 1.625;
@@ -561,7 +561,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCard + .infoCV {
     margin-top: 68px;
   }
@@ -583,7 +583,7 @@
   position: relative;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCV {
     padding-bottom: 20px;
   }
@@ -595,7 +595,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCV:hover .infoCV__visual {
     -webkit-box-shadow: 0 8px 16px 0 rgba(102, 102, 102, 0);
             box-shadow: 0 8px 16px 0 rgba(102, 102, 102, 0);
@@ -649,7 +649,7 @@
   transition: 1s;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCV__visual {
     position: relative;
     width: 240px;
@@ -672,7 +672,7 @@
   position: absolute;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCV__visual .caption {
     bottom: 3px;
     color: #ffffff;
@@ -710,7 +710,7 @@
   transition: 1s;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCV__ttl {
     font-size: 18px;
     line-height: 1.38889;
@@ -773,7 +773,7 @@
   transition: 1s;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCV__icon {
     height: 48px;
     width: 48px;
@@ -792,7 +792,7 @@
   height: auto;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .infoCV__icon .arrowSVG,
   .infoCV__icon .plusSVG {
     width: 16px;
@@ -817,7 +817,7 @@
       flex-wrap: wrap;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .livingGallery {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -836,7 +836,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .livingGallery .photo {
     width: 384px;
   }
@@ -860,7 +860,7 @@
   z-index: 1;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pickupDetail {
     padding: 105px 96px 70px;
   }
@@ -889,7 +889,7 @@
   text-align: left;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pickupDetail__head {
     margin: 0 auto;
     width: 480px;
@@ -901,7 +901,7 @@
   margin-left: 20px;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pickupDetail__head .roomSpec {
     max-width: 364px;
   }
@@ -914,7 +914,7 @@
   white-space: nowrap;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pickupDetail__head .roomSpec__variation {
     font-size: 26px;
   }
@@ -926,7 +926,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pickupDetail__head .roomSpec__variation .num {
     font-size: 48px;
   }
@@ -938,7 +938,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pickupDetail__head .roomSpec__variation .large {
     font-size: 34px;
   }
@@ -950,7 +950,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pickupDetail__head .roomSpec__variation + .mainLength {
     margin-top: 40px;
   }
@@ -966,13 +966,13 @@
   line-height: 1;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pickupDetail__head .roomSpec__caption {
     padding-left: 15px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pickupDetail__head .roomSpec + .clickableAttention {
     margin-top: 40px;
   }
@@ -994,7 +994,7 @@
   line-height: .7;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pickupDetail__head .mainLength .num {
     font-size: 40px;
   }
@@ -1006,7 +1006,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pickupDetail__head .mainLength .meter {
     font-size: 18px;
   }
@@ -1024,7 +1024,7 @@
   margin-left: 5px;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pickupDetail__head .mainLength + .subLength {
     margin-top: 15px;
   }
@@ -1065,7 +1065,7 @@
   line-height: .7;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pickupDetail__head .subLength__item:not(:last-of-type) {
     margin-bottom: 10px;
   }
@@ -1076,7 +1076,7 @@
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pickupDetail__cont {
     padding-bottom: 32px;
     padding-top: 45px;
@@ -1111,7 +1111,7 @@
           transform: translate(-50%, -50%);
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pickupDetail__type {
     font-size: 16px;
     height: 62px;
@@ -1127,7 +1127,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pickupDetail__type .name {
     font-size: 28px;
   }
@@ -1163,7 +1163,7 @@
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pickupDetail__pickupTtl {
     font-size: 16px;
     height: 62px;
@@ -1177,7 +1177,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pickupDetail__pickupTtl .name {
     font-size: 28px;
   }
@@ -1193,7 +1193,7 @@
   position: relative;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pickupDetail__bottom {
     margin: 0 auto;
     width: 768px;
@@ -1217,7 +1217,7 @@
           transform: translate(0, 0);
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pickupDetail--pickup .pickupDetail__type {
     height: 134px;
     width: 96px;
@@ -1286,7 +1286,7 @@
   letter-spacing: 0;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pickupDetail .hanreiList__item {
     height: 30px;
     margin-bottom: 5px;
@@ -1312,7 +1312,7 @@
   position: relative;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pickupDetail .hanreiList .icon--storage, .pickupDetail .hanreiList .icon--floor {
     padding-left: 25px;
   }
@@ -1334,7 +1334,7 @@
           transform: translate(0, -50%);
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pickupDetail .hanreiList .icon--storage:before, .pickupDetail .hanreiList .icon--floor:before {
     height: 12px;
     width: 22px;
@@ -1417,7 +1417,7 @@
           justify-content: center;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .clickableAttention__icon {
     height: 49px;
     margin-right: 20px;
@@ -1437,7 +1437,7 @@
   height: auto;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .clickableAttention__icon .searchSVG {
     width: 26px;
   }
@@ -1453,7 +1453,7 @@
   letter-spacing: .08em;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .clickableAttention__txt {
     font-size: 16px;
   }
@@ -1481,7 +1481,7 @@
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomCopy {
     height: 64px;
     margin-bottom: 32px;
@@ -1513,7 +1513,7 @@
           transform: translate(0, -50%);
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomCopy__icon {
     height: 48px;
     left: 24px;
@@ -1533,7 +1533,7 @@
   height: auto;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomCopy__icon .sellSVG {
     width: 26px;
   }
@@ -1549,7 +1549,7 @@
   color: #dfb255;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomCopy__txt {
     font-size: 20px;
     line-height: 1.6;
@@ -1608,7 +1608,7 @@
           justify-content: center;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .searchPoint__icon {
     height: 49px;
     width: 49px;
@@ -1626,7 +1626,7 @@
   height: auto;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .searchPoint__icon .searchSVG {
     width: 26px;
   }
@@ -1638,7 +1638,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .searchPoint--a {
     right: 212px;
     top: 285px;
@@ -1652,7 +1652,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .searchPoint--b {
     left: 160px;
     top: 490px;
@@ -1666,7 +1666,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .searchPoint--c {
     left: 335px;
     top: 670px;
@@ -1697,7 +1697,7 @@
   transition: .3s;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pointBox {
     padding: 20px 13px;
   }
@@ -1717,7 +1717,7 @@
   width: 0;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pointBox:before {
     top: 32px;
   }
@@ -1729,7 +1729,7 @@
   text-align: left;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pointBox__txt {
     font-size: 16px;
     line-height: 1.5625;
@@ -1769,7 +1769,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pointBox--a {
     right: -57px;
     top: 265px;
@@ -1785,7 +1785,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pointBox--a:before {
     border-color: transparent rgba(223, 178, 85, 0.95) transparent transparent;
     border-width: 10px 16px 10px 0;
@@ -1802,7 +1802,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pointBox--b {
     left: -60px;
     top: 470px;
@@ -1818,7 +1818,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pointBox--b:before {
     border-color: transparent transparent transparent rgba(223, 178, 85, 0.95);
     border-width: 10px 0 10px 16px;
@@ -1835,7 +1835,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pointBox--c {
     right: 130px;
     top: 655px;
@@ -1851,7 +1851,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pointBox--c:before {
     border-color: transparent rgba(223, 178, 85, 0.95) transparent transparent;
     border-width: 10px 16px 10px 0;
@@ -1876,7 +1876,7 @@
   position: relative;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .planBtn {
     height: 220px;
     width: 456px;
@@ -1969,7 +1969,7 @@
   margin: 0 auto;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .planBtn__csTxt {
     font-size: 56px;
   }
@@ -1998,7 +1998,7 @@
   right: 10px;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .planBtn__icon {
     height: 48px;
     width: 48px;
@@ -2012,7 +2012,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .planBtn__icon .arrowSVG {
     width: 18px;
   }
@@ -2032,7 +2032,7 @@
   line-height: 1.2;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .planBtn--small .btnSpec__variation {
     font-size: 35px;
   }
@@ -2044,7 +2044,7 @@
   line-height: .7;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .btnSpec__variation {
     font-size: 40px;
   }
@@ -2056,7 +2056,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .btnSpec__variation .num {
     font-size: 48px;
   }
@@ -2068,7 +2068,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .btnSpec__variation + .btnSpec__length {
     margin-top: 20px;
   }
@@ -2089,7 +2089,7 @@
   width: fit-content;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .btnSpec__floor {
     font-size: 20px;
     margin: 5px 0 20px;
@@ -2105,7 +2105,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .btnSpec__floor .num {
     font-size: 28px;
   }
@@ -2121,7 +2121,7 @@
   line-height: 1;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .btnSpec__length {
     font-size: 16px;
   }
@@ -2139,7 +2139,7 @@
   line-height: .7;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .btnSpec__length .num {
     font-size: 40px;
   }
@@ -2151,7 +2151,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .btnSpec__length .meter {
     font-size: 18px;
   }
@@ -2168,7 +2168,7 @@
   margin-left: 5px;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .btnSpec__length .tsubo, .btnSpec__length .floor {
     font-size: 16px;
     line-height: 1;
@@ -2189,7 +2189,7 @@
   white-space: nowrap;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .planHead {
     font-size: 32px;
   }
@@ -2205,7 +2205,7 @@
   display: block;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .planHead .block {
     margin-top: 16px;
   }
@@ -2225,7 +2225,7 @@
   color: #248068 !important;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .planHead .num {
     font-size: 42px;
   }
@@ -2249,7 +2249,7 @@
   display: inline;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .planHead + .accessTrafficInfo,
   .planHead + .roomInfo {
     margin-top: 30px;
@@ -2263,7 +2263,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .planHead + .moreBtn {
     margin-top: 40px;
   }
@@ -2335,7 +2335,7 @@
   width: 0;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .pointSwitch__txt {
     margin-bottom: 10px;
   }
@@ -2357,7 +2357,7 @@
   z-index: 1;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomDetail {
     padding: 105px 30px 70px;
   }
@@ -2385,7 +2385,7 @@
   line-height: .7;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomDetail__head .roomSpec__variation {
     font-size: 40px;
   }
@@ -2397,7 +2397,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomDetail__head .roomSpec__variation .num {
     font-size: 48px;
   }
@@ -2409,7 +2409,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomDetail__head .roomSpec__variation + .mainLength {
     margin-top: 40px;
   }
@@ -2425,13 +2425,13 @@
   line-height: 1;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomDetail__head .roomSpec__caption {
     padding-left: 15px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomDetail__head .roomSpec + .pointSwitch {
     margin-top: 40px;
   }
@@ -2453,7 +2453,7 @@
   line-height: .7;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomDetail__head .mainLength .num {
     font-size: 40px;
   }
@@ -2465,7 +2465,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomDetail__head .mainLength .meter {
     font-size: 18px;
   }
@@ -2483,7 +2483,7 @@
   margin-left: 5px;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomDetail__head .mainLength + .subLength {
     margin-top: 15px;
   }
@@ -2524,7 +2524,7 @@
   line-height: .7;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomDetail__head .subLength__item:not(:last-of-type) {
     margin-bottom: 10px;
   }
@@ -2534,7 +2534,7 @@
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomDetail__cont {
     padding-bottom: 70px;
     padding-top: 45px;
@@ -2572,7 +2572,7 @@
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomDetail__type {
     font-size: 16px;
     height: 62px;
@@ -2586,7 +2586,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomDetail__type .name {
     font-size: 28px;
   }
@@ -2619,7 +2619,7 @@
           transform: translate(-50%, -50%);
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomDetail__pickupTtl {
     font-size: 16px;
     height: 62px;
@@ -2635,7 +2635,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomDetail__pickupTtl .name {
     font-size: 28px;
   }
@@ -2651,7 +2651,7 @@
   position: relative;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomDetail__bottom {
     margin: 0 auto;
     width: 768px;
@@ -2669,7 +2669,7 @@
   position: relative;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomDetail--pickup {
     padding: 85px 96px 70px;
   }
@@ -2704,7 +2704,7 @@
   margin-left: 20px;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomDetail--pickup .roomDetail__head .roomSpec + .pointSwitch {
     margin: 0 0 0 auto;
   }
@@ -2723,7 +2723,7 @@
           transform: translate(0, 0);
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomDetail--pickup .roomDetail__type {
     height: 134px;
     width: 96px;
@@ -2792,7 +2792,7 @@
   letter-spacing: 0;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomDetail .hanreiList__item {
     height: 30px;
     margin-bottom: 5px;
@@ -2818,7 +2818,7 @@
   position: relative;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomDetail .hanreiList .icon--storage, .roomDetail .hanreiList .icon--floor {
     padding-left: 25px;
   }
@@ -2840,7 +2840,7 @@
           transform: translate(0, -50%);
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomDetail .hanreiList .icon--storage:before, .roomDetail .hanreiList .icon--floor:before {
     height: 12px;
     width: 22px;
@@ -2897,7 +2897,7 @@
   counter-reset: number 0;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomDetail .pointList {
     -webkit-column-gap: 32px;
        -moz-column-gap: 32px;
@@ -2949,7 +2949,7 @@
   width: 0;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomDetail .pointList__item {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -2991,7 +2991,7 @@
   position: absolute;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomDetail .pointList__item:before {
     height: 24px;
     top: .75em;
@@ -3081,7 +3081,7 @@
   line-height: .8;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomInfo__term, .roomInfo__desc {
     font-size: 34px;
   }
@@ -3102,7 +3102,7 @@
   vertical-align: top;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomInfo__term .large, .roomInfo__desc .large {
     font-size: 42px;
     line-height: .65;
@@ -3120,7 +3120,7 @@
   color: #315048;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomInfo__term .small, .roomInfo__desc .small {
     font-size: 28px;
   }
@@ -3137,7 +3137,7 @@
   font-family: "YakuHanMP", "Shippori Mincho B1", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomInfo__term .meter, .roomInfo__desc .meter {
     font-size: 28px;
   }
@@ -3149,7 +3149,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomInfo__term sup, .roomInfo__desc sup {
     font-size: 10px;
   }
@@ -3175,7 +3175,7 @@
   margin: 0 10px;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomInfo__line {
     width: 24px;
   }
@@ -3196,7 +3196,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomInfo--ldk {
     font-size: 34px;
   }
@@ -3208,7 +3208,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomInfo--ldk .large {
     line-height: .55;
   }
@@ -3220,7 +3220,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomInfo--length {
     font-size: 28px;
   }
@@ -3232,7 +3232,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomInfo + .roomInfo {
     margin-top: 20px;
   }
@@ -3259,7 +3259,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomInfo + .moreBtn {
     margin-top: 40px;
   }
@@ -3271,7 +3271,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .stepBox {
     font-size: 20px !important;
   }
@@ -3288,7 +3288,7 @@
   font-family: "Cinzel", serif;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .stepBox .heading--label {
     height: 45px;
   }
@@ -3307,7 +3307,7 @@
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .stepBox__body {
     height: 86px;
   }
@@ -3333,7 +3333,7 @@
   position: relative;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .switchBtn {
     border-radius: 32px;
     height: 64px;
@@ -3355,7 +3355,7 @@
   line-height: 1;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .switchBtn__txt {
     font-size: 16px;
   }
@@ -3376,7 +3376,7 @@
           transform: translate(0, -50%);
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .switchBtn__lever {
     height: 48px;
     left: 8px;
@@ -3390,7 +3390,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .plan-catch {
     padding-top: 120px;
   }
@@ -3406,7 +3406,7 @@
   margin-top: 36px;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .plan-list {
     padding-bottom: 200px;
     padding-top: 100px;
@@ -3420,7 +3420,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .plan-flow {
     margin-top: 80px;
   }
@@ -3432,7 +3432,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .plan-change {
     margin-top: 64px;
   }
@@ -3444,7 +3444,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .plan-living {
     margin-top: 160px;
   }
@@ -3456,7 +3456,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .plan-outframe {
     margin-top: 160px;
     padding-bottom: 160px;
@@ -3470,7 +3470,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .plan-detail {
     padding-bottom: 200px;
     padding-top: 100px;
@@ -3494,7 +3494,7 @@
   margin-right: auto;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .outFrameIllust {
     width: -webkit-max-content;
     width: -moz-max-content;
@@ -3806,7 +3806,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .menu .item .text .size .caption {
     margin-left: 120px;
   }
@@ -3971,7 +3971,7 @@
   vertical-align: text-bottom;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .planDetail .panel .size .primary .num {
     padding-left: 8px;
   }
@@ -4109,7 +4109,7 @@
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .planDetail .panel .image {
     margin-top: 120px;
     min-height: 800px;
@@ -4211,7 +4211,7 @@
       flex-wrap: wrap;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .planDetail .hanreiList {
     gap: 20px;
     -webkit-box-pack: justify;
@@ -4235,7 +4235,7 @@
   margin-top: 5px;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .planDetail .hanreiList + .hanreiList {
     gap: 20px;
     -webkit-box-pack: start;
@@ -4531,7 +4531,7 @@
   padding: 10px;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .planNav__link:hover {
     opacity: .7;
   }
@@ -4942,7 +4942,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .selectPhotos__item {
     width: 272px;
   }
@@ -5325,7 +5325,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomspaceSection .bgLayer {
     padding-bottom: 120px;
     padding-top: 120px;
@@ -5339,7 +5339,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomspaceSection__row .roomspaceSection__item--texts {
     width: 575px;
   }
@@ -5351,7 +5351,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomspaceSection__row .roomspaceSection__item--images {
     width: 379px;
   }
@@ -5364,7 +5364,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomspaceSection__row .roomspacePhotos__item .capOut {
     text-align: right;
   }
@@ -5439,7 +5439,7 @@
   position: relative;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .roomspaceSection__row--change .roomspaceSection__item {
     width: 216px;
   }
@@ -5489,7 +5489,7 @@
   margin-top: 60px;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .defaultBtn__list {
     margin-top: 40px;
   }
@@ -5680,7 +5680,7 @@
   font-size: 14px;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .changeArea__ttlItem--large .subArea {
     padding-bottom: 10px;
   }
@@ -5851,7 +5851,7 @@
   width: 0;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .changeArea__contTxt {
     font-size: 14px;
   }
@@ -5878,7 +5878,7 @@
   text-indent: -1em;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .changeArea__contTxtInner {
     font-size: 14px;
     letter-spacing: .06em;
@@ -5914,7 +5914,7 @@
   margin-top: 40px;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .changeArea__contHanrei {
     gap: 10px;
   }
@@ -5933,7 +5933,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .changeArea__contHanrei .hanreiTtl {
     font-size: 12px;
   }
@@ -6005,7 +6005,7 @@
   margin-top: 15px;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .changeArea__contCap {
     font-size: 12px;
   }

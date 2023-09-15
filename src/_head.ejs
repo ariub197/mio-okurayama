@@ -63,7 +63,8 @@ const fmtTtl = params.pageId !== 'top' ? `${offcialTtl}${params.title}｜${split
   <meta property="og:image" content="<%- common.url %>ogp/index.jpg" />
   <meta property="og:description" content="<%- common.description %>" />
   <link rel="stylesheet" href="<%= relativePath %>common/css/common.css" />
-  <link rel="stylesheet" href="./css/style.css" /><% if (params.pageId == 'interactionPattern') { %>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="<%= relativePath %>common/css/print.css" media="print" /><% if (params.pageId == 'interactionPattern') { %>
   <script src="//maps.google.com/maps/api/js?key=AIzaSyBdQtnBRaQf1kiXDNIG-hmXGQOuWnt8TmQ&amp;language=ja"></script><% }%>
   <script src="<%= relativePath %>common/js/lib.js"></script>
   <% if (params.vendorScript) { %><!-- vendor -->

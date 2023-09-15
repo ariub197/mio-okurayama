@@ -1,0 +1,102 @@
+* {
+  -webkit-animation: none !important;
+          animation: none !important;
+  -webkit-print-color-adjust: exact;
+}
+
+html,
+body,
+.currentPage {
+  width: 1084px;
+}
+
+.header,
+.header-menuButton {
+  position: absolute;
+}
+
+img {
+  max-width: initial;
+  width: 100%;
+}
+
+.fixBnr,
+.only-sp {
+  display: none;
+}
+
+.blurBg {
+  height: 100%;
+}
+
+.bottomCV {
+  margin-bottom: 0;
+}
+
+.mainVisual {
+  width: calc(1344 / 1440 * 100%);
+}
+
+.mainVisual__head {
+  width: calc(312 / 1440 * 100%);
+}
+
+.mainVisual__heading .ttlSVG {
+  width: calc(195 / 312 * 100%);
+}
+
+.mainVisual__cont {
+  width: calc(960 / 1440 * 100%);
+}
+
+.uspCard__bgSquare:before {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.resultGallery {
+  margin-right: 0;
+  width: 624px;
+}
+
+.planDetail .madori img {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.planDetail .hanreiList__item .icon--storage {
+  padding-left: 25px;
+}
+
+.planDetail .hanreiList__item .icon--storage:before {
+  height: 12px;
+  width: 22px;
+}
+
+.planDetail .hanreiList__item .icon--floor {
+  padding-left: 25px;
+}
+
+.planDetail .hanreiList__item .icon--floor:before {
+  height: 12px;
+  width: 22px;
+}
+
+.bgLayer--pattern01:before {
+  width: 3000px !important;
+}
+
+#plan .main {
+  width: 100% !important;
+}
+
+#plan .main .container .wrap .changeArea__contHanrei img {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.keyVisual {
+  width: 1020px !important;
+}
