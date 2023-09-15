@@ -38,7 +38,6 @@ document.addEventListener(
         new access();
 
         break;
-
       case 'location':
         _log('PAGE NAME', 'INDEX', 'orange');
 
