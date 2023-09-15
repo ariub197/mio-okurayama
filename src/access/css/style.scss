@@ -3,7 +3,7 @@
 @import '../../common/css/mixins/_mixins';
 @import '../components/**/*';
 
-[data-color="lightGreen"] {
+[data-color='lightGreen'] {
   color: #248068 !important;
 }
 
@@ -15,10 +15,11 @@
 }
 
 .keyVisual {
+
   &__heading {
     color: #ffffff;
     text-shadow: none;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 1), 0 0 5px rgba(0, 0, 0, 1), 0 0 5px rgba(0, 0, 0, 1);
+    text-shadow: 0 0 5px rgba(0, 0, 0, .6), 0 0 5px rgba(0, 0, 0, .6), 0 0 5px rgba(0, 0, 0, .6);
   }
 }
 
@@ -58,6 +59,7 @@
   text-align: right;
 
   .touchFigure {
+
     &--swipe {
       @include sp {
         height: 400px;
@@ -65,7 +67,7 @@
     }
 
     &__inner {
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
     }
   }
 }
@@ -90,6 +92,7 @@
   }
 
   .touchFigure {
+
     &--swipe {
       @include sp {
         height: 300px;
@@ -108,9 +111,10 @@
   }
 
   .photo {
+
     &__capOut {
       @include sp {
-        letter-spacing: 0.02em;
+        letter-spacing: .02em;
         text-align: right;
       }
     }
@@ -134,8 +138,8 @@
     &__capOut {
       @include sp {
         left: 20px;
+        letter-spacing: .02em;
         right: 20px;
-        letter-spacing: 0.02em;
         text-align: right;
       }
     }
@@ -143,7 +147,7 @@
 
   .caption {
     @include sp {
-      letter-spacing: 0.02em;
+      letter-spacing: .02em;
       text-align: right;
     }
   }

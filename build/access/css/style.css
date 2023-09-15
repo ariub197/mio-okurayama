@@ -700,7 +700,7 @@
   margin-top: 36px;
 }
 
-[data-color="lightGreen"] {
+[data-color='lightGreen'] {
   color: #248068 !important;
 }
 
@@ -714,7 +714,7 @@
 .keyVisual__heading {
   color: #ffffff;
   text-shadow: none;
-  text-shadow: 0 0 5px black, 0 0 5px black, 0 0 5px black;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.6), 0 0 5px rgba(0, 0, 0, 0.6), 0 0 5px rgba(0, 0, 0, 0.6);
 }
 
 @media screen and (min-width: 768px) {
@@ -812,7 +812,7 @@
 
 @media screen and (max-width: 768px) {
   .airport-section .photo__capOut {
-    letter-spacing: 0.02em;
+    letter-spacing: .02em;
     text-align: right;
   }
 }
@@ -838,15 +838,15 @@
 @media screen and (max-width: 768px) {
   .bus-section .photo__capOut {
     left: 20px;
+    letter-spacing: .02em;
     right: 20px;
-    letter-spacing: 0.02em;
     text-align: right;
   }
 }
 
 @media screen and (max-width: 768px) {
   .bus-section .caption {
-    letter-spacing: 0.02em;
+    letter-spacing: .02em;
     text-align: right;
   }
 }
