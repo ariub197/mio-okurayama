@@ -7198,7 +7198,7 @@ button.swiper-pagination-bullet {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .photo + .heading--label-small {
     margin-top: 20px;
   }
@@ -7372,7 +7372,7 @@ button.swiper-pagination-bullet {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .heading--02 + .heading--01 {
     margin-top: 36px;
   }
@@ -8067,7 +8067,7 @@ button.swiper-pagination-bullet {
       flex-wrap: wrap;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .layoutSect {
     gap: 48px;
   }
@@ -8082,7 +8082,7 @@ button.swiper-pagination-bullet {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .layoutSect--floorMap {
     gap: 48px;
   }
@@ -8094,7 +8094,7 @@ button.swiper-pagination-bullet {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .layoutSect--gapNarrow {
     gap: 48px;
   }
@@ -8106,7 +8106,7 @@ button.swiper-pagination-bullet {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .layoutSect--gapWide {
     gap: 48px;
   }
@@ -8124,7 +8124,7 @@ button.swiper-pagination-bullet {
           align-items: center;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .layoutSect--reverse {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
@@ -8142,7 +8142,7 @@ button.swiper-pagination-bullet {
   height: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .layoutSect__item--half {
     width: 480px;
   }
@@ -8154,7 +8154,7 @@ button.swiper-pagination-bullet {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .layoutSect__item--third {
     width: 304px;
   }
@@ -8166,7 +8166,7 @@ button.swiper-pagination-bullet {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .layoutSect__item--quarter {
     width: 216px;
   }
@@ -8178,7 +8178,7 @@ button.swiper-pagination-bullet {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .layoutSect__item--headSmall .placeCard__ttl {
     font-size: 14px !important;
   }
@@ -8188,7 +8188,7 @@ button.swiper-pagination-bullet {
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .layoutSect + .layoutSect {
     margin-top: 60px;
   }
@@ -8200,7 +8200,7 @@ button.swiper-pagination-bullet {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media print, screen and (min-width: 768px) {
   .layoutSect + .layoutSect--floorMap {
     margin-top: 30px;
   }
