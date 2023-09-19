@@ -74,6 +74,37 @@ img {
   width: 624px;
 }
 
+.plan-list {
+
+  .menu {
+
+    .list {
+
+      .item {
+        height: 320px;
+      }
+    }
+  }
+}
+
+.roomspaceSection {
+
+  .changeArea {
+    margin-top: 100px !important;
+
+    &__cont {
+      padding: 40px;
+    }
+
+    &__contHanrei {
+
+      img {
+        width: fit-content;
+      }
+    }
+  }
+}
+
 .planDetail {
 
   .madori {
@@ -86,6 +117,9 @@ img {
   .hanreiList {
 
     &__item {
+      height: 30px;
+      padding: 0 20px !important;
+      width: fit-content;
 
       .icon {
 
@@ -117,25 +151,6 @@ img {
 
     &:before {
       width: 3000px !important;
-    }
-  }
-}
-
-#plan {
-
-  .main {
-
-    .container {
-
-      .wrap {
-
-        .changeArea__contHanrei {
-
-          img {
-            width: fit-content;
-          }
-        }
-      }
     }
   }
 }
