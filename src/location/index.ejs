@@ -26,7 +26,7 @@
             <%- include('/common/components/photo/_photo.ejs', {
               imagePathPC: '<img src="./imgs/pc/img-okurayama-visual@2x.jpg" alt="" width="1920" height="960">',
               imagePathSP: '<img src="./imgs/sp/img-okurayama-visual.jpg" alt="" width="1920" height="960">',
-              alt: '背景画像 ： 横浜市大倉山記念館',
+              alt: '横浜市大倉山記念館',
               captionPosition: 'capOut',
               captionColor: 'black',
               pictureMode: 'on',
@@ -67,7 +67,7 @@
         <section class="location-shopping">
           <div class="shoppingSect">
             <div class="shoppingSect__head">
-              <div class="heading--02" data-align="center"><span class="en" data-color="lightGreen">SHOPPING</span></div>
+              <%#<div class="heading--02" data-align="center"><span class="en" data-color="lightGreen">SHOPPING</span></div>%>
               <h4 class="heading--01" data-align="center">徒歩圏内には毎日の暮らしを支えてくれる商業施設が充実。</h4>
               <p class="txt" data-align="pc-center">落ち着いた住環境の中には複数のスーパーをはじめ、<br class="only-pc">ドラッグストアやディスカウントショップ等多くの商業施設が充実し、<br class="only-pc">毎日のお買い物を楽しく、便利にサポートしてくれます。</p>
             </div>
@@ -96,8 +96,31 @@
                     </div>
                   </div>
                 </div>
+                <div class="layoutSect layoutSect--gapNarrow">
+                 
+                  <div class="layoutSect__item layoutSect__item--half">
+                    <div class="placeCard">
+                      <div class="placeCard__flex">
+                        <div class="placeCard__ttl">大倉山エルム通り商店街</div>
+                        <div class="placeCard__walk">徒歩<span class="num">8</span>分<span class="placeCard__distance placeCard__distance--middle">（約620m）</span></div>
+                      </div>
+                      <p class="txt">ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト。</p>
+                      <p class="caption">※ダミーテキストダミーテキストダミーテキストダミーテキスト。</p>
+                    </div>
+                  </div>
+                  <div class="layoutSect__item layoutSect__item--half">
+                    <%- include('/common/components/photo/_photo.ejs', {
+                      imagePath: '<img src="./imgs/img-shopping-02.jpg" width="432" height="276">',
+                      alt: '',
+                      captionPosition: 'noCap',
+                      captionColor: '',
+                      pictureMode: '',
+                      modifiers: []
+                    }) %>
+                  </div>
+                </div>
 
-                <%- include('/common/components/photo/_photo.ejs', {
+                <%#- include('/common/components/photo/_photo.ejs', {
                   imagePath: '<img src="./imgs/img-shopping-02.jpg" width="912" height="342">',
                   alt: '',
                   captionPosition: 'noCap',
@@ -118,7 +141,7 @@
                             lazy:'',
                             pictureMode: '',
                           },
-                          ttl:'カフェ・ド・ピオン / ペドーネ',
+                          ttl:'カフェ・ド・ピオン / ペドーネ<small>（カフェ・立飲みバル）</small>',
                           walk:'9',
                           distance:'（約680m）',
                           tagList: ['#カフェ', '#立飲みバル'],
@@ -133,7 +156,7 @@
                             lazy:'',
                             pictureMode: '',
                           },
-                          ttl:'パティスリーピオン',
+                          ttl:'パティスリーピオン<small>（洋菓子）</small>',
                           walk:'10',
                           distance:'（約750m）',
                           tagList: ['#洋菓子'],
@@ -148,7 +171,7 @@
                             lazy:'',
                             pictureMode: '',
                           },
-                          ttl:'コスタ・デル・ソル',
+                          ttl:'コスタ・デル・ソル<small>（スペイン料理）</small>',
                           walk:'10',
                           distance:'（約790m）',
                           tagList: ['#スペイン料理'],
@@ -163,7 +186,7 @@
                             lazy:'',
                             pictureMode: '',
                           },
-                          ttl:'テラコーヒー 大倉山店',
+                          ttl:'テラコーヒー 大倉山店<br><small>（コーヒーショップ）</small>',
                           walk:'12',
                           distance:'（約930m）',
                           tagList: ['#コーヒーショップ'],
@@ -178,7 +201,7 @@
                             lazy:'',
                             pictureMode: '',
                           },
-                          ttl:'トラットリア ピッツェリア ピレウス',
+                          ttl:'トラットリア ピッツェリア ピレウス<small>（イタリア料理）</small>',
                           walk:'14',
                           distance:'（約1,050m）',
                           tagList: ['#イタリア料理'],
@@ -193,7 +216,7 @@
                             lazy:'',
                             pictureMode: '',
                           },
-                          ttl:'鴨屋そば香 大倉山店',
+                          ttl:'鴨屋そば香 大倉山店<small>（日本蕎麦）</small>',
                           walk:'14',
                           distance:'（約1,100m）',
                           tagList: ['#日本蕎麦'],
@@ -268,7 +291,7 @@
                     distance:'（約610m）',
                   }) %>
                 </div>
-                <div class="layoutSect__item layoutSect__item--quarter layoutSect__item--headSmall">
+                <div class="layoutSect__item layoutSect__item--quarter">
                   <%- include('./components/placeCard/_placeCard.ejs', {
                     visual: {
                       imagePath: '<img src="./imgs/img-shopping-07.jpg" width="216" height="144">',
@@ -303,7 +326,7 @@
                       pictureMode: '',
                     },
                     ttl:'サミットストア菊名店',
-                    walk:'11',
+                    walk:'15',
                     distance:'（約1,180m）',
                   }) %>
                 </div>
@@ -348,6 +371,7 @@
                         <div class="placeCard__walk">徒歩<span class="num">13</span>分<span class="placeCard__distance placeCard__distance--middle">（約990m）</span></div>
                       </div>
                       <p class="txt">閑静な住宅街の中にある緑豊かな環境を愉しむことが出来る公園で、「横浜市大倉山記念館」や「梅林」は多くの人が訪れます。46種約220本の梅が咲き誇り、毎年2月頃には「大倉山観梅会」が開催されています。</p>
+                      <p class="caption">※横浜市ホームページより。</p>
                     </div>
                   </div>
                 </div>
@@ -364,7 +388,7 @@
                     }) %>
                     <div class="placeCard">
                       <div class="placeCard__body placeCard__body--marginTopWide">
-                        <div class="placeCard__ttl">ダミーテキスト</div>
+                        <div class="placeCard__ttl"></div>
                         <p class="txt">ダミーテキストダミーテキストダミーテキストダミーテキスト</p>
                       </div>
                     </div>
@@ -380,7 +404,7 @@
                     }) %>
                     <div class="placeCard">
                       <div class="placeCard__body placeCard__body--marginTopWide">
-                        <div class="placeCard__ttl">ダミーテキスト</div>
+                        <div class="placeCard__ttl"></div>
                         <p class="txt">ダミーテキストダミーテキストダミーテキストダミーテキスト</p>
                       </div>
                     </div>
@@ -588,7 +612,7 @@
                       pictureMode: '',
                     },
                     ttl:'くっくおさんぽ保育園ふとお',
-                    walk:'2',
+                    walk:'7',
                     distance:'（約530m）',
                   }) %>
                 </div>
@@ -895,7 +919,7 @@
         <div class="shinyokohamaSect">
           <div class="shinyokohamaSect__head">
             <h4 class="heading--01" data-align="center">「大倉山」を拠点に、<br>華やかな「新横浜」も生活圏内の絶妙なポジショニング。</h4>
-            <p class="txt" data-align="pc-center">穏やかで成熟した街「大倉山」を拠点としながら、<br class="only-pc">高いエンターテインメント性を誇る「新横浜」の華やかさを、<br class="only-pc">いつでも気軽に愉しむことが可能です。</p>
+            <p class="txt" data-align="pc-center">穏やかで成熟した街「大倉山」を拠点としながら、<br class="only-pc">高いエンターテインメント性を誇る「新横浜」の華やかさを、<br class="only-pc">いつでも気軽に愉しめます。</p>
           </div>
           <div class="shinyokohamaSect__contFirst">
             <div class="layoutSect layoutSect--center layoutSect--gapNarrow">
@@ -1455,4 +1479,4 @@
   <%- include('/common/components/contentsGuide/_contentsGuide.ejs') %>
 </main>
 <%- include('/common/inc/bottomInfo/_bottomInfo.ejs', {pageId: pageData.pageDir}) %>
-<%- include('/common/inc/footer/_footer.ejs', {pageId: pageData.pageDir, footerCap: 'ダミーテキストダミーテキストダミーテキストダミーテキスト'}) %>
+<%- include('/common/inc/footer/_footer.ejs', {pageId: pageData.pageDir, footerCap: '※徒歩分数は80ｍあたり1分として換算しております。<br>※掲載の内容は、2023年8月現在のものであり、今後変更される場合があります。<br>※掲載の環境写真は2023年3月、7月、８月、2016年11月に撮影したものに一部ＣＧ加工を施しております。'}) %>
