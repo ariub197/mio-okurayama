@@ -1,0 +1,26 @@
+.greenLabel {
+  align-items: center;
+  background: $color-autumn-sub-01;
+  color: #ffffff;
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+
+  @include pc {
+    padding: 0 20px;
+  }
+
+  @include sp {
+    height: 32px;
+  }
+
+  .photo + & {
+    @include pc {
+      margin-top: 20px;
+    }
+
+    @include sp {
+      margin-top: 10px;
+    }
+  }
+}

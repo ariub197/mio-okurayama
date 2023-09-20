@@ -130,7 +130,7 @@
               }) %>
             </div>
           </div>
-          <p class="caption">●「日吉」駅へ直通4分（日中時4分）／「大倉山」駅より【通勤時・日中時】東急東横線利用。●「武蔵小杉」駅へ直通9分（日中時8分）／「大倉山」駅より【通勤時・日中時】東急東横線利用。●「元町・中華街」駅へ直通20分（日中時18分）／「大倉山」駅より【通勤時】東急東横線利用（みなとみらい線直通）。【日中時】東急東横線利用、「菊名」駅より東急東横線急行乗換（みなとみらい線直通）。●「池袋」駅へ44分（日中時39分）／「大倉山」駅より【通勤時】東急東横線利用、「自由が丘」駅より東急東横線急行乗換（東京メトロ副都心線直通）。【日中時】東急東横線利用、「武蔵小杉」駅より東急東横線特急乗換（東京メトロ副都心線直通）。※所要時間は乗換案内調べ（2023年7月現在）に基づいて作成しております。記載の所要時間は通勤時（7：00〜9:00）、日中時（10：00〜16：00）に到着駅着としております。所要時間には乗換、待ち合わせ時間が含まれております。また、時間帯により所要時間は多少異なる場合がございます。※掲載の路線概念図は一部路線・駅等を省略して表記しております。※掲載の各情報は今後変更される場合があります。</p>
+          <p class="caption">●「日吉」駅へ直通4分（日中時4分）／「大倉山」駅より【通勤時・日中時】東急東横線利用。●「武蔵小杉」駅へ直通9分（日中時8分）／「大倉山」駅より【通勤時・日中時】東急東横線利用。●「元町・中華街」駅へ直通20分（日中時18分）／「大倉山」駅より【通勤時】東急東横線利用（みなとみらい線直通）。【日中時】東急東横線利用、「菊名」駅より東急東横線急行乗換（みなとみらい線直通）。●「池袋」駅へ44分（日中時39分）／「大倉山」駅より【通勤時】東急東横線利用、「自由が丘」駅より東急東横線急行乗換（東京メトロ副都心線直通）。【日中時】東急東横線利用、「武蔵小杉」駅より東急東横線特急乗換（東京メトロ副都心線直通）。<br>※所要時間は乗換案内調べ（2023年7月現在）に基づいて作成しております。記載の所要時間は通勤時（7：00〜9:00）、日中時（10：00〜16：00）に到着駅着としております。所要時間には乗換、待ち合わせ時間が含まれております。また、時間帯により所要時間は多少異なる場合がございます。※掲載の路線概念図は一部路線・駅等を省略して表記しております。※掲載の各情報は今後変更される場合があります。</p>
         </div>
       </section>
 
@@ -160,17 +160,19 @@
           </div>
           <div class="accrArea__body">
             <div class="accrArea__cont">
-              <%- include('/common/components/touchFigure/_touchFigure.ejs', {
-                imagePath: './imgs/img-travel-01.jpg',
-                alt: '東海道新幹線停車駅（一部停車駅を省略してあります）',
-                captionPosition: 'capOut',
-                captionColor: '',
-                pictureMode: '',
-                modifiers: ['swipe']
-              }) %>
-
               <div class="layoutSect">
-                <div class="layoutSect__item layoutSect__item--third">
+                <div class="layoutSect__item layoutSect__item--half">
+                  <%- include('/common/components/photo/_photo.ejs', {
+                    imagePath: '<img src="./imgs/img-travel-01.jpg" width="304" height="203">',
+                    alt: 'image photo',
+                    captionPosition: 'capIn',
+                    captionColor: 'white',
+                    pictureMode: '',
+                    modifiers: []
+                  }) %>
+                </div>
+               
+                <div class="layoutSect__item layoutSect__item--half">
                   <%- include('/common/components/photo/_photo.ejs', {
                     imagePath: '<img src="./imgs/img-travel-02.jpg" width="304" height="203">',
                     alt: 'image photo',
@@ -179,10 +181,11 @@
                     pictureMode: '',
                     modifiers: []
                   }) %>
-                  <div class="heading--label-small">
-                    <p class="txt">新大阪</p>
-                  </div>
                 </div>
+                
+              </div>
+
+              <div class="layoutSect">
                 <div class="layoutSect__item layoutSect__item--third">
                   <%- include('/common/components/photo/_photo.ejs', {
                     imagePath: '<img src="./imgs/img-travel-03.jpg" width="304" height="203">',
@@ -192,10 +195,13 @@
                     pictureMode: '',
                     modifiers: []
                   }) %>
-                  <div class="heading--label-small">
-                    <p class="txt">京都</p>
-                  </div>
+                  <%- include('./components/greenLabel/_greenLabel.ejs', {
+                    place: '名古屋',
+                    txt: '76',
+                    modifiers: [],
+                  }) %>
                 </div>
+               
                 <div class="layoutSect__item layoutSect__item--third">
                   <%- include('/common/components/photo/_photo.ejs', {
                     imagePath: '<img src="./imgs/img-travel-04.jpg" width="304" height="203">',
@@ -205,10 +211,29 @@
                     pictureMode: '',
                     modifiers: []
                   }) %>
-                  <div class="heading--label-small">
-                    <p class="txt">名古屋</p>
-                  </div>
+                  <%- include('./components/greenLabel/_greenLabel.ejs', {
+                    place: '京都',
+                    txt: '112',
+                    modifiers: [],
+                  }) %>
                 </div>
+
+                <div class="layoutSect__item layoutSect__item--third">
+                  <%- include('/common/components/photo/_photo.ejs', {
+                    imagePath: '<img src="./imgs/img-travel-05.jpg" width="304" height="203">',
+                    alt: 'image photo',
+                    captionPosition: 'capIn',
+                    captionColor: 'white',
+                    pictureMode: '',
+                    modifiers: []
+                  }) %>
+                  <%- include('./components/greenLabel/_greenLabel.ejs', {
+                    place: '新大阪',
+                    txt: '127',
+                    modifiers: [],
+                  }) %>
+                </div>
+                
               </div>
             </div>
           </div>
@@ -261,7 +286,7 @@
         </div>
       </section>
 
-      <section class="bus-section">
+      <%#<section class="bus-section">
         <div class="accrArea">
           <div class="accrArea__head js-access-accr">
             <div class="accrDoor">
@@ -275,12 +300,12 @@
                 </div>
               </div>
               <div class="accrDoor__bg">
-                <%- include('/common/components/pic/_pic.ejs', {
+                < %- include('/common/components/pic/_pic.ejs', {
                   imagePathPC: '<img src="./imgs/pc/bg-door-bus.jpg" alt="" width="1008" height="160">',
                   imagePathSP: '<img src="./imgs/sp/bg-door-bus.jpg" alt="" width="670" height="315">',
                   alt: 'BUS',
                   pictureMode: 'on',
-                }) %>
+                }) % >
                 <p class="accrDoor__cap">image photo</p>
               </div>
             </div>
@@ -302,20 +327,20 @@
 
                 </div>
                 <div class="layoutSect__item layoutSect__item--half">
-                  <%- include('/common/components/photo/_photo.ejs', {
+                  < %- include('/common/components/photo/_photo.ejs', {
                     imagePath: '<img src="./imgs/img-bus-01.jpg" width="480" height="285">',
                     alt: '※一部停留所は省略しています ※横浜市交通局ホームページより（2023年8月現在）',
                     captionPosition: 'capOut',
                     captionColor: '',
                     pictureMode: '',
                     modifiers: ['shadow']
-                  }) %>
+                  }) % >
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </section>%>
 
       <section class="car-section">
         <div class="accrArea">
@@ -355,9 +380,11 @@
                     pictureMode: '',
                     modifiers: []
                   }) %>
-                  <div class="heading--label-small">
-                    <p class="txt">鎌倉</p>
-                  </div>
+                  <%- include('./components/greenLabel/_greenLabel.ejs', {
+                    place: '鎌倉',
+                    txt: '朝比奈IC 26,100m',
+                    modifiers: [],
+                  }) %>
                 </div>
                 <div class="layoutSect__item layoutSect__item--third">
                   <%- include('/common/components/photo/_photo.ejs', {
@@ -368,9 +395,11 @@
                     pictureMode: '',
                     modifiers: []
                   }) %>
-                  <div class="heading--label-small">
-                    <p class="txt">箱根</p>
-                  </div>
+                  <%- include('./components/greenLabel/_greenLabel.ejs', {
+                    place: '箱根',
+                    txt: '箱根口IC 62,400m',
+                    modifiers: [],
+                  }) %>
                 </div>
                 <div class="layoutSect__item layoutSect__item--third">
                   <%- include('/common/components/photo/_photo.ejs', {
@@ -381,9 +410,11 @@
                     pictureMode: '',
                     modifiers: []
                   }) %>
-                  <div class="heading--label-small">
-                    <p class="txt">御殿場</p>
-                  </div>
+                  <%- include('./components/greenLabel/_greenLabel.ejs', {
+                    place: '御殿場',
+                    txt: '御殿場IC 78,700m',
+                    modifiers: [],
+                  }) %>
                 </div>
               </div>
             </div>

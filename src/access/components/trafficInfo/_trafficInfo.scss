@@ -6,14 +6,15 @@
   }
 
   &--bus {
+
     .trafficInfo__term {
       @include pc {
         font-size: 24px;
       }
 
       @include sp {
-        padding-bottom: 0;
         font-size: 16px;
+        padding-bottom: 0;
       }
 
       .station {
@@ -29,15 +30,15 @@
       }
 
       @include sp {
-        padding-bottom: 3px;
         font-size: 16px;
+        padding-bottom: 3px;
         white-space: nowrap;
       }
 
       .num {
+        color: #248068;
         font-family: $font-en;
         font-size: 72px;
-        color: #248068;
 
         @include sp {
           font-size: 36px;
@@ -46,6 +47,7 @@
 
       small {
         font-size: 12px;
+
         @include sp {
           display: inline-block;
         }
@@ -58,8 +60,15 @@
     align-items: flex-end;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 15px;
     position: relative;
+
+    @include pc {
+      padding-bottom: 15px;
+    }
+
+    @include sp {
+      padding-bottom: 5px;
+    }
 
     &--border-none {
       padding-bottom: 0;
@@ -70,7 +79,7 @@
     }
 
     &:before {
-      background-color: rgba(70,70,70,0.2);
+      background-color: rgba(70,70,70,.2);
       bottom: 0;
       content: '';
       height: 1px;
@@ -86,17 +95,17 @@
   }
 
   &__term {
-    position: relative;
-    letter-spacing: .06em;
     color: $color-base-txt-01;
+    letter-spacing: .06em;
+    position: relative;
 
     @include pc {
       font-size: 16px;
     }
 
     @include sp {
-      padding-bottom: 12px;
       font-size: 14px;
+      padding-bottom: 12px;
     }
 
     .station {
@@ -119,13 +128,13 @@
       display: block;
 
       @include pc {
-        margin-bottom: 8px;
         font-size: 16px;
+        margin-bottom: 8px;
       }
 
       @include sp {
-        margin-bottom: 4px;
         font-size: 14px;
+        margin-bottom: 4px;
       }
     }
   }
@@ -158,8 +167,8 @@
     }
 
     small {
-      font-size: 10px;
       color: #464646;
+      font-size: 10px;
 
       @include sp {
         display: block;

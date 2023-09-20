@@ -44,7 +44,11 @@
     color: #ffffff;
     display: flex;
     height: 40px;
-    justify-content: center;
+    justify-content: space-between;
+
+    @include pc {
+      padding: 0 20px;
+    }
 
     @include sp {
       height: 32px;

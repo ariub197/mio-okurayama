@@ -1,0 +1,24 @@
+<%include('/_utils');
+const params = ejsUtils.defaultParamsMapper(locals, {
+  place:'',
+  txt:'',
+  modifiers: []
+});
+const className = ejsUtils.mapModifiers('greenLabel', params.modifiers);
+%>
+
+    <div class="<%- className %>">
+        <p class="txt">
+            <%- params.place %>
+        </p>
+        <p class="txt">
+          <span  class="num">
+            <%- params.txt %>
+          </span>
+          分
+          <span class="small">
+            （日中時）
+          </span>
+        </p>
+      </div>
+

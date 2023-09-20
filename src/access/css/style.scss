@@ -81,7 +81,7 @@
     margin-top: 80px;
   }
 
-  .layoutSect {
+  .layoutSect + .layoutSect  {
     @include pc {
       margin-top: 64px;
     }
