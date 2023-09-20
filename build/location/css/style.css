@@ -1498,37 +1498,34 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media print, screen and (min-width: 768px) {
   .lifeInfoGroup__tab {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-bottom: 60px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .lifeInfoGroup__tab {
-    overflow-x: auto;
     gap: 10px;
-    margin-left: -40px;
-    margin-right: -40px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-bottom: 40px;
-    padding: 0 40px;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  .lifeInfoGroup__tab::-webkit-scrollbar {
-    display: none;
-    -webkit-appearance: none;
   }
 }
 
 .lifeInfoGroup__tabItem {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(148, 175, 170, 0.2);
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1536,28 +1533,24 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: rgba(148, 175, 170, 0.2);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 @media print, screen and (min-width: 768px) {
   .lifeInfoGroup__tabItem {
-    width: 216px;
-    height: 56px;
     font-size: 16px;
+    height: 56px;
+    width: 216px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .lifeInfoGroup__tabItem {
-    min-width: 130px;
-    height: 38px;
     font-size: 11px;
-    letter-spacing: 0.05em;
+    height: 38px;
+    letter-spacing: .05em;
+    min-width: 130px;
   }
 }
 
@@ -1577,15 +1570,15 @@
 }
 
 .lifeInfoGroup .lifeInfoSect {
-  overflow: hidden;
   height: 0;
+  overflow: hidden;
   -webkit-transition: 2s;
   transition: 2s;
 }
 
 .lifeInfoGroup .lifeInfoSect.is-active {
-  overflow: visible;
   height: auto;
+  overflow: visible;
 }
 
 @media print, screen and (min-width: 768px) {
@@ -2060,8 +2053,8 @@
 }
 
 .placeCard {
-  position: relative;
   height: 100%;
+  position: relative;
 }
 
 .placeCard__flex {
@@ -2118,24 +2111,24 @@
 }
 
 .placeCard__body--row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   gap: 16px;
 }
 
 @media screen and (max-width: 768px) {
   .placeCard__body--row {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
     gap: 8px;
   }
 }
@@ -2147,6 +2140,18 @@
 @media screen and (max-width: 768px) {
   .placeCard__body--marginTopWide {
     margin-top: 24px;
+  }
+}
+
+@media print, screen and (min-width: 768px) {
+  .placeCard__body--marginTopWidest {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .placeCard__body--marginTopWidest {
+    margin-top: 30px;
   }
 }
 
@@ -2211,7 +2216,7 @@
 }
 
 .placeCard__ttl + .txt {
-  letter-spacing: 0.08em;
+  letter-spacing: .08em;
   line-height: 1.75;
 }
 
@@ -2246,21 +2251,21 @@
 }
 
 .placeCard__walk {
-  line-height: 1;
   color: #248068;
+  line-height: 1;
 }
 
 @media print, screen and (min-width: 768px) {
   .placeCard__walk {
-    margin-top: 12px;
     font-size: 16px;
+    margin-top: 12px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .placeCard__walk {
-    margin-top: 8px;
     font-size: 13px;
+    margin-top: 8px;
   }
 }
 
@@ -2301,7 +2306,7 @@
 .placeCard__distance {
   color: #248068;
   font-size: 10px;
-  letter-spacing: 0.05em;
+  letter-spacing: .05em;
 }
 
 .placeCard__distance--middle {
@@ -2309,11 +2314,11 @@
 }
 
 .placeCard__subTxt {
-  margin-top: 16px;
-  padding-top: 10px;
   border-top: solid 1px #d6d8d9;
   font-size: 12px;
   line-height: 1.5;
+  margin-top: 16px;
+  padding-top: 10px;
 }
 
 @media screen and (max-width: 768px) {
@@ -2333,15 +2338,15 @@
 }
 
 .placeCard__info {
-  width: 100%;
   margin-top: 24px;
+  width: 100%;
 }
 
 @media print, screen and (min-width: 768px) {
   .placeCard__info {
-    position: absolute;
     bottom: 0;
     left: 0;
+    position: absolute;
   }
 }
 
@@ -2350,22 +2355,22 @@
 }
 
 .placeCard__infoHead {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 12px;
   gap: 5px;
   white-space: nowrap;
-  font-size: 12px;
 }
 
 .placeCard__infoHead:after {
-  content: '';
-  width: 100%;
-  height: 1px;
   background: rgba(70, 70, 70, 0.2);
+  content: '';
+  height: 1px;
+  width: 100%;
 }
 
 .placeCard__infoHead + .txt {
@@ -2373,12 +2378,12 @@
 }
 
 .placeCard .txt {
-  letter-spacing: 0.08em;
+  letter-spacing: .08em;
   line-height: 1.75;
 }
 
 .placeCard .txt + .caption {
-  letter-spacing: 0.05em;
+  letter-spacing: .05em;
 }
 
 @media print, screen and (min-width: 768px) {

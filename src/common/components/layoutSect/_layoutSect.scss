@@ -7,8 +7,8 @@
   }
 
   @include sp {
-    justify-content: space-between;
     gap: 40px 20px;
+    justify-content: space-between;
   }
 
   &--floorMap {
@@ -90,6 +90,7 @@
     }
 
     &--headSmall {
+
       .placeCard__ttl {
         @include pc {
           font-size: 14px !important;
@@ -98,8 +99,20 @@
     }
 
     .photo {
+
       img {
         width: 100%;
+      }
+    }
+
+    .txt--noWrap {
+      @include pc {
+        font-size: 16px;
+      }
+
+      @include sp {
+        font-size: 12px;
+        white-space: nowrap;
       }
     }
   }

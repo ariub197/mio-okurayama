@@ -8075,10 +8075,10 @@ button.swiper-pagination-bullet {
 
 @media screen and (max-width: 768px) {
   .layoutSect {
+    gap: 40px 20px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    gap: 40px 20px;
   }
 }
 
@@ -8186,6 +8186,19 @@ button.swiper-pagination-bullet {
 
 .layoutSect__item .photo img {
   width: 100%;
+}
+
+@media print, screen and (min-width: 768px) {
+  .layoutSect__item .txt--noWrap {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .layoutSect__item .txt--noWrap {
+    font-size: 12px;
+    white-space: nowrap;
+  }
 }
 
 @media print, screen and (min-width: 768px) {
