@@ -7099,45 +7099,6 @@ button.swiper-pagination-bullet {
   margin-top: 20px;
 }
 
-.greenLabel {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #315048;
-  color: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 40px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-@media print, screen and (min-width: 768px) {
-  .greenLabel {
-    padding: 0 20px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .greenLabel {
-    height: 32px;
-  }
-}
-
-@media print, screen and (min-width: 768px) {
-  .photo + .greenLabel {
-    margin-top: 20px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .photo + .greenLabel {
-    margin-top: 10px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .heading {
     font-size: 18px;
@@ -8220,6 +8181,12 @@ button.swiper-pagination-bullet {
 @media screen and (max-width: 768px) {
   .layoutSect__item--quarter {
     width: calc(50% - 10px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .layoutSect__item--spOne {
+    width: 100%;
   }
 }
 

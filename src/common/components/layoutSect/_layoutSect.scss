@@ -89,6 +89,12 @@
       }
     }
 
+    &--spOne {
+      @include sp {
+        width: 100%;
+      }
+    }
+
     &--headSmall {
 
       .placeCard__ttl {
