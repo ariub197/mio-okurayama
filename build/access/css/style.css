@@ -588,6 +588,12 @@
   margin-top: 10px;
 }
 
+@media screen and (max-width: 768px) {
+  .trafficInfo__inner + .caption {
+    margin-top: 5px;
+  }
+}
+
 .trafficInfo__term {
   color: #464646;
   letter-spacing: .06em;
@@ -897,6 +903,18 @@
   }
 }
 
+@media print, screen and (min-width: 768px) {
+  .airport-section .txt + .photo {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .airport-section .txt + .photo {
+    margin-top: 24px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .airport-section .photo__capOut {
     letter-spacing: .02em;
@@ -961,5 +979,17 @@
 @media screen and (max-width: 768px) {
   .car-section .layoutSect {
     margin-top: 24px;
+  }
+}
+
+@media print, screen and (min-width: 768px) {
+  .car-section .layoutSect + .caption {
+    margin-top: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .car-section .layoutSect + .caption {
+    margin-top: 16px;
   }
 }

@@ -1101,6 +1101,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transform: 0.3s;
+          transform: 0.3s;
+  opacity: 1;
 }
 
 @media print, screen and (min-width: 768px) {
@@ -1125,6 +1128,10 @@
   .gourmetSwiper__circleBtn:not(:last-of-type) {
     margin-right: 20px;
   }
+}
+
+.gourmetSwiper__circleBtn.swiper-button-disabled {
+  opacity: 0.4;
 }
 
 .hospitalCard {
@@ -2863,4 +2870,8 @@
   .location-lifeinfo .bgLayer {
     padding: 80px 0;
   }
+}
+
+[aria-disabled] {
+  cursor: default !important;
 }

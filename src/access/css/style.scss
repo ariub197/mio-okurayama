@@ -110,6 +110,16 @@
     margin-top: 60px;
   }
 
+  .txt + .photo {
+    @include pc {
+      margin-top: 30px;
+    }
+
+    @include sp {
+      margin-top: 24px;
+    }
+  }
+
   .photo {
 
     &__capOut {
@@ -171,6 +181,16 @@
 
     @include sp {
       margin-top: 24px;
+    }
+
+    & + .caption {
+      @include pc {
+        margin-top: 24px;
+      }
+
+      @include sp {
+        margin-top: 16px;
+      }
     }
   }
 }

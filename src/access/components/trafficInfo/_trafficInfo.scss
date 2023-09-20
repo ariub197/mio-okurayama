@@ -91,6 +91,10 @@
     & + .caption {
       letter-spacing: 0;
       margin-top: 10px;
+
+      @include sp {
+        margin-top: 5px;
+      }
     }
   }
 

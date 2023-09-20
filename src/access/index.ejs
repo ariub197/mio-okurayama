@@ -171,7 +171,7 @@
                     modifiers: []
                   }) %>
                 </div>
-               
+
                 <div class="layoutSect__item layoutSect__item--half">
                   <%- include('/common/components/photo/_photo.ejs', {
                     imagePath: '<img src="./imgs/img-travel-02.jpg" width="304" height="203">',
@@ -182,7 +182,7 @@
                     modifiers: []
                   }) %>
                 </div>
-                
+
               </div>
 
               <div class="layoutSect">
@@ -201,7 +201,7 @@
                     modifiers: [],
                   }) %>
                 </div>
-               
+
                 <div class="layoutSect__item layoutSect__item--third layoutSect__item--spOne">
                   <%- include('/common/components/photo/_photo.ejs', {
                     imagePath: '<img src="./imgs/img-travel-04.jpg" width="304" height="203">',
@@ -233,7 +233,7 @@
                     modifiers: [],
                   }) %>
                 </div>
-                
+
               </div>
             </div>
           </div>
@@ -266,11 +266,20 @@
           </div>
           <div class="accrArea__body">
             <div class="accrArea__cont">
-              <div class="layoutSect layoutSect--center">
+              <div class="layoutSect">
                 <div class="layoutSect__item layoutSect__item--half">
-                  <p class="txt">「新横浜」駅の駅前バスターミナル1番乗場からは羽田空港行きのリムジンバスが運行しています。大きな荷物のある出張や旅行の際にも便利です。</p>
+                  <%- include('/common/components/photo/_photo.ejs', {
+                    imagePath: '<img src="./imgs/img-airport-02.jpg" width="480" height="304">',
+                    alt: 'キャプション',
+                    captionPosition: 'capOut',
+                    captionColor: '',
+                    pictureMode: '',
+                    modifiers: []
+                  }) %>
                 </div>
                 <div class="layoutSect__item layoutSect__item--half">
+                  <p class="txt">「新横浜」駅の駅前バスターミナル1番乗場からは羽田空港行きのリムジンバスが運行しています。大きな荷物のある出張や旅行の際にも便利です。</p>
+
                   <%- include('/common/components/photo/_photo.ejs', {
                     imagePath: '<img src="./imgs/img-airport-01.jpg" width="480" height="217">',
                     alt: '※京浜急行バスホームページより（2023年8月現在）<br>※掲載の各情報は今後変更される場合があります。',
@@ -417,6 +426,7 @@
                   }) %>
                 </div>
               </div>
+              <p class="caption">※掲載の最寄りICまでの距離は駐車場出入口を起点にゼンリン地図にて計測しております。</p>
             </div>
           </div>
         </div>

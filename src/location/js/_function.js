@@ -26,7 +26,7 @@ export default class location {
           });
           const slideSwitchSpeed = 1000;
           const optionArray = {
-            loop: true,
+            loop: false,
             pagination: {
               el: '.gourmetSwiper--' + i + ' .swiper-pagination',
               clickable: true
@@ -35,10 +35,10 @@ export default class location {
               nextEl: '.js-gourmetSwiper-next',
               prevEl: '.js-gourmetSwiper-prev'
             },
-            autoplay: {
-              delay: 5000,
-              disableOnInteraction: false
-            },
+            //autoplay: {
+              //delay: 5000,
+              //disableOnInteraction: false
+            //},
             on: {
               init: function () {
                 setTimeout(() => {
@@ -55,15 +55,15 @@ export default class location {
             },
             allowTouchMove: true,
             grabCursor: true,
-            scrollbar: false,
-            loopedSlides: 10,
+            scrollbar: true,
+            loopedSlides: 0,
             breakpoints: {
               768: {
-                loop: true,
+                loop: false,
                 centeredSlides: false,
                 scrollbar: false,
                 slidesPerView: '3',
-                spaceBetween: 48
+                spaceBetween: 48,
               }
             }
           };
