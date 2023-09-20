@@ -2090,6 +2090,12 @@
 }
 
 @media print, screen and (min-width: 768px) {
+  .placeCard__flex--gapNarrow {
+    gap: 16px;
+  }
+}
+
+@media print, screen and (min-width: 768px) {
   .placeCard__flex + .txt {
     margin-top: 30px;
   }
@@ -2260,6 +2266,7 @@
 .placeCard__walk {
   color: #248068;
   line-height: 1;
+  white-space: nowrap;
 }
 
 @media print, screen and (min-width: 768px) {
