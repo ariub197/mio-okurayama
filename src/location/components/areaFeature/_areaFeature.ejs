@@ -10,7 +10,7 @@ const className = ejsUtils.mapModifiers('areaFeature', params.modifiers);
     <%- include('../placeInfo/_placeInfo.ejs', {
       term: value.term,
       desc: value.desc,
-      modifiers: []
+      modifiers: value.modifiers
     }) %>
 <% }); %>
 </div>

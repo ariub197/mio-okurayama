@@ -951,7 +951,7 @@
 
 @media screen and (max-width: 768px) {
   .gourmetSwiper {
-    margin-top: 24px;
+    margin-top: 40px;
   }
 }
 
@@ -2519,6 +2519,22 @@
   }
 }
 
+@media print, screen and (min-width: 768px) {
+  .placeInfo--double .placeInfo__desc .num {
+    min-width: 26px;
+    margin-left: 3px;
+    text-align: left;
+  }
+}
+
+@media print, screen and (min-width: 768px) {
+  .placeInfo--doubleWide .placeInfo__desc .num {
+    min-width: 30px;
+    margin-left: 3px;
+    text-align: left;
+  }
+}
+
 .placeInfo__term {
   letter-spacing: .04em;
   position: relative;
@@ -2557,10 +2573,13 @@
 .placeInfo__desc .num {
   font-family: "Cinzel", serif;
   line-height: .7;
+  text-align: center;
 }
 
 @media print, screen and (min-width: 768px) {
   .placeInfo__desc .num {
+    display: inline-block;
+    min-width: 17px;
     font-size: 26px;
   }
 }
@@ -2635,6 +2654,27 @@
   }
 }
 
+.shinyokohamaSect__contFirst .photo + .txt {
+  margin-top: 16px;
+  letter-spacing: 0;
+}
+
+@media print, screen and (min-width: 768px) {
+  .shinyokohamaSect__contFirstInner {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .shinyokohamaSect__contFirstInner {
+    margin-top: 60px;
+    padding: 20px;
+    background: #ffffff;
+    -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
 @media print, screen and (min-width: 768px) {
   .shinyokohamaSect__contSecond {
     margin-top: 120px;
@@ -2673,6 +2713,33 @@
 @media screen and (max-width: 768px) {
   .shinyokohamaSect__contFourth {
     margin-top: 64px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .shinyokohamaSect__contFourth .layoutSect--floorMap + .layoutSect--gapNarrow {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .shinyokohamaSect__contFourthInner {
+    padding: 20px;
+    background: #ffffff;
+    -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media print, screen and (min-width: 768px) {
+  .shinyokohamaSect__contFourthInner + .layoutSect {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .shinyokohamaSect__contFourthInner + .layoutSect {
+    margin-top: 80px;
   }
 }
 

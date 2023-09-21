@@ -18,6 +18,36 @@
     width: 100%;
   }
 
+  &--double {
+    .placeInfo__desc {
+      .num {
+        @include pc {
+          min-width: 26px;
+          margin-left: 3px;
+          text-align: left;
+        }
+
+        @include sp {
+        }
+      }
+    }
+  }
+
+  &--doubleWide {
+    .placeInfo__desc {
+      .num {
+        @include pc {
+          min-width: 30px;
+          margin-left: 3px;
+          text-align: left;
+        }
+
+        @include sp {
+        }
+      }
+    }
+  }
+
   &__term {
     letter-spacing: .04em;
     position: relative;
@@ -48,8 +78,11 @@
     .num {
       font-family: $font-en;
       line-height: .7;
+      text-align: center;
 
       @include pc {
+        display: inline-block;
+        min-width: 17px;
         font-size: 26px;
       }
 

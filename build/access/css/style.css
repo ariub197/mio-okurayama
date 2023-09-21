@@ -57,6 +57,12 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .accrArea__cont--mobilePadding .layoutSect {
+    margin: 0 32px;
+  }
+}
+
 .accrArea__cont .touchFigure__inner {
   -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
@@ -899,7 +905,7 @@
 
 @media screen and (max-width: 768px) {
   .airport-section {
-    margin-top: 60px;
+    margin-top: 80px;
   }
 }
 
@@ -965,7 +971,7 @@
 
 @media screen and (max-width: 768px) {
   .car-section {
-    margin-top: 60px;
+    margin-top: 80px;
     padding-bottom: 40px;
   }
 }

@@ -18,6 +18,24 @@
     @include sp {
       margin-top: 48px;
     }
+
+    .photo + .txt {
+      margin-top: 16px;
+      letter-spacing: 0;
+    }
+  }
+
+  &__contFirstInner {
+    @include pc {
+      margin-top: 60px;
+    }
+
+    @include sp {
+      margin-top: 60px;
+      padding: 20px;
+      background: #ffffff;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
   }
 
   &__contSecond {
@@ -52,6 +70,30 @@
 
     @include sp {
       margin-top: 64px;
+    }
+
+    .layoutSect--floorMap + .layoutSect--gapNarrow {
+      @include sp {
+        margin-top: 80px;
+      }
+    }
+  }
+
+  &__contFourthInner {
+    @include sp {
+      padding: 20px;
+      background: #ffffff;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    & + .layoutSect {
+      @include pc {
+        margin-top: 60px;
+      }
+
+      @include sp {
+        margin-top: 80px;
+      }
     }
   }
 }

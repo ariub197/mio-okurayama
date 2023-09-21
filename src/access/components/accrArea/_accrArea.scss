@@ -54,6 +54,14 @@
       padding-top: 24px;
     }
 
+    &--mobilePadding {
+      .layoutSect {
+        @include sp {
+          margin: 0 32px;
+        }
+      }
+    }
+
     .touchFigure__inner {
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
     }
