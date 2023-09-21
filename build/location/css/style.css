@@ -2519,19 +2519,39 @@
   }
 }
 
+.placeInfo--double .placeInfo__desc .num {
+  text-align: left;
+}
+
 @media print, screen and (min-width: 768px) {
   .placeInfo--double .placeInfo__desc .num {
     min-width: 26px;
     margin-left: 3px;
-    text-align: left;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .placeInfo--double .placeInfo__desc .num {
+    min-width: 18px;
+    margin-left: 2px;
+  }
+}
+
+.placeInfo--doubleWide .placeInfo__desc .num {
+  text-align: left;
 }
 
 @media print, screen and (min-width: 768px) {
   .placeInfo--doubleWide .placeInfo__desc .num {
     min-width: 30px;
     margin-left: 3px;
-    text-align: left;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .placeInfo--doubleWide .placeInfo__desc .num {
+    min-width: 22px;
+    margin-left: 2px;
   }
 }
 
@@ -2571,6 +2591,7 @@
 }
 
 .placeInfo__desc .num {
+  display: inline-block;
   font-family: "Cinzel", serif;
   line-height: .7;
   text-align: center;
@@ -2578,7 +2599,6 @@
 
 @media print, screen and (min-width: 768px) {
   .placeInfo__desc .num {
-    display: inline-block;
     min-width: 17px;
     font-size: 26px;
   }
@@ -2586,6 +2606,7 @@
 
 @media screen and (max-width: 768px) {
   .placeInfo__desc .num {
+    min-width: 12px;
     font-size: 18px;
   }
 }

@@ -21,13 +21,16 @@
   &--double {
     .placeInfo__desc {
       .num {
+        text-align: left;
+
         @include pc {
           min-width: 26px;
           margin-left: 3px;
-          text-align: left;
         }
 
         @include sp {
+          min-width: 18px;
+          margin-left: 2px;
         }
       }
     }
@@ -36,13 +39,16 @@
   &--doubleWide {
     .placeInfo__desc {
       .num {
+        text-align: left;
+
         @include pc {
           min-width: 30px;
           margin-left: 3px;
-          text-align: left;
         }
 
         @include sp {
+          min-width: 22px;
+          margin-left: 2px;
         }
       }
     }
@@ -76,17 +82,18 @@
     }
 
     .num {
+      display: inline-block;
       font-family: $font-en;
       line-height: .7;
       text-align: center;
 
       @include pc {
-        display: inline-block;
         min-width: 17px;
         font-size: 26px;
       }
 
       @include sp {
+        min-width: 12px;
         font-size: 18px;
       }
     }
