@@ -9,9 +9,9 @@ const params = ejsUtils.defaultParamsMapper(locals, {
 
 <footer id="gFooter" class="footer">
   <div class="footer__cont">
-    <div class="footer-captionArea">
+    <% if(params.footerCap !== '') { %> <div class="footer-captionArea">
       <p class="caption"><%- params.footerCap %></p>
-    </div>
+    </div> <% } %>
     <div class="footer-facility">
       <%# <a href="https://www.yamada-kensetsu.co.jp/zizai" target="_blank" class="footer-facility__bnrLink">
         <img src="< %= relativePath % >common/imgs/bnr-gooddesign.jpg" alt="GOOD DESIGN 自在空間">
