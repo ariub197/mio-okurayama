@@ -8113,6 +8113,18 @@ button.swiper-pagination-bullet {
 }
 
 @media print, screen and (min-width: 768px) {
+  .layoutSect--gapMiddle {
+    gap: 48px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .layoutSect--gapMiddle {
+    gap: 36px;
+  }
+}
+
+@media print, screen and (min-width: 768px) {
   .layoutSect--gapWide {
     gap: 48px;
   }
@@ -8178,6 +8190,24 @@ button.swiper-pagination-bullet {
 @media screen and (max-width: 768px) {
   .layoutSect__item--third {
     width: calc(50% - 10px);
+  }
+}
+
+@media print, screen and (min-width: 768px) {
+  .layoutSect__item--thirdLarge {
+    width: 656px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .layoutSect__item--thirdLarge {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .layoutSect__item--mobileFull {
+    width: 100%;
   }
 }
 

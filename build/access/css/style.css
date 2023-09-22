@@ -325,6 +325,27 @@
   }
 }
 
+.photoGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media print, screen and (min-width: 768px) {
+  .photoGroup__item {
+    width: 304px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .photoGroup__item {
+    width: calc(50% - 10px);
+  }
+}
+
 @media print, screen and (min-width: 768px) {
   .routeMap .touchFigure {
     width: 100%;
@@ -926,6 +947,10 @@
     letter-spacing: .02em;
     text-align: right;
   }
+}
+
+.airport-section .accrArea__cont .layoutSect__item--half.last .photo__capOut {
+  position: static;
 }
 
 @media print, screen and (min-width: 768px) {

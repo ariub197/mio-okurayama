@@ -129,6 +129,28 @@
       }
     }
   }
+
+  .accrArea {
+
+    &__cont {
+
+      .layoutSect {
+
+        &__item {
+
+          &--half {
+
+            &.last {
+
+              .photo__capOut  {
+                position: static;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .bus-section {

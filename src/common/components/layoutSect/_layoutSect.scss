@@ -31,6 +31,16 @@
     }
   }
 
+  &--gapMiddle {
+    @include pc {
+      gap: 48px;
+    }
+
+    @include sp {
+      gap: 36px;
+    }
+  }
+
   &--gapWide {
     @include pc {
       gap: 48px;
@@ -82,6 +92,22 @@
 
       @include sp {
         width: calc(50% - 10px);
+      }
+    }
+
+    &--thirdLarge {
+      @include pc {
+        width: 656px;
+      }
+
+      @include sp {
+        width: 100%;
+      }
+    }
+
+    &--mobileFull {
+      @include sp {
+        width: 100%;
       }
     }
 
