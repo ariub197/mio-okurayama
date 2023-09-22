@@ -1,0 +1,23 @@
+.parkMap {
+  margin: 0 auto;
+
+  @include pc {
+    width: 670px;
+  }
+
+  .touchFigure {
+    @include sp {
+      width: 100%;
+    }
+  }
+
+  .specialCard + &  {
+    @include pc {
+      margin-top: 80px;
+    }
+
+    @include sp {
+      margin-top: 30px;
+    }
+  }
+}

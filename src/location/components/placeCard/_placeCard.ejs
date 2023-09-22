@@ -1,0 +1,21 @@
+<% include('/_utils.ejs');
+	const params = ejsUtils.defaultParamsMapper(locals,{
+		visual:'',
+		ttl:'',
+		walk: '',
+		subtxt: '',
+		distance: '',
+		tagList: '',
+		column: '',
+		modifiers: []
+	});
+	const className = ejsUtils.mapModifiers('placeCard', params.modifiers);
+%><div class="placeCard">
+  <%- include('/common/components/photo/_photo.ejs', visual) %>
+  <div class="placeCard__body<% if(params.column == 'row'){ %> placeCard__body--row<% } %>">
+    <div class="placeCard__ttl"><%- params.ttl %></div>
+    <% if(params.walk !== ''){ %><div class="placeCard__walk">徒歩<span class="num"><%- params.walk %></span>分<% if(params.distance !== ''){ %><span class="placeCard__distance"><%- params.distance %></span><% } %></div><% } %>
+    <% if(params.subtxt !== ''){ %><div class="placeCard__subTxt"><%- params.subtxt %></div><% } %>
+    <% if(params.tagList !== ''){ %><ul class="tagList"><% params.tagList.forEach(tag => { %><li class="tagList__item"><%- tag %></li><% });%></ul><% } %>
+  </div>
+</div>

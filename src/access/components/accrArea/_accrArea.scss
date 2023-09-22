@@ -1,0 +1,69 @@
+.accrArea {
+
+  &__head {
+    cursor: pointer;
+
+    @include pc {
+      pointer-events: none;
+    }
+
+
+    .stateIcon {
+      transition: 0.3s;
+      @include pc {
+        display: none;
+      }
+    }
+
+    &.is-open {
+
+      .stateIcon {
+
+        &__circle {
+          transform: scale(1,-1);
+
+          .arrowSVG {
+          }
+        }
+      }
+    }
+  }
+
+  &__body {
+    transition: .3s;
+
+    @include pc {
+      height: 100% !important;
+      max-height: 100% !important;
+    }
+
+    @include sp {
+      overflow: hidden;
+    }
+
+    &.is-open {
+      overflow: visible;
+      height: auto;
+    }
+  }
+
+  &__cont {
+    padding-top: 64px;
+
+    @include sp {
+      padding-top: 24px;
+    }
+
+    &--mobilePadding {
+      .layoutSect {
+        @include sp {
+          margin: 0 32px;
+        }
+      }
+    }
+
+    .touchFigure__inner {
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+  }
+}

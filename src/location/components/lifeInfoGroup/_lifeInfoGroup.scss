@@ -1,0 +1,68 @@
+.lifeInfoGroup {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__tab {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include pc {
+      justify-content: space-between;
+      margin-bottom: 60px;
+    }
+
+    @include sp {
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__tabItem {
+    align-items: center;
+    background: rgba(148,175,170,.2);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    transition: .3s;
+
+    @include pc {
+      font-size: 16px;
+      height: 56px;
+      width: 216px;
+    }
+
+    @include sp {
+      font-size: 11px;
+      height: 38px;
+      letter-spacing: .05em;
+      min-width: 130px;
+    }
+
+    &:nth-of-type(n+5) {
+      margin-top: 20px;
+
+      @include sp {
+        margin-top: 0;
+      }
+    }
+
+    &.is-active {
+      background: rgba(148,175,170,.8);
+      color: #ffffff;
+    }
+  }
+
+  .lifeInfoSect {
+    height: 0;
+    overflow: hidden;
+    transition: 2s;
+
+    &.is-active {
+      height: auto;
+      overflow: visible;
+    }
+  }
+}

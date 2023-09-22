@@ -1,0 +1,183 @@
+.trafficInfo {
+  position: relative;
+
+  @include sp {
+    margin: 0 auto;
+  }
+
+  &--bus {
+
+    .trafficInfo__term {
+      @include pc {
+        font-size: 24px;
+      }
+
+      @include sp {
+        font-size: 16px;
+        padding-bottom: 0;
+      }
+
+      .station {
+        @include sp {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .trafficInfo__desc {
+      @include pc {
+        font-size: 24px;
+      }
+
+      @include sp {
+        font-size: 16px;
+        padding-bottom: 3px;
+        white-space: nowrap;
+      }
+
+      .num {
+        color: #248068;
+        font-family: $font-en;
+        font-size: 72px;
+
+        @include sp {
+          font-size: 36px;
+        }
+      }
+
+      small {
+        font-size: 12px;
+
+        @include sp {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+
+  &__inner {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    @include pc {
+      padding-bottom: 15px;
+    }
+
+    @include sp {
+      padding-bottom: 5px;
+    }
+
+    &--border-none {
+      padding-bottom: 0;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    &:before {
+      background-color: rgba(70,70,70,.2);
+      bottom: 0;
+      content: '';
+      height: 1px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+    & + .caption {
+      letter-spacing: 0;
+      margin-top: 10px;
+
+      @include sp {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  &__term {
+    color: $color-base-txt-01;
+    letter-spacing: .06em;
+    position: relative;
+
+    @include pc {
+      font-size: 16px;
+    }
+
+    @include sp {
+      font-size: 14px;
+      padding-bottom: 12px;
+    }
+
+    .station {
+      line-height: 1;
+
+      @include pc {
+        font-size: 32px;
+      }
+
+      @include sp {
+        font-size: 20px;
+      }
+    }
+
+    .waku {
+      vertical-align: top;
+    }
+
+    .sub {
+      display: block;
+
+      @include pc {
+        font-size: 16px;
+        margin-bottom: 8px;
+      }
+
+      @include sp {
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  &__desc {
+    letter-spacing: .06em;
+    line-height: 1;
+    text-align: right;
+
+    @include pc {
+      font-size: 16px;
+    }
+
+    @include sp {
+      font-size: 12px;
+    }
+
+    .num {
+      color: #248068;
+      font-family: $font-en;
+      line-height: .7;
+
+      @include pc {
+        font-size: 40px;
+      }
+
+      @include sp {
+        font-size: 32px;
+      }
+    }
+
+    small {
+      color: #464646;
+      font-size: 10px;
+
+      @include sp {
+        display: block;
+        margin-top: 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.areaSect {
+
+
+  &__head {
+    background-color: #d5e7eb;
+
+    @include pc {
+      padding: 20px;
+      width: 100%;
+    }
+
+    @include sp {
+      margin-left: -30px;
+      padding: 10px 30px;
+      width: calc(100% + 30px);
+    }
+
+    & + .areaSect__cont {
+      @include pc {
+        margin-top: 40px;
+      }
+
+      @include sp {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &__heading {
+    color: #464646;
+    letter-spacing: 0;
+
+    @include pc {
+      font-size: 20px;
+      text-align: center;
+
+      @include lhCrop(32 / 20);
+    }
+
+    @include sp {
+      font-size: 14px;
+
+      @include lhCrop(44 / 28);
+    }
+  }
+
+  & + .areaSect {
+    @include pc {
+      margin-top: 110px;
+    }
+
+    @include sp {
+      margin-top: 60px;
+    }
+  }
+
+  & + .relatedBox {
+    @include pc {
+      margin-top: 150px;
+    }
+
+    @include sp {
+      margin-top: 90px;
+    }
+  }
+}

@@ -211,7 +211,7 @@
 .main {
   .contentsNav {
     &__item {
-      &:nth-of-type(3) {
+      &:nth-of-type(2) {
         .contentsNav__image {
           &:after {
             content: '1';
@@ -219,10 +219,26 @@
         }
       }
 
-      &:nth-of-type(7) {
+      &:nth-of-type(3) {
         .contentsNav__image {
           &:after {
             content: '2';
+          }
+        }
+      }
+
+      &:nth-of-type(4) {
+        .contentsNav__image {
+          &:after {
+            content: '3';
+          }
+        }
+      }
+
+      &:nth-of-type(7) {
+        .contentsNav__image {
+          &:after {
+            content: '4';
           }
         }
       }

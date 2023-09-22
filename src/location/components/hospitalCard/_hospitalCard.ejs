@@ -1,0 +1,24 @@
+<% include('/_utils.ejs');
+	const params = ejsUtils.defaultParamsMapper(locals,{
+		visual:'',
+		ttl:'',
+		distance: '',
+		caption: '',
+		modifiers: []
+	});
+	const className = ejsUtils.mapModifiers('hospitalCard', params.modifiers);
+  let fmtDistance = params.distance.replace(/徒歩(\d+)分/g, '徒歩<span class="num">$1</span>分');
+  fmtDistance = fmtDistance.replace(/（/g, '<small>（').replace(/）/g, '）</small>');
+
+%><div class="<%- className %>">
+  <div class="hospitalCard__head">
+    <%- include('/common/components/photo/_photo.ejs', visual) %>
+  </div>
+  <div class="hospitalCard__cont">
+    <div class="hospitalCard__ttl"><%- params.ttl %></div>
+    <div class="hospitalCard__distance"><%- fmtDistance %></div>
+    <p class="caption"><%- params.caption %></p>
+  </div>
+</div>
+
+

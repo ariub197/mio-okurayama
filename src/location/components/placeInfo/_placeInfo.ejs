@@ -1,0 +1,15 @@
+<%include('/_utils');
+const params = ejsUtils.defaultParamsMapper(locals, {
+  term: '',
+  desc: '',
+  modifiers: []
+});
+const fmtDesc = params.desc.replace(/徒歩(\d+)分/g, '徒歩<span class="num">$1</span>分');
+
+const className = ejsUtils.mapModifiers('placeInfo', params.modifiers);
+%><div class="<%- className %>">
+  <div class="placeInfo__term"><%- params.term %></div>
+  <div class="dot"></div>
+  <div class="placeInfo__desc"><%- fmtDesc %></div>
+</div>
+

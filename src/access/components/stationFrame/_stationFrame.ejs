@@ -1,0 +1,22 @@
+<% include('/_utils');
+const params = ejsUtils.defaultParamsMapper(locals,{
+  url: '',
+  name: '',
+  desc1: '',
+  desc2: '',
+  modifiers: [],
+});
+%><div class="stationFrame">
+    <div class="photo">
+        <picture class="photo__pic">
+            <source media="(min-width: 768px)" data-srcset="<%- params.url %>" width="336" height="440" srcset="<%- params.url %>">
+            <img src="<%- params.url %>" data-src="<%- params.url %>" width="336" height="336" class="photo__image ls-is-cached lazyloaded">
+        </picture>
+    </div>
+    <div class="stationFrame__info">
+        <div class="stationFrame__infoInner">
+            <div class="stationFrame__term"><%- params.name %></div>
+            <div class="stationFrame__desc"><span class="num"><%- params.desc1 %></span><span class="min">min.</span><span class="day">（日中時<%- params.desc2 %>分）</span></div>
+        </div>
+    </div>
+</div>

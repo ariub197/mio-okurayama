@@ -1,0 +1,440 @@
+<% var pageData = {
+		pageDir: 'access'
+	};
+%>
+<%- include('/_head', {
+  pageId: pageData.pageDir,
+  title: 'アクセス',
+  canonical:'access/',
+  }) %>
+<%- include('/common/inc/header/_header.ejs', {pageId: pageData.pageDir}) %>
+<main class="main">
+  <div class="container">
+    <%- include('/common/components/keyVisual/_keyVisual.ejs', {
+      pageTitle: {
+        en: 'ACCESS',
+      },
+      alt:'image photo',
+      captionColor:'white',
+      modifiers:[]
+    }) %>
+    <div class="wrap">
+
+      <section class="access-catch">
+        <h4 class="heading--02" data-align="center" data-color="lightGreen">都心＆横浜へ快適アクセス。<br>さらに新幹線利用で旅行や<br class="only-sp">レジャーもスムーズに。</h4>
+      </section>
+
+      <section class="access-station">
+        <div class="stationGallery">
+          <div class="stationGallery__item">
+            <%- include('./components/stationFrame/_stationFrame.ejs', {
+              url: './imgs/img-access-01.jpg',
+              name: 'Yokohama',
+              desc1: '10',
+              desc2: '9',
+            }) %>
+          </div>
+          <div class="stationGallery__item">
+            <%- include('./components/stationFrame/_stationFrame.ejs', {
+              url: './imgs/img-access-02.jpg',
+              name: 'Shibuya',
+              desc1: '28',
+              desc2: '26',
+            }) %>
+          </div>
+          <div class="stationGallery__item">
+            <%- include('./components/stationFrame/_stationFrame.ejs', {
+              url: './imgs/img-access-03.jpg',
+              name: 'Tokyo',
+              desc1: '38',
+              desc2: '37',
+            }) %>
+          </div>
+          <p class="caption">all image photo</p>
+        </div>
+
+        <div class="routeMap">
+          <%- include('/common/components/touchFigure/_touchFigure.ejs', {
+            imagePath: './imgs/img-rootmap.jpg',
+            alt: '路線概念図<br>※一部路線・駅等を省略して表記しております。',
+            captionPosition: 'capOut',
+            captionColor: '',
+            pictureMode: '',
+            modifiers: ['swipe']
+          }) %>
+        </div>
+
+        <div class="transportation">
+          <div class="trafficLayout">
+            <div class="trafficLayout__head">東急東横線「大倉山」駅より</div>
+            <div class="trafficLayout__cont trafficLayout__cont--station">
+              <%- include('./components/trafficInfo/_trafficInfo.ejs', {
+                station: '横浜',
+                commute: '<span class="num">10</span>分<small>（日中時9分）</small>',
+                cap: '【通勤時】東急東横線利用。「菊名」駅より東急東横線急行乗換。<br>【日中時】東急東横線利用。「菊名」駅より東急東横線Fライナー特急乗換。',
+                modifiers: [],
+              }) %>
+              <%- include('./components/trafficInfo/_trafficInfo.ejs', {
+                station: 'みなとみらい',
+                commute: '<span data-color="lightGreen">直通</span><span class="num">14</span>分<small>（日中時12分）</small>',
+                cap: '【通勤時】東急東横線利用（みなとみらい線直通）。<br>【日中時】東急東横線利用、「菊名」駅より東急東横線急行乗換（みなとみらい線直通）。',
+                modifiers: [],
+              }) %>
+              <%- include('./components/trafficInfo/_trafficInfo.ejs', {
+                station: '渋谷',
+                commute: '<span class="num">28</span>分<small>（日中時26分）</small>',
+                cap: '【通勤時】東急東横線利用、「自由が丘」駅より東急東横線通勤特急乗換。<br>【日中時】東急東横線利用、「自由が丘」駅より東急東横線Fライナー特急乗換。',
+                modifiers: [],
+              }) %>
+              <%- include('./components/trafficInfo/_trafficInfo.ejs', {
+                station: '品川',
+                commute: '<span class="num">30</span>分<small>（日中時29分）</small>',
+                cap: '【通勤時・日中時】東急東横線利用、「武蔵小杉」駅よりJR横須賀線乗換。',
+                modifiers: [],
+              }) %>
+              <%- include('./components/trafficInfo/_trafficInfo.ejs', {
+                station: '東京',
+                commute: '<span class="num">38</span>分<small>（日中時37分）</small>',
+                cap: '【通勤時・日中時】東急東横線利用、「武蔵小杉」駅よりJR横須賀線乗換。',
+                modifiers: [],
+              }) %>
+              <%- include('./components/trafficInfo/_trafficInfo.ejs', {
+                station: '新宿',
+                commute: '<span class="num">41</span>分<small>（日中時37分）</small>',
+                cap: '【通勤時】東急東横線利用、「武蔵小杉」駅よりJR湘南新宿ライン乗換。<br>【日中時】東急東横線利用、「自由が丘」駅より東急東横線特急乗換（東京メトロ副都心線直通）、<br>「新宿三丁目」駅より東京メトロ丸ノ内線乗換。',
+                modifiers: [],
+              }) %>
+            </div>
+          </div>
+
+          <div class="trafficLayout">
+            <div class="trafficLayout__head">相鉄・東急新横浜線／横浜市営地下鉄ブルーライン／JR横浜線「新横浜」駅より</div>
+            <div class="trafficLayout__cont trafficLayout__cont--station">
+              <%- include('./components/trafficInfo/_trafficInfo.ejs', {
+                station: '桜木町',
+                commute: '<span data-color="lightGreen">直通</span><span class="num">15</span>分<small>（日中時11分）</small>',
+                cap: '【通勤時】横浜市営地下鉄ブルーライン利用。<br>【日中時】横浜市営地下鉄ブルーライン快速利用',
+                modifiers: [],
+              }) %>
+              <%- include('./components/trafficInfo/_trafficInfo.ejs', {
+                station: 'あざみ野',
+                commute: '<span data-color="lightGreen">直通</span><span class="num">16</span>分<small>（日中時16分）</small>',
+                cap: '【通勤時】横浜市営地下鉄ブルーライン利用。<br>【日中時】横浜市営地下鉄ブルーライン快速利用。',
+                modifiers: [],
+              }) %>
+              <%- include('./components/trafficInfo/_trafficInfo.ejs', {
+                station: '町田',
+                commute: '<span data-color="lightGreen">直通</span><span class="num">21</span>分<small>（日中時17分）</small>',
+                cap: '【通勤時】JR横浜線利用。【日中時】JR横浜線快速利用。',
+                modifiers: [],
+              }) %>
+            </div>
+          </div>
+          <p class="caption">●「日吉」駅へ直通4分（日中時4分）／「大倉山」駅より【通勤時・日中時】東急東横線利用。●「武蔵小杉」駅へ直通9分（日中時8分）／「大倉山」駅より【通勤時・日中時】東急東横線利用。●「元町・中華街」駅へ直通20分（日中時18分）／「大倉山」駅より【通勤時】東急東横線利用（みなとみらい線直通）。【日中時】東急東横線利用、「菊名」駅より東急東横線急行乗換（みなとみらい線直通）。●「池袋」駅へ44分（日中時39分）／「大倉山」駅より【通勤時】東急東横線利用、「自由が丘」駅より東急東横線急行乗換（東京メトロ副都心線直通）。【日中時】東急東横線利用、「武蔵小杉」駅より東急東横線特急乗換（東京メトロ副都心線直通）。<br>※所要時間は乗換案内調べ（2023年7月現在）に基づいて作成しております。記載の所要時間は通勤時（7：00〜9:00）、日中時（10：00〜16：00）に到着駅着としております。所要時間には乗換、待ち合わせ時間が含まれております。また、時間帯により所要時間は多少異なる場合がございます。※掲載の路線概念図は一部路線・駅等を省略して表記しております。※掲載の各情報は今後変更される場合があります。</p>
+        </div>
+      </section>
+
+      <section class="travel-section">
+        <div class="accrArea">
+          <div class="accrArea__head js-access-accr">
+            <div class="accrDoor">
+              <div class="accrDoor__inner">
+                <div class="accrDoor__ttl">TRAVEL</div>
+                <div class="accrDoor__txt">「新横浜」駅よりJR東海道新幹線利用で<br>旅行やレジャーもスムーズに。</div>
+                <div class="stateIcon">
+                  <div class="stateIcon__circle">
+                    <svg class="arrowSVG" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="8px"><path fill-rule="evenodd"  fill="rgb(70, 70, 70)" d="M4.995,8.011 L-0.005,-0.004 L4.977,2.250 L9.997,-0.004 L4.995,8.011 Z"/></svg>
+                  </div>
+                </div>
+              </div>
+              <div class="accrDoor__bg">
+                <%- include('/common/components/pic/_pic.ejs', {
+                  imagePathPC: '<img src="./imgs/pc/bg-door-travel.jpg" alt="" width="1008" height="160">',
+                  imagePathSP: '<img src="./imgs/sp/bg-door-travel.jpg" alt="" width="670" height="315">',
+                  alt: 'TRAVEL',
+                  pictureMode: 'on',
+                }) %>
+                <p class="accrDoor__cap">image photo</p>
+              </div>
+            </div>
+          </div>
+          <div class="accrArea__body">
+            <div class="accrArea__cont accrArea__cont--mobilePadding">
+              <div class="layoutSect">
+                <div class="layoutSect__item layoutSect__item--half">
+                  <%- include('/common/components/photo/_photo.ejs', {
+                    imagePath: '<img src="./imgs/img-travel-01.jpg" width="304" height="203">',
+                    alt: 'image photo',
+                    captionPosition: 'capIn',
+                    captionColor: 'white',
+                    pictureMode: '',
+                    modifiers: []
+                  }) %>
+                </div>
+
+                <div class="layoutSect__item layoutSect__item--half">
+                  <!--<p class="txt">「新横浜」駅は、東海道新幹線を利用して「名古屋」「京都」「新大阪」へスピーディにアクセスできます。<br>ビジネスにレジャーに快適なアクセスが利用できるのも大きな魅力です。</p>-->
+                  <%- include('/common/components/photo/_photo.ejs', {
+                    imagePath: '<img src="./imgs/img-travel-02.jpg" width="304" height="203">',
+                    alt: 'image photo',
+                    captionPosition: 'capIn',
+                    captionColor: 'white',
+                    pictureMode: '',
+                    modifiers: []
+                  }) %>
+                </div>
+
+              </div>
+
+              <div class="layoutSect">
+                <div class="layoutSect__item layoutSect__item--third layoutSect__item--spOne">
+                  <%- include('/common/components/photo/_photo.ejs', {
+                    imagePath: '<img src="./imgs/img-travel-03.jpg" width="304" height="203">',
+                    alt: 'image photo',
+                    captionPosition: 'capIn',
+                    captionColor: 'white',
+                    pictureMode: '',
+                    modifiers: []
+                  }) %>
+                  <%- include('./components/greenLabel/_greenLabel.ejs', {
+                    place: '名古屋',
+                    txt: '<span class="num">76</span>分<small>（日中時）</small>',
+                    modifiers: [],
+                  }) %>
+                </div>
+
+                <div class="layoutSect__item layoutSect__item--third layoutSect__item--spOne">
+                  <%- include('/common/components/photo/_photo.ejs', {
+                    imagePath: '<img src="./imgs/img-travel-04.jpg" width="304" height="203">',
+                    alt: 'image photo',
+                    captionPosition: 'capIn',
+                    captionColor: 'white',
+                    pictureMode: '',
+                    modifiers: []
+                  }) %>
+                  <%- include('./components/greenLabel/_greenLabel.ejs', {
+                    place: '京都',
+                    txt: '<span class="num">112</span>分<small>（日中時）</small>',
+                    modifiers: [],
+                  }) %>
+                </div>
+
+                <div class="layoutSect__item layoutSect__item--third layoutSect__item--spOne">
+                  <%- include('/common/components/photo/_photo.ejs', {
+                    imagePath: '<img src="./imgs/img-travel-05.jpg" width="304" height="203">',
+                    alt: 'image photo',
+                    captionPosition: 'capIn',
+                    captionColor: 'white',
+                    pictureMode: '',
+                    modifiers: []
+                  }) %>
+                  <%- include('./components/greenLabel/_greenLabel.ejs', {
+                    place: '新大阪',
+                    txt: '<span class="num">127</span>分<small>（日中時）</small>',
+                    modifiers: [],
+                  }) %>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="airport-section">
+        <div class="accrArea">
+          <div class="accrArea__head js-access-accr">
+            <div class="accrDoor">
+              <div class="accrDoor__inner">
+                <div class="accrDoor__ttl">AIRPORT</div>
+                <div class="accrDoor__txt">「新横浜」駅前バスターミナルより<br>羽田空港へはリムジンバスでゆったりと。</div>
+                <div class="stateIcon">
+                  <div class="stateIcon__circle">
+                    <svg class="arrowSVG" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="8px"><path fill-rule="evenodd"  fill="rgb(70, 70, 70)" d="M4.995,8.011 L-0.005,-0.004 L4.977,2.250 L9.997,-0.004 L4.995,8.011 Z"/></svg>
+                  </div>
+                </div>
+              </div>
+              <div class="accrDoor__bg">
+                <%- include('/common/components/pic/_pic.ejs', {
+                  imagePathPC: '<img src="./imgs/pc/bg-door-airport.jpg" alt="" width="1008" height="160">',
+                  imagePathSP: '<img src="./imgs/sp/bg-door-airport.jpg" alt="" width="670" height="315">',
+                  alt: 'AIRPORT',
+                  pictureMode: 'on',
+                }) %>
+                <p class="accrDoor__cap">image photo</p>
+              </div>
+            </div>
+          </div>
+          <div class="accrArea__body">
+            <div class="accrArea__cont">
+              <div class="layoutSect">
+                <div class="layoutSect__item layoutSect__item--half">
+                  <%- include('/common/components/photo/_photo.ejs', {
+                    imagePath: '<img src="./imgs/img-airport-02.jpg" width="480" height="304">',
+                    alt: 'image photo',
+                    captionPosition: 'capIn',
+                    captionColor: 'white',
+                    pictureMode: '',
+                    modifiers: []
+                  }) %>
+                </div>
+                <div class="layoutSect__item layoutSect__item--half">
+                  <p class="txt">「新横浜」駅の駅前バスターミナル1番乗場からは羽田空港行きのリムジンバスが運行しています。大きな荷物のある出張や旅行の際にも便利です。</p>
+
+                  <%- include('/common/components/photo/_photo.ejs', {
+                    imagePath: '<img src="./imgs/img-airport-01.jpg" width="480" height="217">',
+                    alt: '※京浜急行バスホームページより（2023年8月現在）<br>※掲載の各情報は今後変更される場合があります。',
+                    captionPosition: 'capOut',
+                    captionColor: '',
+                    pictureMode: '',
+                    modifiers: []
+                  }) %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <%#<section class="bus-section">
+        <div class="accrArea">
+          <div class="accrArea__head js-access-accr">
+            <div class="accrDoor">
+              <div class="accrDoor__inner">
+                <div class="accrDoor__ttl">LOCAL BUS</div>
+                <div class="accrDoor__txt">「横浜アリーナ」、「港北区総合庁舎」、<br>「トレッサ横浜」へは路線バスも便利です。</div>
+                <div class="stateIcon">
+                  <div class="stateIcon__circle">
+                    <svg class="arrowSVG" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="8px"><path fill-rule="evenodd"  fill="rgb(70, 70, 70)" d="M4.995,8.011 L-0.005,-0.004 L4.977,2.250 L9.997,-0.004 L4.995,8.011 Z"/></svg>
+                  </div>
+                </div>
+              </div>
+              <div class="accrDoor__bg">
+                < %- include('/common/components/pic/_pic.ejs', {
+                  imagePathPC: '<img src="./imgs/pc/bg-door-bus.jpg" alt="" width="1008" height="160">',
+                  imagePathSP: '<img src="./imgs/sp/bg-door-bus.jpg" alt="" width="670" height="315">',
+                  alt: 'BUS',
+                  pictureMode: 'on',
+                }) % >
+                <p class="accrDoor__cap">image photo</p>
+              </div>
+            </div>
+          </div>
+          <div class="accrArea__body">
+            <div class="accrArea__cont accrArea__cont--mobilePadding">
+              <div class="layoutSect layoutSect--center">
+                <div class="layoutSect__item layoutSect__item--half">
+
+                  <div class="trafficInfo trafficInfo--bus">
+                    <div class="trafficInfo__inner trafficInfo__inner--border-none">
+                      <span class="trafficInfo__term">
+                        <span class="sub">横浜市営バス〈 6系統 〉</span>
+                        <span class="waku">「</span><span class="station">太尾南公園</span>」バス停
+                      </span>
+                      <span class="trafficInfo__desc">徒歩<span class="num">5</span>分<small>（約400m）</small></span>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="layoutSect__item layoutSect__item--half">
+                  < %- include('/common/components/photo/_photo.ejs', {
+                    imagePath: '<img src="./imgs/img-bus-01.jpg" width="480" height="285">',
+                    alt: '※一部停留所は省略しています ※横浜市交通局ホームページより（2023年8月現在）',
+                    captionPosition: 'capOut',
+                    captionColor: '',
+                    pictureMode: '',
+                    modifiers: ['shadow']
+                  }) % >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>%>
+
+      <section class="car-section">
+        <div class="accrArea">
+          <div class="accrArea__head js-access-accr">
+            <div class="accrDoor">
+              <div class="accrDoor__inner">
+                <div class="accrDoor__ttl">CAR</div>
+                <div class="accrDoor__txt">「新横浜IC」へ約2.4km（約2,410m）で広がる<br>暮らしの楽しさと利便性。</div>
+                <div class="stateIcon">
+                  <div class="stateIcon__circle">
+                    <svg class="arrowSVG" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="8px"><path fill-rule="evenodd"  fill="rgb(70, 70, 70)" d="M4.995,8.011 L-0.005,-0.004 L4.977,2.250 L9.997,-0.004 L4.995,8.011 Z"/></svg>
+                  </div>
+                </div>
+              </div>
+              <div class="accrDoor__bg">
+                <%- include('/common/components/pic/_pic.ejs', {
+                  imagePathPC: '<img src="./imgs/pc/bg-door-car.jpg" alt="" width="1008" height="160">',
+                  imagePathSP: '<img src="./imgs/sp/bg-door-car.jpg" alt="" width="670" height="315">',
+                  alt: 'BUS',
+                  pictureMode: 'on',
+                }) %>
+                <p class="accrDoor__cap">image photo</p>
+              </div>
+            </div>
+          </div>
+          <div class="accrArea__body">
+            <div class="accrArea__cont accrArea__cont--mobilePadding">
+              <p class="txt">2020年3月に開通した首都高速神奈川7号横浜北線「新横浜IC」を基点に「御殿場」「箱根」「鎌倉」等のレジャースポットへ、また「馬場IC]（約3,200m）からは都心や羽田空港、千葉方面へのスムーズなアクセスが可能で、休日の楽しさや利便性が広がります。</p>
+
+              <div class="layoutSect">
+                <div class="layoutSect__item layoutSect__item--third layoutSect__item--spOne">
+                  <%- include('/common/components/photo/_photo.ejs', {
+                    imagePath: '<img src="./imgs/img-car-01.jpg" width="304" height="203">',
+                    alt: 'image photo',
+                    captionPosition: 'capIn',
+                    captionColor: 'white',
+                    pictureMode: '',
+                    modifiers: []
+                  }) %>
+                  <%- include('./components/greenLabel/_greenLabel.ejs', {
+                    place: '鎌倉',
+                    txt: '<small>朝比奈IC</small> <span class="num">26,100</span>m',
+                    modifiers: ['distance'],
+                  }) %>
+                </div>
+                <div class="layoutSect__item layoutSect__item--third layoutSect__item--spOne">
+                  <%- include('/common/components/photo/_photo.ejs', {
+                    imagePath: '<img src="./imgs/img-car-02.jpg" width="304" height="203">',
+                    alt: 'image photo',
+                    captionPosition: 'capIn',
+                    captionColor: 'white',
+                    pictureMode: '',
+                    modifiers: []
+                  }) %>
+                  <%- include('./components/greenLabel/_greenLabel.ejs', {
+                    place: '箱根',
+                    txt: '<small>箱根口IC</small> <span class="num">62,400</span>m',
+                    modifiers: ['distance'],
+                  }) %>
+                </div>
+                <div class="layoutSect__item layoutSect__item--third layoutSect__item--spOne">
+                  <%- include('/common/components/photo/_photo.ejs', {
+                    imagePath: '<img src="./imgs/img-car-03.jpg" width="304" height="203">',
+                    alt: 'image photo',
+                    captionPosition: 'capIn',
+                    captionColor: 'white',
+                    pictureMode: '',
+                    modifiers: []
+                  }) %>
+                  <%- include('./components/greenLabel/_greenLabel.ejs', {
+                    place: '御殿場',
+                    txt: '<small>御殿場IC </small> <span class="num">78,700</span>m',
+                    modifiers: ['distance'],
+                  }) %>
+                </div>
+              </div>
+              <p class="caption">※掲載の最寄りICまでの距離は駐車場出入口を起点にゼンリン地図にて計測しております。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div><!-- /.wrap -->
+  </div><!-- /.container -->
+  <%- include('/common/components/contentsGuide/_contentsGuide.ejs') %>
+</main>
+<%- include('/common/inc/bottomInfo/_bottomInfo.ejs', {pageId: pageData.pageDir}) %>
+<%- include('/common/inc/footer/_footer.ejs', {pageId: pageData.pageDir, footerCap: ''}) %>

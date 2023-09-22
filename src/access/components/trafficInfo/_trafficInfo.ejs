@@ -1,0 +1,21 @@
+<%include('/_utils');
+  const params = ejsUtils.defaultParamsMapper(locals, {
+    station: '',
+    commute: '',
+    cap: '',
+    modifiers: []
+  });
+  const className = ejsUtils.mapModifiers('trafficInfo', params.modifiers);
+  const stationName = params.station.split('駅');
+  const straight = params.commute.indexOf('直通') !== -1 ? '直通' : '';
+  const timeNum = parseInt(params.commute.match(/\d+/)[0]);
+
+  const fmtTime = `${straight}<span class="num">${timeNum}</span>分`;
+%>
+<div class="<%- className %>" data-sai="fade-up">
+  <div class="trafficInfo__inner">
+    <span class="trafficInfo__term"><span class="waku">「</span><span class="station"><%- stationName[0] %></span>」駅へ</span>
+    <span class="trafficInfo__desc"><%- params.commute %></span>
+  </div>
+  <div class="caption"><%- params.cap %></div>
+</div>

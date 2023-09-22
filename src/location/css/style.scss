@@ -1,0 +1,126 @@
+@import '../../common/css/variables/_variables';
+@import '../../common/css/mixins/_easing';
+@import '../../common/css/mixins/_mixins';
+@import '../components/**/*';
+
+[data-color="lightGreen"] {
+  color: #248068 !important;
+}
+
+.keyVisual {
+  &__heading {
+    color: #ffffff;
+    text-shadow: none;
+  }
+}
+
+.wrap {
+  @include pc {
+    width: 1008px;
+  }
+}
+
+.bottomCV {
+  @include sp {
+    margin-top: 0;
+  }
+}
+
+.touchFigure--swipe {
+  @include sp {
+    //height: 282px;
+  }
+}
+
+.container {
+  overflow: hidden;
+
+  @include sp {
+    padding-top: 0;
+  }
+}
+
+.location-okurayama {
+  @include pc {
+    margin-top: 120px;
+  }
+
+  @include sp {
+    margin-top: 80px;
+  }
+
+  .featureIntro + .columnSect {
+    @include pc {
+      margin-top: 120px;
+    }
+
+    @include sp {
+      margin-top: 80px;
+    }
+  }
+}
+
+.location-shopping {
+  @include pc {
+    margin-top: 64px;
+  }
+
+  @include sp {
+    margin-top: 48px;
+  }
+}
+
+.location-park {
+  @include pc {
+    margin-top: 64px;
+  }
+
+  @include sp {
+    margin-top: 48px;
+  }
+}
+
+.location-subFeature {
+  @include pc {
+    margin-top: 120px;
+  }
+
+  @include sp {
+    margin-top: 80px;
+  }
+}
+
+.location-shinyokohama {
+  @include pc {
+    margin-top: 120px;
+  }
+
+  @include sp {
+    margin-top: 80px;
+  }
+}
+
+.location-lifeinfo {
+  @include pc {
+    margin-top: 120px;
+  }
+
+  @include sp {
+    margin-top: 80px;
+  }
+
+  .bgLayer {
+    @include pc {
+      padding: 120px 0;
+    }
+
+    @include sp {
+      padding: 80px 0;
+    }
+  }
+}
+
+[aria-disabled] {
+  cursor: default !important;
+}
+

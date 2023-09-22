@@ -1,0 +1,16 @@
+<%include('/_utils');
+const params = ejsUtils.defaultParamsMapper(locals, {
+  placeList: [],
+  modifiers: []
+});
+const className = ejsUtils.mapModifiers('areaFeature', params.modifiers);
+%>
+<div class="<%- className %>">
+<% placeList.forEach(function (value, key) { %>
+    <%- include('../placeInfo/_placeInfo.ejs', {
+      term: value.term,
+      desc: value.desc,
+      modifiers: value.modifiers
+    }) %>
+<% }); %>
+</div>

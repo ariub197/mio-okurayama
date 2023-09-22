@@ -1,0 +1,151 @@
+.layoutSect {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include pc {
+    gap: 48px;
+  }
+
+  @include sp {
+    gap: 40px 20px;
+    justify-content: space-between;
+  }
+
+  &--floorMap {
+    @include pc {
+      gap: 48px;
+    }
+
+    @include sp {
+      gap: 0;
+    }
+  }
+
+  &--gapNarrow {
+    @include pc {
+      gap: 48px;
+    }
+
+    @include sp {
+      gap: 20px;
+    }
+  }
+
+  &--gapWide {
+    @include pc {
+      gap: 48px;
+    }
+
+    @include sp {
+      gap: 60px;
+    }
+  }
+
+  &--center {
+    align-items: center;
+  }
+
+  &--reverse {
+    @include pc {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &--mobileReverse {
+    @include sp {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: 100%;
+
+    &--heightFull {
+      height: 100%;
+    }
+
+    &--half {
+      @include pc {
+        width: 480px;
+      }
+
+      @include sp {
+        width: 100%;
+      }
+    }
+
+    &--third {
+      @include pc {
+        width: 304px;
+      }
+
+      @include sp {
+        width: calc(50% - 10px);
+      }
+    }
+
+    &--quarter {
+      @include pc {
+        width: 216px;
+      }
+
+      @include sp {
+        width: calc(50% - 10px);
+      }
+    }
+
+    &--spOne {
+      @include sp {
+        width: 100%;
+      }
+    }
+
+    &--headSmall {
+
+      .placeCard__ttl {
+        @include pc {
+          font-size: 14px !important;
+        }
+      }
+    }
+
+    .photo {
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .txt--noWrap {
+      @include pc {
+        font-size: 16px;
+      }
+
+      @include sp {
+        font-size: 12px;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  & + & {
+    @include pc {
+      margin-top: 60px;
+    }
+
+    @include sp {
+      margin-top: 48px;
+    }
+  }
+
+  & + &--floorMap {
+    @include pc {
+      margin-top: 30px;
+    }
+
+    @include sp {
+      margin-top: 24px;
+    }
+  }
+}

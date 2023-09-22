@@ -1,0 +1,79 @@
+.greenLabel {
+  align-items: center;
+  background: $color-autumn-sub-01;
+  color: #ffffff;
+  display: flex;
+  height: 51px;
+  justify-content: space-between;
+
+  @include pc {
+    padding: 0 20px;
+  }
+
+  @include sp {
+    height: 32px;
+    padding: 0 18px;
+  }
+
+  .photo + & {
+    @include pc {
+      margin-top: 20px;
+    }
+
+    @include sp {
+      margin-top: 10px;
+    }
+  }
+
+  .txt {
+
+    & + .txt {
+      @include pc {
+        font-size: 16px;
+      }
+      
+    }
+
+    .num {
+      @include pc {
+        font-size: 30px;
+      }
+    }
+
+    small {
+      @include pc {
+        font-size: 10px;
+      }
+      
+    }
+
+  }
+
+  &--distance {
+
+    .txt {
+
+      & + .txt {
+        @include pc {
+          font-size: 16px;
+        }
+        
+      }
+  
+      .num {
+        @include pc {
+          font-size: 20px;
+        }
+      }
+  
+      small {
+        @include pc {
+          font-size: 14px;
+        }
+        
+      }
+  
+    }
+  }
+
+}

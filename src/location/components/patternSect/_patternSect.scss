@@ -1,0 +1,180 @@
+.patternSect {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 100px 0;
+  position: relative;
+
+  @include pc {
+    padding: 80px 96px;
+  }
+
+  @include sp {
+    padding: 35px 30px 58px;
+  }
+
+  &__head,
+  &__cont {
+    @include pc {
+      width: 360px;
+    }
+  }
+
+  &__heading {
+    color: #464646;
+    letter-spacing: .12em;
+
+    @include pc {
+      font-size: 20px;
+
+      @include lhCrop(32 / 20);
+    }
+
+    @include sp {
+      font-size: 14px;
+
+      @include lhCrop(44 / 28);
+    }
+
+    & + .patternSect__subheading {
+      @include pc {
+        margin-top: 20px;
+      }
+
+      @include sp {
+        margin-top: 15px;
+      }
+    }
+
+    & + .txt {
+      @include pc {
+        margin-top: 30px;
+      }
+
+      @include sp {
+        margin-top: 25px;
+      }
+
+    }
+  }
+
+  &__subheading {
+    color: #464646;
+    letter-spacing: .12em;
+
+    @include pc {
+      font-size: 16px;
+
+      @include lhCrop(32 / 16);
+    }
+
+    @include sp {
+      font-size: 12px;
+
+      @include lhCrop(36 / 24);
+    }
+
+    & + .txt {
+      @include pc {
+        margin-top: 30px;
+      }
+
+      @include sp {
+        margin-top: 25px;
+      }
+
+    }
+  }
+
+  &__head {
+
+    .txt {
+      text-align: justify;
+    }
+
+    & + .patternSect__cont {
+      @include sp {
+        margin-top: 25px;
+      }
+    }
+  }
+
+  &__cont {
+
+    .photo {
+
+      & + .txt {
+        margin-top: 35px;
+
+      }
+    }
+  }
+
+  &__squareBG {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+
+    &:before{
+      background-color: #4c98aa;
+      content: '';
+      height: 100%;
+      left: 0;
+      opacity: .2;
+      position: absolute;
+      top: 0;
+      transform: rotate(-5deg);
+      width: 100%;
+    }
+
+
+    span {
+      background: url('../../common/imgs/bg-pattern.jpg') repeat;
+      box-shadow: 0 8px 16px 0 rgba(102, 102, 102, .1);
+      display: block;
+      height: 100%;
+      opacity: .6;
+      position: relative;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+
+  .txt {
+    text-align: justify;
+  }
+
+  &--pattern01 {
+    @include sp {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .patternSect {
+
+        &__head {
+          display: flex;
+          justify-content: center;
+          width: 100px;
+
+        }
+
+        &__heading {
+          text-align: center;
+        }
+
+        &__cont {
+          width: 148px;
+
+          & + .txt {
+            margin-top: 40px;
+          }
+        }
+      }
+    }
+  }
+}

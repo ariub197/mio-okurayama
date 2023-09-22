@@ -38,6 +38,33 @@
     }
   }
 
+  &--label-small {
+    align-items: center;
+    background: $color-autumn-sub-01;
+    color: #ffffff;
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+
+    @include pc {
+      padding: 0 20px;
+    }
+
+    @include sp {
+      height: 32px;
+    }
+
+    .photo + & {
+      @include pc {
+        margin-top: 20px;
+      }
+
+      @include sp {
+        margin-top: 10px;
+      }
+    }
+  }
+
   &--gray {
     background: #595959;
   }
@@ -128,6 +155,16 @@
     & + .txt {
       @include pc {
         margin-top: 32px;
+      }
+
+      @include sp {
+        margin-top: 24px;
+      }
+    }
+
+    & + .heading--01 {
+      @include pc {
+        margin-top: 36px;
       }
 
       @include sp {
