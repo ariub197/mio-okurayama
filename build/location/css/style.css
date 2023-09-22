@@ -2534,6 +2534,9 @@
 
 @media screen and (max-width: 768px) {
   .placeInfo {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     width: 100%;

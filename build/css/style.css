@@ -1125,6 +1125,9 @@
     -webkit-transform: translate(30%, -50%);
             transform: translate(30%, -50%);
   }
+  .moreBtn:hover .arrowSVG path {
+    fill: #ffffff;
+  }
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -1134,6 +1137,9 @@
   .moreBtn:hover .arrowSVG {
     -webkit-transform: translate(30%, -50%);
             transform: translate(30%, -50%);
+  }
+  .moreBtn:hover .arrowSVG path {
+    fill: #ffffff;
   }
 }
 
@@ -1177,6 +1183,10 @@
     right: 10px;
     width: 10px;
   }
+}
+
+.moreBtn .arrowSVG path {
+  fill: #ffffff;
 }
 
 .moreBtn--comingsoon {
