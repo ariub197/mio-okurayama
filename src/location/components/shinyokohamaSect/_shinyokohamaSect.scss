@@ -20,8 +20,29 @@
     }
 
     .photo + .txt {
-      margin-top: 16px;
       letter-spacing: 0;
+      margin-top: 16px;
+    }
+  }
+
+  &__contBlock {
+    @include pc {
+      margin-top: 120px;
+    }
+
+    @include sp {
+      margin-top: 64px;
+    }
+
+    .bgLayer {
+      @include pc {
+        padding: 120px 0;
+      }
+
+      @include sp {
+        padding: 64px 0;
+      }
+
     }
   }
 
@@ -31,10 +52,10 @@
     }
 
     @include sp {
+      background: #ffffff;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
       margin-top: 60px;
       padding: 20px;
-      background: #ffffff;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
     }
   }
 
@@ -58,8 +79,8 @@
     }
 
     .photo + .txt {
-      margin-top: 16px;
       letter-spacing: 0;
+      margin-top: 16px;
     }
   }
 
@@ -81,9 +102,9 @@
 
   &__contFourthInner {
     @include sp {
-      padding: 20px;
       background: #ffffff;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+      padding: 20px;
     }
 
     & + .layoutSect {
