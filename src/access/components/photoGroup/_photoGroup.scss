@@ -1,0 +1,14 @@
+.photoGroup {
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    @include pc {
+      width: 304px;
+    }
+
+    @include sp {
+      width: calc(50% - 10px);
+    }
+  }
+}
