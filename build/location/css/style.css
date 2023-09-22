@@ -2693,8 +2693,8 @@
 }
 
 @media print, screen and (min-width: 768px) {
-  .shinyokohamaSect__contBlock .bgLayer {
-    padding: 120px 0;
+  .shinyokohamaSect__contBlock .bgLayer--pattern01:before {
+    background-color: transparent;
   }
 }
 

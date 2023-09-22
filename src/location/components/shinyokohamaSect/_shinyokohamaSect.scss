@@ -35,8 +35,14 @@
     }
 
     .bgLayer {
-      @include pc {
-        padding: 120px 0;
+
+      &--pattern01 {
+
+        &:before {
+          @include pc {
+            background-color: transparent;
+          }
+        }
       }
 
       @include sp {
