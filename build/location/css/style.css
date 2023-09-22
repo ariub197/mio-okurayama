@@ -2064,6 +2064,25 @@
   position: relative;
 }
 
+@media screen and (max-width: 768px) {
+  .placeCard--no-wrap .placeCard__ttl {
+    font-size: calc(28 / 750 * 100vw);
+    white-space: nowrap;
+  }
+}
+
+@media print, screen and (min-width: 768px) {
+  .placeCard__head + .txt {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .placeCard__head + .txt {
+    margin-top: 20px;
+  }
+}
+
 .placeCard__flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2715,7 +2734,7 @@
     background: #ffffff;
     -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-    margin-top: 60px;
+    margin-top: 20px;
     padding: 20px;
   }
 }

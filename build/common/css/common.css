@@ -7812,14 +7812,14 @@ button.swiper-pagination-bullet {
 @media print, screen and (min-width: 768px) {
   .infoCV__ttl {
     font-size: 18px;
-    line-height: 2.77778;
+    line-height: 1.38889;
   }
   .infoCV__ttl:before {
     content: '';
-    margin-top: calc((1 - 2.77778) * .5em);
+    margin-top: calc((1 - 1.38889) * .5em);
   }
   .infoCV__ttl:after {
-    margin-bottom: calc((1 - 2.77778) * .5em);
+    margin-bottom: calc((1 - 1.38889) * .5em);
   }
   .infoCV__ttl:before, .infoCV__ttl:after {
     content: '';

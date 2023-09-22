@@ -104,7 +104,7 @@
     @include pc {
       font-size: 18px;
 
-      @include lhCrop(50 / 18);
+      @include lhCrop(25 / 18);
     }
 
     @include sp {

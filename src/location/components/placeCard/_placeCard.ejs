@@ -10,7 +10,7 @@
 		modifiers: []
 	});
 	const className = ejsUtils.mapModifiers('placeCard', params.modifiers);
-%><div class="placeCard">
+%><div class="<%- className %>" >
   <%- include('/common/components/photo/_photo.ejs', visual) %>
   <div class="placeCard__body<% if(params.column == 'row'){ %> placeCard__body--row<% } %>">
     <div class="placeCard__ttl"><%- params.ttl %></div>

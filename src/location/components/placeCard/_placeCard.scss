@@ -2,6 +2,32 @@
   height: 100%;
   position: relative;
 
+  &--no-wrap {
+
+    .placeCard {
+
+      &__ttl {
+        @include sp {
+          font-size: calc(28 / 750 * 100vw);
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  &__head {
+
+    & + .txt {
+      @include pc {
+        margin-top: 30px;
+      }
+
+      @include sp {
+        margin-top: 20px;
+      }
+    }
+  }
+
   &__flex {
     display: flex;
 

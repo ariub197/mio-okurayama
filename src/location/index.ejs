@@ -140,7 +140,7 @@
                             lazy:'',
                             pictureMode: '',
                           },
-                          ttl:'カフェ・ド・ピオン / ペドーネ<small>（カフェ・立飲みバル）</small>',
+                          ttl:'カフェ・ド・ピオン / ペドーネ',
                           walk:'9',
                           distance:'（約680m）',
                           tagList: ['#カフェ', '#立飲みバル'],
@@ -155,7 +155,7 @@
                             lazy:'',
                             pictureMode: '',
                           },
-                          ttl:'パティスリーピオン<small>（洋菓子）</small>',
+                          ttl:'パティスリーピオン',
                           walk:'10',
                           distance:'（約750m）',
                           tagList: ['#洋菓子'],
@@ -170,7 +170,7 @@
                             lazy:'',
                             pictureMode: '',
                           },
-                          ttl:'コスタ・デル・ソル<small>（スペイン料理）</small>',
+                          ttl:'コスタ・デル・ソル',
                           walk:'10',
                           distance:'（約790m）',
                           tagList: ['#スペイン料理'],
@@ -185,7 +185,7 @@
                             lazy:'',
                             pictureMode: '',
                           },
-                          ttl:'テラコーヒー 大倉山店<br><small>（コーヒーショップ）</small>',
+                          ttl:'テラコーヒー 大倉山店',
                           walk:'12',
                           distance:'（約930m）',
                           tagList: ['#コーヒーショップ'],
@@ -200,7 +200,7 @@
                             lazy:'',
                             pictureMode: '',
                           },
-                          ttl:'トラットリア ピッツェリア ピレウス<small>（イタリア料理）</small>',
+                          ttl:'トラットリア ピッツェリア ピレウス',
                           walk:'14',
                           distance:'（約1,050m）',
                           tagList: ['#イタリア料理'],
@@ -215,7 +215,7 @@
                             lazy:'',
                             pictureMode: '',
                           },
-                          ttl:'鴨屋そば香 大倉山店<small>（日本蕎麦）</small>',
+                          ttl:'鴨屋そば香 大倉山店',
                           walk:'14',
                           distance:'（約1,100m）',
                           tagList: ['#日本蕎麦'],
@@ -262,6 +262,7 @@
                     ttl:'ヨークマート大倉山店',
                     walk:'5',
                     distance:'（約380m）',
+                    modifiers:['no-wrap']
                   }) %>
                 </div>
                 <div class="layoutSect__item layoutSect__item--third">
@@ -288,6 +289,7 @@
                     ttl:'MEGAドン・キホーテ<br>新横浜店',
                     walk:'8',
                     distance:'（約610m）',
+                    modifiers:['no-wrap']
                   }) %>
                 </div>
                 <div class="layoutSect__item layoutSect__item--quarter">
@@ -327,6 +329,7 @@
                     ttl:'サミットストア菊名店',
                     walk:'15',
                     distance:'（約1,180m）',
+                    modifiers:['no-wrap']
                   }) %>
                 </div>
               </div>
@@ -974,17 +977,17 @@
                     <div class="layoutSect__item layoutSect__item--half">
                       <%- include('/common/components/photo/_photo.ejs', {
                         imagePath: '<img src="./imgs/img-shinyokohama-15.jpg" width="480" height="320">',
-                        alt: '',
-                        captionPosition: 'noCap',
-                        captionColor: '',
+                        alt: 'image photo',
+                        captionPosition: 'capIn',
+                        captionColor: 'sdw-wh',
                         pictureMode: '',
                         modifiers: []
                       }) %>
                     </div>
                     <div class="layoutSect__item layoutSect__item--half">
-                      <div class="placeCard">
-                        <div class="placeCard__flex">
-                          <div class="placeCard__ttl">日産スタジアム</div>
+                      <div class="placeCard placeCard--stadium">
+                        <div class="placeCard__head">
+                          <div class="placeCard__ttl">日産スタジアム（横浜国際総合競技場）</div>
                           <div class="placeCard__walk">徒歩<span class="num">27</span>分<span class="placeCard__distance placeCard__distance--middle">（約2,120m）</span></div>
                         </div>
                         <p class="txt">国内最大規模の約70,000席を備える屋外多目的競技場。<br>東京2020オリンピックではサッカーの決勝が開催されました。陸上競技やサッカー等のスポーツ観戦はもちろん、照明やスピーカーにもこだわっているためコンサートやイベント等も臨場感たっぷりに楽しむことが出来ます。</p>
