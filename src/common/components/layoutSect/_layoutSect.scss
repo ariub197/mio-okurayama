@@ -2,6 +2,19 @@
   display: flex;
   flex-wrap: wrap;
 
+  .photo {
+
+    & + .placeCard {
+      @include pc {
+        margin-top: 25px;
+      }
+
+      @include sp {
+        margin-top: 20px;
+      }
+    }
+  }
+
   @include pc {
     gap: 48px;
   }

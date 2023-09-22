@@ -8074,6 +8074,18 @@ button.swiper-pagination-bullet {
 }
 
 @media print, screen and (min-width: 768px) {
+  .layoutSect .photo + .placeCard {
+    margin-top: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .layoutSect .photo + .placeCard {
+    margin-top: 20px;
+  }
+}
+
+@media print, screen and (min-width: 768px) {
   .layoutSect {
     gap: 48px;
   }

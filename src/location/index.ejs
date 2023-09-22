@@ -744,7 +744,7 @@
           </div>
           <div class="accrArea__body">
             <div class="accrArea__cont">
-              <div class="layoutSect layoutSect--center">
+              <div class="layoutSect">
                 <div class="layoutSect__item layoutSect__item--half">
                   <%- include('/common/components/photo/_photo.ejs', {
                     imagePath: '<img src="./imgs/img-sports-01.jpg" width="480" height="320">',
@@ -754,8 +754,6 @@
                     pictureMode: '',
                     modifiers: []
                   }) %>
-                </div>
-                <div class="layoutSect__item layoutSect__item--half">
                   <div class="placeCard">
                     <div class="placeCard__flex">
                       <div class="placeCard__ttl">横浜市港北スポーツセンター</div>
@@ -763,6 +761,24 @@
                     </div>
                     <p class="txt">テニスコート3面、バドミントン、卓球、バスケットボール等の球技が楽しめる第1・第2体育館、ダンスやヨガが楽しめる第3体育館、ベンチプレスを備えるトレーニング室等、市民のスポーツ交流の場として幅広く利用されています。</p>
                     <p class="caption">※横浜市港北スポーツセンターホームページより</p>
+                  </div>
+                </div>
+                <div class="layoutSect__item layoutSect__item--half">
+                  <%- include('/common/components/photo/_photo.ejs', {
+                    imagePath: '<img src="./imgs/img-sports-02.jpg" width="480" height="320">',
+                    alt: '',
+                    captionPosition: 'noCap',
+                    captionColor: '',
+                    pictureMode: '',
+                    modifiers: []
+                  }) %>
+                  <div class="placeCard">
+                    <div class="placeCard__flex">
+                      <div class="placeCard__ttl">スポーツスパアスリエ大倉山</div>
+                      <div class="placeCard__walk">徒歩<span class="num">9</span>分<span class="placeCard__distance placeCard__distance--middle">（約710m）</span></div>
+                    </div>
+                    <p class="txt">「整える」と「鍛える」をバランス良くプログラムし、最良のコンディションへと導いてくれる総合スポーツクラブ。本格的なトレーニングマシンをはじめ、ヨガやエアロビクスの出来るスタジオ、屋内スポーツを楽しめるアリーナ、アウトドアジャグジーや熱海直送の温泉が楽しめるバスルーム等、高品質な設備が充実しています。</p>
+                    <p class="caption">※スポーツスパアスリエ大倉山ホームページより。</p>
                   </div>
                 </div>
               </div>
