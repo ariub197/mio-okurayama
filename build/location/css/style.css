@@ -2130,6 +2130,19 @@
   margin-top: 0;
 }
 
+.placeCard__flex--imgDouble {
+  margin-top: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .placeCard__flex--imgDouble {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 @media print, screen and (min-width: 768px) {
   .placeCard__body {
     margin-top: 20px;

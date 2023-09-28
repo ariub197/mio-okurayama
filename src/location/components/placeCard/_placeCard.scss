@@ -60,6 +60,14 @@
     .placeCard__walk {
       margin-top: 0;
     }
+
+    &--imgDouble {
+      margin-top: 12px;
+
+      @include sp {
+        flex-direction: row;
+      }
+    }
   }
 
   &__body {
