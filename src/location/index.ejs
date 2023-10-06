@@ -382,8 +382,8 @@
                   <div class="layoutSect__item layoutSect__item--half">
                     <%- include('/common/components/photo/_photo.ejs', {
                       imagePath: '<img src="./imgs/img-park-03.jpg" width="432" height="276">',
-                      alt: 'Image Photo',
-                      captionPosition: 'capOut',
+                      alt: '',
+                      captionPosition: 'noCap',
                       captionColor: 'black',
                       pictureMode: '',
                       modifiers: []
@@ -398,8 +398,8 @@
                   <div class="layoutSect__item layoutSect__item--half">
                     <%- include('/common/components/photo/_photo.ejs', {
                       imagePath: '<img src="./imgs/img-park-02.jpg" width="432" height="276">',
-                      alt: 'Image Photo',
-                      captionPosition: 'capOut',
+                      alt: '',
+                      captionPosition: 'noCap',
                       captionColor: 'black',
                       pictureMode: '',
                       modifiers: []
@@ -430,7 +430,7 @@
                       <div class="placeCard__ttl">横浜市大倉山記念館</div>
                       <div class="placeCard__walk">徒歩<span class="num">15</span>分<span class="placeCard__distance placeCard__distance--middle">（約1,160m）</span></div>
                     </div>
-                    <p class="txt">「大倉山」の地名の元となった「大倉精神文化研究所（現：横浜市大倉山記念館）」は、「清らかで強い心と豊かな知性を兼ね備えた人材の育成」を目指して1932年に大倉邦彦氏により開設されました。東西文化が融合した独特の様式美を持つ建物は、1991年、横浜市指定有形文化財に指定されました。<br>現在では館内の見学、映画やCM等の撮影、小規模な音楽会、サークル等の利用や展示会等幅広く利用されています。</p>
+                    <p class="txt">「大倉山」の地名の元となった「大倉精神文化研究所（現：横浜市大倉山記念館）」は、「清らかで強い心と豊かな知性を兼ね備えた人材の育成」を目指して1932年に大倉邦彦氏により創建されました。東西文化が融合した独特の様式美を持つ建物は、1991年、横浜市指定有形文化財に指定されました。<br>現在では館内の見学、映画やCM等の撮影、小規模な音楽会、サークル等の利用や展示会等幅広く利用されています。</p>
                     <p class="caption">※横浜市大倉山記念館ホームページおよび大倉精神文化研究所ホームページより。</p>
                   </div>
                 </div>
@@ -791,7 +791,7 @@
             <div class="accrDoor">
               <div class="accrDoor__inner">
                 <div class="accrDoor__ttl">HOSPITAL</div>
-                <p class="accrDoor__txt accrDoor__txt--small">休日でも安心な急患診療所をはじめ、<br class="only-sp">病床数114床の<br class="only-pc">総合病院「大倉山記念病院」、<br class="only-sp">小児科、内科、耳鼻咽喉科等の<br class="only-pc">クリニックビルや、<br class="only-sp">医療施設も充実する安心の住環境です。</p>
+                <p class="accrDoor__txt accrDoor__txt--small">休日でも安心な急患診療所をはじめ、<br class="only-sp">病床数114床の<br class="only-pc">総合病院「大倉山記念病院」、<br class="only-sp">小児科、内科、耳鼻咽喉科等が<br class="only-pc">入ったクリニックビルや、<br class="only-sp">医療施設も充実する安心の住環境です。</p>
                 <div class="stateIcon">
                   <div class="stateIcon__circle">
                     <svg class="arrowSVG" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="8px"><path fill-rule="evenodd"  fill="rgb(70, 70, 70)" d="M4.995,8.011 L-0.005,-0.004 L4.977,2.250 L9.997,-0.004 L4.995,8.011 Z"/></svg>
@@ -980,7 +980,7 @@
                     }) %>
                   </div>
                 </div>
-                 
+
               </div>
             </div>
 
@@ -1295,7 +1295,7 @@
                     <div class="placeCard__ttl placeCard__ttl--small">KOSÉ新横浜スケートセンター</div>
                     <div class="placeCard__walk">徒歩<span class="numSmall">20</span>分<span class="placeCard__distance placeCard__distance--middle">（約1,590m）</span></div>
                   </div>
-                  <p class="txt">国際規格のスケートリンクを備え、イベントや競技会を開催。<br>またスケート教室も開かれ、子どもから大人までアイススケートの魅力や楽しさを体験できます。</p>
+                  <p class="txt">国際規格のスケートリンクを備え、イベントや競技会を開催。<br>またスケート教室も開かれ、お子様から大人までアイススケートの魅力や楽しさを体験できます。</p>
                   <!--<p class="caption">※KOSÉ新横浜スケートセンターホームページより。</p>-->
                 </div>
               </div>
@@ -1457,7 +1457,7 @@
                         {term:'スポーツスパアスリエ大倉山', desc:'徒歩9分（約710m）',modifiers: []},
                         {term:'カーブス大倉山', desc:'徒歩11分（約870m）',modifiers: ['double']},
                         {term:'横浜アリーナ', desc:'徒歩11分（約880m）',modifiers: ['double']},
-                        {term:'ファストジム24大倉山', desc:'徒歩13分（約980m）',modifiers: ['double']},
+                        {term:'FASTGYM24大倉山', desc:'徒歩13分（約980m）',modifiers: ['double']},
                         {term:'セントラルスポーツジム24菊名', desc:'徒歩15分（約1,190m）',modifiers: ['double']},
                         {term:'新横浜ラーメン博物館', desc:'徒歩17分（約1,360m）',modifiers: ['double']},
                         {term:'KOSÉ新横浜スケートセンター', desc:'徒歩20分（約1,590m）',modifiers: ['doubleWide']},
