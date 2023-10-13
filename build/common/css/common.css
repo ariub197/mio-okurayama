@@ -2979,6 +2979,10 @@ body[data-sai-easing='ease-in-out-quart'] [data-sai] {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 0 0 0 auto;
   opacity: 0;
   position: sticky;
@@ -2990,10 +2994,6 @@ body[data-sai-easing='ease-in-out-quart'] [data-sai] {
 @media print, screen and (min-width: 768px) {
   .fixBnrWrap {
     bottom: 30px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     height: 200px;
     margin-bottom: 30px;
     right: 30px;
@@ -3004,14 +3004,13 @@ body[data-sai-easing='ease-in-out-quart'] [data-sai] {
 @media screen and (max-width: 768px) {
   .fixBnrWrap {
     bottom: 20px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    height: 60px;
-    margin-bottom: 20px;
-    right: 20px;
-    width: 150px;
+    margin: 0 20px 20px 0;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    row-gap: 10px;
+    width: auto;
+    height: auto;
   }
 }
 
@@ -3045,7 +3044,7 @@ body[data-sai-easing='ease-in-out-quart'] [data-sai] {
   .fixBnr {
     font-size: 10px;
     height: 60px;
-    width: 70px;
+    width: 60px;
   }
 }
 
