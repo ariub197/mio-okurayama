@@ -55,7 +55,7 @@
         content: none;
       }
 
-      &--entry {
+      &--entry, &--visit {
         background-color: $color-autumn-globalmenu;
 
         @include pc {
@@ -65,6 +65,10 @@
         @include sp {
           padding-left: 30px;
         }
+      }
+
+      &--visit {
+        background-color: $color-accent; 
       }
 
       &--flow {
@@ -94,7 +98,7 @@
       &__icon {
         background-color: transparent;
 
-        &--entry {
+        &--entry, &--visit {
           @include sp {
             right: 10px;
           }
