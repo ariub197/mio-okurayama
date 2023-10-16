@@ -2976,13 +2976,13 @@ body[data-sai-easing='ease-in-out-quart'] [data-sai] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 0 0 0 auto;
   opacity: 0;
   position: sticky;
@@ -3003,14 +3003,14 @@ body[data-sai-easing='ease-in-out-quart'] [data-sai] {
 
 @media screen and (max-width: 768px) {
   .fixBnrWrap {
-    bottom: 20px;
-    margin: 0 20px 20px 0;
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+    bottom: 20px;
+    height: auto;
+    margin: 0 20px 20px 0;
     row-gap: 10px;
     width: auto;
-    height: auto;
   }
 }
 
@@ -3103,7 +3103,7 @@ body[data-sai-easing='ease-in-out-quart'] [data-sai] {
 }
 
 .fixBnr--visit .fixBnr__bg {
-  background-color: #C5954B;
+  background-color: #0c2240;
 }
 
 .fixBnr.is-visible {
@@ -5331,7 +5331,7 @@ body[data-sai-easing='ease-in-out-quart'] [data-sai] {
 }
 
 .menuCV__inner .infoCV--visit {
-  background-color: #C5954B;
+  background-color: #0c2240;
 }
 
 .menuCV__inner .infoCV--flow {
