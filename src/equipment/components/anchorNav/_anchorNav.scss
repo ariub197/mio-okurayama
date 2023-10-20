@@ -1,0 +1,83 @@
+.anchorNav {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+
+  &__link {
+    align-items: center;
+    border: 1px solid #94afaa;
+    box-shadow: 0 8px 16px 0 rgba(102, 102, 102, .1);
+    color: #94afaa;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    @include pc {
+      height: 60px;
+      width: 216px;
+    }
+
+    @include sp {
+      height: 50px;
+      width: 158px;
+    }
+
+    &:not(:last-of-type) {
+      @include pc {
+        margin-right: 48px;
+      }
+    }
+
+    &:nth-of-type(n + 3) {
+      @include sp {
+        margin-top: 14px;
+      }
+    }
+
+
+
+    &.is-active {
+      background-color: #94afaa;
+      color: #ffffff;
+      opacity: .8;
+
+      &:after {
+        transform: scale(1,1);
+      }
+    }
+  }
+
+  &__txt {
+    line-height: 1;
+
+    @include pc {
+      font-size: 18px;
+    }
+
+    @include sp {
+      font-size: 16px;
+    }
+  }
+
+  & + .featureIntro {
+    @include pc {
+      margin-top: 64px;
+    }
+
+    @include sp {
+      margin-top: 41px;
+    }
+  }
+
+  & + .equipmentVisual {
+    @include pc {
+      margin-top: 80px;
+    }
+
+    @include sp {
+      margin-top: 41px;
+    }
+  }
+}

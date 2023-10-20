@@ -1,0 +1,176 @@
+.equipmentCardGroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  &--half {
+
+    .equipmentCard {
+      @include pc {
+        margin-right: 48px;
+        width: 480px;
+      }
+
+      &:nth-of-type(2n) {
+        @include pc {
+          margin-right: 0;
+        }
+      }
+
+      &:nth-of-type(n + 3) {
+        @include pc {
+          margin-top: 65px;
+        }
+      }
+
+      &:not(:last-of-type) {
+        @include sp {
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
+
+  &--oneThird {
+
+    .equipmentCard {
+      @include pc {
+        margin-right: 48px;
+        width: 304px;
+      }
+
+
+
+      @include sp {
+        margin-right: 20px;
+        width: 157px;
+      }
+
+      &__cont {
+        @include pc {
+          margin-top: 30px;
+        }
+
+        @include sp {
+          margin-top: 30px;
+        }
+      }
+
+      &--double {
+        @include sp {
+          width: 100%;
+        }
+      }
+
+      &:nth-of-type(3n) {
+        @include pc {
+          margin-right: 0;
+        }
+      }
+
+      &:nth-of-type(n + 4) {
+        @include pc {
+          margin-top: 40px;
+        }
+      }
+
+      &:nth-of-type(2n) {
+        @include sp {
+          margin-right: 0;
+        }
+      }
+
+      &:nth-of-type(n + 3) {
+        @include sp {
+          margin-top: 27px;
+        }
+      }
+    }
+
+  }
+
+  &--oneFourth {
+
+
+    .equipmentCard {
+      margin-right: 20px;
+
+      @include pc {
+        width: 237px;
+      }
+
+      @include sp {
+        width: 157px;
+      }
+
+      &__cont {
+        @include pc {
+          margin-top: 22px;
+        }
+
+        @include sp {
+          margin-top: 22px;
+        }
+      }
+
+      &:nth-of-type(4n) {
+        @include pc {
+          margin-right: 0;
+        }
+      }
+
+      &:nth-of-type(2n) {
+        @include sp {
+          margin-right: 0;
+        }
+      }
+
+      &:nth-of-type(n + 5) {
+        @include pc {
+          margin-top: 40px;
+        }
+      }
+
+      &:nth-of-type(n + 3) {
+        @include sp {
+          margin-top: 27px;
+        }
+      }
+    }
+
+  }
+
+  &--oneFifth {
+
+    .equipmentCard {
+      @include pc {
+        margin-right: 20px;
+        width: 185px;
+      }
+
+      @include sp {
+        margin-right: 20px;
+        width: 157px;
+      }
+
+      &:nth-of-type(5n) {
+        @include pc {
+          margin-right: 0;
+        }
+      }
+
+      &:nth-of-type(2n) {
+        @include sp {
+          margin-right: 0;
+        }
+      }
+
+      &:nth-of-type(n + 3) {
+        @include sp {
+          margin-top: 27px;
+        }
+      }
+    }
+
+  }
+}

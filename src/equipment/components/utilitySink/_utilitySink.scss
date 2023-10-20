@@ -1,0 +1,100 @@
+.utilitySink {
+  @include pc {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__head {
+    @include pc {
+      width: 304px;
+    }
+
+    @include sp {
+      display: none;
+    }
+  }
+
+  &__spVisual {
+    @include pc {
+      display: none;
+    }
+
+    @include sp {
+      margin-top: 35px;
+    }
+  }
+
+  &__heading {
+    letter-spacing: .15em;
+
+    @include pc {
+      font-size: 22px;
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+
+    @include sp {
+      font-size: 20px;
+      letter-spacing: .05em;
+      line-height: 1.5;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+  }
+
+  &__cont {
+    @include pc {
+      width: 657px;
+    }
+
+
+    .equipmentCardGroup {
+      justify-content: space-between;
+
+      @include pc {
+        margin-top: 40px;
+      }
+
+      @include sp {
+        margin-top: 30px;
+      }
+    }
+
+    .equipmentCard {
+      @include pc {
+        width: 195px;
+      }
+
+      @include sp {
+        width: 160px;
+      }
+
+      &:nth-of-type(3n) {
+        @include pc {
+          margin-right: 0;
+        }
+      }
+
+      &:nth-of-type(n + 3) {
+        @include sp {
+          margin-top: 30px;
+        }
+      }
+
+    }
+  }
+
+  .counterKitchen + & {
+    margin-top: 60px;
+  }
+
+  & + .equipmentCardGroup {
+    @include pc {
+      margin-top: 120px;
+    }
+
+    @include sp {
+      margin-top: 90px;
+    }
+  }
+}

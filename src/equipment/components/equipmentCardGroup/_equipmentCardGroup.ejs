@@ -1,0 +1,19 @@
+<% include('/_utils');
+const params = ejsUtils.defaultParamsMapper(locals, {
+  cardList: [],
+  modifiers: []
+});
+const className = ejsUtils.mapModifiers('equipmentCardGroup', params.modifiers);
+%><div class="<%- className %>">
+  <% cardList.forEach(function (value, key) { %>
+    <%- include('../equipmentCard/_equipmentCard.ejs', {
+      visual: value.visual,
+      spIcon: value.spIcon,
+      subCap: value.subCap,
+      ttl: value.ttl,
+      txt: value.txt,
+      modifiers: value.modifiers
+    }) %>
+<% }); %>
+</div>
+

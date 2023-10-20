@@ -1,0 +1,22 @@
+.webMobile {
+
+  .securitySect + & {
+    @include pc {
+      margin-top: 64px;
+    }
+
+    @include sp {
+      margin-top: 50px;
+    }
+  }
+
+  & + .equipmentCardGroup {
+    @include pc {
+      margin-top: 64px;
+    }
+
+    @include sp {
+      margin-top: 50px;
+    }
+  }
+}

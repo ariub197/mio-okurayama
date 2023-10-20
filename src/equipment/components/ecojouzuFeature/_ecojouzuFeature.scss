@@ -1,0 +1,55 @@
+.ecojouzuFeature {
+
+  .equipmentCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__ttl {
+      @include pc {
+        font-size: 20px;
+      }
+
+      .ecojouzuLogo {
+        @include pc {
+          margin-bottom: 32px;
+          width: 169px;
+        }
+
+        @include sp {
+          display: block;
+          margin: 0 auto 30px;
+          width: 135px;
+        }
+      }
+    }
+
+    &__cont {
+      @include pc {
+        width: 294px;
+      }
+    }
+
+    .photo {
+      @include pc {
+        width: 630px;
+      }
+
+      &__image {
+        width: 100%;
+      }
+    }
+
+    &--upsideDown {
+      @include pc {
+        flex-direction: row-reverse;
+      }
+
+      .equipmentCard__cont {
+        @include pc {
+          flex-grow: 0;
+        }
+      }
+    }
+  }
+}

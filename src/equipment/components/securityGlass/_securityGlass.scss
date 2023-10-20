@@ -1,0 +1,32 @@
+.securityGlass {
+
+  .photo {
+    margin: 0 auto;
+    width: fit-content;
+  }
+
+  .photo__image {
+    display: block;
+    margin: auto;
+  }
+
+  .equipmentCardGroup + & {
+    @include pc {
+      margin-top: 64px;
+    }
+
+    @include sp {
+      margin-top: 50px;
+    }
+  }
+
+  & + .equipmentCardGroup {
+    @include pc {
+      margin-top: 64px;
+    }
+
+    @include sp {
+      margin-top: 50px;
+    }
+  }
+}

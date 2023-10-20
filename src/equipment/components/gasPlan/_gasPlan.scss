@@ -1,0 +1,60 @@
+.gasPlan {
+
+  &__cont {
+    position: relative;
+  }
+
+  &__spIcon {
+    align-items: center;
+    background-color: rgba(70,70,70,.75);
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 32px;
+    z-index: 2;
+
+    @include pc  {
+      display: none;
+    }
+
+    .zoomSVG {
+      width: 17px;
+
+      &__path {
+        fill: #ffffff;
+      }
+    }
+  }
+
+  .txt {
+    @include pc {
+      text-align: center;
+    }
+
+    & + .gasPlan__cont {
+      @include pc {
+        margin-top: 40px;
+      }
+
+      @include sp {
+        margin-top: 25px;
+      }
+    }
+  }
+
+  .photo {
+    margin: 0 auto;
+
+    &__image {
+      width: 100%;
+    }
+
+    & + .caption {
+      letter-spacing: 0;
+      margin-top: 10px;
+    }
+  }
+}

@@ -1,0 +1,130 @@
+.mistySect {
+  @include pc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__visual {
+    @include pc {
+      margin-bottom: 90px;
+    }
+
+    @include sp {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__logoGroup {
+    display: flex;
+
+    @include pc {
+      margin-bottom: 40px;
+      width: 312px;
+    }
+
+    @include sp {
+      justify-content: center;
+      margin-bottom: 25px;
+    }
+
+    .logoMisty {
+      @include pc {
+        width: 129px;
+      }
+
+      @include sp {
+        width: 125px;
+      }
+    }
+
+    .logoGasmart {
+      @include pc {
+        width: 153px;
+      }
+
+      @include sp {
+        width: 125px;
+      }
+    }
+  }
+
+  &__head,
+  &__cont {
+    @include pc {
+      width: 480px;
+    }
+  }
+
+  &__cont {
+    @include sp {
+      margin-top: 30px;
+    }
+  }
+
+  &__heading {
+    @include pc {
+      font-size: 22px;
+      margin-bottom: 24px;
+
+      @include lhCrop(26/20);
+    }
+
+    @include sp {
+      font-size: 16px;
+      margin-bottom: 25px;
+      text-align: center;
+
+      @include lhCrop(51/32);
+    }
+  }
+
+  &__bottom {
+    @include pc {
+      margin-top: 55px;
+    }
+
+    @include sp {
+      margin-top: 70px;
+    }
+
+    .equipmentCardGroup {
+      @include pc {
+        align-items: flex-start;
+      }
+    }
+
+    .equipmentCard {
+
+      &__head {
+        @include sp {
+          margin: 0 auto;
+          width: 100%;
+        }
+      }
+
+      .photo__capOut {
+        position: static;
+
+      }
+
+      &--upsideDown {
+
+        .equipmentCard__cont {
+          flex-grow: 0;
+        }
+      }
+    }
+  }
+
+  .equipmentCardGroup + & {
+    @include pc {
+      margin-top: 64px;
+    }
+
+    @include sp {
+      margin-top: 100px;
+    }
+
+  }
+}

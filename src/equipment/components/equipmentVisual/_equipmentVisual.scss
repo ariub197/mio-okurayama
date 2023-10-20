@@ -1,0 +1,45 @@
+.equipmentVisual {
+  position: relative;
+
+  &__ttl {
+    color: #ffffff;
+    font-family: $font-en;
+    left: 50%;
+    letter-spacing: .08em;
+    line-height: .8;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    z-index: 10;
+
+    @include pc {
+      font-size: 42px;
+    }
+
+    @include sp {
+      font-size: 22px;
+    }
+  }
+
+  & + .subVisual,
+  & + .equipmentSect {
+    @include pc {
+      margin-top: 100px;
+    }
+
+    @include sp {
+      margin-top: 75px;
+    }
+  }
+
+  .equipmentSect + & {
+    @include pc {
+      margin-top: 120px;
+    }
+
+    @include sp {
+      margin-top: 60px;
+    }
+  }
+}

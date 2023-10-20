@@ -1,0 +1,85 @@
+.equipmentSect {
+
+  &__head {
+    background-color: #94afaa;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+
+    @include pc {
+      padding: 20px;
+      width: 100%;
+    }
+
+    @include sp {
+      padding: 10px;
+      width: 100%;
+    }
+
+    & + .areaSect__cont {
+      @include pc {
+        margin-top: 40px;
+      }
+
+      @include sp {
+        margin-top: 30px;
+      }
+    }
+
+  }
+
+  &__catch {
+    margin: 0 auto;
+
+    @include pc {
+      text-align: center;
+    }
+
+    & + .equipmentCardGroup {
+      @include pc {
+        margin-top: 40px;
+      }
+
+      @include sp {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &__heading {
+    color: #ffffff;
+    letter-spacing: .1em;
+
+    @include pc {
+      font-size: 22px;
+      text-align: center;
+
+      @include lhCrop(32 / 24);
+    }
+
+    @include sp {
+      font-size: 16px;
+
+      @include lhCrop(44 / 28);
+    }
+  }
+
+  &__cont {
+    @include pc {
+      margin-top: 42px;
+    }
+
+    @include sp {
+      margin-top: 28px;
+    }
+  }
+
+  & + .equipmentSect {
+    @include pc {
+      margin-top: 80px;
+    }
+
+    @include sp {
+      margin-top: 60px;
+    }
+  }
+
+}

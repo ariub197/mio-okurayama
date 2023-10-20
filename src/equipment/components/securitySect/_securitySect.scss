@@ -1,0 +1,141 @@
+.securitySect {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include sp {
+    margin-top: 35px;
+  }
+
+  &__head {
+    @include pc {
+      width: 456px;
+    }
+
+    .equipmentCard {
+
+      &__ttl {
+        @include pc {
+          font-size: 20px;
+          line-height: calc(36 / 20);
+        }
+
+        @include sp {
+          font-size: 14px;
+          letter-spacing: 0;
+          line-height: calc(42 / 24);
+        }
+
+        .hisectLogo {
+          @include pc {
+            display: none;
+            margin-bottom: 36px;
+            width: 86px;
+          }
+
+          @include sp {
+            bottom: 11px;
+            position: absolute;
+            right: 0;
+            width: 68px;
+          }
+        }
+      }
+
+      &__txt {
+        @include pc {
+          padding-left: 145px;
+          position: relative;
+        }
+
+        .hisectLogo {
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 120px;
+
+          @include sp {
+            display: none;
+          }
+        }
+      }
+
+    }
+  }
+
+  &__heading {
+    text-align: center;
+    width: 100%;
+
+    @include pc {
+      font-size: 24px;
+      letter-spacing: .15em;
+      line-height: 1;
+      margin-bottom: 20px;
+
+    }
+
+    @include sp {
+      font-size: 18px;
+      letter-spacing: .05em;
+      line-height: 1;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__cont {
+    @include sp {
+      width: 100%;
+    }
+  }
+
+  &__bottom {
+    position: relative;
+
+    @include pc {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+      width: 100%;
+    }
+
+    @include sp {
+      margin-top: 28px;
+    }
+  }
+
+  &__spIcon {
+    align-items: center;
+    background-color: rgba(70,70,70,.75);
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 32px;
+    z-index: 2;
+
+    @include pc  {
+      display: none;
+    }
+
+    .zoomSVG {
+      width: 17px;
+
+      &__path {
+        fill: #ffffff;
+      }
+    }
+  }
+
+  .photo,
+  .photo__image {
+    width: 100%;
+  }
+
+  & + .webMobile {
+    margin-top: 32px;
+  }
+}

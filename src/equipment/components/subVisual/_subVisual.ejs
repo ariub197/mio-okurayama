@@ -1,0 +1,9 @@
+<% include('/_utils'); const params = ejsUtils.defaultParamsMapper(locals, {
+  visual: {},
+  ttl: ''
+}); %>
+
+<div class="subVisual">
+  <%- include('/common/components/photo/_photo.ejs', params.visual) %>
+  <div class="subVisual__ttl"><%- params.ttl %></div>
+</div>

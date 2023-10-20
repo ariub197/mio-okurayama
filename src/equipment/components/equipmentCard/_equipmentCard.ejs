@@ -1,0 +1,24 @@
+<% include('/_utils');
+const params = ejsUtils.defaultParamsMapper(locals, {
+  visual: {},
+  spIcon: '',
+  subCap: '',
+  ttl: '',
+  txt: '',
+  modifiers: []
+});
+const className = ejsUtils.mapModifiers('equipmentCard', params.modifiers);
+%><div class="<%- className %>">
+  <% if (params.visual !== {}) { %>
+    <div class="equipmentCard__head">
+      <% if (params.spIcon !== '') { %><div class="equipmentCard__spIcon"><svg class="zoomSVG" viewBox="0 0 34 34"><path class="zoomSVG__path" d="m0,34v-13.54h1.54v10.94L31.4,1.54h-10.94V0h13.54v13.54h-1.54V2.6L2.6,32.46h10.94v1.54H0Z"/></svg></div><% } %>
+      <%- include('/common/components/photo/_photo.ejs', params.visual) %>
+      <% if (params.subCap !== '') { %><p class="caption"><%- params.subCap %></p><% } %>
+    </div>
+  <% } %>
+  <div class="equipmentCard__cont">
+    <% if (params.ttl !== '') { %><div class="equipmentCard__ttl"><span><%- params.ttl %></span></div><% } %>
+    <% if (params.txt !== '') { %><p class="equipmentCard__txt"><%- params.txt %></p><% } %>
+  </div>
+</div>
+
