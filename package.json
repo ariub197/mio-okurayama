@@ -1,9 +1,9 @@
 {
   "name": "gulpset-skeleton",
-  "version": "3.1.0",
+  "version": "1.0.0",
   "description": "Gulp based project skeleton with modular tasks.",
-  "main": "gulpfile.js",
-  "author": "FOURDIGIT Inc., Nobuyuki NISHIGAKI",
+  "main": "index.js",
+  "author": "Ariub197 <arisumi19702@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.1.2",
@@ -71,6 +71,7 @@
     "stickyfill": "^1.1.1-strict",
     "swiper": "5.1.0",
     "tiny-slider": "^2.9.3",
+    "volta": "0.0.0",
     "yakuhanjp": "^3.3.1"
   },
   "directories": {
@@ -82,10 +83,7 @@
     "eslint:fix": "yarn eslint --fix",
     "deployrsync": "gulp deployrsync"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fourdigitdesign/gulpset.git"
-  },
+  "repository": "https://github.com/holonincjp/bkn_271-055_okurayama.git",
   "keywords": [
     "gulp",
     "skeleton",
@@ -98,5 +96,9 @@
   "homepage": "https://github.com/fourdigitdesign/gulpset#readme",
   "engines": {
     "node": ">=8.0.0"
+  },
+  "volta": {
+    "node": "12.20.1",
+    "yarn": "1.22.0"
   }
 }
