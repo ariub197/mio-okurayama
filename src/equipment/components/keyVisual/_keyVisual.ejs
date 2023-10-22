@@ -1,0 +1,25 @@
+<%include('/_utils');
+const params = ejsUtils.defaultParamsMapper(locals, {
+  pageTitle: {
+    en:'',
+  },
+  alt:'image photo',
+  captionColor:'sdw-wh',
+  modifiers: []
+});
+const className = ejsUtils.mapModifiers('keyVisual', params.modifiers);
+%>
+<div id="keyVisual" class="<%- className %>">
+  <div class="keyVisual__head">
+    <picture class="keyVisual__picture">
+      <source media="(min-width: 768px)" srcset="./imgs/pc/img-top.jpg" width="1200" height="600">
+      <img src="./imgs/sp/img-top-sp.jpg" alt="<%= params.alt %>" class="keyVisual__image" width="750" height="1000">
+    </picture>
+    <p class="keyVisual__capIn capIn" data-color="<%- params.captionColor %>"><%- params.alt %></p>
+  </div>
+  <div class="keyVisual__cont">
+    <h2 class="keyVisual__heading">
+      <span class="en"><%- params.pageTitle.en %></span>
+    </h2>
+  </div>
+</div>

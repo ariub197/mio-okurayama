@@ -15,6 +15,13 @@
         letter-spacing: 0;
         margin-top: 5px;
       }
+
+      &shadow {
+        .photo__image {
+          box-shadow: 0 8px 16px 0 rgba(102, 102, 102, 0.5);
+        }
+      }
+
     }
   }
 

@@ -2,25 +2,26 @@
   position: relative;
 
   &__item {
+    gap: 48px;
+
     @include sp {
       display: flex;
       justify-content: space-between;
+      gap: 20px;
     }
 
     &:not(:last-of-type) {
+      @include pc {
+        margin-bottom: 46px;
+      }
+
       @include sp {
         margin-bottom: 27px;
       }
     }
 
     .equipmentCard {
-      @include pc {
-        width: 304px;
-      }
-
-      @include sp {
-        width: 160px;
-      }
+      width: 50%;
     }
 
     &--edge {

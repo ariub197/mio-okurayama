@@ -5,21 +5,26 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .anchorNav {
+    display: none;
+  }
 }
 
 .anchorNav__link {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid #94afaa;
+  border: 1px solid #56706a;
   -webkit-box-shadow: 0 8px 16px 0 rgba(102, 102, 102, 0.1);
           box-shadow: 0 8px 16px 0 rgba(102, 102, 102, 0.1);
-  color: #94afaa;
+  color: #56706a;
+  background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,8 +36,8 @@
 
 @media print, screen and (min-width: 768px) {
   .anchorNav__link {
-    height: 60px;
-    width: 216px;
+    height: 80px;
+    width: 200px;
   }
 }
 
@@ -45,7 +50,7 @@
 
 @media print, screen and (min-width: 768px) {
   .anchorNav__link:not(:last-of-type) {
-    margin-right: 48px;
+    margin-right: 40px;
   }
 }
 
@@ -56,9 +61,8 @@
 }
 
 .anchorNav__link.is-active {
-  background-color: #94afaa;
+  background-color: #56706a;
   color: #ffffff;
-  opacity: .8;
 }
 
 .anchorNav__link.is-active:after {
@@ -212,6 +216,10 @@
   position: relative;
 }
 
+.designKitchen__item {
+  gap: 48px;
+}
+
 @media screen and (max-width: 768px) {
   .designKitchen__item {
     display: -webkit-box;
@@ -220,6 +228,13 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    gap: 20px;
+  }
+}
+
+@media print, screen and (min-width: 768px) {
+  .designKitchen__item:not(:last-of-type) {
+    margin-bottom: 46px;
   }
 }
 
@@ -229,16 +244,8 @@
   }
 }
 
-@media print, screen and (min-width: 768px) {
-  .designKitchen__item .equipmentCard {
-    width: 304px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .designKitchen__item .equipmentCard {
-    width: 160px;
-  }
+.designKitchen__item .equipmentCard {
+  width: 50%;
 }
 
 @media print, screen and (min-width: 768px) {
@@ -362,6 +369,11 @@
 .equipmentCard__head .photo + .caption {
   letter-spacing: 0;
   margin-top: 5px;
+}
+
+.equipmentCard__head .photoshadow .photo__image {
+  -webkit-box-shadow: 0 8px 16px 0 rgba(102, 102, 102, 0.5);
+          box-shadow: 0 8px 16px 0 rgba(102, 102, 102, 0.5);
 }
 
 .equipmentCard__spIcon {
@@ -788,7 +800,7 @@
 }
 
 .equipmentSect__head {
-  background-color: #94afaa;
+  background-color: #2f4f47;
   -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
@@ -1074,11 +1086,161 @@
 
 .gasPlan .photo__image {
   width: 100%;
+  -webkit-box-shadow: 0 2px 10px 0 rgba(102, 102, 102, 0.5);
+          box-shadow: 0 2px 10px 0 rgba(102, 102, 102, 0.5);
 }
 
 .gasPlan .photo + .caption {
   letter-spacing: 0;
   margin-top: 10px;
+}
+
+.keyVisual {
+  position: relative;
+}
+
+@media print, screen and (min-width: 768px) {
+  .keyVisual {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+}
+
+.keyVisual__head {
+  position: relative;
+}
+
+@media print, screen and (min-width: 768px) {
+  .keyVisual__head {
+    -webkit-box-shadow: 0 0 16px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 0 16px 10px rgba(0, 0, 0, 0.05);
+  }
+}
+
+@media print, screen and (min-width: 768px) {
+  .keyVisual__head .keyVisual__heading {
+    display: none;
+  }
+}
+
+.keyVisual__cont {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media print, screen and (min-width: 768px) {
+  .keyVisual__cont {
+    position: relative;
+    z-index: 3;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .keyVisual__cont {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+.keyVisual__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  color: #fff;
+}
+
+@media print, screen and (min-width: 768px) {
+  .keyVisual__heading {
+    bottom: 40px;
+    left: 40px;
+    z-index: 2;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .keyVisual__heading {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    position: absolute;
+  }
+}
+
+.keyVisual__heading .en {
+  display: block;
+  font-family: "Cinzel", serif;
+  letter-spacing: .06em;
+  line-height: .65;
+}
+
+@media print, screen and (min-width: 768px) {
+  .keyVisual__heading .en {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .keyVisual__heading .en {
+    font-size: 40px;
+  }
+}
+
+.keyVisual__capIn {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  z-index: 3;
+}
+
+.keyVisual--lowerCase .keyVisual__heading .en {
+  text-shadow: none;
+}
+
+@media print, screen and (min-width: 768px) {
+  .keyVisual--lowerCase .keyVisual__heading .en .lowercase {
+    font-size: 38px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .keyVisual--lowerCase .keyVisual__heading .en .lowercase {
+    font-size: 24px;
+  }
+}
+
+@media print, screen and (min-width: 768px) {
+  .keyVisual + .lead {
+    margin-top: 160px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .keyVisual + .lead {
+    margin-top: 80px;
+  }
 }
 
 @media print, screen and (min-width: 768px) {

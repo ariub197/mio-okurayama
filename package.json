@@ -18,7 +18,7 @@
     "fast-csv": "^2.4.1",
     "glob": "^7.1.2",
     "gulp": "^4.0.0",
-    "gulp-aigis": "https://github.com/TakuyaAbe/gulp-aigis#v1.3.1",
+    "gulp-aigis": "git+https://github.com/TakuyaAbe/gulp-aigis.git#v1.3.1",
     "gulp-changed": "^3.2.0",
     "gulp-ejs": "^3.2.0",
     "gulp-eslint": "^5.0.0",
@@ -83,7 +83,10 @@
     "eslint:fix": "yarn eslint --fix",
     "deployrsync": "gulp deployrsync"
   },
-  "repository": "https://github.com/holonincjp/bkn_271-055_okurayama.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holonincjp/bkn_271-055_okurayama.git"
+  },
   "keywords": [
     "gulp",
     "skeleton",

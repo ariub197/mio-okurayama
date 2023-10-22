@@ -6,7 +6,8 @@ const params = ejsUtils.defaultParamsMapper(locals, {
 const className = ejsUtils.mapModifiers('equipmentCard', params.modifiers);
 %><div class="anchorNav">
   <a href="#anchorEquipment" class="anchorNav__link<% if (params.current === 'anchorEquipment') { %> is-active<% } %>"><span class="anchorNav__txt">設備仕様</span></a>
-  <a href="#anchorComfort" class="anchorNav__link<% if (params.current === 'anchorComfort') { %> is-active<% } %>"><span class="anchorNav__txt">快適装備</span></a>
-  <a href="#anchorSecurity" class="anchorNav__link<% if (params.current === 'anchorSecurity') { %> is-active<% } %>"><span class="anchorNav__txt">セキュリティ</span></a>
+  <a href="#anchorComfort" class="anchorNav__link<% if (params.current === 'anchorComfort') { %> is-active<% } %>"><span class="anchorNav__txt">ガス設備</span></a>
+  <a href="#anchorSecurity" class="anchorNav__link<% if (params.current === 'anchorSecurity') { %> is-active<% } %>"><span class="anchorNav__txt">快適環境</span></a>
+  <a href="#anchorStructure" class="anchorNav__link<% if (params.current === 'anchorStructure') { %> is-active<% } %>"><span class="anchorNav__txt">セキュリティ</span></a>
   <a href="#anchorStructure" class="anchorNav__link<% if (params.current === 'anchorStructure') { %> is-active<% } %>"><span class="anchorNav__txt">構造</span></a>
 </div>
