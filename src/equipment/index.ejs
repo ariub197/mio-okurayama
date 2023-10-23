@@ -10,23 +10,21 @@
 <%- include('/common/inc/header/_header.ejs', {pageId: pageData.pageDir}) %>
 <main class="main">
   <div class="container">
-    <%- include('./components/keyVisual/_keyVisual.ejs', {
-      pageTitle: {
-        en: 'EQUIPMENT'
-      }
+    <%- include('/common/components/keyVisual/_keyVisual.ejs', {
+      pageTitle: 'EQUIPMENT'
     }) %>
     <div class="wrap">
       <div id="anchorEquipment" class="equpment-normal">
         <%- include('./components/anchorNav/_anchorNav.ejs', { current: 'anchorEquipment' }) %>
         <%- include('./components/equipmentVisual/_equipmentVisual.ejs', {
           visual: {
-            imagePath: '<img src="./imgs/img-kichin.jpg" alt="" width="1008" height="240">',
+            imagePath: '<img src="./imgs/img-kitchen-visual.jpg" alt="" width="1008" height="240">',
             alt: '',
             captionColor: '',
             captionPosition: 'capOut',
             pictureMode: ''
           },
-          ttl: '設備仕様'
+          ttl: 'EQUIPMENT'
         }) %>
         <%- include('./components/subVisual/_subVisual.ejs', {
           visual: {
@@ -50,7 +48,7 @@
               <div class="designKitchen__item designKitchen__item--edge">
                 <%- include('./components/equipmentCard/_equipmentCard.ejs', {
                   visual: {
-                    imagePath: '<img src="./imgs/img-kitchen-strage.jpg" alt="">',
+                    imagePath: '<img src="./imgs/img-kitchen-design-01.jpg" alt="" width="304" height="564">',
                     alt: '',
                     captionColor: '',
                     captionPosition: 'capOut',
@@ -61,31 +59,7 @@
                 }) %>
                 <%- include('./components/equipmentCard/_equipmentCard.ejs', {
                   visual: {
-                    imagePath: '<img src="./imgs/img-kitchen-pocket.png" alt="">',
-                    alt: '',
-                    captionColor: '',
-                    captionPosition: 'capOut',
-                    pictureMode: ''
-                  },
-                  ttl: 'フロントポケット',
-                  txt: 'お料理中も包丁等が取り出しやすいフロントポケットを採用。'
-                }) %>
-              </div>
-              <div class="designKitchen__item designKitchen__item--edge">
-                <%- include('./components/equipmentCard/_equipmentCard.ejs', {
-                  visual: {
-                    imagePath: '<img src="./imgs/img-kitchen-spices.jpg" alt="">',
-                    alt: '',
-                    captionColor: '',
-                    captionPosition: 'capOut',
-                    pictureMode: ''
-                  },
-                  ttl: 'スパイスキャリー',
-                  txt: '調味料や小物類等を使う時は、取り外して手元に置ける便利なスライドラックを採用。'
-                }) %>
-                <%- include('./components/equipmentCard/_equipmentCard.ejs', {
-                  visual: {
-                    imagePath: '<img src="./imgs/img-kitchen-capboard.jpg" alt="">',
+                    imagePath: '<img src="./imgs/img-kitchen-design-02.jpg" alt="" width="304" height="564">',
                     alt: '',
                     captionColor: '',
                     captionPosition: 'capOut',
@@ -95,13 +69,43 @@
                   txt: 'キッチンの面材と同色の食器棚を標準装備。電化製品も無理なく置けるので、キッチンまわりはいつもスッキリ。'
                 }) %>
               </div>
+              <div class="designKitchen__item designKitchen__item--core">
+                <%- include('./components/equipmentCard/_equipmentCard.ejs', {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-kitchen-design-03.jpg" alt="" width="304" height="203">',
+                    alt: '',
+                    captionColor: '',
+                    captionPosition: 'capOut',
+                    pictureMode: ''
+                  },
+                  ttl: 'フロントポケット',
+                  txt: 'お料理中も包丁等が取り出しやすいフロントポケットを採用。'
+                }) %>
+                <%- include('./components/equipmentCard/_equipmentCard.ejs', {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-kitchen-design-04.jpg" alt="" width="304" height="203">',
+                    alt: '',
+                    captionColor: '',
+                    captionPosition: 'capOut',
+                    pictureMode: ''
+                  },
+                  ttl: 'スライドラック',
+                  txt: '調味料や小物類等を使う時は、取り外して手元に置ける便利なスライドラックを採用。'
+                }) %>
+              </div>
             </div>
+          </div>
+        </section>
+        <section class="equipmentSect">
+          <div class="equipmentSect__head">
+            <div class="equipmentSect__heading"><span>開放的なオープンカウンターキッチン。</span></div>
           </div>
           <div class="equipmentSect__cont">
             <div class="counterKitchen">
               <div class="counterKitchen__item">
+                <p class="txt">お料理をしながらでもリビングで寛ぐ家族と会話が楽しめるよう、障害物のない開けた視界を確保したオープンカウンターキッチンを採用。リビングとの一体感のある空間は、閉鎖的なキッチンのイメージを無くし、楽しいキッチンワークを可能としました。</p>
                 <%- include('/common/components/photo/_photo.ejs', {
-                  imagePath: '<img src="./imgs/img-kitchen-counter.jpg" alt="" width="480" height="360">',
+                  imagePath: '<img src="./imgs/img-kitchen-counter-01.jpg" alt="" width="480" height="360">',
                   alt: '',
                   captionColor: '',
                   captionPosition: 'noCap',
@@ -110,161 +114,51 @@
                 }) %>
               </div>
               <div class="counterKitchen__item">
-                <div class="counterKitchen__heading">開放的なオープンカウンターキッチン</div>
-                <p class="txt">お料理をしながらでもリビングで寛ぐ家族と会話が楽しめるよう、障害物のない開けた視界を確保したオープンカウンターキッチンを採用。リビングとの一体感のある空間は、閉鎖的なキッチンのイメージを無くし、楽しいキッチンワークを可能としました。</p>
+                <div class="counterKitchen__heading">使いやすさを追求したガスコンロ</div>
+                <%- include('./components/equipmentCard/_equipmentCard.ejs', {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-kitchen-counter-02.jpg" alt="" width="230" height="153">',
+                    alt: '',
+                    captionColor: '',
+                    captionPosition: 'capOut',
+                    pictureMode: ''
+                  },
+                  ttl: 'さっとお手入れで<br>キレイが長持ち',
+                  txt: 'ガラス天板はドイツ・ショット社製のセランガラスを使用。様々な安全機能を搭載し、いつもキレイなコンロまわりを維持でき、お掃除が簡単なのもうれしい仕様です。',
+                  modifiers:['horizontal']
+                }) %>
+                <div class="counterKitchen__detail">
+                  <%- include('./components/equipmentCard/_equipmentCard.ejs', {
+                    visual: {
+                      imagePath: '<img src="./imgs/img-kitchen-counter-03.jpg" alt="" width="230" height="153">',
+                      alt: '参考写真',
+                      captionColor: 'sdw-wh',
+                      captionPosition: 'capIn',
+                      pictureMode: ''
+                    },
+                    ttl: '温度で止める<br>調理油過熱防止装置',
+                    txt: '調理油が自然発火する温度のずっと手前の約250℃の段階で、センサーが自動で火加減を調整します。',
+                    modifiers:['half']
+                  }) %>
+                  <%- include('./components/equipmentCard/_equipmentCard.ejs', {
+                    visual: {
+                      imagePath: '<img src="./imgs/img-kitchen-counter-04.jpg" alt="" width="230" height="153">',
+                      alt: '参考写真',
+                      captionColor: 'sdw-wh',
+                      captionPosition: 'capIn',
+                      pictureMode: ''
+                    },
+                    ttl: '時間で止める<br class="only-sp">コンロ・グリル<br>消し忘れ消火機能',
+                    txt: 'うっかり火を消し忘れても大丈夫。コンロは一定時間で自動消火するので安心です。',
+                    modifiers:['half']
+                  }) %>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="equipmentSect__cont">
-            <div class="counterKitchen__heading">使いやすさを追求したガスコンロ</div>
-            <div class="counterKitchen__detail">
-              <%- include('./components/equipmentCard/_equipmentCard.ejs', {
-                visual: {
-                  imagePath: '<img src="./imgs/img-kitchen-stove.jpg" alt="" width="230" height="153">',
-                  alt: '参考写真',
-                  captionColor: '',
-                  captionPosition: 'capIn',
-                  pictureMode: ''
-                },
-                ttl: 'さっとお手入れで<br>キレイが長持ち',
-                txt: 'ガラス天板はドイツ・ショット社製のセランガラスを使用。様々な安全機能を搭載し、いつもキレイなコンロまわりを維持でき、お掃除が簡単なのもうれしい仕様です。',
-                modifiers:['oneThird']
-              }) %>
-              <%- include('./components/equipmentCard/_equipmentCard.ejs', {
-                visual: {
-                  imagePath: '<img src="./imgs/img-kitchen-counter-03.jpg" alt="" width="230" height="153">',
-                  alt: '参考写真',
-                  captionColor: '',
-                  captionPosition: 'capIn',
-                  pictureMode: ''
-                },
-                ttl: '温度で止める<br>調理油過熱防止装置',
-                txt: '調理油が自然発火する温度のずっと手前の約250℃の段階で、センサーが自動で火加減を調整します。',
-                modifiers:['oneThird']
-              }) %>
-              <%- include('./components/equipmentCard/_equipmentCard.ejs', {
-                visual: {
-                  imagePath: '<img src="./imgs/img-kitchen-counter-04.jpg" alt="" width="230" height="153">',
-                  alt: '参考写真',
-                  captionColor: 'sdw-wh',
-                  captionPosition: 'capIn',
-                  pictureMode: ''
-                },
-                ttl: '時間で止める<br class="only-sp">コンロ・グリル<br>消し忘れ消火機能',
-                txt: 'うっかり火を消し忘れても大丈夫。コンロは一定時間で自動消火するので安心です。',
-                modifiers:['oneThird']
-              }) %>
-            </div>
-          </div>
-          <div class="equipmentSect__cont">
-            <%- include('./components/equipmentCardGroup/_equipmentCardGroup.ejs', {
-                cardList: [
-                  {
-                    visual: {
-                      imagePath: '<img src="./imgs/img-kitchen-dishwasher.jpg" alt="" width="237" height="158">',
-                      alt: '',
-                      captionColor: '',
-                      captionPosition: 'capOut',
-                      pictureMode: ''
-                    },
-                    ttl: '食器洗浄乾燥機',
-                    txt: 'ビルトイン式の食器洗浄乾燥機を装備しています。場所もとらず、後片付けもスムーズです。',
-                    modifiers: []
-                  },
-                  {
-                    visual: {
-                      imagePath: '<img src="./imgs/img-kitchen-shawer.png" alt="" width="237" height="158">',
-                      alt: '',
-                      captionColor: '',
-                      captionPosition: 'capOut',
-                      pictureMode: ''
-                    },
-                    ttl: '浄水機能付シャワー<br class="only-sp">混合水栓',
-                    txt: '原水・浄水の切り換えがワンタッチで操作できる混合水栓です。',
-                    modifiers: []
-                  },
-                  {
-                    visual: {
-                      imagePath: '<img src="./imgs/img-kitchen-hose.png" alt="" width="237" height="158">',
-                      alt: '',
-                      captionColor: '',
-                      captionPosition: 'capOut',
-                      pictureMode: ''
-                    },
-                    ttl: '引き出し式ホース',
-                    txt: '引き出し式のホースがシンクの隅々まで届き、お掃除の際にも大変便利です。',
-                    modifiers: []
-                  },
-                  {
-                    visual: {
-                      imagePath: '<img src="./imgs/img-kitchen-range-food.png" alt="" width="237" height="158">',
-                      alt: '',
-                      captionColor: '',
-                      captionPosition: 'capOut',
-                      pictureMode: ''
-                    },
-                    ttl: 'レンジフード',
-                    txt: '煙を逃がさないホーロー整流板は頑固な油汚れもサッと拭くだけ。熱にも強い仕様です。',
-                    modifiers: []
-                  },
-                  {
-                    visual: {
-                      imagePath: '<img src="./imgs/img-kitchen-sink.png" alt="" width="237" height="158">',
-                      alt: '',
-                      captionColor: '',
-                      captionPosition: 'capOut',
-                      pictureMode: ''
-                    },
-                    ttl: '静音シンク',
-                    txt: '水はねの音がしにくい静音仕様のシンクを採用しているので、食器洗いの水音を軽減します。',
-                    modifiers: []
-                  },
-                  {
-                    visual: {
-                      imagePath: '<img src="./imgs/img-kitchen-counter-top.png" alt="" width="237" height="158">',
-                      alt: '',
-                      captionColor: '',
-                      captionPosition: 'capOut',
-                      pictureMode: ''
-                    },
-                    ttl: 'キッチンカウンター<br class="only-sp">トップ',
-                    txt: 'カウンタートップにはデザイン性が高く、高級感があり傷や汚れに強い人造大理石を使用しています。',
-                    modifiers: []
-                  },
-                  {
-                    visual: {
-                      imagePath: '<img src="./imgs/img-kitchen-panel.png" alt="" width="237" height="158">',
-                      alt: '',
-                      captionColor: '',
-                      captionPosition: 'capOut',
-                      pictureMode: ''
-                    },
-                    ttl: 'ホーロー<br class="only-sp">キッチンパネル',
-                    txt: '油汚れが気になるコンロまわりには、汚れが染み込まない高品位ホーローを使用しています。',
-                    modifiers: []
-                  },
-                  {
-                    visual: {
-                      imagePath: '<img src="./imgs/img-kitchen-oil-guard.png" alt="" width="237" height="158">',
-                      alt: '',
-                      captionColor: '',
-                      captionPosition: 'capOut',
-                      pictureMode: ''
-                    },
-                    ttl: 'オイルガード',
-                    txt: '油飛びを防ぐガラスパネルは、お手入れ簡単で目立たずにスタイリッシュです。',
-                    modifiers: []
-                  },
-                ],
-                modifiers: ['oneFourth']
-              })%>
-            </div>
             <section class="utilitySink">
-              <div class="utilitySink__heading">3層立体的なシンクで<br class="only-sp">「洗う、調理、片付ける」をスムーズに</div>
-                <p class="txt">「ワークトップスペース」、「アシストスペース」、「ミドルスペース」と、シンクスペースを3層に使い分けられ、家事の効率を高めます。 </p>
               <div class="utilitySink__head">
                 <%- include('/common/components/photo/_photo.ejs', {
-                  imagePathPC: '<img src="./imgs/img-kitchen-sink-top.png" alt="" width="304" height="399">',
+                  imagePathPC: '<img src="./imgs/pc/img-kitchen-utility-01.jpg" alt="" width="304" height="399">',
                   imagePathSP: '<img src="./imgs/sp/img-kitchen-utility-01.jpg" alt="" width="630" height="420">',
                   alt: 'image photo',
                   captionColor: 'sdw-wh',
@@ -274,10 +168,12 @@
                 }) %>
               </div>
               <div class="utilitySink__cont">
+                <div class="utilitySink__heading">3層立体的なシンクで<br class="only-sp">「洗う、調理、片付ける」をスムーズに</div>
+                <p class="txt">「ワークトップスペース」、「アシストスペース」、「ミドルスペース」と、シンクスペースを3層に使い分けられ、家事の効率を高めます。 </p>
                 <div class="utilitySink__spVisual">
                   <%- include('/common/components/photo/_photo.ejs', {
-                    imagePathPC: '<img src="./imgs/img-kitchen-sink-top.png" alt="" width="304" height="399">',
-                    imagePathSP: '<img src="./imgs/img-kitchen-sink-top.png" alt="" width="630" height="420">',
+                    imagePathPC: '<img src="./imgs/pc/img-kitchen-utility-01.jpg" alt="" width="304" height="399">',
+                    imagePathSP: '<img src="./imgs/sp/img-kitchen-utility-01.jpg" alt="" width="630" height="420">',
                     alt: 'image photo',
                     captionColor: 'sdw-wh',
                     captionPosition: 'capIn',
@@ -289,7 +185,7 @@
                   cardList: [
                     {
                       visual: {
-                        imagePath: '<img src="./imgs/img-kitchen-sink-wash.png" alt="" width="205" height="137">',
+                        imagePath: '<img src="./imgs/img-kitchen-utility-02.jpg" alt="" width="205" height="137">',
                         alt: 'image photo',
                         captionColor: 'sdw-wh',
                         captionPosition: 'capIn',
@@ -301,7 +197,7 @@
                     },
                     {
                       visual: {
-                        imagePath: '<img src="./imgs/img-kitchen-sink-pasta.png" alt="" width="205" height="137">',
+                        imagePath: '<img src="./imgs/img-kitchen-utility-03.jpg" alt="" width="205" height="137">',
                         alt: 'image photo',
                         captionColor: 'sdw-wh',
                         captionPosition: 'capIn',
@@ -313,7 +209,7 @@
                     },
                     {
                       visual: {
-                        imagePath: '<img src="./imgs/img-kitchen-sink-middle.png" alt="" width="205" height="137">',
+                        imagePath: '<img src="./imgs/img-kitchen-utility-04.jpg" alt="" width="205" height="137">',
                         alt: 'image photo',
                         captionColor: 'sdw-wh',
                         captionPosition: 'capIn',
@@ -328,6 +224,108 @@
                 })%>
               </div>
             </section>
+            <%- include('./components/equipmentCardGroup/_equipmentCardGroup.ejs', {
+              cardList: [
+                {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-kitchen-sink-01.jpg" alt="" width="237" height="158">',
+                    alt: '',
+                    captionColor: '',
+                    captionPosition: 'capOut',
+                    pictureMode: ''
+                  },
+                  ttl: '食器洗浄乾燥機',
+                  txt: 'ビルトイン式の食器洗浄乾燥機を装備しています。場所もとらず、後片付けもスムーズです。',
+                  modifiers: []
+                },
+                {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-kitchen-sink-02.jpg" alt="" width="237" height="158">',
+                    alt: '',
+                    captionColor: '',
+                    captionPosition: 'capOut',
+                    pictureMode: ''
+                  },
+                  ttl: '浄水機能付シャワー<br class="only-sp">混合水栓',
+                  txt: '原水・浄水の切り換えがワンタッチで操作できる混合水栓です。',
+                  modifiers: []
+                },
+                {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-kitchen-sink-03.jpg" alt="" width="237" height="158">',
+                    alt: '',
+                    captionColor: '',
+                    captionPosition: 'capOut',
+                    pictureMode: ''
+                  },
+                  ttl: '引き出し式ホース',
+                  txt: '引き出し式のホースがシンクの隅々まで届き、お掃除の際にも大変便利です。',
+                  modifiers: []
+                },
+                {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-kitchen-sink-04.jpg" alt="" width="237" height="158">',
+                    alt: '',
+                    captionColor: '',
+                    captionPosition: 'capOut',
+                    pictureMode: ''
+                  },
+                  ttl: 'レンジフード',
+                  txt: '煙を逃がさないホーロー整流板は頑固な油汚れもサッと拭くだけ。熱にも強い仕様です。',
+                  modifiers: []
+                },
+                {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-kitchen-sink-05.jpg" alt="" width="237" height="158">',
+                    alt: '',
+                    captionColor: '',
+                    captionPosition: 'capOut',
+                    pictureMode: ''
+                  },
+                  ttl: '静音シンク',
+                  txt: '水はねの音がしにくい静音仕様のシンクを採用しているので、食器洗いの水音を軽減します。',
+                  modifiers: []
+                },
+                {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-kitchen-sink-06.jpg" alt="" width="237" height="158">',
+                    alt: '',
+                    captionColor: '',
+                    captionPosition: 'capOut',
+                    pictureMode: ''
+                  },
+                  ttl: 'キッチンカウンター<br class="only-sp">トップ',
+                  txt: 'カウンタートップにはデザイン性が高く、高級感があり傷や汚れに強い人造大理石を使用しています。',
+                  modifiers: []
+                },
+                {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-kitchen-sink-07.jpg" alt="" width="237" height="158">',
+                    alt: '',
+                    captionColor: '',
+                    captionPosition: 'capOut',
+                    pictureMode: ''
+                  },
+                  ttl: 'ホーロー<br class="only-sp">キッチンパネル',
+                  txt: '油汚れが気になるコンロまわりには、汚れが染み込まない高品位ホーローを使用しています。',
+                  modifiers: []
+                },
+                {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-kitchen-sink-08.jpg" alt="" width="237" height="158">',
+                    alt: '',
+                    captionColor: '',
+                    captionPosition: 'capOut',
+                    pictureMode: ''
+                  },
+                  ttl: 'オイルガード',
+                  txt: '油飛びを防ぐガラスパネルは、お手入れ簡単で目立たずにスタイリッシュです。',
+                  modifiers: []
+                },
+              ],
+              modifiers: ['oneFourth']
+            })%>
+          </div>
         </section>
         <%- include('./components/subVisual/_subVisual.ejs', {
           visual: {
@@ -351,20 +349,20 @@
               cardList: [
                 {
                   visual: {
-                    imagePath: '<img src="./imgs/img-bathroom-light.png" alt="" width="304" height="203">',
+                    imagePath: '<img src="./imgs/img-bathroom-01.jpg" alt="" width="304" height="203">',
                     alt: '',
                     captionColor: '',
                     captionPosition: 'capOut',
                     pictureMode: ''
                   },
-                  ttl: 'ダウンライト',
+                  ttl: 'ダウンライト<span class="small">（一部除く）</span>',
                   txt: 'スッキリした印象のもと、バスルームの隅々まで優しく照らしてくれます。',
                   modifiers: []
                 },
 
                 {
                   visual: {
-                    imagePath: '<img src="./imgs/img-bathroom-shower.png" alt="" width="304" height="203">',
+                    imagePath: '<img src="./imgs/img-bathroom-02.jpg" alt="" width="304" height="203">',
                     alt: '',
                     captionColor: '',
                     captionPosition: 'capOut',
@@ -376,7 +374,7 @@
                 },
                 {
                   visual: {
-                    imagePath: '<img src="./imgs/img-bathroom-dryer.png" alt="" width="304" height="203">',
+                    imagePath: '<img src="./imgs/img-bathroom-03.jpg" alt="" width="304" height="203">',
                     alt: '',
                     captionColor: '',
                     captionPosition: 'capOut',
@@ -418,7 +416,7 @@
                 <%- include('/common/components/photo/_photo.ejs', {
                   imagePathPC: '<img src="./imgs/pc/img-misty-visual.jpg" alt="" width="1008" height="160">',
                   imagePathSP: '<img src="./imgs/sp/img-misty-visual.jpg" alt="" width="630" height="315">',
-                  alt: '',
+                  alt: 'image photo',
                   captionColor: '',
                   captionPosition: 'capOut',
                   pictureMode: 'on',
@@ -426,12 +424,15 @@
                 }) %>
               </div>
               <div class="mistySect__head">
+                <div class="mistySect__logoGroup">
+                  <img src="./imgs/logo-misty.png" class="logoMisty" alt="MISTY" width="251" height="55">
+                </div>
                 <div class="mistySect__heading">ミスティで、時短・節水<br class="only-sp">新入浴スタイル</div>
                 <p class="txt">ミスティを使った「ミスト浴」は、温かいミストが全身をしっかり包み込むから頭からつま先までポカポカに。短時間で入浴効果を実感出来るから、忙しい人にもぴったり。細かいミストで温めるので、節水にもこだわった毎日の入浴に取り入れたい新習慣です。</p>
               </div>
               <div class="mistySect__cont">
                 <%- include('/common/components/photo/_photo.ejs', {
-                  imagePath: '<img src="./imgs/img-bathroom-misty-top.png" alt="" width="480" height="320">',
+                  imagePath: '<img src="./imgs/img-misty-01.jpg" alt="" width="480" height="320">',
                   alt: '画像提供：東京ガス（イメージ）',
                   captionColor: '',
                   captionPosition: 'capOut',
@@ -449,7 +450,7 @@
                         captionColor: '',
                         captionPosition: 'capOut',
                         pictureMode: '',
-                        modifiers: ['shadow']
+                        modifiers: ['sdw_inner']
                       },
                       spIcon: 'zoom',
                       ttl: '入浴後の体の温かさ',
@@ -458,12 +459,12 @@
                     },
                     {
                       visual: {
-                        imagePath: '<img src="./imgs/img-bathroom-comparison.png" alt="" width="480" height="320">',
+                        imagePath: '<img src="./imgs/img-misty-03.jpg" alt="" width="480" height="320">',
                         alt: 'image photo',
                         captionColor: '',
                         captionPosition: 'capIn',
                         pictureMode: '',
-                        modifiers: ['shadow']
+                        modifiers: ['sdw_inner']
                       },
                       subCap: '入浴条件：ミストサウナ浴(スプラッシュ)40℃10分、シャワー浴40℃10分<br>それぞれ同じ被験者にフルメイクを施術し入浴・洗顔後の顔のメイク汚れの残り方を美容部員がマイクロスコープ画像で比較し、20代女性12人中8人でミストサウナ浴が優位であると判定(2011年東京ガス調べ)',
                       ttl: '肌の汚れ落ち比較',
@@ -473,11 +474,11 @@
                     {
                       visual: {
                         imagePath: '<img src="./imgs/img-misty-04.jpg" alt="" width="480" height="320">',
-                        alt: '入浴条件：ミストサウナ浴約40℃10分<br>連浴期間：1ヵ月　N=40(女性、平均年齢41.4歳<br>出展：2005年大阪ガスエネルギー技術研究所<br>※個人差があります',
+                        alt: '入浴条件：ミストサウナ浴約40℃10分<br>連浴期間：1ヵ月　N=40(女性、平均年齢41.4歳<br>出展：2005年大阪ガスエネルギー技術研究所<br>※個人差があります。',
                         captionColor: '',
                         captionPosition: 'capOut',
                         pictureMode: '',
-                        modifiers: ['shadow']
+                        modifiers: ['sdw_inner']
                       },
                       spIcon: 'zoom',
                       ttl: '肌のうるおい効果',
@@ -486,14 +487,14 @@
                     },
                     {
                       visual: {
-                        imagePath: '<img src="./imgs/img-bathroom-water-saving.png" alt="" width="480" height="480">',
-                        alt: '',
+                        imagePath: '<img src="./imgs/img-misty-05.jpg" alt="" width="480" height="480">',
+                        alt: '※試算条件：天井カセットタイプ、ノーリツ製エコジョーズ使用、1.5坪ユニットバス、外気温5℃、30分運転した場合の東京ガス試算例。ガス料金は家庭用ガス温水床暖房契約セット割（東京地区等）の2022年9月実施の約款の料金表且つ2022年12月時点の原料費調整額を適用。電気料金は東京電力エナジーパートナーの従量電灯Bの2019年10月実施の約款の料金表且つ2022年12月時点の燃料費調整額および再生可能エネルギー発電促進賦課金を適用。水道料金は、東京都水道局に基づく税込金額。ご使用状況・機種によりコストは異なります。<br>※1 機種およびミストモードにより差があります。<br>※2 冬期（12月〜4月検針分）：約59円〜74円、その他期（5月〜11月検針分）：約63円〜78円',
                         captionColor: '',
                         captionPosition: 'capOut',
                         pictureMode: '',
-                        modifiers: ['shadow']
+                        modifiers: ['sdw_inner']
                       },
-                      subCap: ' <img src="./imgs/img-bathroom-running-cost.png">※試算条件：天井カセットタイプ、ノーリツ製エコジョーズ使用、1.5坪ユニットバス、外気温5℃、30分運転した場合の東京ガス試算例。ガス料金は家庭用ガス温水床暖房契約セット割（東京地区等）の2022年9月実施の約款の料金表且つ2022年12月時点の原料費調整額を適用。電気料金は東京電力エナジーパートナーの従量電灯Bの2019年10月実施の約款の料金表且つ2022年12月時点の燃料費調整額および再生可能エネルギー発電促進賦課金を適用。水道料金は、東京都水道局に基づく税込金額。ご使用状況・機種によりコストは異なります。<br>※1 機種およびミストモードにより差があります。<br>※2 冬期（12月〜4月検針分）：約59円〜74円、その他期（5月〜11月検針分）：約63円〜78円',
+                      spIcon: 'zoom',
                       ttl: '節水だから毎日使える！',
                       txt: 'ミストサウナ浴は、細かいミストで温めるため、水の使用量は少なめ。毎日の入浴にプラスしてお使いください。',
                       modifiers: ['upsideDown']
@@ -527,7 +528,7 @@
               cardList: [
                 {
                   visual: {
-                    imagePath: '<img src="./imgs/img-powder-bowl.png" alt="" width="304" height="203">',
+                    imagePath: '<img src="./imgs/img-powderroom-01.jpg" alt="" width="304" height="203">',
                     alt: '',
                     captionColor: '',
                     captionPosition: 'capOut',
@@ -539,7 +540,7 @@
                 },
                 {
                   visual: {
-                    imagePath: '<img src="./imgs/img-powder-mirror.png" alt="" width="304" height="203">',
+                    imagePath: '<img src="./imgs/img-powderroom-02.jpg" alt="" width="304" height="203">',
                     alt: '',
                     captionColor: '',
                     captionPosition: 'capOut',
@@ -551,7 +552,7 @@
                 },
                 {
                   visual: {
-                    imagePath: '<img src="./imgs/img-powder-faucet.png" alt="" width="304" height="203">',
+                    imagePath: '<img src="./imgs/img-powderroom-03.jpg" alt="" width="304" height="203">',
                     alt: '',
                     captionColor: '',
                     captionPosition: 'capOut',
@@ -563,7 +564,7 @@
                 },
                 {
                   visual: {
-                    imagePath: '<img src="./imgs/img-powder-hook.png" alt="" width="304" height="203">',
+                    imagePath: '<img src="./imgs/img-powderroom-04.jpg" alt="" width="304" height="203">',
                     alt: '',
                     captionColor: '',
                     captionPosition: 'capOut',
@@ -575,7 +576,7 @@
                 },
                 {
                   visual: {
-                    imagePath: '<img src="./imgs/img-powder-pocket.png" alt="" width="304" height="203">',
+                    imagePath: '<img src="./imgs/img-powderroom-05.jpg" alt="" width="304" height="203">',
                     alt: '',
                     captionColor: '',
                     captionPosition: 'capOut',
@@ -587,7 +588,7 @@
                 },
                 {
                   visual: {
-                    imagePath: '<img src="./imgs/img-powder-cabinet.png" alt="" width="304" height="203">',
+                    imagePath: '<img src="./imgs/img-powderroom-06.jpg" alt="" width="304" height="203">',
                     alt: '',
                     captionColor: '',
                     captionPosition: 'capOut',
@@ -618,13 +619,13 @@
           </div>
           <div class="equipmentSect__cont">
             <div class="equipmentSect__catch">
-              <p class="txt">住まいの中にあって、いちばん清潔感と爽やかさを求められる空間であるトイレには、<br>先進の技術とスタイルを導入しました。<br>シンプルな形状でお掃除もしやすいタンクレストイレやトイレ内に小物類を収納出来る吊戸棚などが<br>清潔感のある空間を保ちます。</p>
+              <p class="txt">住まいの中にあって、いちばん清潔感と爽やかさを求められる空間であるトイレには、先進の技術とスタイルを導入しました。<br>シンプルな形状でお掃除もしやすいタンクレストイレやトイレ内に小物類を収納出来る吊戸棚などが<br class="only-pc">清潔感のある空間を保ちます。</p>
             </div>
             <%- include('./components/equipmentCardGroup/_equipmentCardGroup.ejs', {
               cardList: [
                 {
                   visual: {
-                    imagePath: '<img src="./imgs/img-toilet-hand-wash.png" alt="" width="304" height="203">',
+                    imagePath: '<img src="./imgs/img-toilet-01.jpg" alt="" width="304" height="203">',
                     alt: '',
                     captionColor: '',
                     captionPosition: 'capOut',
@@ -636,7 +637,7 @@
                 },
                 {
                   visual: {
-                    imagePath: '<img src="./imgs/img-toilet-tankles.png" alt="" width="304" height="203">',
+                    imagePath: '<img src="./imgs/img-toilet-02.jpg" alt="" width="304" height="203">',
                     alt: '',
                     captionColor: '',
                     captionPosition: 'capOut',
@@ -648,7 +649,7 @@
                 },
                 {
                   visual: {
-                    imagePath: '<img src="./imgs/img-toilet-cabinet.png" alt="" width="304" height="203">',
+                    imagePath: '<img src="./imgs/img-toilet-03.jpg" alt="" width="304" height="203">',
                     alt: '',
                     captionColor: '',
                     captionPosition: 'capOut',
@@ -664,546 +665,536 @@
           </div>
         </section>
       </div>
-      <div class="wrap">
-        <div id="anchorGas" class="equpment-comfort">
-          <%- include('./components/anchorNav/_anchorNav.ejs', { current: 'anchorGas' }) %>
-          <%- include('./components/equipmentVisual/_equipmentVisual.ejs', {
-            visual: {
-              imagePath: '<img src="./imgs/img-eco-visual.jpg" alt="" width="1008" height="240">',
-              alt: '',
-              captionColor: '',
-              captionPosition: 'capOut',
-              pictureMode: ''
-            },
-            ttl: '快適設備'
-          }) %>
-          <section class="equipmentSect">
-            <div class="equipmentSect__head">
-              <div class="equipmentSect__heading"><span>お得で快適な生活を彩る先進のガス設備。</span></div>
-            </div>
-            <div class="equipmentSect__cont">
-              <div class="gasFeature">
-                <div class="gasFeature__ttl">「ガス温水床暖房」の特徴</div>
-                <%- include('./components/equipmentCardGroup/_equipmentCardGroup.ejs', {
-                  cardList: [
-                    {
-                      visual: {
-                        imagePath: '<img src="./imgs/img-eco-01.jpg" alt="" width="480" height="320">',
-                        alt: 'image photo',
-                        captionColor: 'sdw-wh',
-                        captionPosition: 'capIn',
-                        pictureMode: ''
-                      },
-                      ttl: '',
-                      txt: '床面全体をほぼ均一に暖める床暖房なら、部屋の上部ばかり暖まってのぼせるようなことはありません。エアコンと併用することで部屋全体が暖かいので身体への負担が少ない暖房です。',
-                      modifiers: []
-                    },
-                    {
-                      visual: {
-                        imagePath: '<img src="./imgs/img-eco-02.jpg" alt="" width="480" height="320">',
-                        alt: 'image photo',
-                        captionColor: 'sdw-wh',
-                        captionPosition: 'capIn',
-                        pictureMode: ''
-                      },
-                      ttl: '',
-                      txt: '床暖房リモコンは「セーブモード」搭載です。「セーブモード」は床暖房とエアコンを併用運転することにより、省エネを目指したモードです。お部屋の空気はエアコンで暖め、床暖房はセーブモードで床を暖めるため快適性と省エネ性を両立できます。',
-                      modifiers: []
-                    },
-                    {
-                      visual: {
-                        imagePath: '<img src="./imgs/img-eco-03.jpg" alt="" width="480" height="320">',
-                        alt: 'image photo',
-                        captionColor: 'sdw-wh',
-                        captionPosition: 'capIn',
-                        pictureMode: ''
-                      },
-                      ttl: '',
-                      txt: '暖房器具の出し入れやお手入れの手間、収納スペースも不要で、器具の転倒や子どものいたずらによるやけどの心配もない安心・安全な設備です。',
-                      modifiers: []
-                    },
-                    {
-                      visual: {
-                        imagePath: '<img src="./imgs/img-eco-04.jpg" alt="" width="480" height="320">',
-                        alt: 'image photo',
-                        captionColor: 'sdw-wh',
-                        captionPosition: 'capIn',
-                        pictureMode: ''
-                      },
-                      ttl: '',
-                      txt: '床暖房とエアコン暖房の「ふく射熱」「熱伝導」「対流」を組み合わせ、その相乗効果により、部屋の空気だけでなく、足元からも部屋が暖まります。',
-                      modifiers: []
-                    },
-                  ],
-                  modifiers: ['half']
-                })%>
-              </div>
-            </div>
-          </section>
-          <section class="equipmentSect equipmentSect__ecojouzu">
-            <div class="equipmentSect__head">
-              <div class="equipmentSect__heading"><span>高効率TES熱源機「エコジョーズ」<sup>※</sup></span></div>
-            </div>
-            <div class="equipmentSect__cont">
-              <div class="ecojouzuFeature">
-                <div class="equipmentCard equipmentCard--upsideDown">
-                  <div class="equipmentCard__head">
-                    <%- include('/common/components/photo/_photo.ejs', {
-                      imagePath: '<img src="./imgs/img-gas-ecojozu.png" alt="" width="657" height="438">',
-                      alt: 'イメージイラスト',
-                      captionColor: '',
+      <div id="anchorComfort" class="equpment-comfort">
+        <%- include('./components/anchorNav/_anchorNav.ejs', { current: 'anchorComfort' }) %>
+        <%- include('./components/equipmentVisual/_equipmentVisual.ejs', {
+          visual: {
+            imagePath: '<img src="./imgs/img-eco-visual.jpg" alt="" width="1008" height="240">',
+            alt: '',
+            captionColor: '',
+            captionPosition: 'capOut',
+            pictureMode: ''
+          },
+          ttl: 'ECO&EQUIPMENT'
+        }) %>
+        <section class="equipmentSect">
+          <div class="equipmentSect__head">
+            <div class="equipmentSect__heading"><span>お得で快適な生活を彩る先進のガス設備。</span></div>
+          </div>
+          <div class="equipmentSect__cont">
+            <div class="gasFeature">
+              <div class="gasFeature__ttl">「ガス温水床暖房」の特徴</div>
+              <%- include('./components/equipmentCardGroup/_equipmentCardGroup.ejs', {
+                cardList: [
+                  {
+                    visual: {
+                      imagePath: '<img src="./imgs/img-eco-01.jpg" alt="" width="186" height="124">',
+                      alt: 'image photo',
+                      captionColor: 'sdw-wh',
                       captionPosition: 'capIn',
-                      pictureMode: '',
-                      modifiers: ['sdw_inner']
-                    }) %>
-                    <p class="caption">※1  HT4216BRSAW6Qの場合（スタンダードの一例）<br class="only-sp">※2  HT4215BRSAW6Cの場合（エコジョーズの一例）<br>※1※2はJIS S 2109で定める測定方法により算定。<br class="only-sp">ただし※1・※2ともご使用状況により熱効率は異なります。</p>
-                    <div class="equipmentCard__spIcon"><svg class="zoomSVG" viewBox="0 0 34 34"><path class="zoomSVG__path" d="m0,34v-13.54h1.54v10.94L31.4,1.54h-10.94V0h13.54v13.54h-1.54V2.6L2.6,32.46h10.94v1.54H0Z"/></svg></div>
+                      pictureMode: ''
+                    },
+                    ttl: '',
+                    txt: '床面全体をほぼ均一に暖める床暖房なら、部屋の上部が暖まることでのぼせる感覚は少なく、床からのふく射熱と熱伝導による暖かさを感じます。',
+                    modifiers: []
+                  },
+                  {
+                    visual: {
+                      imagePath: '<img src="./imgs/img-eco-02.jpg" alt="" width="186" height="124">',
+                      alt: 'image photo',
+                      captionColor: 'sdw-wh',
+                      captionPosition: 'capIn',
+                      pictureMode: ''
+                    },
+                    ttl: '',
+                    txt: '床暖房は温風暖房と比べて、ダニアレルゲンを舞い上げにくい暖房です。<br><span class="caption">※最新モデルの温風暖房はアレルゲンを舞い上げにくい機種もございます。</span>',
+                    modifiers: []
+                  },
+                  {
+                    visual: {
+                      imagePath: '<img src="./imgs/img-eco-03.jpg" alt="" width="186" height="124">',
+                      alt: 'image photo',
+                      captionColor: 'sdw-wh',
+                      captionPosition: 'capIn',
+                      pictureMode: ''
+                    },
+                    ttl: '',
+                    txt: '大きな気流を作らない床暖房の方がエアコンよりも皮膚から水分が蒸発しにくいです。<br><span class="caption">※最新モデルのエアコンは風を体に直接感じにくい機種もございます。</span>',
+                    modifiers: []
+                  },
+                  {
+                    visual: {
+                      imagePath: '<img src="./imgs/img-eco-04.jpg" alt="" width="186" height="124">',
+                      alt: 'image photo',
+                      captionColor: 'sdw-wh',
+                      captionPosition: 'capIn',
+                      pictureMode: ''
+                    },
+                    ttl: '',
+                    txt: '暖房器具の出し入れやお手入れの手間、収納スペースも不要で、器具の転倒や子どものいたずらによるやけどの心配もない安心・安全な設備です。',
+                    modifiers: []
+                  },
+                  {
+                    visual: {
+                      imagePath: '<img src="./imgs/img-eco-05.jpg" alt="" width="186" height="124">',
+                      alt: 'image photo',
+                      captionColor: 'sdw-wh',
+                      captionPosition: 'capIn',
+                      pictureMode: ''
+                    },
+                    ttl: '',
+                    txt: 'お財布にやさしい、経済的なランニングコストです。',
+                    modifiers: []
+                  },
+                ],
+                modifiers: ['oneFifth']
+              })%>
+
+            </div>
+          </div>
+        </section>
+        <section class="equipmentSect equipmentSect__ecojouzu">
+          <div class="equipmentSect__head">
+            <div class="equipmentSect__heading"><span>高効率TES熱源機「エコジョーズ」<sup>※</sup></span></div>
+          </div>
+          <div class="equipmentSect__cont">
+            <div class="ecojouzuFeature">
+              <div class="equipmentCard equipmentCard--upsideDown">
+                <div class="equipmentCard__head">
+                  <%- include('/common/components/photo/_photo.ejs', {
+                    imagePath: '<img src="./imgs/img-eco-ecojouzu-01@2x.jpg" alt="" width="657" height="438">',
+                    alt: 'イメージイラスト',
+                    captionColor: '',
+                    captionPosition: 'capIn',
+                    pictureMode: '',
+                    modifiers: ['sdw_inner']
+                  }) %>
+                  <p class="caption">※1  HT4216BRSAW6Qの場合（スタンダードの一例）<br class="only-sp">※2  HT4215BRSAW6Cの場合（エコジョーズの一例）<br>※1※2はJIS S 2109で定める測定方法により算定。<br class="only-sp">ただし※1・※2ともご使用状況により熱効率は異なります。</p>
+                  <div class="equipmentCard__spIcon"><svg class="zoomSVG" viewBox="0 0 34 34"><path class="zoomSVG__path" d="m0,34v-13.54h1.54v10.94L31.4,1.54h-10.94V0h13.54v13.54h-1.54V2.6L2.6,32.46h10.94v1.54H0Z"/></svg></div>
+                </div>
+                <div class="equipmentCard__cont">
+                  <div class="equipmentCard__ttl">
+                    <img src="./imgs/logo-ecojouzu.png" alt="" class="ecojouzuLogo" width="270" height="70">
+                    <span>95%の給湯熱効率を実現</span>
                   </div>
-                  <div class="equipmentCard__cont">
-                    <div class="equipmentCard__ttl">
-                      <span>約95%の給湯熱効率を実現</span>
-                    </div>
-                    <p class="equipmentCard__txt">従来の給湯器では約83%が限界だった給湯熱効率を、排気熱・潜熱回収システムにより約95%までに向上。これにより省エネルギーを実現し、大幅なランニングコストの削減を実現しました。<br><span class="caption">※ エコジョーズは潜熱回収型高効率給湯器の各製造メーカーにより使用されている名称であり、東京ガスブランド品に限った呼称ではありません。</span></p>
-                  </div>
+                  <p class="equipmentCard__txt">従来の給湯器では約83%が限界だった給湯熱効率を、排気熱・潜熱回収システムにより約95%までに向上。これにより省エネルギーを実現し、大幅なランニングコストの削減を実現しました。<br><span class="caption">※ エコジョーズは潜熱回収型高効率給湯器の各製造メーカーにより使用されている名称であり、東京ガスブランド品に限った呼称ではありません。</span></p>
                 </div>
               </div>
             </div>
-          </section>
-          <section class="equipmentSect">
-            <div class="equipmentSect__head">
-              <div class="equipmentSect__heading"><span>ガス料金プラン</span></div>
+          </div>
+        </section>
+        <section class="equipmentSect">
+          <div class="equipmentSect__head">
+            <div class="equipmentSect__heading"><span>ガス料金プラン</span></div>
+          </div>
+          <div class="equipmentSect__cont">
+            <div class="gasPlan">
+              <p class="txt">東京ガスでは、ご使用のガス機器に応じて、毎月のガス料金がおトクになる料金メニューをご用意しています。</p>
+              <div class="gasPlan__cont">
+                <div class="gasPlan__spIcon"><svg class="zoomSVG" viewBox="0 0 34 34"><path class="zoomSVG__path" d="m0,34v-13.54h1.54v10.94L31.4,1.54h-10.94V0h13.54v13.54h-1.54V2.6L2.6,32.46h10.94v1.54H0Z"/></svg></div>
+                <%- include('/common/components/photo/_photo.ejs', {
+                  imagePath: '<img src="./imgs/img-eco-gasplan-01@2x.jpg" alt="" width="630" height="420">',
+                  alt: '',
+                  subCap: '',
+                  captionColor: '',
+                  captionPosition: 'noCap',
+                  pictureMode: '',
+                  modifiers: ['sdw_inner']
+                }) %>
+                <p class="caption">※1　家庭用ガス温水床暖房をお住まいの居室（日常的に居住のために使用している場所、浴室・台所・洗面所含む）でご使用されているお客様（群馬南地区、東彩ガス地区、東日本ガス地区、日本瓦斯真岡地区は除く）を対象としたガス料金メニューです。（2022年12月時点）<br>※2　《暖らんぷらん》および割引制度のご契約には所定のお申込み書によるお申込みが必要です。（自動適用できません）<br>※3　【試算条件】集合住宅専有部において東京ガスの「暖らんぷらん（セット割）」を契約いただいている方の中央値の使用量（約535㎥/年）を例として使用。家庭用の平均的な月別の使用量比率を用いて試算（東京ガス調べ）。一般料金を適用した場合と、家庭用ガス温水床暖房契約セット割（東京地区等）を適用した場合の比較。2021年10月実施の約款の料金表かつ、2022年7月時点の原料費調整額で計算。<br>・ガス料金は家庭用ガス温水床暖房契約セット割が適用の場合です。ご注意ください。なお、群馬南地区、東彩ガス地区、東日本ガス地区、日本瓦斯（ニチガス）真岡地区の物件では使用できません。ご注意ください。（2022年12月時点）</p>
+              </div>
             </div>
-            <div class="equipmentSect__cont">
-              <div class="gasPlan">
-                <p class="txt">東京ガスでは、ご使用のガス機器に応じて、毎月のガス料金がおトクになる料金メニューをご用意しています。</p>
-                <div class="gasPlan__cont">
-                  <div class="gasPlan__spIcon"><svg class="zoomSVG" viewBox="0 0 34 34"><path class="zoomSVG__path" d="m0,34v-13.54h1.54v10.94L31.4,1.54h-10.94V0h13.54v13.54h-1.54V2.6L2.6,32.46h10.94v1.54H0Z"/></svg></div>
-                  <%- include('/common/components/photo/_photo.ejs', {
-                    imagePath: '<img src="./imgs/img-eco-gasplan-01@2x.jpg" alt="" width="630" height="420">',
+          </div>
+        </section>
+        <%- include('./components/equipmentVisual/_equipmentVisual.ejs', {
+          visual: {
+            imagePath: '<img src="./imgs/img-amenity-visual.jpg" alt="" width="1008" height="240">',
+            alt: '',
+            captionColor: '',
+            captionPosition: 'capOut',
+            pictureMode: ''
+          },
+          ttl: 'AMENITY'
+        }) %>
+        <section class="equipmentSect">
+          <div class="equipmentSect__head">
+            <div class="equipmentSect__heading"><span>快適な毎日をサポートする設備・仕様。</span></div>
+          </div>
+          <div class="equipmentSect__cont">
+            <%- include('./components/equipmentCardGroup/_equipmentCardGroup.ejs', {
+              cardList: [
+                {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-amenity-01.jpg" alt="" width="304" height="203">',
+                    alt: 'イメージイラスト',
+                    captionColor: '',
+                    captionPosition: 'capOut',
+                    pictureMode: ''
+                  },
+                  ttl: 'いつも新鮮な空気を取り入れる24時間換気システム',
+                  txt: 'サッシを閉めたままでも24時間低風量で少しずつ室内の空気を外気と入れ換え、住戸全体の換気が可能なシステムです。きれいな空気と健康的な室内環境を保ちます。',
+                  modifiers: ['']
+                },
+                {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-amenity-02.jpg" alt="" width="304" height="203">',
+                    alt: 'イメージイラスト',
+                    captionColor: '',
+                    captionPosition: 'capOut',
+                    pictureMode: ''
+                  },
+                  ttl: '24時間ゴミ出し可能',
+                  txt: 'ゴミ出しは、24時間可能です。お仕事で帰りが遅くなった時でも、朝早い出勤時にもゴミを出すことができるので、お部屋をクリーンに保つことができます。<br><span class="caption">※詳しくは管理規約をご覧下さい。</span>',
+                  modifiers: ['']
+                },
+                {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-amenity-03.jpg" alt="" width="304" height="203">',
+                    alt: '参考写真',
+                    captionColor: '',
+                    captionPosition: 'capOut',
+                    pictureMode: ''
+                  },
+                  ttl: '安心して外出できる宅配ロッカー',
+                  txt: '外出中に届いた荷物を預かり、24時間いつでも都合の良いときに取り出すことが出来るので大変便利です。',
+                  modifiers: ['']
+                },
+                {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-amenity-04.jpg" alt="" width="304" height="203">',
+                    alt: 'イメージイラスト',
+                    captionColor: '',
+                    captionPosition: 'capOut',
+                    pictureMode: ''
+                  },
+                  ttl: '防音サッシ＆結露防止に適した複層ガラス',
+                  txt: '遮音性能に配慮しT-2等級（相当）または、ペアガラスを採用しました。（一部除く）また、ガラス板の間に空気層を設けることで、室内の冷暖房効果を高め、空調コストの低減を実現、結露も発生しにくい仕様です。',
+                  modifiers: ['']
+                },
+                {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-amenity-05.jpg" alt="" width="304" height="203">',
+                    alt: '参考写真',
+                    captionColor: '',
+                    captionPosition: 'capOut',
+                    pictureMode: ''
+                  },
+                  ttl: '外壁タイル',
+                  txt: '外壁には、耐久性と高級感を両立したタイルを使用しています。躯体の保護機能・防汚などに優れ、建物の美観を保ちます。（一部除く）',
+                  modifiers: ['']
+                },
+                {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-amenity-06.jpg" alt="" width="304" height="203">',
+                    alt: 'イメージイラスト',
+                    captionColor: '',
+                    captionPosition: 'capOut',
+                    pictureMode: ''
+                  },
+                  ttl: '13人乗りエレベーター',
+                  txt: 'エレベーターは13人乗りを採用しました。ソーシャルディスタンスの確保ができ、大きな荷物の移動も可能です。<br><span class="caption">※一部2,000mm未満となる部分があります。詳細につきましては係員までお尋ね下さい。</span>',
+                  modifiers: ['ttlNarrow']
+                },
+                {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-amenity-07.jpg" alt="" width="304" height="203">',
+                    alt: 'イメージイラスト',
+                    captionColor: '',
+                    captionPosition: 'capOut',
+                    pictureMode: ''
+                  },
+                  ttl: '省エネ・長寿命の<br class="only-sp">LED電球を使用',
+                  txt: '専有部と共用部のダウンライトは、省エネ・長寿命のLED電球を使用しています。消費電力は、白熱電球と比べると抑えられるので電気代の節約につながります。また、器具の寿命が長いことも合せてランニングコストとCO2の削減に貢献します。（一部除く）',
+                  modifiers: ['']
+                },
+                {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-amenity-08.jpg" alt="" width="304" height="203">',
+                    alt: '参考写真',
+                    captionColor: '',
+                    captionPosition: 'capOut',
+                    pictureMode: ''
+                  },
+                  ttl: 'マルチメディア<br class="only-sp">コンセント',
+                  txt: '電源コンセント・テレビアンテナ端子・電話端子をひとつにまとめたマルチメディアコンセントを各居室に設置しました。',
+                  modifiers: ['']
+                },
+                {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-amenity-09.jpg" alt="" width="304" height="203">',
+                    alt: 'image photo',
+                    captionColor: '',
+                    captionPosition: 'capOut',
+                    pictureMode: ''
+                  },
+                  ttl: 'ペットと暮らせる<br class="only-sp">マンション',
+                  txt: '大切なパートナーと共に快適に暮らしていただけます。<br>※ペットの大きさ等には、管理規約による制限がございます。',
+                  modifiers: ['']
+                },
+                {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-amenity-10.jpg" alt="" width="304" height="203">',
                     alt: '',
-                    subCap: '',
+                    captionColor: '',
+                    captionPosition: 'capIn',
+                    pictureMode: ''
+                  },
+                  ttl: '光ブロードバンド<br class="only-sp">インターネット',
+                  txt: '各住戸まで直接光ファイバーをつなげる方式を採用。高品質かつ多彩なブロードバンド環境を提供し、将来の拡張性にも富んだ「オール“光”（光配線方式）」のマンションです。<br><span class="caption">※ご利用にあたっては、別途使用料・プロバイダ費用等がかかります。また一部サービスはオプションです。<br>※光コンセントは「FLET’S光」を契約後、LDのマルチメディアコンセントに設置。また、契約後に、光ケーブルを敷設致します。</span>',
+                  modifiers: ['']
+                },
+                {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-amenity-11.jpg" alt="" width="304" height="203">',
+                    alt: '',
+                    captionColor: '',
+                    captionPosition: 'capIn',
+                    pictureMode: ''
+                  },
+                  ttl: '住宅瑕疵担保責任保険',
+                  txt: '●工事中、専門の検査員による現場審査を受けます。<br>●引渡日より10年間の瑕疵担保責任保険が付帯されています。<br>※工事完成日から引渡までの期間により保険期間は異なります。<br>●お引渡後、保険付保証明書をお渡しします。',
+                  modifiers: ['']
+                },
+                {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-amenity-12.jpg" alt="" width="304" height="203">',
+                    alt: '',
+                    captionColor: '',
+                    captionPosition: 'capIn',
+                    pictureMode: ''
+                  },
+                  ttl: '安全と安心の証<br class="only-sp">「住宅性能評価」',
+                  txt: 'さらに安心して暮らせる住まいを目指して、第三者評価機関が客観的に評価するとともに、建物構造に関するチェック機能を強化します。',
+                  modifiers: ['']
+                },
+              ],
+              modifiers: ['oneThird']
+            })%>
+          </div>
+        </section>
+
+      </div>
+      <div id="anchorSecurity" class="equpment-security">
+        <%- include('./components/anchorNav/_anchorNav.ejs', { current: 'anchorSecurity' }) %>
+        <%- include('./components/equipmentVisual/_equipmentVisual.ejs', {
+          visual: {
+            imagePath: '<img src="./imgs/img-security-visual.jpg" alt="" width="1008" height="240">',
+            alt: '',
+            captionColor: '',
+            captionPosition: 'capOut',
+            pictureMode: ''
+          },
+          ttl: 'SECURITY'
+        }) %>
+        <section class="equipmentSect">
+          <div class="equipmentSect__head">
+            <div class="equipmentSect__heading"><span>カードキー使用、モバイル対応のセキュリティ。</span></div>
+          </div>
+          <div class="equipmentSect__cont">
+            <div class="securitySect">
+              <div class="securitySect__heading">カードキー1枚でできる先進ライフ</div>
+              <div class="securitySect__head">
+                <div class="equipmentCard equipmentCard--upsideDown">
+                  <div class="equipmentCard__cont">
+                    <div class="equipmentCard__ttl">
+                      安らぎと寛ぎを創造する<br>先進のセキュリティシステムを導入
+                    </div>
+                    <p class="equipmentCard__txt">
+                      <img src="./imgs/logo-security-highsect.png" class="hisectLogo" alt="HISECT" width="120" height="142">
+                      セントラル警備保障との連携により安心のセキュリティ体制を構築する「ハイセクト」を導入。カードキー採用、インターネットと電話回線の二重通信ライン確保など先進システムの導入により、24時間365日住む方の安心を守ります。
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="securitySect__cont">
+                <div class="systemFigure">
+                  <%- include('/common/components/photo/_photo.ejs', {
+                    imagePathPC: '<img src="./imgs/pc/img-security-highsect-01.jpg" alt="" width="480" height="320">',
+                    imagePathSP: '<img src="./imgs/sp/img-security-highsect-01.jpg" alt="" width="295" height="197">',
+                    alt: '',
+                    captionColor: '',
+                    captionPosition: 'noCap',
+                    pictureMode: 'on',
+                    modifiers: ['sdw_inner']
+                  }) %>
+                  <div class="systemFigure__txt">電話回線がダウンしても警備会社の集中管理センターで回線の異常が分かるシステムになっております。</div>
+                </div>
+              </div>
+              <div class="securitySect__bottom">
+                <div class="securitySect__spIcon"><svg class="zoomSVG" viewBox="0 0 34 34"><path class="zoomSVG__path" d="m0,34v-13.54h1.54v10.94L31.4,1.54h-10.94V0h13.54v13.54h-1.54V2.6L2.6,32.46h10.94v1.54H0Z"/></svg></div>
+                <%- include('/common/components/photo/_photo.ejs', {
+                  imagePath: '<img src="./imgs/img-security-highsect-02@2x.jpg" alt="" width="630" height="420">',
+                  alt: 'イメージイラスト',
+                  captionColor: '',
+                  captionPosition: 'capOut',
+                  pictureMode: '',
+                  modifiers: ['sdw_inner']
+                }) %>
+              </div>
+            </div>
+            <div class="webMobile">
+              <%- include('./components/equipmentCard/_equipmentCard.ejs', {
+                visual: {
+                  imagePathPC: '<img src="./imgs/pc/img-security-webmobile-01.jpg" alt="" width="1008" height="359">',
+                  imagePathSP: '<img src="./imgs/sp/img-security-webmobile-01.jpg" alt="" width="630" height="793">',
+                  alt: 'イメージイラスト',
+                  captionColor: '',
+                  captionPosition: 'capOut',
+                  pictureMode: 'on',
+                  modifiers: ['sdw_inner']
+                },
+                spIcon: 'zoom',
+                ttl: 'ウェブ・モバイルサービス',
+                txt: '家族の帰宅や不審者の侵入を、登録した携帯電話やパソコンなどにメールで知らせるウェブ・モバイルサービスです。<br class="only-pc">外出先より遠隔施錠・防犯設定等をご利用頂けます。',
+                modifiers: ['upsideDown']
+              }) %>
+            </div>
+            <%- include('./components/equipmentCardGroup/_equipmentCardGroup.ejs', {
+              cardList: [
+                {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-security-01.jpg" alt="" width="480" height="320">',
+                    alt: '1階敷地配置図イメージイラスト',
+                    captionColor: '',
+                    captionPosition: 'capOut',
+                    pictureMode: '',
+                    modifiers: ['sdw_inner']
+                  },
+                  spIcon: 'zoom',
+                  ttl: '暮らしを見守る防犯カメラ（12台設置）',
+                  txt: '共用スペースには、24時間作動する防犯カメラを設置。管理事務室の記録装置に防犯カメラの記録映像をリアルタイムで送り続けます。',
+                  modifiers: ['upsideDown']
+                },
+                {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-security-02.jpg" alt="" width="480" height="320">',
+                    alt: 'Dタイプイメージイラスト',
+                    captionColor: '',
+                    captionPosition: 'capOut',
+                    pictureMode: '',
+                    modifiers: ['sdw_inner']
+                  },
+                  spIcon: 'zoom',
+                  ttl: 'マグネットセンサー付の窓・玄関扉を全住戸に採用',
+                  txt: '各住戸の開閉開口部に設置されたマグネットセンサーにより、窓の開閉異常を監視します。また、住戸内にはパッシブセンサーを設置。侵入者を察知し、警備会社などに通知します。',
+                  modifiers: ['upsideDown']
+                },
+              ],
+              modifiers: ['half']
+            })%>
+          </div>
+        </section>
+
+      </div>
+      <div id="anchorStructure" class="equpment-structure">
+        <%- include('./components/anchorNav/_anchorNav.ejs', { current: 'anchorStructure' }) %>
+        <%- include('./components/equipmentVisual/_equipmentVisual.ejs', {
+          visual: {
+            imagePath: '<img src="./imgs/img-structure-visual.jpg" alt="" width="1008" height="240">',
+            alt: '',
+            captionColor: '',
+            captionPosition: 'capOut',
+            pictureMode: ''
+          },
+          ttl: 'STRUCTURE'
+        }) %>
+        <section class="equipmentSect">
+          <div class="equipmentSect__head">
+            <div class="equipmentSect__heading"><span>“将来の安心”をお届けする<br class="only-sp">優れた構造・品質。</span></div>
+          </div>
+          <div class="equipmentSect__cont">
+            <%- include('./components/equipmentCardGroup/_equipmentCardGroup.ejs', {
+              cardList: [
+                {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-structure-01.jpg" alt="" width="480" height="320">',
+                    alt: 'イメージイラスト',
+                    captionColor: '',
+                    captionPosition: 'capOut',
+                    pictureMode: '',
+                    modifiers: ['sdw_inner']
+                  },
+                  spIcon: 'zoom',
+                  ttl: '遮音性や断熱性に優れた二重床・二重天井',
+                  txt: '遮音性と断熱性に優れた二重床・二重天井を採用しています。床の下地材と仕上げ材には遮音性の高い素材を使用しました。また、スラブ内に中空部を設けることでワイドスパンでも天井に小梁のでない空間を実現することができ、将来のライフスタイルの変化によるリフォームにも対応しやすい工法です。',
+                  modifiers: ['upsideDown']
+                },
+                {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-structure-02.jpg" alt="" width="480" height="320">',
+                    alt: 'イメージイラスト',
+                    captionColor: '',
+                    captionPosition: 'capOut',
+                    pictureMode: '',
+                    modifiers: ['sdw_inner']
+                  },
+                  spIcon: 'zoom',
+                  ttl: '地盤の調査結果に基づいて、最適な基礎を選択',
+                  txt: '地盤の調査結果により、建物を支持するために必要な地耐力を有する地盤が地表近くにあり、十分建物を支えられるため、直接基礎（ベタ基礎）を採用しております。<br><span class="caption">※施工の際、地盤の状況で基礎の深さは多少異なります。</span>',
+                  modifiers: ['upsideDown']
+                },
+                {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-structure-03.jpg" alt="" width="480" height="320">',
+                    alt: '',
                     captionColor: '',
                     captionPosition: 'noCap',
                     pictureMode: '',
                     modifiers: ['sdw_inner']
-                  }) %>
-                  <p class="caption">※1　家庭用ガス温水床暖房をお住まいの居室（日常的に居住のために使用している場所、浴室・台所・洗面所含む）でご使用されているお客様（群馬南地区、東彩ガス地区、東日本ガス地区、日本瓦斯真岡地区は除く）を対象としたガス料金メニューです。（2022年12月時点）<br>※2　《暖らんぷらん》および割引制度のご契約には所定のお申込み書によるお申込みが必要です。（自動適用できません）<br>※3　【試算条件】集合住宅専有部において東京ガスの「暖らんぷらん（セット割）」を契約いただいている方の中央値の使用量（約535㎥/年）を例として使用。家庭用の平均的な月別の使用量比率を用いて試算（東京ガス調べ）。一般料金を適用した場合と、家庭用ガス温水床暖房契約セット割（東京地区等）を適用した場合の比較。2021年10月実施の約款の料金表かつ、2022年7月時点の原料費調整額で計算。</p>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-        <div class="wrap">
-          <div id="anchorComfort" class="equpment-security">
-            <%- include('./components/anchorNav/_anchorNav.ejs', { current: 'anchorComfort' }) %>
-            <%- include('./components/equipmentVisual/_equipmentVisual.ejs', {
-              visual: {
-                imagePath: '<img src="./imgs/img-amenity-visual.jpg" alt="" width="1008" height="240">',
-                alt: '',
-                captionColor: '',
-                captionPosition: 'capOut',
-                pictureMode: ''
-              },
-              ttl: 'アメニティ'
-            }) %>
-            <section class="equipmentSect">
-              <div class="equipmentSect__head">
-                <div class="equipmentSect__heading"><span>快適な毎日をサポートする設備・仕様。</span></div>
-              </div>
-              <div class="equipmentSect__cont">
-                <%- include('./components/equipmentCardGroup/_equipmentCardGroup.ejs', {
-                  cardList: [
-                    {
-                      visual: {
-                        imagePath: '<img src="./imgs/img-amenity-01.jpg" alt="" width="304" height="203">',
-                        alt: 'イメージイラスト',
-                        captionColor: '',
-                        captionPosition: 'capOut',
-                        pictureMode: ''
-                      },
-                      ttl: 'いつも新鮮な空気を取り入れる<br>24時間換気システム',
-                      txt: 'サッシを閉めたままでも24時間低風量で少しずつ室内の空気を外気と入れ換え、住戸全体の換気が可能なシステムです。きれいな空気と健康的な室内環境を保ちます。',
-                      modifiers: ['']
-                    },
-                    {
-                      visual: {
-                        imagePath: '<img src="./imgs/img-amenity-02.jpg" alt="" width="304" height="203">',
-                        alt: 'イメージイラスト',
-                        captionColor: '',
-                        captionPosition: 'capOut',
-                        pictureMode: ''
-                      },
-                      ttl: '24時間ゴミ出し可能',
-                      txt: 'ゴミ出しは、24時間可能です。お仕事で帰りが遅くなった時でも、朝早い出勤時にもゴミを出すことができるので、お部屋をクリーンに保つことができます。<br><span class="caption">※詳しくは管理規約をご覧下さい。</span>',
-                      modifiers: ['']
-                    },
-                    {
-                      visual: {
-                        imagePath: '<img src="./imgs/img-amenity-03.jpg" alt="" width="304" height="203">',
-                        alt: '参考写真',
-                        captionColor: '',
-                        captionPosition: 'capOut',
-                        pictureMode: ''
-                      },
-                      ttl: '安心して外出できる宅配ロッカー',
-                      txt: '外出中に届いた荷物を預かり、24時間いつでも都合の良いときに取り出すことが出来るので大変便利です。',
-                      modifiers: ['']
-                    },
-                    {
-                      visual: {
-                        imagePath: '<img src="./imgs/img-amenity-04.jpg" alt="" width="304" height="203">',
-                        alt: 'イメージイラスト',
-                        captionColor: '',
-                        captionPosition: 'capOut',
-                        pictureMode: ''
-                      },
-                      ttl: '防音サッシ＆結露防止に適した複層ガラス',
-                      txt: '遮音性能に配慮しT-2等級（相当）または、ペアガラスを採用しました。（一部除く）また、ガラス板の間に空気層を設けることで、室内の冷暖房効果を高め、空調コストの低減を実現、結露も発生しにくい仕様です。',
-                      modifiers: ['']
-                    },
-                    {
-                      visual: {
-                        imagePath: '<img src="./imgs/img-amenity-05.jpg" alt="" width="304" height="203">',
-                        alt: '参考写真',
-                        captionColor: '',
-                        captionPosition: 'capOut',
-                        pictureMode: ''
-                      },
-                      ttl: '外壁タイル',
-                      txt: '外壁には、耐久性と高級感を両立したタイルを使用しています。躯体の保護機能・防汚などに優れ、建物の美観を保ちます。（一部除く）',
-                      modifiers: ['']
-                    },
-                    {
-                      visual: {
-                        imagePath: '<img src="./imgs/img-amenity-06.jpg" alt="" width="304" height="203">',
-                        alt: 'イメージイラスト',
-                        captionColor: '',
-                        captionPosition: 'capOut',
-                        pictureMode: ''
-                      },
-                      ttl: '13人乗りエレベーター',
-                      txt: 'エレベーターは13人乗りを採用しました。ソーシャルディスタンスの確保ができ、大きな荷物の移動も可能です。<br><span class="caption">※一部2,000mm未満となる部分があります。詳細につきましては係員までお尋ね下さい。</span>',
-                      modifiers: ['ttlNarrow']
-                    },
-                    {
-                      visual: {
-                        imagePath: '<img src="./imgs/img-amenity-07.jpg" alt="" width="304" height="203">',
-                        alt: 'イメージイラスト',
-                        captionColor: '',
-                        captionPosition: 'capOut',
-                        pictureMode: ''
-                      },
-                      ttl: '省エネ・長寿命の<br class="only-sp">LED電球を使用',
-                      txt: '専有部と共用部のダウンライトは、省エネ・長寿命のLED電球を使用しています。消費電力は、白熱電球と比べると抑えられるので電気代の節約につながります。また、器具の寿命が長いことも合せてランニングコストとCO2の削減に貢献します。（一部除く）',
-                      modifiers: ['']
-                    },
-                    {
-                      visual: {
-                        imagePath: '<img src="./imgs/img-amenity-08.jpg" alt="" width="304" height="203">',
-                        alt: '参考写真',
-                        captionColor: '',
-                        captionPosition: 'capOut',
-                        pictureMode: ''
-                      },
-                      ttl: 'マルチメディア<br class="only-sp">コンセント',
-                      txt: '電源コンセント・テレビアンテナ端子・電話端子をひとつにまとめたマルチメディアコンセントを各居室に設置しました。',
-                      modifiers: ['']
-                    },
-                    {
-                      visual: {
-                        imagePath: '<img src="./imgs/img-amenity-09.jpg" alt="" width="304" height="203">',
-                        alt: 'image photo',
-                        captionColor: '',
-                        captionPosition: 'capOut',
-                        pictureMode: ''
-                      },
-                      ttl: 'ペットと暮らせる<br class="only-sp">マンション',
-                      txt: '大切なパートナーと共に快適に暮らしていただけます。<br>※ペットの大きさ等には、管理規約による制限がございます。',
-                      modifiers: ['']
-                    },
-                    {
-                      visual: {
-                        imagePath: '<img src="./imgs/img-amenity-10.jpg" alt="" width="304" height="203">',
-                        alt: '',
-                        captionColor: '',
-                        captionPosition: 'capIn',
-                        pictureMode: ''
-                      },
-                      ttl: '光ブロードバンド<br class="only-sp">インターネット',
-                      txt: '各住戸まで直接光ファイバーをつなげる方式を採用。高品質かつ多彩なブロードバンド環境を提供し、将来の拡張性にも富んだ「オール“光”（光配線方式）」のマンションです。<br><span class="caption">※ご利用にあたっては、別途使用料・プロバイダ費用等がかかります。また一部サービスはオプションです。<br>※光コンセントは「FLET’S光」を契約後、LDのマルチメディアコンセントに設置。また、契約後に、光ケーブルを敷設致します。</span>',
-                      modifiers: ['']
-                    },
-                    {
-                      visual: {
-                        imagePath: '<img src="./imgs/img-amenity-11.jpg" alt="" width="304" height="203">',
-                        alt: '',
-                        captionColor: '',
-                        captionPosition: 'capIn',
-                        pictureMode: ''
-                      },
-                      ttl: '住宅瑕疵担保責任保険',
-                      txt: '●工事中、専門の検査員による現場審査を受けます。<br>●引渡日より10年間の瑕疵担保責任保険が付帯されています。<br>※工事完成日から引渡までの期間により保険期間は異なります。<br>●お引渡後、保険付保証明書をお渡しします。',
-                      modifiers: ['']
-                    },
-                    {
-                      visual: {
-                        imagePath: '<img src="./imgs/img-amenity-12.jpg" alt="" width="304" height="203">',
-                        alt: '',
-                        captionColor: '',
-                        captionPosition: 'capIn',
-                        pictureMode: ''
-                      },
-                      ttl: '安全と安心の証<br class="only-sp">「住宅性能評価」',
-                      txt: 'さらに安心して暮らせる住まいを目指して、第三者評価機関が客観的に評価するとともに、建物構造に関するチェック機能を強化します。',
-                      modifiers: ['']
-                    },
-                  ],
-                  modifiers: ['oneThird']
-                })%>
-              </div>
-            </section>
-          </div>
-        </div>
-      </div>
-      <div class="wrap">
-        <div id="anchorSecurity" class="equpment-security">
-          <%- include('./components/anchorNav/_anchorNav.ejs', { current: 'anchorSecurity' }) %>
-          <%- include('./components/equipmentVisual/_equipmentVisual.ejs', {
-            visual: {
-              imagePath: '<img src="./imgs/img-security-visual.jpg" alt="" width="1008" height="240">',
-              alt: '',
-              captionColor: '',
-              captionPosition: 'capOut',
-              pictureMode: ''
-            },
-            ttl: 'セキュリティ'
-          }) %>
-          <section class="equipmentSect">
-            <div class="equipmentSect__head">
-              <div class="equipmentSect__heading"><span>カードキー使用、モバイル対応のセキュリティ。</span></div>
-            </div>
-            <div class="equipmentSect__cont">
-              <div class="securitySect">
-                <div class="securitySect__heading">カードキー1枚でできる先進ライフ</div>
-                <div class="securitySect__head">
-                  <div class="equipmentCard equipmentCard--upsideDown">
-                    <div class="equipmentCard__cont">
-                      <div class="equipmentCard__ttl">
-                        安らぎと寛ぎを創造する<br>先進のセキュリティシステムを導入
-                      </div>
-                      <p class="equipmentCard__txt">
-                        <img src="./imgs/logo-security-highsect.png" class="hisectLogo" alt="HISECT" width="120" height="142">
-                        セントラル警備保障との連携により安心のセキュリティ体制を構築する「ハイセクト」を導入。カードキー採用、インターネットと電話回線の二重通信ライン確保など先進システムの導入により、24時間365日住む方の安心を守ります。
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="securitySect__cont">
-                  <div class="systemFigure">
-                    <%- include('/common/components/photo/_photo.ejs', {
-                      imagePathPC: '<img src="./imgs/pc/img-security-highsect-01.jpg" alt="" width="480" height="320">',
-                      imagePathSP: '<img src="./imgs/sp/img-security-highsect-01.jpg" alt="" width="295" height="197">',
-                      alt: '',
-                      captionColor: '',
-                      captionPosition: 'noCap',
-                      pictureMode: 'on',
-                      modifiers: ['sdw_inner']
-                    }) %>
-                    <div class="systemFigure__txt">電話回線がダウンしても警備会社の集中管理センターで回線の異常が分かるシステムになっております。</div>
-                  </div>
-                </div>
-                <div class="securitySect__bottom">
-                  <div class="securitySect__spIcon"><svg class="zoomSVG" viewBox="0 0 34 34"><path class="zoomSVG__path" d="m0,34v-13.54h1.54v10.94L31.4,1.54h-10.94V0h13.54v13.54h-1.54V2.6L2.6,32.46h10.94v1.54H0Z"/></svg></div>
-                  <%- include('/common/components/photo/_photo.ejs', {
-                    imagePath: '<img src="./imgs/img-security-highsect-02@2x.jpg" alt="" width="630" height="420">',
+                  },
+                  spIcon: 'zoom',
+                  ttl: '遮音性の高い壁構造',
+                  txt: '戸境壁や外壁等の厚さを十分に確保。隣戸同士や外部騒音などが伝わりにくい構造とし、断熱性も考慮しました。',
+                  modifiers: ['upsideDown']
+                },
+                {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-structure-04.jpg" alt="" width="480" height="320">',
                     alt: 'イメージイラスト',
                     captionColor: '',
                     captionPosition: 'capOut',
                     pictureMode: '',
                     modifiers: ['sdw_inner']
-                  }) %>
-                </div>
-              </div>
-              </section>
-
-              <section class="equipmentSect">
-              <div class="equipmentSect__head">
-                <div class="equipmentSect__heading">ウェブ・モバイルサービス</div>
-              </div>
-              <div class="equipmentSect__cont">
-                <p class="txt">家族の帰宅や不審者の侵入を、登録した携帯電話やパソコンなどにメールで知らせるウェブ・モバイルサービスです。<br>外出先より遠隔施錠・防犯設定等をご利用頂けます。</p>
-              </div>
-              <div class="webMobile">
-                <%- include('./components/equipmentCard/_equipmentCard.ejs', {
-                  visual: {
-                    imagePathPC: '<img src="./imgs/pc/img-security-webmobile-01.jpg" alt="" width="1008" height="359">',
-                    imagePathSP: '<img src="./imgs/sp/img-security-webmobile-01.jpg" alt="" width="630" height="793">',
-                    alt: 'イメージイラスト',
-                    captionColor: '',
-                    captionPosition: 'capOut',
-                    pictureMode: 'on',
-                    modifiers: ['shadow']
                   },
                   spIcon: 'zoom',
+                  ttl: '耐震枠の玄関ドア',
+                  txt: '上下のクリアランスを大きく確保することにより面内変形を受けても枠とドアの接触をやわらげる、閉じ込められにくい構造です。',
                   modifiers: ['upsideDown']
-                }) %>
-              </div>
-              </section>
-
-              <section class="equipmentSect">
-              <div class="equipmentSect__head">
-                <div class="equipmentSect__heading">他にも充実のセキュリティサービス</div>
-              </div>
-              
-              <%- include('./components/equipmentCardGroup/_equipmentCardGroup.ejs', {
-                cardList: [
-                  {
-                    visual: {
-                      imagePath: '<img src="./imgs/img-security-camera.png" alt="" width="480" height="320">',
-                      alt: '1階敷地配置図イメージイラスト',
-                      captionColor: '',
-                      captionPosition: 'capOut',
-                      pictureMode: '',
-                      modifiers: ['sdw_inner']
-                    },
-                    spIcon: 'zoom',
-                    ttl: '暮らしを見守る防犯カメラ（12台設置）',
-                    txt: '共用スペースには、24時間作動する防犯カメラを設置。管理事務室の記録装置に防犯カメラの記録映像をリアルタイムで送り続けます。',
-                    modifiers: ['upsideDown']
+                },
+                {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-structure-05.jpg" alt="" width="630" height="262">',
+                    alt: 'コンクリート強度概念図、参考図書 JASS5 2003年版',
+                    captionColor: '',
+                    captionPosition: 'capIn',
+                    pictureMode: '',
+                    modifiers: ['sdw_inner']
                   },
-                  {
-                    visual: {
-                      imagePath: '<img src="./imgs/img-security-02.jpg" alt="" width="480" height="320">',
-                      alt: 'Dタイプイメージイラスト',
-                      captionColor: '',
-                      captionPosition: 'capOut',
-                      pictureMode: '',
-                      modifiers: ['sdw_inner']
-                    },
-                    spIcon: 'zoom',
-                    ttl: 'マグネットセンサー付の窓・玄関扉を全住戸に採用',
-                    txt: '各住戸の開閉開口部に設置されたマグネットセンサーにより、窓の開閉異常を監視します。また、住戸内にはパッシブセンサーを設置。侵入者を察知し、警備会社などに通知します。',
-                    modifiers: ['upsideDown']
+                  subCap: '※およそ100年の耐久性とは、日本建築学会「建築工事標準仕様書（JASS5）」により定められた「構造体の大規模補修を必要としないことが予定できる期間として100年」という供用期間を目指したコンクリート（30N/m㎡≒1㎡3,000トンの圧縮に耐える強さ）を採用しているという意味で、100年の寿命やメンテナンスフリーを保証するものではありません。',
+                  spIcon: 'zoom',
+                  ttl: '100年の耐久性を目指したコンクリート',
+                  txt: '長期修繕計画に関わる1階から最上階の構造躯体には、設計基準強度30N/m㎡以上のコンクリートを採用。これは、日本建築学会建築工事標準仕様書（JASS5）で定められた基準によるもので、約100年にわたり大規模な補修をせずに、鉄筋の腐食やコンクリートの重大な劣化が生じないことが期待できます。（但し、建物本体の構造耐力上、重要な部分である柱・梁・壁・床・屋根の躯体に使用するコンクリートに限る。）',
+                  modifiers: ['upsideDown']
+                },
+                {
+                  visual: {
+                    imagePath: '<img src="./imgs/img-structure-06.jpg" alt="" width="480" height="320">',
+                    alt: 'イメージ概念図',
+                    captionColor: '',
+                    captionPosition: 'capOut',
+                    pictureMode: '',
+                    modifiers: ['sdw_inner']
                   },
-                ],
-                modifiers: ['half']
-              })%>
-            </div>
-          </section>
-
-        </div>
-      </div>
-      <div class="wrap">
-        <div id="anchorStructure" class="equpment-structure">
-          <%- include('./components/anchorNav/_anchorNav.ejs', { current: 'anchorStructure' }) %>
-          <%- include('./components/equipmentVisual/_equipmentVisual.ejs', {
-            visual: {
-              imagePath: '<img src="./imgs/img-structure-visual.jpg" alt="" width="1008" height="240">',
-              alt: '',
-              captionColor: '',
-              captionPosition: 'capOut',
-              pictureMode: ''
-            },
-            ttl: '構造'
-          }) %>
-          <section class="equipmentSect">
-            <div class="equipmentSect__head">
-              <div class="equipmentSect__heading"><span>“将来の安心”をお届けする<br class="only-sp">優れた構造・品質。</span></div>
-            </div>
-            <div class="equipmentSect__cont">
-              <%- include('./components/equipmentCardGroup/_equipmentCardGroup.ejs', {
-                cardList: [
-                  {
-                    visual: {
-                      imagePath: '<img src="./imgs/img-structure-01.jpg" alt="" width="480" height="320">',
-                      alt: 'イメージイラスト',
-                      captionColor: '',
-                      captionPosition: 'capOut',
-                      pictureMode: '',
-                      modifiers: ['shadow']
-                    },
-                    spIcon: 'zoom',
-                    ttl: '遮音性や断熱性に優れた二重床・二重天井',
-                    txt: '遮音性と断熱性に優れた二重床・二重天井を採用しています。床の下地材と仕上げ材には遮音性の高い素材を使用しました。また、スラブ内に中空部を設けることでワイドスパンでも天井に小梁のでない空間を実現することができ、将来のライフスタイルの変化によるリフォームにも対応しやすい工法です。',
-                    modifiers: ['upsideDown']
-                  },
-                  {
-                    visual: {
-                      imagePath: '<img src="./imgs/img-structure-02.jpg" alt="" width="480" height="320">',
-                      alt: 'イメージイラスト',
-                      captionColor: '',
-                      captionPosition: 'capOut',
-                      pictureMode: '',
-                      modifiers: ['shadow']
-                    },
-                    spIcon: 'zoom',
-                    ttl: '地盤の調査結果に基づいて、最適な基礎を選択',
-                    txt: '建物を強固なものにするために、杭の先端を地下深くの固い地盤（支持層）に到達させ、建物をしっかりと支えます。住まいという大切な財産を高い信頼性で守ります。<br><span class="caption">※施工の際、地盤の状況で基礎の深さは多少異なります。</span>',
-                    modifiers: ['upsideDown']
-                  },
-                  {
-                    visual: {
-                      imagePath: '<img src="./imgs/img-structure-03.jpg" alt="" width="480" height="320">',
-                      alt: '',
-                      captionColor: '',
-                      captionPosition: 'noCap',
-                      pictureMode: '',
-                      modifiers: ['shadow']
-                    },
-                    spIcon: 'zoom',
-                    ttl: '遮音性の高い壁構造',
-                    txt: '戸境壁や外壁等の厚さを十分に確保。隣戸同士や外部騒音などが伝わりにくい構造とし、断熱性も考慮しました。',
-                    modifiers: ['upsideDown']
-                  },
-                  {
-                    visual: {
-                      imagePath: '<img src="./imgs/img-structure-04.jpg" alt="" width="480" height="320">',
-                      alt: 'イメージイラスト',
-                      captionColor: '',
-                      captionPosition: 'capOut',
-                      pictureMode: '',
-                      modifiers: ['shadow']
-                    },
-                    spIcon: 'zoom',
-                    ttl: '耐震枠の玄関ドア',
-                    txt: '上下のクリアランスを大きく確保することにより面内変形を受けても枠とドアの接触をやわらげる、閉じ込められにくい構造です。',
-                    modifiers: ['upsideDown']
-                  },
-                  {
-                    visual: {
-                      imagePath: '<img src="./imgs/img-structure-05.jpg" alt="" width="630" height="262">',
-                      alt: 'コンクリート強度概念図、参考図書 JASS5 2003年版',
-                      captionColor: '',
-                      captionPosition: 'capIn',
-                      pictureMode: '',
-                      modifiers: ['shadow']
-                    },
-                    subCap: '※およそ100年の耐久性とは、日本建築学会「建築工事標準仕様書（JASS5）」により定められた「構造体の大規模補修を必要としないことが予定できる期間として100年」という供用期間を目指したコンクリート（30N/m㎡≒1㎡3,000トンの圧縮に耐える強さ）を採用しているという意味で、100年の寿命やメンテナンスフリーを保証するものではありません。',
-                    spIcon: 'zoom',
-                    ttl: '100年の耐久性を目指したコンクリート',
-                    txt: '長期修繕計画に関わる1階から最上階の構造躯体には、設計基準強度30N/m㎡以上のコンクリートを採用。これは、日本建築学会建築工事標準仕様書（JASS5）で定められた基準によるもので、約100年にわたり大規模な補修をせずに、鉄筋の腐食やコンクリートの重大な劣化が生じないことが期待できます。（但し、建物本体の構造耐力上、重要な部分である柱・梁・壁・床・屋根の躯体に使用するコンクリートに限る。）',
-                    modifiers: ['upsideDown']
-                  },
-                  {
-                    visual: {
-                      imagePath: '<img src="./imgs/img-structure-06.jpg" alt="" width="480" height="320">',
-                      alt: 'イメージ概念図',
-                      captionColor: '',
-                      captionPosition: 'capOut',
-                      pictureMode: '',
-                      modifiers: ['sdw_inner']
-                    },
-                    spIcon: 'zoom',
-                    ttl: '耐震性を強化した溶接閉鎖型フープ',
-                    txt: '柱の主筋を囲む帯筋を連続させ、強度を均等化するため、せん断力に抵抗する補強効果が高く、柱の耐震性を向上させることができます。またコンクリートを拘束し柱が破壊するのを防ぎます。（一部除く）',
-                    modifiers: ['upsideDown']
-                  },
-                ],
-                modifiers: ['half']
-              })%>
-            </div>
-          </section>
-        </div>
+                  spIcon: 'zoom',
+                  ttl: '耐震性を強化した溶接閉鎖型フープ',
+                  txt: '柱の主筋を囲む帯筋を連続させ、強度を均等化するため、せん断力に抵抗する補強効果が高く、柱の耐震性を向上させることができます。またコンクリートを拘束し柱が破壊するのを防ぎます。（一部除く）',
+                  modifiers: ['upsideDown']
+                },
+              ],
+              modifiers: ['half']
+            })%>
+          </div>
+        </section>
       </div>
     </div>
     <%# include('/common/components/contentsGuide/_contentsGuide.ejs') %>

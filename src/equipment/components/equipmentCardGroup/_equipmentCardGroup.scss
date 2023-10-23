@@ -89,21 +89,6 @@
 
   }
 
-  &--towThird {
-    display: flex;
-
-    .equipmentCard {
-      @include pc {
-        margin-right: 48px;
-      }
-
-      @include sp {
-        margin-right: 20px;
-        width: 157px;
-      }
-    }
-  }
-
   &--oneFourth {
 
 

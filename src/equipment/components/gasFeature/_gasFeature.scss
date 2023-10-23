@@ -3,9 +3,9 @@
   &__ttl {
     align-items: center;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     line-height: 1;
-    text-align: center;
+    position: relative;
 
     @include pc {
       font-size: 22px;
@@ -17,6 +17,17 @@
       padding-bottom: 10px;
     }
 
+
+    &:after {
+      background-color: #6eacba;
+      bottom: 0;
+      content: '';
+      height: 1px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+
     & + .txt {
       margin-top: 15px;
     }
@@ -24,9 +35,5 @@
     & + .equipmentCardGroup  {
       margin-top: 22px;
     }
-  }
-
-  &__CardGroup {
-    display: flex;
   }
 }

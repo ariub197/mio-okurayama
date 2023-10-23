@@ -44,7 +44,7 @@ photoFunc(baseImg);
 const photoAlt = alt.replace(/<br.*?>|<span.*?>|<\u002fspan>|<sup.*?>(.*?)<\u002fsup>/g, "");
 
 %>
-<div class="<%- className %>" <% if (params.sai !== '') { %> data-sai="<%- params.sai %>"<% } %>><% if (params.pictureMode !== '') { %>
+<div class="<%- className %>"<% if (params.sai !== '') { %> data-sai="<%- params.sai %>"<% } %>><% if (params.pictureMode !== '') { %>
   <picture class="photo__pic">
       <source media="(min-width: 768px)" <% if (params.lazy == 'on') { %>data-<% } %>srcset="<%- pureSrcPC %>" width="<%- pureWidthPC %>" height="<%- pureHeightPC %>">
       <% if (params.lazy == 'on') { %><img src="data:image/gif;base64,R0lGODlhAQABAGAAACH5BAEKAP8ALAAAAAABAAEAAAgEAP8FBAA7" data-src="<%- pureSrcSP %>" alt="<%- photoAlt %>"  width="<%- pureWidthSP %>" height="<%- pureHeightSP %>" class="photo__image lazyload"><% } else { %><img src="<%- pureSrcSP %>" alt="<%- photoAlt %>" width="<%- pureWidthSP %>" height="<%- pureHeightSP %>" class="photo__image"><% } %>
