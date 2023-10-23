@@ -1,4 +1,7 @@
 .anchorNav {
+  position: sticky;
+  top: 10%;
+  z-index: 100;
   align-items: center;
   display: flex;
   justify-content: space-between;

@@ -1,8 +1,13 @@
 .utilitySink {
-  @include pc {
-    display: flex;
-    justify-content: space-between;
-  }
+  background: rgba(#248068, 0.1);
+  box-shadow: 0 0 0 100vmax rgba(#248068, 0.1);
+  clip-path: inset(0 -100vmax);
+  padding: 80px 0;
+  margin-top: 80px;
+
+  // @include pc {
+
+  // }
 
   &__head {
     @include pc {
