@@ -15,7 +15,9 @@
 
 @media screen and (max-width: 768px) {
   .anchorNav {
-    display: none;
+    position: static;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -47,7 +49,7 @@
 @media screen and (max-width: 768px) {
   .anchorNav__link {
     height: 50px;
-    width: 158px;
+    width: calc(50% - 10px);
   }
 }
 
@@ -125,6 +127,13 @@
   width: 100%;
 }
 
+@media screen and (max-width: 768px) {
+  .counterKitchen {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
 @media print, screen and (min-width: 768px) {
   .counterKitchen__item, .counterKitchen__item--center, .utilitySink__item--center {
     width: 480px;
@@ -139,7 +148,7 @@
 
 @media screen and (max-width: 768px) {
   .counterKitchen__item:not(:last-of-type), .counterKitchen__item--center:not(:last-of-type), .utilitySink__item--center:not(:last-of-type) {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 }
 
@@ -150,6 +159,12 @@
 .counterKitchen__item--center {
   height: 100%;
   margin: auto 0;
+}
+
+@media screen and (max-width: 768px) {
+  .counterKitchen__item.photo > img, .photo.counterKitchen__item--center > img, .photo.utilitySink__item--center > img {
+    width: 100%;
+  }
 }
 
 @media print, screen and (min-width: 768px) {
@@ -172,7 +187,7 @@
 }
 
 .counterKitchen__heading--position {
-  margin: 64px auto 34px;
+  margin: 0 auto 34px;
   text-align: center;
 }
 
@@ -195,7 +210,8 @@
 
 @media screen and (max-width: 768px) {
   .counterKitchen__detail {
-    margin-top: 30px;
+    margin: 30px auto 0;
+    max-width: 494px;
   }
 }
 
@@ -207,7 +223,10 @@
 
 @media screen and (max-width: 768px) {
   .counterKitchen__detail .equipmentCard {
-    width: 160px;
+    width: calc(50% - 10px);
+  }
+  .counterKitchen__detail .equipmentCard:nth-of-type(3n) {
+    margin-top: 30px;
   }
 }
 
@@ -241,6 +260,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    gap: 1rem;
   }
 }
 
@@ -264,7 +284,7 @@
 
 @media screen and (max-width: 768px) {
   .designKitchen__item .equipmentCard {
-    width: 160px;
+    width: 50%;
   }
 }
 
@@ -394,6 +414,12 @@
 .equipmentCard__head .photoshadow .photo__image {
   -webkit-box-shadow: 0 8px 16px 0 rgba(102, 102, 102, 0.5);
           box-shadow: 0 8px 16px 0 rgba(102, 102, 102, 0.5);
+}
+
+@media screen and (max-width: 768px) {
+  .equipmentCard__head .photo .photo__pic > img {
+    width: 100%;
+  }
 }
 
 .equipmentCard__spIcon {
@@ -654,10 +680,24 @@
           justify-content: flex-start;
 }
 
+@media screen and (max-width: 768px) {
+  .equipmentCardGroup--half {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 480px;
+  }
+}
+
 @media print, screen and (min-width: 768px) {
   .equipmentCardGroup--half .equipmentCard {
     margin-right: 48px;
     width: 480px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .equipmentCardGroup--half .equipmentCard {
+    width: 100%;
   }
 }
 
@@ -735,6 +775,13 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .equipmentCardGroup--oneFourth {
+    max-width: 494px;
+    margin: auto;
+  }
+}
+
 .equipmentCardGroup--oneFourth .equipmentCard {
   margin-right: 20px;
 }
@@ -747,7 +794,7 @@
 
 @media screen and (max-width: 768px) {
   .equipmentCardGroup--oneFourth .equipmentCard {
-    width: 157px;
+    width: calc(50% - 10px);
   }
 }
 
@@ -947,6 +994,11 @@
   }
 }
 
+.equipmentSect__cont .txt {
+  letter-spacing: 0;
+  text-align: center;
+}
+
 @media print, screen and (min-width: 768px) {
   .equipmentSect__cont--large {
     margin-top: 64px;
@@ -1077,6 +1129,12 @@
   .flexSect .generalSect .generalSect__head, .flexSect .generalSect--revers .generalSect__head {
     width: 100%;
     margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .flexSect .generalSect .generalSect__head .photo > img, .flexSect .generalSect--revers .generalSect__head .photo > img {
+    width: 100%;
   }
 }
 
@@ -1399,6 +1457,13 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .mistySect {
+    margin-top: 40px;
+    padding: 40px 0;
+  }
+}
+
 @media print, screen and (min-width: 768px) {
   .mistySect__visual {
     margin-bottom: 90px;
@@ -1407,7 +1472,13 @@
 
 @media screen and (max-width: 768px) {
   .mistySect__visual {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mistySect__visual .photo__pic > img {
+    width: 100%;
   }
 }
 
@@ -1470,7 +1541,8 @@
 
 @media screen and (max-width: 768px) {
   .mistySect__cont {
-    margin-top: 30px;
+    margin: 30px auto 0;
+    max-width: 480px;
   }
 }
 
@@ -1525,7 +1597,7 @@
 
 @media screen and (max-width: 768px) {
   .mistySect__bottom {
-    margin-top: 70px;
+    margin-top: 50px;
   }
 }
 
@@ -1534,6 +1606,18 @@
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mistySect__bottom .equipmentCardGroup--half {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mistySect__bottom .equipmentCardGroup--half .equipmentCard {
+    width: 100%;
   }
 }
 
@@ -1562,7 +1646,7 @@
 
 @media screen and (max-width: 768px) {
   .equipmentCardGroup + .mistySect {
-    margin-top: 100px;
+    margin-top: 40px;
   }
 }
 
@@ -1825,7 +1909,7 @@
 @media screen and (max-width: 768px) {
   .subVisual + .equipmentVisual,
   .subVisual + .equipmentSect {
-    margin-top: 75px;
+    margin-top: 45px;
   }
 }
 
@@ -1933,6 +2017,14 @@
   margin-top: 80px;
 }
 
+@media screen and (max-width: 768px) {
+  .utilitySink {
+    margin: 40px auto 0;
+    padding: 40px 0;
+    max-width: 480px;
+  }
+}
+
 .utilitySink__group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1963,6 +2055,16 @@
   }
 }
 
+.utilitySink__item .txt {
+  letter-spacing: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .utilitySink__item .txt {
+    text-align: center;
+  }
+}
+
 .utilitySink__item .txt + .photo {
   margin-top: 22px;
 }
@@ -1970,6 +2072,10 @@
 .utilitySink__item--center {
   height: 100%;
   margin: auto 0;
+}
+
+.utilitySink__item .photo {
+  text-align: center;
 }
 
 @media print, screen and (min-width: 768px) {
@@ -2044,7 +2150,8 @@
 
 @media screen and (max-width: 768px) {
   .utilitySink__cont .equipmentCard {
-    width: 160px;
+    width: calc(50% - 10px);
+    max-width: 304px;
   }
 }
 

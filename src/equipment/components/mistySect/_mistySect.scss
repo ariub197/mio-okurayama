@@ -11,13 +11,24 @@
     justify-content: space-between;
   }
 
+  @include sp {
+    margin-top: 40px;
+    padding: 40px 0;
+  }
+
   &__visual {
     @include pc {
       margin-bottom: 90px;
     }
 
     @include sp {
-      margin-bottom: 60px;
+      margin-bottom: 30px;
+    }
+
+    .photo__pic > img {
+      @include sp {
+        width: 100%;
+      }
     }
   }
 
@@ -70,7 +81,8 @@
 
   &__cont {
     @include sp {
-      margin-top: 30px;
+      margin: 30px auto 0;
+      max-width: 480px;
     }
   }
 
@@ -97,12 +109,24 @@
     }
 
     @include sp {
-      margin-top: 70px;
+      margin-top: 50px;
     }
 
     .equipmentCardGroup {
       @include pc {
         align-items: flex-start;
+      }
+
+      &--half {
+        @include sp {
+          display: block;
+        }
+
+        .equipmentCard {
+          @include sp {
+            width: 100%;
+          }
+        }
       }
     }
 
@@ -135,7 +159,7 @@
     }
 
     @include sp {
-      margin-top: 100px;
+      margin-top: 40px;
     }
 
   }

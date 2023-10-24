@@ -22,6 +22,11 @@
         }
       }
 
+      .photo__pic > img {
+        @include sp {
+          width: 100%;
+        }
+      }
     }
   }
 

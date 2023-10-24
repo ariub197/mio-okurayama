@@ -262,32 +262,21 @@
             <section class="utilitySink">
               <div class="utilitySink__group">
                 <div class="utilitySink__item--center">
-                  <div class="utilitySink__heading">3層立体的なシンクで<br class="only-sp">「洗う、調理、片付ける」をスムーズに</div>
-                  <p class="txt">ワークトップスペース」、「アシストスペース」、「ミドルスペース」と、シンクスペースを3層に使い分けられ、家事の効率を高めます。 </p>
+                  <div class="utilitySink__heading">3層立体的なシンクで<br>「洗う、調理、片付ける」をスムーズに</div>
+                  <p class="txt">ワークトップスペース」、「アシストスペース」、「ミドルスペース」と、<br class="only-sp">シンクスペースを3層に使い分けられ、家事の効率を高めます。 </p>
                 </div>
                 <div class="utilitySink__item">
                   <%- include('/common/components/photo/_photo.ejs', {
                     imagePath: '<img src="./imgs/img-kitchen-sink-top.png" alt="" width="480" height="360">',
-                    alt: '',
-                    captionColor: '',
-                    captionPosition: 'noCap',
+                    alt: 'image photo',
+                    captionColor: 'white',
+                    captionPosition: 'capIn',
                     pictureMode: '',
                     modifiers: []
                   }) %>
                 </div>
               </div>
               <div class="utilitySink__cont">
-                <div class="utilitySink__spVisual">
-                  <%- include('/common/components/photo/_photo.ejs', {
-                    imagePathPC: '<img src="./imgs/img-kitchen-sink-top.png" alt="" width="304" height="399">',
-                    imagePathSP: '<img src="./imgs/img-kitchen-sink-top.png" alt="" width="630" height="420">',
-                    alt: 'image photo',
-                    captionColor: 'sdw-wh',
-                    captionPosition: 'capIn',
-                    pictureMode: 'on',
-                    modifiers: []
-                  }) %>
-                </div>
                 <%- include('./components/equipmentCardGroup/_equipmentCardGroup.ejs', {
                   cardList: [
                     {
@@ -348,7 +337,7 @@
           </div>
           <div class="equipmentSect__cont">
             <div class="equipmentSect__catch">
-              <p class="txt">バスルームは、標準装備のミストサウナや優雅な空間を演出するダウンライト、浴槽のお湯が冷めにくい保温浴槽、多機能浴室リモコンなどを採用し、心ゆくまでリラックスタイムを楽しむことができます。</p>
+              <p class="txt">バスルームは、標準装備のミストサウナや優雅な空間を演出するダウンライト、浴槽のお湯が冷めにくい保温浴槽、<br>多機能浴室リモコンなどを採用し、心ゆくまでリラックスタイムを楽しむことができます。</p>
             </div>
             <%- include('./components/equipmentCardGroup/_equipmentCardGroup.ejs', {
               cardList: [
@@ -421,11 +410,11 @@
                 <%- include('/common/components/photo/_photo.ejs', {
                   imagePathPC: '<img src="./imgs/pc/img-misty-visual.jpg" alt="" width="1008" height="160">',
                   imagePathSP: '<img src="./imgs/sp/img-misty-visual.jpg" alt="" width="630" height="315">',
-                  alt: '',
-                  captionColor: '',
+                  alt: 'photo',
+                  captionColor: 'white',
                   captionPosition: 'capOut',
                   pictureMode: 'on',
-                  modifiers: []
+                  modifiers: [shadow]
                 }) %>
               </div>
               <div class="mistySect__head--center">
@@ -669,7 +658,6 @@
           </div>
         </section>
       </div>
-      <div class="wrap">
         <div id="anchorComfort" class="equpment-comfort">
           <%- include('./components/anchorNav/_anchorNav.ejs', { current: 'anchorComfort' }) %>
           <%- include('./components/equipmentVisual/_equipmentVisual.ejs', {
@@ -797,7 +785,6 @@
             </div>
           </section>
         </div>
-        <div class="wrap">
           <div id="anchorAmenities" class="equpment-security">
             <%- include('./components/anchorNav/_anchorNav.ejs', { current: 'anchorAmenities' }) %>
             <%- include('./components/equipmentVisual/_equipmentVisual.ejs', {
@@ -822,7 +809,7 @@
                         imagePath: '<img src="./imgs/img-amenities-elevator.jpg" alt="" width="480" height="360">',
                         alt: '参考写真',
                         captionColor: '',
-                        captionPosition: 'capIn',
+                        captionPosition: 'capOut',
                         pictureMode: '',
                         modifiers: ['shadow']
                       }) %>
@@ -1003,9 +990,7 @@
               </div>
             </section>
           </div>
-        </div>
-      </div>
-      <div class="wrap">
+
         <div id="anchorSecurity" class="equpment-security">
           <%- include('./components/anchorNav/_anchorNav.ejs', { current: 'anchorSecurity' }) %>
           <%- include('./components/equipmentVisual/_equipmentVisual.ejs', {
@@ -1027,16 +1012,13 @@
                 <div class="generalSect">
                   <div class="generalSect__head">
                     <%- include('/common/components/photo/_photo.ejs', {
-                      imagePathPC: '<img src="./imgs/pc/img-security-highsect-01.jpg" alt="" width="480" height="320">',
-                      imagePathSP: '<img src="./imgs/sp/img-security-highsect-01.jpg" alt="" width="295" height="197">',
+                      imagePath: '<img src="./imgs/img-security-highsect-01.jpg" alt="" width="480" height="320">',
                       alt: '',
                       captionColor: '',
                       captionPosition: 'noCap',
-                      pictureMode: 'on',
+                      pictureMode: '',
                       modifiers: ['shadow']
                     }) %>
-                    <p class="caption">※1  HT4216BRSAW6Qの場合（スタンダードの一例）<br class="only-sp">※2  HT4215BRSAW6Cの場合（エコジョーズの一例）<br>※1※2はJIS S 2109で定める測定方法により算定。<br class="only-sp">ただし※1・※2ともご使用状況により熱効率は異なります。</p>
-                    <div class="equipmentCard__spIcon"><svg class="zoomSVG" viewBox="0 0 34 34"><path class="zoomSVG__path" d="m0,34v-13.54h1.54v10.94L31.4,1.54h-10.94V0h13.54v13.54h-1.54V2.6L2.6,32.46h10.94v1.54H0Z"/></svg></div>
                   </div>
                   <div class="generalSect__cont">
                     <div class="generalSect__ttl">カードキー1枚でできる先進ライフ<br>安らぎと寛ぎを創造する<br>先進のセキュリティシステムを導入</div>
@@ -1059,41 +1041,43 @@
                   }) %>
                 </div>
               </div>
-              </section>
+            </div>
+          </section>
 
-              <section class="equipmentSect">
-              <div class="equipmentSect__head">
-                <div class="equipmentSect__heading">ウェブ・モバイルサービス</div>
-              </div>
-              <div class="equipmentSect__cont">
-                <p class="txt">家族の帰宅や不審者の侵入を、登録した携帯電話やパソコンなどにメールで知らせるウェブ・モバイルサービスです。<br>外出先より遠隔施錠・防犯設定等をご利用頂けます。</p>
-              </div>
-              <div class="webMobile">
-                <%- include('./components/equipmentCard/_equipmentCard.ejs', {
-                  visual: {
-                    imagePathPC: '<img src="./imgs/pc/img-security-webmobile-01.jpg" alt="" width="1008" height="359">',
-                    imagePathSP: '<img src="./imgs/sp/img-security-webmobile-01.jpg" alt="" width="630" height="793">',
-                    alt: 'イメージイラスト',
-                    captionColor: '',
-                    captionPosition: 'capOut',
-                    pictureMode: 'on',
-                    modifiers: ['shadow']
-                  },
-                  spIcon: 'zoom',
-                  modifiers: ['upsideDown']
-                }) %>
-              </div>
-              </section>
+          <section class="equipmentSect">
+            <div class="equipmentSect__head">
+              <div class="equipmentSect__heading">ウェブ・モバイルサービス</div>
+            </div>
+            <div class="equipmentSect__cont">
+              <p class="txt">家族の帰宅や不審者の侵入を、登録した携帯電話やパソコンなどにメールで知らせるウェブ・モバイルサービスです。<br>外出先より遠隔施錠・防犯設定等をご利用頂けます。</p>
+            </div>
+            <div class="webMobile">
+              <%- include('./components/equipmentCard/_equipmentCard.ejs', {
+                visual: {
+                  imagePathPC: '<img src="./imgs/pc/img-security-webmobile-01.jpg" alt="" width="1008" height="359">',
+                  imagePathSP: '<img src="./imgs/sp/img-security-webmobile-01.jpg" alt="" width="630" height="793">',
+                  alt: 'イメージイラスト',
+                  captionColor: '',
+                  captionPosition: 'capOut',
+                  pictureMode: 'on',
+                  modifiers: ['shadow']
+                },
+                spIcon: 'zoom',
+                modifiers: ['upsideDown']
+              }) %>
+            </div>
+          </section>
 
-              <section class="equipmentSect">
-              <div class="equipmentSect__head">
-                <div class="equipmentSect__heading">暮らしの安全を支えるセキュリティ</div>
-              </div>
-              <div class="equipmentSect__cont">
-                <div class="flexSect">
-                  <div class="generalSect">
-                    <div class="generalSect__head">
-                      <%- include('/common/components/photo/_photo.ejs', {
+          <section class="equipmentSect">
+            <div class="equipmentSect__head">
+              <div class="equipmentSect__heading">暮らしの安全を支えるセキュリティ</div>
+            </div>
+            <div class="equipmentSect__cont">
+              <div class="flexSect">
+                <div class="generalSect">
+                  <div class="generalSect__head">
+                    <%- include('./components/equipmentCard/_equipmentCard.ejs', {
+                      visual: {
                         imagePath: '<img src="./imgs/img-security-camera.png" alt="" width="480" height="320">',
                         alt: '1階敷地配置図イメージイラスト',
                         captionColor: '',
@@ -1101,59 +1085,46 @@
                         pictureMode: '',
                         modifiers: ['shadow']
                       },
-                        spIcon: 'zoom',
-                      ) %>
-                      <p class="caption">※1  HT4216BRSAW6Qの場合（スタンダードの一例）<br class="only-sp">※2  HT4215BRSAW6Cの場合（エコジョーズの一例）<br>※1※2はJIS S 2109で定める測定方法により算定。<br class="only-sp">ただし※1・※2ともご使用状況により熱効率は異なります。</p>
-                      <div class="equipmentCard__spIcon"><svg class="zoomSVG" viewBox="0 0 34 34"><path class="zoomSVG__path" d="m0,34v-13.54h1.54v10.94L31.4,1.54h-10.94V0h13.54v13.54h-1.54V2.6L2.6,32.46h10.94v1.54H0Z"/></svg></div>
-                    </div>
-                    <div class="generalSect__cont">
-                      <div class="generalSect__ttl">カードキー1枚でできる先進ライフ<br>安らぎと寛ぎを創造する<br>先進のセキュリティシステムを導入</div>
-                      <p class="generalSect__txt">セントラル警備保障との連携により安心のセキュリティ体制を構築する「ハイセクト」を導入。カードキー採用、インターネットと電話回線の二重通信ライン確保など先進システムの導入により、24時間365日住む方の安心を守ります。<br>電話回線がダウンしても警備会社の集中管理センターで回線の異常が分かるシステムになっております。
-                      </p>
-                    </div>
+                      spIcon: 'zoom',
+                      modifiers: ['upsideDown']
+                    }) %>
+                  </div>
+                  <div class="generalSect__cont">
+                    <div class="generalSect__ttl">暮らしを見守る防犯カメラ（12台設置）</div>
+                    <p class="generalSect__txt">共用スペースには、24時間作動する防犯カメラを設置。管理事務室の記録装置に防犯カメラの記録映像をリアルタイムで送り続けます。
+                    </p>
                   </div>
                 </div>
               </div>
-
-              <%- include('./components/equipmentCardGroup/_equipmentCardGroup.ejs', {
-                cardList: [
-                  {
-                    visual: {
-                      imagePath: '<img src="./imgs/img-security-camera.png" alt="" width="480" height="320">',
-                      alt: '1階敷地配置図イメージイラスト',
-                      captionColor: '',
-                      captionPosition: 'capOut',
-                      pictureMode: '',
-                      modifiers: ['sdw_inner']
-                    },
-                    spIcon: 'zoom',
-                    ttl: '暮らしを見守る防犯カメラ（12台設置）',
-                    txt: '共用スペースには、24時間作動する防犯カメラを設置。管理事務室の記録装置に防犯カメラの記録映像をリアルタイムで送り続けます。',
-                    modifiers: ['upsideDown']
-                  },
-                  {
-                    visual: {
-                      imagePath: '<img src="./imgs/img-security-02.jpg" alt="" width="480" height="320">',
-                      alt: 'Dタイプイメージイラスト',
-                      captionColor: '',
-                      captionPosition: 'capOut',
-                      pictureMode: '',
-                      modifiers: ['sdw_inner']
-                    },
-                    spIcon: 'zoom',
-                    ttl: 'マグネットセンサー付の窓・玄関扉を全住戸に採用',
-                    txt: '各住戸の開閉開口部に設置されたマグネットセンサーにより、窓の開閉異常を監視します。また、住戸内にはパッシブセンサーを設置。侵入者を察知し、警備会社などに通知します。',
-                    modifiers: ['upsideDown']
-                  },
-                ],
-                modifiers: ['half']
-              })%>
+            </div>
+            <div class="equipmentSect__cont">
+              <div class="flexSect">
+                <div class="generalSect--revers">
+                  <div class="generalSect__head">
+                    <%- include('./components/equipmentCard/_equipmentCard.ejs', {
+                      visual: {
+                        imagePath: '<img src="./imgs/img-security-02.jpg" alt="" width="480" height="320">',
+                        alt: 'Dタイプイメージイラスト',
+                        captionColor: '',
+                        captionPosition: 'capOut',
+                        pictureMode: '',
+                        modifiers: ['shadow']
+                      },
+                      spIcon: 'zoom',
+                      modifiers: ['upsideDown']
+                    }) %>
+                    <div class="equipmentCard__spIcon"><svg class="zoomSVG" viewBox="0 0 34 34"><path class="zoomSVG__path" d="m0,34v-13.54h1.54v10.94L31.4,1.54h-10.94V0h13.54v13.54h-1.54V2.6L2.6,32.46h10.94v1.54H0Z"/></svg></div>
+                  </div>
+                  <div class="generalSect__cont">
+                    <div class="generalSect__ttl">マグネットセンサー付の窓・玄関扉を<br>全住戸に採用</div>
+                    <p class="generalSect__txt">各住戸の開閉開口部に設置されたマグネットセンサーにより、窓の開閉異常を監視します。また、住戸内にはパッシブセンサーを設置。侵入者を察知し、警備会社などに通知します。
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
-
         </div>
-      </div>
-      <div class="wrap">
         <div id="anchorStructure" class="equpment-structure">
           <%- include('./components/anchorNav/_anchorNav.ejs', { current: 'anchorStructure' }) %>
           <%- include('./components/equipmentVisual/_equipmentVisual.ejs', {
@@ -1171,96 +1142,156 @@
               <div class="equipmentSect__heading"><span>“将来の安心”をお届けする<br class="only-sp">優れた構造・品質。</span></div>
             </div>
             <div class="equipmentSect__cont">
-              <%- include('./components/equipmentCardGroup/_equipmentCardGroup.ejs', {
-                cardList: [
-                  {
-                    visual: {
-                      imagePath: '<img src="./imgs/img-structure-01.jpg" alt="" width="480" height="320">',
-                      alt: 'イメージイラスト',
-                      captionColor: '',
-                      captionPosition: 'capOut',
-                      pictureMode: '',
-                      modifiers: ['shadow']
-                    },
-                    spIcon: 'zoom',
-                    ttl: '遮音性や断熱性に優れた二重床・二重天井',
-                    txt: '遮音性と断熱性に優れた二重床・二重天井を採用しています。床の下地材と仕上げ材には遮音性の高い素材を使用しました。また、スラブ内に中空部を設けることでワイドスパンでも天井に小梁のでない空間を実現することができ、将来のライフスタイルの変化によるリフォームにも対応しやすい工法です。',
-                    modifiers: ['upsideDown']
-                  },
-                  {
-                    visual: {
-                      imagePath: '<img src="./imgs/img-structure-02.jpg" alt="" width="480" height="320">',
-                      alt: 'イメージイラスト',
-                      captionColor: '',
-                      captionPosition: 'capOut',
-                      pictureMode: '',
-                      modifiers: ['shadow']
-                    },
-                    spIcon: 'zoom',
-                    ttl: '地盤の調査結果に基づいて、最適な基礎を選択',
-                    txt: '建物を強固なものにするために、杭の先端を地下深くの固い地盤（支持層）に到達させ、建物をしっかりと支えます。住まいという大切な財産を高い信頼性で守ります。<br><span class="caption">※施工の際、地盤の状況で基礎の深さは多少異なります。</span>',
-                    modifiers: ['upsideDown']
-                  },
-                  {
-                    visual: {
-                      imagePath: '<img src="./imgs/img-structure-03.jpg" alt="" width="480" height="320">',
-                      alt: '',
-                      captionColor: '',
-                      captionPosition: 'noCap',
-                      pictureMode: '',
-                      modifiers: ['shadow']
-                    },
-                    spIcon: 'zoom',
-                    ttl: '遮音性の高い壁構造',
-                    txt: '戸境壁や外壁等の厚さを十分に確保。隣戸同士や外部騒音などが伝わりにくい構造とし、断熱性も考慮しました。',
-                    modifiers: ['upsideDown']
-                  },
-                  {
-                    visual: {
-                      imagePath: '<img src="./imgs/img-structure-04.jpg" alt="" width="480" height="320">',
-                      alt: 'イメージイラスト',
-                      captionColor: '',
-                      captionPosition: 'capOut',
-                      pictureMode: '',
-                      modifiers: ['shadow']
-                    },
-                    spIcon: 'zoom',
-                    ttl: '耐震枠の玄関ドア',
-                    txt: '上下のクリアランスを大きく確保することにより面内変形を受けても枠とドアの接触をやわらげる、閉じ込められにくい構造です。',
-                    modifiers: ['upsideDown']
-                  },
-                  {
-                    visual: {
-                      imagePath: '<img src="./imgs/img-structure-05.jpg" alt="" width="630" height="262">',
-                      alt: 'コンクリート強度概念図、参考図書 JASS5 2003年版',
-                      captionColor: '',
-                      captionPosition: 'capIn',
-                      pictureMode: '',
-                      modifiers: ['shadow']
-                    },
-                    subCap: '※およそ100年の耐久性とは、日本建築学会「建築工事標準仕様書（JASS5）」により定められた「構造体の大規模補修を必要としないことが予定できる期間として100年」という供用期間を目指したコンクリート（30N/m㎡≒1㎡3,000トンの圧縮に耐える強さ）を採用しているという意味で、100年の寿命やメンテナンスフリーを保証するものではありません。',
-                    spIcon: 'zoom',
-                    ttl: '100年の耐久性を目指したコンクリート',
-                    txt: '長期修繕計画に関わる1階から最上階の構造躯体には、設計基準強度30N/m㎡以上のコンクリートを採用。これは、日本建築学会建築工事標準仕様書（JASS5）で定められた基準によるもので、約100年にわたり大規模な補修をせずに、鉄筋の腐食やコンクリートの重大な劣化が生じないことが期待できます。（但し、建物本体の構造耐力上、重要な部分である柱・梁・壁・床・屋根の躯体に使用するコンクリートに限る。）',
-                    modifiers: ['upsideDown']
-                  },
-                  {
-                    visual: {
-                      imagePath: '<img src="./imgs/img-structure-06.jpg" alt="" width="480" height="320">',
-                      alt: 'イメージ概念図',
-                      captionColor: '',
-                      captionPosition: 'capOut',
-                      pictureMode: '',
-                      modifiers: ['sdw_inner']
-                    },
-                    spIcon: 'zoom',
-                    ttl: '耐震性を強化した溶接閉鎖型フープ',
-                    txt: '柱の主筋を囲む帯筋を連続させ、強度を均等化するため、せん断力に抵抗する補強効果が高く、柱の耐震性を向上させることができます。またコンクリートを拘束し柱が破壊するのを防ぎます。（一部除く）',
-                    modifiers: ['upsideDown']
-                  },
-                ],
-                modifiers: ['half']
-              })%>
+              <div class="flexSect">
+                <div class="generalSect">
+                  <div class="generalSect__head">
+                    <%- include('./components/equipmentCard/_equipmentCard.ejs', {
+                      visual: {
+                        imagePath: '<img src="./imgs/img-structure-01.jpg" alt="" width="480" height="320">',
+                        alt: 'イメージイラスト',
+                        captionColor: '',
+                        captionPosition: 'capOut',
+                        pictureMode: '',
+                        modifiers: ['shadow']
+                      },
+                      spIcon: 'zoom',
+                      modifiers: ['upsideDown']
+                    }) %>
+                  </div>
+                  <div class="generalSect__cont">
+                    <div class="generalSect__ttl">遮音性や断熱性に優れた二重床・二重天井</div>
+                    <p class="generalSect__txt">遮音性と断熱性に優れた二重床・二重天井を採用しています。床の下地材と仕上げ材には遮音性の高い素材を使用しました。また、スラブ内に中空部を設けることでワイドスパンでも天井に小梁のでない空間を実現することができ、将来のライフスタイルの変化によるリフォームにも対応しやすい工法です。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="equipmentSect__cont">
+              <div class="flexSect">
+                <div class="generalSect--revers">
+                  <div class="generalSect__head">
+                    <%- include('./components/equipmentCard/_equipmentCard.ejs', {
+                      visual: {
+                        imagePath: '<img src="./imgs/img-structure-02.jpg" alt="" width="480" height="320">',
+                        alt: 'イメージイラスト',
+                        captionColor: '',
+                        captionPosition: 'capOut',
+                        pictureMode: '',
+                        modifiers: ['shadow']
+                      },
+                      spIcon: 'zoom',
+                      modifiers: ['upsideDown']
+                    }) %>
+                  </div>
+                  <div class="generalSect__cont">
+                    <div class="generalSect__ttl">地盤の調査結果に基づいて、<br>最適な基礎を選択</div>
+                    <p class="generalSect__txt">建物を強固なものにするために、杭の先端を地下深くの固い地盤（支持層）に到達させ、建物をしっかりと支えます。住まいという大切な財産を高い信頼性で守ります。
+                    </p>
+                    <p class="caption">※施工の際、地盤の状況で基礎の深さは多少異なります。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="equipmentSect__cont">
+              <div class="flexSect">
+                <div class="generalSect">
+                  <div class="generalSect__head">
+                    <%- include('./components/equipmentCard/_equipmentCard.ejs', {
+                      visual: {
+                        imagePath: '<img src="./imgs/img-structure-03.jpg" alt="" width="480" height="320">',
+                        alt: 'イメージイラスト',
+                        captionColor: '',
+                        captionPosition: 'capOut',
+                        pictureMode: '',
+                        modifiers: ['shadow']
+                      },
+                      spIcon: 'zoom',
+                      modifiers: ['upsideDown']
+                    }) %>
+                  </div>
+                  <div class="generalSect__cont">
+                    <div class="generalSect__ttl">遮音性の高い壁構造</div>
+                    <p class="generalSect__txt">戸境壁や外壁等の厚さを十分に確保。隣戸同士や外部騒音などが伝わりにくい構造とし、断熱性も考慮しました。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="equipmentSect__cont">
+              <div class="flexSect">
+                <div class="generalSect--revers">
+                  <div class="generalSect__head">
+                    <%- include('./components/equipmentCard/_equipmentCard.ejs', {
+                      visual: {
+                        imagePath: '<img src="./imgs/img-structure-04.jpg" alt="" width="480" height="320">',
+                        alt: 'イメージイラスト',
+                        captionColor: '',
+                        captionPosition: 'capOut',
+                        pictureMode: '',
+                        modifiers: ['shadow']
+                      },
+                      spIcon: 'zoom',
+                      modifiers: ['upsideDown']
+                    }) %>
+                  </div>
+                  <div class="generalSect__cont">
+                    <div class="generalSect__ttl">耐震枠の玄関ドア</div>
+                    <p class="generalSect__txt">上下のクリアランスを大きく確保することにより面内変形を受けても枠とドアの接触をやわらげる、閉じ込められにくい構造です。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="equipmentSect__cont">
+              <div class="flexSect">
+                <div class="generalSect">
+                  <div class="generalSect__head">
+                    <%- include('./components/equipmentCard/_equipmentCard.ejs', {
+                      visual: {
+                        imagePath: '<img src="./imgs/img-structure-05.jpg" alt="" width="480" height="320">',
+                        alt: 'コンクリート強度概念図、参考図書 JASS5 2003年版',
+                        captionColor: '',
+                        captionPosition: 'capIn',
+                        pictureMode: '',
+                        modifiers: ['shadow']
+                      },
+                      spIcon: 'zoom',
+                      modifiers: ['upsideDown']
+                    }) %>
+                    <p class="caption">※およそ100年の耐久性とは、日本建築学会「建築工事標準仕様書（JASS5）」により定められた「構造体の大規模補修を必要としないことが予定できる期間として100年」という供用期間を目指したコンクリート（30N/m㎡≒1㎡3,000トンの圧縮に耐える強さ）を採用しているという意味で、100年の寿命やメンテナンスフリーを保証するものではありません。</p>
+                  </div>
+                  <div class="generalSect__cont">
+                    <div class="generalSect__ttl">100年の耐久性を目指したコンクリート</div>
+                    <p class="generalSect__txt">長期修繕計画に関わる1階から最上階の構造躯体には、設計基準強度30N/m㎡以上のコンクリートを採用。これは、日本建築学会建築工事標準仕様書（JASS5）で定められた基準によるもので、約100年にわたり大規模な補修をせずに、鉄筋の腐食やコンクリートの重大な劣化が生じないことが期待できます。（但し、建物本体の構造耐力上、重要な部分である柱・梁・壁・床・屋根の躯体に使用するコンクリートに限る。）
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="equipmentSect__cont">
+              <div class="flexSect">
+                <div class="generalSect--revers">
+                  <div class="generalSect__head">
+                    <%- include('./components/equipmentCard/_equipmentCard.ejs', {
+                      visual: {
+                        imagePath: '<img src="./imgs/img-structure-06.jpg" alt="" width="480" height="320">',
+                        alt: 'イメージイラスト',
+                        captionColor: '',
+                        captionPosition: 'capOut',
+                        pictureMode: '',
+                        modifiers: ['shadow']
+                      },
+                      spIcon: 'zoom',
+                      modifiers: ['upsideDown']
+                    }) %>
+                  </div>
+                  <div class="generalSect__cont">
+                    <div class="generalSect__ttl">耐震性を強化した溶接閉鎖型フープ</div>
+                    <p class="generalSect__txt">柱の主筋を囲む帯筋を連続させ、強度を均等化するため、せん断力に抵抗する補強効果が高く、柱の耐震性を向上させることができます。またコンクリートを拘束し柱が破壊するのを防ぎます。（一部除く）
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
         </div>

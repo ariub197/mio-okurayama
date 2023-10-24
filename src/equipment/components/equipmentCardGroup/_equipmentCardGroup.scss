@@ -5,10 +5,20 @@
 
   &--half {
 
+    @include sp {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 480px;
+    }
+
     .equipmentCard {
       @include pc {
         margin-right: 48px;
         width: 480px;
+      }
+
+      @include sp {
+        width: 100%;
       }
 
       &:nth-of-type(2n) {
@@ -88,6 +98,10 @@
 
   &--oneFourth {
 
+    @include sp {
+      max-width: 494px;
+      margin: auto;
+    }
 
     .equipmentCard {
       margin-right: 20px;
@@ -97,7 +111,7 @@
       }
 
       @include sp {
-        width: 157px;
+        width: calc(50% - 10px);
       }
 
       &__cont {

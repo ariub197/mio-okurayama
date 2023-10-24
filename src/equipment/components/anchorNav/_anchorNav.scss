@@ -7,7 +7,8 @@
   justify-content: space-between;
 
   @include sp {
-    display: none;
+    position: static;
+    flex-wrap: wrap;
   }
 
   &__link {
@@ -27,7 +28,7 @@
 
     @include sp {
       height: 50px;
-      width: 158px;
+      width: calc(50% - 10px);
     }
 
     &:not(:last-of-type) {

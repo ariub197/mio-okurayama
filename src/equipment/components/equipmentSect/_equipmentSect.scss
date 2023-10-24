@@ -77,12 +77,18 @@
   }
 
   &__cont {
+
     @include pc {
       margin-top: 40px;
     }
 
     @include sp {
       margin-top: 28px;
+    }
+
+    .txt {
+      letter-spacing: 0;
+      text-align: center;
     }
 
     &--large {

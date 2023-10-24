@@ -7,6 +7,7 @@
     @include sp {
       display: flex;
       justify-content: space-between;
+      gap: 1rem;
     }
 
     &:not(:last-of-type) {
@@ -25,7 +26,7 @@
       }
 
       @include sp {
-        width: 160px;
+        width: 50%;
       }
     }
 
