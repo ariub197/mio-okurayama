@@ -563,7 +563,7 @@
 }
 
 .equipmentCard__txt .blue {
-  color: #4c98aa;
+  color: #248068;
 }
 
 @media print, screen and (min-width: 768px) {
@@ -2103,13 +2103,13 @@
 }
 
 .utilitySink__heading {
-  letter-spacing: .15em;
+  letter-spacing: .05em;
+  line-height: 1.5;
 }
 
 @media print, screen and (min-width: 768px) {
   .utilitySink__heading {
     font-size: 22px;
-    line-height: 1;
     margin-bottom: 24px;
   }
 }
@@ -2117,8 +2117,6 @@
 @media screen and (max-width: 768px) {
   .utilitySink__heading {
     font-size: 20px;
-    letter-spacing: .05em;
-    line-height: 1.5;
     margin-bottom: 18px;
     text-align: center;
   }
