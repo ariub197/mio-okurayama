@@ -1,0 +1,78 @@
+.flexSect {
+
+  .generalSect {
+    width: 100%;
+    display: flex;
+
+    @include pc {
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+
+    @include sp {
+      flex-direction: column-reverse;
+    }
+
+    &--revers {
+      @extend .generalSect;
+
+      @include pc {
+        flex-direction: row;
+      }
+    }
+
+    .generalSect__head {
+      @include pc {
+        width: 47%;
+      }
+
+      @include sp {
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+
+    .generalSect__cont {
+      @include pc {
+        width: 47%;
+        height: 100%;
+        margin: auto 0;
+      }
+
+      @include sp {
+      }
+
+      .generalSect__ttl {
+        font-size: 24px;
+      }
+
+      .generalSect__txt {
+        font-size: 16px;
+        margin-top: 32px;
+        line-height: 2;
+        letter-spacing: 0;
+
+        @include sp {
+        }
+
+        .caption {
+          line-height: 1;
+        }
+      }
+    }
+
+    &--start {
+      .generalSect {
+        @include pc {
+          align-items: flex-start;
+        }
+      }
+    }
+  }
+
+  .caption {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+}

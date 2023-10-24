@@ -25,11 +25,17 @@
         margin-top: 22px;
       }
     }
+
+    &--center {
+      @extend .counterKitchen__item;
+      height: 100%;
+      margin: auto 0;
+    }
   }
 
   &__heading {
     @include pc {
-      font-size: 22px;
+      font-size: 24px;
       letter-spacing: .15em;
       line-height: 1;
       margin-bottom: 24px;
@@ -41,6 +47,11 @@
       letter-spacing: .05em;
       line-height: 1;
       margin-bottom: 30px;
+      text-align: center;
+    }
+
+    &--position {
+      margin: 64px auto 34px;
       text-align: center;
     }
   }
@@ -60,7 +71,7 @@
 
     .equipmentCard {
       @include pc {
-        width: 230px;
+        width: 30.2%;
       }
 
       @include sp {

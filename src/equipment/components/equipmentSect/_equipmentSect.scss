@@ -78,11 +78,21 @@
 
   &__cont {
     @include pc {
-      margin-top: 42px;
+      margin-top: 40px;
     }
 
     @include sp {
       margin-top: 28px;
+    }
+
+    &--large {
+      @include pc {
+        margin-top: 64px;
+      }
+
+      @include sp {
+        margin-top: 28px;
+      }
     }
   }
 

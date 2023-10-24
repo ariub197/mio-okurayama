@@ -1,4 +1,10 @@
 .mistySect {
+  background: rgba(#248068, 0.1);
+  box-shadow: 0 0 0 100vmax rgba(#248068, 0.1);
+  clip-path: inset(0 -100vmax);
+  padding: 80px 0;
+  margin-top: 80px;
+
   @include pc {
     display: flex;
     flex-wrap: wrap;
@@ -53,6 +59,12 @@
   &__cont {
     @include pc {
       width: 480px;
+    }
+
+    &--center {
+      @extend .mistySect__head;
+      height: 100%;
+      margin: auto 0;
     }
   }
 

@@ -8541,6 +8541,10 @@ button.swiper-pagination-bullet {
   display: block;
 }
 
+.photo__sub {
+  margin: 24px 0 20px;
+}
+
 .photo {
   position: relative;
 }
